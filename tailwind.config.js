@@ -1,6 +1,55 @@
 module.exports = {
+    theme: {
+        fontFamily: {
+            display: ['Muli', 'Source Sans Pro', 'Helvetica', 'Arial', 'sans-serif'],
+            body: ['Muli', 'Source Sans Pro', 'Helvetica', 'Arial', 'sans-serif'],
+            title: ['Source Sans Pro', 'Helvetica', 'Arial', 'sans-serif'],
+        },
+        extend: {
+            colors: {
+                body: '#182029',
+                area: '#1f2934',
+                font: '#ebebeb',
+                'font-2': '#B9B9B9',
+                primary: '#e47b65',
+                secondary: '#00978c',
+            },
+
+            letterSpacing: {
+                logo: '0.035em',
+                title: '-0.03em',
+            },
+
+            lineHeight: {
+                articleTitle: '0.95',
+            },
+
+            inset: {
+                '1px': '1px',
+            },
+
+            width: {
+                900: '90%',
+                1000: '100vw',
+            },
+
+            maxWidth: {
+                900: '90%',
+                1000: '100vw',
+            },
+
+            margin: {
+                content: '18rem',
+            },
+        },
+    },
+    variants: {},
     plugins: [
-        // eslint-disable-next-line global-require
-        require('gda-theme'),
+        ({ addBase, config }) => {
+            addBase({
+                h2: { fontSize: config('theme.fontSize.xl') },
+                h3: { fontSize: config('theme.fontSize.lg') },
+            });
+        },
     ],
 };
