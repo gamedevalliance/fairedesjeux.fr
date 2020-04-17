@@ -1,0 +1,18 @@
+{
+  "name": "my-gridsome-site",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gda-theme": "file:../gda-theme",
+    "gridsome": "^0.7.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "gridsome-plugin-tailwind": "0.0.2"
+  }
+}
