@@ -1,54 +1,37 @@
 <template>
-    <div class="layout">
-        <header class="header">
-            <strong>
-                <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-            </strong>
-            <nav class="nav">
-                <g-link class="nav__link" to="/">
-                    Home
-                </g-link>
-                <g-link class="nav__link" to="/about/">
-                    About
-                </g-link>
-            </nav>
-        </header>
-        <slot></slot>
+    <div class="layout bg-body font-body">
+        <Header />
+        <transition name="fade" appear>
+            <main>
+                <slot></slot>
+            </main>
+        </transition>
+        <Footer />
     </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
+<script>
+    import Header from './partials/Header.vue';
+    import Footer from './partials/Footer.vue';
+
+    export default {
+        components: {
+            Header,
+            Footer,
+        },
+        props: {
+            header: Boolean,
+
+        },
+    };
+</script>
 
 <style>
-    body {
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.5;
+    .fade-enter-active {
+        transition: opacity 0.5s;
     }
 
-    .layout {
-        max-width: 760px;
-        margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        height: 80px;
-    }
-
-    .nav__link {
-        margin-left: 20px;
+    .fade-enter {
+        opacity: 0;
     }
 </style>

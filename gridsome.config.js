@@ -7,6 +7,13 @@ const postcssPlugins = [
 ];
 
 module.exports = {
-  siteName: 'FaireDesJeux.fr',
-  plugins: []
-}
+    siteName: 'FaireDesJeux.fr',
+    plugins: [],
+    css: {
+        loaderOptions: {
+            postcss: {
+                plugins: postcssPlugins,
+            },
+        },
+    },
+};

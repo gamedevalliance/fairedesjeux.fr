@@ -11,8 +11,9 @@ module.exports = {
                 area: '#1f2934',
                 font: '#ebebeb',
                 'font-2': '#B9B9B9',
-                primary: '#e47b65',
-                secondary: '#00978c',
+                marvin: '#e47b65',
+                astride: '#9e96d0',
+                remi: '#00978c',
             },
 
             letterSpacing: {
