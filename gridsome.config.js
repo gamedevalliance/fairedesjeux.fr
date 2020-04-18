@@ -8,7 +8,15 @@ const postcssPlugins = [
 
 module.exports = {
     siteName: 'FaireDesJeux.fr',
-    plugins: [],
+    plugins: [
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Section',
+                path: './content/lessons/**/*.md',
+            },
+        },
+    ],
     css: {
         loaderOptions: {
             postcss: {
