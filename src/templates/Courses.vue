@@ -6,7 +6,7 @@
         <div v-for="chapter in $page.course.chapters">
             --- {{ chapter.title }}
             <div v-for="section in chapter.sections">
-                ------ {{ section.title }}
+                ------ {{ section.title }} - {{ section.fileInfo.name }}
             </div>
         </div>
     </div>
@@ -22,10 +22,15 @@
     query ($path: String!) {
         course(path: $path) {
             title
-            chapters {
+            chapters(sort: {by: "id", order:ASC}) {
+                id
                 title
-                sections {
+                sections(sort: {by: "fileInfo.name", order:ASC}) {
+                    id
                     title
+                    fileInfo {
+                        name
+                    }
                 }
             }
         }
