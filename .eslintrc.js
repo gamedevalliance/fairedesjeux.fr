@@ -22,7 +22,7 @@ module.exports = {
     rules: {
         'max-len': ['error', 120, 2, {
             ignoreUrls: true,
-            ignoreComments: false,
+            ignoreComments: true,
             ignoreRegExpLiterals: true,
             ignoreStrings: true,
             ignoreTemplateLiterals: true,
