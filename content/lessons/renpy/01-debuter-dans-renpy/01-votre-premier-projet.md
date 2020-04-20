@@ -1,5 +1,5 @@
 ---
-title: "Votre premier projet !"
+title: Votre premier projet
 description: "Téléchargez Ren'Py gratuitement et apprenez les bases du moteur pour créer votre premier projet."
 ---
 
@@ -9,7 +9,7 @@ Ren'Py est un moteur entièrement gratuit et open source permettant de créer de
 
 Les jeux fonctionnent sur Windows, Linux, macOS, Android, iOS ou en tant qu'application Chrome.
 
-## Télécharger le logiciel
+### Télécharger le logiciel
 
 Pour commencer, rendez vous sur la [page de téléchargement](https://renpy.org/latest.html) de Ren'Py.
 
@@ -19,11 +19,11 @@ La fenêtre qui s'ouvre devant vous est le lanceur de Ren'Py. Vous pouvez le pas
 
 Deux projets sont déja disponibles : le tutoriel donne plein de renseignements assez poussés sur toutes les possibilités de Ren'Py, tandis que "La Question" est une petite histoire d'exemple avec deux personnages et différents décors. N'hésitez pas à l'essayer et à examiner son script !
 
-## Créer son projet
+### Créer son projet
 
 Cliquez ensuite sur "Créer un nouveau projet". Ren'Py va alors vous demander plusieurs informations : emplacement où créer le projet, son nom... Laissez-vous guider puis patientez pendant que le moteur génère les fichiers. Vous pouvez ensuite lancer le jeu pour découvrir ce qu'il contient !
 
-## Ouvrir le script du jeu
+### Ouvrir le script du jeu
 
 Comme une pièce de théatre ou un film, un visual novel suit un script contenant tous les dialogues, les informations sur les décors, les personnages... Lorsqu'un joueur lance le jeu, celui-ci va suivre le script du début à la fin en réalisant les instructions que vous y aurez indiquées.
 

@@ -11,6 +11,7 @@ module.exports = {
                 area: '#1f2934',
                 font: '#ebebeb',
                 'font-2': '#B9B9B9',
+                'font-3': '#9496a8',
                 marvin: '#e47b65',
                 astride: '#9e96d0',
                 remi: '#00978c',
@@ -41,6 +42,12 @@ module.exports = {
 
             margin: {
                 content: '18rem',
+            },
+            gridTemplateColumns: {
+                cont: '17% 58% 17%',
+            },
+            gap: {
+                col: '3%',
             },
         },
     },

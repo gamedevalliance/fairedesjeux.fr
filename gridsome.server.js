@@ -14,7 +14,7 @@ const fs = require('fs');
 module.exports = function (api) {
     api.loadSource(({ addCollection, getCollection }) => {
         // TODO: Define these collections in a .graphql file like we do on GDA - erika, 2020-04-18
-        const lessonsCollection = addCollection('Lesson');
+        const lessonsCollection = addCollection('Course');
         const chaptersCollection = addCollection('Chapter');
         const postsCollection = getCollection('Section');
 
