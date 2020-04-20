@@ -44,7 +44,7 @@ module.exports = {
                 content: '18rem',
             },
             gridTemplateColumns: {
-                cont: '17% 58% 17%',
+                cont: '17% 60% 15%',
             },
             gap: {
                 col: '3%',
