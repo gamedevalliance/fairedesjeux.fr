@@ -5,96 +5,92 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-// NOTE: We have to disable those two rules because Gridsome force us to do it this and eslint doesn't like it, erika - 2020-04-19
-/* eslint-disable no-param-reassign */
-/* eslint-disable consistent-return */
-
 const fs = require('fs');
 
 module.exports = function (api) {
     api.loadSource(({ addCollection, getCollection }) => {
-        // TODO: Define these collections in a .graphql file like we do on GDA - erika, 2020-04-18
-        const lessonsCollection = addCollection('Course');
+        // TODO: Define these collections in a .graphql file like we do on GDA, it'd allow us to have stricter schema - erika, 2020-04-18
+        const coursesCollection = addCollection('Course');
         const chaptersCollection = addCollection('Chapter');
         const postsCollection = getCollection('Section');
 
+        coursesCollection.addReference('chapters', 'Chapter');
+        chaptersCollection.addReference('course', 'Course');
+        chaptersCollection.addReference('sections', 'Section');
         postsCollection.addReference('chapter', 'Chapter');
 
-        const lessons = fs.readdirSync('content/lessons', { withFileTypes: true })
+        const courses = fs.readdirSync('content/courses', { withFileTypes: true })
             .filter((dirent) => dirent.isDirectory())
-            .filter((dirent) => fs.existsSync(`content/lessons/${dirent.name}/lesson.json`))
+            .filter((dirent) => fs.existsSync(`content/courses/${dirent.name}/course.json`))
             .map((dirent) => dirent.name);
 
-        lessons.forEach((lesson) => {
-            const lessonMeta = JSON.parse(fs.readFileSync(`content/lessons/${lesson}/lesson.json`));
+        courses.forEach((course) => {
+            const courseMeta = JSON.parse(fs.readFileSync(`content/courses/${course}/course.json`));
 
-            const lessonNode = lessonsCollection.addNode({
-                slug: lesson,
-                ...lessonMeta,
-            });
-
-            const chapters = fs.readdirSync(`content/lessons/${lesson}/`, { withFileTypes: true })
+            const chapters = fs.readdirSync(`content/courses/${course}/`, { withFileTypes: true })
                 .filter((dirent) => dirent.isDirectory())
-                .filter((dirent) => fs.existsSync(`content/lessons/${lesson}/${dirent.name}/chapter.json`))
+                .filter((dirent) => fs.existsSync(`content/courses/${course}/${dirent.name}/chapter.json`))
                 .map((dirent) => dirent.name);
 
+            const chapterList = [];
             chapters.forEach((chapter) => {
-                const chapterMeta = JSON.parse(fs.readFileSync(`content/lessons/${lesson}/${chapter}/chapter.json`));
+                const chapterMeta = JSON.parse(fs.readFileSync(`content/courses/${course}/${chapter}/chapter.json`));
 
-                chaptersCollection.addNode({
-                    id: `${lesson}-${chapter.substring(0, 2)}`,
+                chapterList.push(chaptersCollection.addNode({
+                    id: `${course}/${chapter.substring(0, 2)}`,
                     slug: `${chapter.substring(3)}`,
-                    lesson: lessonNode,
+                    course,
                     ...chapterMeta,
-                });
+                }).id);
+            });
+
+            coursesCollection.addNode({
+                id: course,
+                slug: course,
+                chapters: chapterList,
+                ...courseMeta,
             });
         });
     });
 
+    /*
+        NOTE: We have to disable those two rules because Gridsome force us to modify nodes in a way ESlint is not happy
+        about, this won't be needed once the next NOTE is solved because the whole onCreateNode thing would go away - erika, 2020-04-19
+    */
+    /* eslint-disable no-param-reassign */
+    /* eslint-disable consistent-return */
+
+    const tempMap = {};
     api.onCreateNode((options) => {
         if (options.internal.typeName === 'Section') {
-            options.chapter = options.fileInfo.directory.replace('./content/lessons/', '');
+            /*
+                NOTE: So far there's no problem with doing this, however in the future it'd be more optimal if we could
+                add the chapter to the node in loadSource or through a plugin instead of adding it here. It'd allow us
+                to directly refer to the chapter in the templates definitions. Also, if we could access the chapter before
+                (or inversely, get the posts related to a chapter) we could reverse the architecture and uses BelongsTo
+                instead of finding the course from the chapter from the section. Confusing. - erika, 2020-04-20
+            */
+            options.chapter = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3);
+            tempMap[options.id] = options.chapter;
 
             return {
                 ...options,
             };
         }
-    });
 
-    api.createPages(async ({ createPage, graphql }) => {
-        const { data } = await graphql(`{
-            allChapter {
-                edges {
-                    node {
-                        slug
-                        lesson {
-                            slug
-                        }
-                    }
+        if (options.internal.typeName === 'Chapter') {
+            const tempList = [];
+            Object.entries(tempMap).forEach(([key, value]) => {
+                if (value === options.id) {
+                    tempList.push(key);
                 }
-            }
-
-            allLesson {
-                edges {
-                    node {
-                        slug
-                    }
-                }
-            }
-        }`);
-
-        data.allChapter.edges.forEach(({ node }) => {
-            createPage({
-                path: `/${node.lesson.slug}/${node.slug}`,
-                component: './src/templates/Chapter.vue',
             });
-        });
+            options.sections = tempList;
 
-        data.allLesson.edges.forEach(({ node }) => {
-            createPage({
-                path: `/${node.slug}`,
-                component: './src/templates/Lesson.vue',
-            });
-        });
+
+            return {
+                ...options,
+            };
+        }
     });
 };
