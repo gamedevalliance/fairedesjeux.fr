@@ -1,6 +1,9 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
+// Prism CSS, used for syntax coloring
+import 'prismjs/themes/prism-okaidia.css';
+
 // Tailwind
 import 'tailwindcss/tailwind.css';
 

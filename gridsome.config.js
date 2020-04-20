@@ -12,16 +12,29 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
-                typeName: 'Section',
+                typeName: 'Sections',
                 path: './content/lessons/**/*.md',
             },
         },
     ],
+    templates: {
+        Sections: '/:title',
+    },
     css: {
         loaderOptions: {
             postcss: {
                 plugins: postcssPlugins,
             },
+        },
+    },
+    transformers: {
+        remark: {
+            options: {
+                footnotes: true,
+            },
+            plugins: [
+                '@gridsome/remark-prismjs',
+            ],
         },
     },
 };
