@@ -33,7 +33,7 @@ Ne vous tracassez pas sur le choix de l'éditeur au début : ils se ressemblent 
 
 Vous voilà donc dans le fichier de script !
 
-## Un premier texte
+### Un premier texte
 
 Je vous propose d'effacer le contenu par défaut pour que l'on écrive quelque chose ensemble :
 
@@ -52,7 +52,7 @@ Les lignes suivantes sont des instructions de dialogue. Les noms entre guillemet
 
 Lorsqu'un texte contient des guillemets doubles comme dans le second texte, ces caractères doivent être précédés d'un `\` pour indiquer à Ren'Py qu'ils font partie du dialogue. Sinon, le jeu ne pourrait pas savoir à quel guillemet le texte est censé se terminer.
 
-## Ajouter une fin au jeu
+### Ajouter une fin au jeu
 
 Vous pouvez terminer le jeu avec l'instruction `return`, qui renvoie immédiatement à l'écran-titre :
 

@@ -49,6 +49,10 @@ module.exports = {
             gap: {
                 col: '3%',
             },
+            fontSize: {
+                sm: '15px',
+                lg: '19px',
+            },
         },
     },
     variants: {},

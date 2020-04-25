@@ -20,6 +20,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 // Import default layout, this layout will be imported as a global component
 import Layout from './layouts/Default.vue';
 
+// Import the fonts.
+import 'typeface-source-sans-pro';
+import 'typeface-muli';
+
 // Import only the icons we need from Font-Awesome
 config.autoAddCss = false;
 library.add(faFacebookF, faGithub, faTwitter, faInstagram, faLinkedinIn, faGlobeEurope, faExternalLinkAlt);

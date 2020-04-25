@@ -1,6 +1,6 @@
-<template>
+mb-6 mt-3<template>
     <Layout>
-        <article class="container mx-auto text-xl font-body">
+        <article class="container mx-auto text-lg font-body">
             <div class="grid grid-cols-cont gap-col">
                 <aside class="content mt-12">
                     <div class="bg-area rounded-lg py-3 px-6 mb-3">
@@ -73,7 +73,7 @@
 <style lang="postcss" scoped>
     article >>> {
         & p, & ul {
-            @apply text-font mb-10 mt-4 leading-normal;
+            @apply text-font mb-6 mt-3 leading-normal;
 
             & a {
                 @apply no-underline text-astride border-solid border-b border-astride;
@@ -88,23 +88,23 @@
         }
 
         & h2 {
-            @apply mb-4 mt-3 font-bold text-5xl leading-normal text-astride tracking-title;
+            @apply mb-3 mt-3 font-bold text-5xl leading-normal text-astride font-title tracking-title;
         }
 
         & h3 {
-            @apply mb-4 mt-12 font-semibold text-3xl leading-normal text-remi tracking-title;
+            @apply mb-3 mt-8 font-semibold text-2xl leading-normal text-remi font-title tracking-title;
         }
 
         & h4 {
-            @apply mx-auto mb-10 mt-4 font-semibold leading-normal text-font-2 text-center tracking-title;
+            @apply mx-auto mb-6 mt-3 font-semibold leading-normal text-font-2 font-title text-center tracking-title;
         }
 
         & .caption {
-            @apply mb-0 mt-12 font-semibold text-lg leading-normal text-font tracking-title;
+            @apply mb-0 mt-8 font-semibold text-base leading-normal text-font tracking-title;
         }
 
         & ul {
-            @apply list-none list-inside mb-3 mt-1 font-semibold text-base leading-normal text-font-2;
+            @apply list-none list-inside mb-3 mt-1 font-semibold text-sm leading-normal text-font-2;
         }
 
         & .quizz {
@@ -116,7 +116,7 @@
         }
 
         & .edit-the-page {
-            @apply mb-10 mt-4 leading-normal no-underline text-base text-font-3 border-solid border-0;
+            @apply mb-6 mt-3 leading-normal no-underline text-sm text-font-3 border-solid border-0;
 
             padding-bottom: 1px;
             transition: border-color 0.12s ease, color 0.12s ease;
@@ -127,12 +127,12 @@
         }
 
         & .caption-toc {
-            @apply leading-normal no-underline text-lg text-font border-solid border-0;
+            @apply leading-normal no-underline text-base text-font border-solid border-0;
         }
 
         & .local-toc {
             & li {
-                @apply leading-normal no-underline text-base text-font-3 border-solid border-0;
+                @apply leading-normal no-underline text-sm text-font-3 border-solid border-0;
 
                 padding-bottom: 1px;
                 transition: border-color 0.12s ease, color 0.12s ease;
@@ -163,12 +163,12 @@
             }
 
             & img + noscript + em {
-                @apply text-center text-base text-font-2 mt-10 mb-0 block;
+                @apply text-center text-sm text-font-2 mt-10 mb-0 block;
             }
         }
 
         & pre, & code {
-            @apply border-0 bg-area text-base mb-10 mt-4;
+            @apply border-0 bg-area text-sm mb-6 mt-3;
 
             text-shadow: none;
             box-shadow: none;
