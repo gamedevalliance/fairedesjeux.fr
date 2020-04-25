@@ -92,7 +92,7 @@ mb-6 mt-3<template>
         }
 
         & h3 {
-            @apply mb-3 mt-8 font-semibold text-2xl leading-normal text-remi font-title tracking-title;
+            @apply mb-3 mt-10 font-semibold text-3xl leading-normal text-remi font-title tracking-title;
         }
 
         & h4 {
@@ -162,8 +162,12 @@ mb-6 mt-3<template>
                 } */
             }
 
+            /*
+                NOTE: This style is used for captions of images and videos. Very practical for the authors
+                as they only have to do a line return and write in italics. - erika, 2020-04-20
+            */
             & img + noscript + em {
-                @apply text-center text-sm text-font-2 mt-10 mb-0 block;
+                @apply text-center text-sm text-font-2 mt-6 mb-0 block;
             }
         }
 

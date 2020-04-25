@@ -18,7 +18,7 @@ module.exports = {
             },
 
             letterSpacing: {
-                logo: '0.035em',
+                logo: '0.075em',
                 title: '-0.03em',
             },
 
@@ -51,7 +51,7 @@ module.exports = {
             },
             fontSize: {
                 sm: '15px',
-                lg: '19px',
+                lg: '18.5px',
             },
         },
     },
