@@ -6,7 +6,11 @@
         <div v-for="chapter in $page.course.chapters">
             --- {{ chapter.title }}
             <div v-for="section in chapter.sections">
-                ------ {{ section.title }} - {{ section.fileInfo.name }}
+                ------
+                <g-link :to="section.path">
+                    {{ section.title }}
+                </g-link>
+                - {{ section.fileInfo.name }}
             </div>
         </div>
     </div>
@@ -28,6 +32,7 @@
                 sections(sort: {by: "fileInfo.name", order:ASC}) {
                     id
                     title
+                    path
                     fileInfo {
                         name
                     }
