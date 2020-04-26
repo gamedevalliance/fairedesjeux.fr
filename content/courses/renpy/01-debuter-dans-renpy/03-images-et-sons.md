@@ -5,7 +5,7 @@ description: "Donnez vie à votre jeu Ren'Py avec des images et des musiques."
 
 C'est bien beau de savoir faire un dialogue, mais sans illustration, on s'ennuie un peu ! Nous allons ajouter l'image du personnage qui parle, un arrière-plan, et une musique.
 
-## Ajouter des fichiers
+### Ajouter des fichiers
 
 Pour ajouter des fichiers à votre projet, retournez sur le launcher Ren'Py pour ouvrir le répertoire `game` : c'est le répertoire principal de votre projet.
 
@@ -13,13 +13,15 @@ Ajoutez un fichier de musique directement dans ce dossier. Ren'Py supporte les f
 
 Pour ajouter les images, entrez dans le dossier `images`, qui devrait être vide pour le moment. Voici les deux images que je vais utiliser dans ce cours, mais n'hésitez pas à créer les vôtres.
 
-{{< figure src="/images/renpy/ecole.jpg" caption="ecole.jpg" >}}
+![](./ecole.jpg)
+*ecole.jpg*
 
-{{< figure src="/images/renpy/astride.png" caption="astride.png" >}}
+![](./astride.png)
+*astride.png*
 
 La première image vient du jeu "La Question" et le personnage vient de [ce générateur](http://www.rinmarugames.com/playgame.php?game_link=witch-apprentice-creator).
 
-## Afficher les images
+### Afficher les images
 
 Bien ! Afficher une image est très simple. Pour afficher le fond, écrivez `scene` suivi du nom de votre image. Pour le personnage, écrivez `show` puis le nom.
 
@@ -28,7 +30,7 @@ scene ecole
 show astride
 ```
 
-![Screenshot du projet](/images/renpy/imagesenjeu.png)
+![Screenshot du projet](./images-en-jeu.png)
 
 Essayez votre jeu, et vous verrez que les images s'affichent soudainement. On pourrait ajouter un fondu pour rendre ça plus élégant. A la suite d'une commande pour afficher une image, écrivez `with` pour qu'elle s'affiche avec une transition :
 
@@ -52,7 +54,7 @@ with dissolve
 
 > **Note :** Pour des exemples plus avancés, vous pouvez consulter la [documentation de `with`](https://www.renpy.org/doc/html/displaying_images.html#with-statement).
 
-## Jouer une musique
+### Jouer une musique
 
 Pour jouer une musique de fond, il suffit d'écrire cette commande :
 
@@ -99,3 +101,5 @@ label start:
 ```
 
 Dans la partie suivante, on va pimenter le jeu en ajoutant des choix de dialogue.
+
+[Suite](les-choix-de-dialogue)

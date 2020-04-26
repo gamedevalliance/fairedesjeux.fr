@@ -5,9 +5,9 @@ description: "Enrichissez vos dialogues en rajoutant des choix et des embranchem
 
 Il ne reste plus qu'une chose avant que vous ne puissiez réellement créer un petit jeu par vous-même : les choix de dialogue. C'est important dans un visual novel pour amener de l'interactivité et impliquer vos joueurs dans l'histoire que vous leur racontez !
 
-![Screenshot des choix en jeu](/images/renpy/choix.png)
+![Screenshot des choix en jeu](./choix.png)
 
-## Créer un menu
+### Créer un menu
 
 Un menu de choix se présente ainsi :
 
@@ -26,7 +26,7 @@ Le premier texte est facultatif, et s'affiche en même temps que le menu de choi
 
 Je vous explique juste après ce que signifie l'instruction `jump`. Mais tout d'abord, nous allons créer les embranchements spécifiques à chaque choix, et ce grâce aux labels !
 
-## Les labels et les sauts
+### Les labels et les sauts
 
 Souvenez-vous ! Vous avez déjà utilisé un label dans votre script :
 
@@ -77,3 +77,5 @@ Les sauts sont très utiles étant donné qu'en temps normal, Ren'Py lit le scri
 D'ailleurs, si vous testez le jeu, vous remarquerez qu'en choisissant le jeu d'horreur, Ren'Py va lire le `label horreur`, mais aussi le `label romance` puisqu'il est situé juste à la suite ! Maintenant que vous savez utiliser les jumps et les labels, je ne doute pas que vous parviendrez à régler ce problème.
 
 Le chapitre est bientôt terminé ! Dans la dernière étape, nous allons ajouter des fins au jeu et l'exporter pour le publier.
+
+[Suite](ajouter-des-fins)

@@ -17,7 +17,8 @@ define m = Character("Marvin", color="#ffc8c8")
 
 Comme vous le voyez, on peut aussi préciser la couleur du nom quand il est affiché en jeu. Cette valeur qui commence par un `#` est un code hexadécimal, aussi utilisé dans le webdesign ou les logiciels de graphisme. `#ffc8c8` correspond à un rouge pâle, mais vous pouvez choisir votre propre couleur en cherchant "sélecteur de couleur" sur Google par exemple.
 
-{{< figure src="/images/renpy/colorpicker.png" caption="Le sélecteur de couleur de Google." >}}
+![](./color-picker.png)
+*Le sélecteur de couleur de Google.*
 
 Maintenant que le personnage est défini, on peut écrire les dialogues plus rapidement !
 
@@ -31,6 +32,9 @@ label start:
     a "Je peux t'aider si tu veux !"
 ```
 
-{{< figure src="/images/renpy/couleurdunom.png" alt="Screenshot du projet" caption="Le nom est bel et bien rouge pâle." >}}
+![](./couleur-du-nom.png)
+*Le nom est bel et bien rouge pâle.*
 
 Dans la prochaine partie, nous allons enrichir le jeu avec des illustrations et des musiques.
+
+[Suite](images-et-sons)

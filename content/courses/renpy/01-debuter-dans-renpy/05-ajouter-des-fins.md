@@ -27,10 +27,11 @@ return
 
 Et voilà, vous savez tout ce dont vous avez besoin pour créer une petite histoire simple sur Ren'Py ! Il ne vous manque plus qu'à compiler le jeu afin de le partager à vos amis ou sur Internet.
 
-## Compiler le jeu
+### Compiler le jeu
 
 Avant toute chose, cliquez sur "Vérifier le script (Lint)" dans le launcher. Ren'Py va ensuite scanner votre jeu et afficher un compte-rendu. S'il contient des erreurs, assurez-vous de les comprendre et de les régler. En effet, cet outil peut détecter des erreurs subtiles qui ne se verraient pas chez vous, mais pourraient poser problème en jouant sur un autre système.
 
-{{< figure src="/images/renpy/lintreport.png" caption="Un rapport Lint sans erreur." >}}
+![](./lint-report.png)
+*Un rapport Lint sans erreur.*
 
 Ensuite, cliquez sur "Compiler les paquets" dans le launcher pour générer les fichiers Windows, Mac ou Linux que vous pourrez distribuer à vos futurs joueurs et joueuses. Pour obtenir plus d'informations sur la distribution de jeux indés en général, consultez notre guide sur itch.io !
