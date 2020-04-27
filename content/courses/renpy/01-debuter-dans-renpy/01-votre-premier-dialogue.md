@@ -20,8 +20,6 @@ Les jeux peuvent fonctionner sur Windows, Linux, macOS, Android, iOS ou en tant 
 Dans ce premier chapitre, nous allons créer en quelques minutes un dialogue complet entre plusieurs personnages.
 
 
-{{< video src="/videos/renpy/demo1.mp4" poster="/images/renpy/imagesenjeu.png" caption="Le résultat final de ce chapitre." attr="muted loop controls" >}}
-
 ### Télécharger le logiciel
 
 Pour commencer, rendez vous sur la [page de téléchargement](https://renpy.org/latest.html) de Ren'Py.

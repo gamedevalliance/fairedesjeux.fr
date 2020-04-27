@@ -5,7 +5,7 @@ description: "Afin de permettre à tout les contributeurs d'avancer dans la mêm
 
 Afin de permettre à tout les contributeurs d'avancer dans la même direction, de connaître les exigences en terme de qualité du site et de les faire progresser collectivement : nous avons rédigé une charte de qualité ainsi qu'un système de notation visible par les lecteurs.
 
-## Critères de qualité
+### Critères de qualité
 
 Un soin particulier doit être apporté à l’écriture. Le texte doit être agréable à lire tout en étant informatif, en utilisant un langage courant (ni familier ni jargonnant) et le vouvoiement, vous pouvez également parler à la première personne (particulièrement dans l'introduction). La concision est appréciée, sans pour autant survoler les détails.
 
@@ -23,7 +23,7 @@ La conclusion de votre formation doit inciter le lecteur à s'autonomiser : mont
 
 Enfin, sachez que l'équipe de modération et les autres contributeurs sont à votre disposition pour vous aider dans la rédaction de votre formation. N’hésitez pas à nous envoyer vos premiers jets afin que nous voyons ensemble comment les améliorer.
 
-## Système de notation
+### Système de notation
 
 Afin de permettre aux lecteurs de connaître la qualité d'une formation qu'ils sont en train de lire, mais également aux contributeurs de savoir quels formations ont besoin d'être actualisés, nous avons mis en place un système de médailles accompagné d'un commentaire justifiant cette note.
 
