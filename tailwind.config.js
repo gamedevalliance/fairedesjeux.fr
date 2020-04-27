@@ -30,6 +30,11 @@ module.exports = {
                 '1px': '1px',
             },
 
+            height: {
+                featuredClass: '19rem',
+                gameEngineClass: '18.5rem',
+            },
+
             width: {
                 900: '90%',
                 1000: '100vw',

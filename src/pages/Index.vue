@@ -1,22 +1,82 @@
 <template>
     <Layout>
-        <div class="container mx-auto pt-4 flex flex-wrap">
-            <div v-for="featuredCourse in $page.featuredCourses.edges"
-                 :key="featuredCourse.id"
-                 class="featured-class relative m-2"
-            >
-                <g-link :to="featuredCourse.node.path" class="featured-class__link">
-                    <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.id}/cover-wide.png`)" class="rounded h-full object-cover" />
-                    <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                        <h2 class="text-white font-bold leading-articleTitle mt-2">
-                            {{ featuredCourse.node.title }}
-                        </h2>
-                    </div>
-                </g-link>
+        <div class="container mx-auto">
+            <div class="pt-4 flex flex-wrap">
+                <div v-for="featuredCourse in $page.featuredCourses.edges"
+                     :key="featuredCourse.node.id"
+                     class="featured-class h-featuredClass relative mx-2"
+                     :title="featuredCourse.node.title"
+                >
+                    <g-link :to="featuredCourse.node.path" class="featured-class__link">
+                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.id}/cover-wide.png`)" class="rounded-md h-full object-cover" />
+                        <div class="absolute inset-x-0 bottom-0 z-10 p-4">
+                            <h2 class="text-white font-bold leading-articleTitle mt-2 text-2xl">
+                                {{ featuredCourse.node.title }}
+                            </h2>
+                        </div>
+                    </g-link>
+                </div>
             </div>
-            <h3 class="text-2xl text-white">
-                Faire des jeux avec :
+
+            <h3 class="text-2xl text-white m-2 mt-3 ml-5 block container">
+                Faire des jeux avec...
             </h3>
+
+            <div class="flex flex-wrap">
+                <div
+                    v-for="gameEngineCourse in $page.gameEngineCourses.edges"
+                    :key="gameEngineCourse.node.id"
+                    class="game-engine-class h-gameEngineClass relative mx-2"
+                    :title="gameEngineCourse.node.title"
+                >
+                    <g-link :to="gameEngineCourse.node.path" class="game-engine-class__link">
+                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.id}/cover-tall.png`)" class="rounded-md h-full object-cover" />
+                        <div class="absolute inset-x-0 bottom-0 z-10 p-4">
+                            <h2 class="text-white font-bold leading-articleTitle mt-2 text-2xl">
+                                {{ gameEngineCourse.node.engine_name }}
+                            </h2>
+                        </div>
+                    </g-link>
+                </div>
+                <div v-if="$page.gameEngineCourses.edges.length < 5" class="bg-area rounded w-3/12 text-font text-center flex justify-evenly flex-col mx-2">
+                    <g-image src="~/assets/book.png" width="175" class="text-center mx-auto" />
+                    <div>
+                        À la recherche de plus de contenu? N'hésitez pas à <g-link to="/contribuer">
+                            contribuer
+                        </g-link>!
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl text-white m-2 mt-3 ml-5 block container">
+                Autres compétences :
+            </h3>
+
+            <div class="flex flex-wrap">
+                <div
+                    v-for="otherCourse in $page.otherCourses.edges"
+                    :key="otherCourse.node.id"
+                    class="game-engine-class h-gameEngineClass relative mx-2"
+                    :title="otherCourse.node.title"
+                >
+                    <g-link :to="otherCourse.node.path" class="game-engine-class__link">
+                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${otherCourse.node.id}/cover-tall.png`)" class="rounded-md h-full object-cover" />
+                        <div class="absolute inset-x-0 bottom-0 z-10 p-4">
+                            <h2 class="text-white font-bold leading-articleTitle mt-2 text-2xl">
+                                {{ otherCourse.node.title }}
+                            </h2>
+                        </div>
+                    </g-link>
+                </div>
+                <div v-if="$page.otherCourses.edges.length < 5" class="bg-area rounded w-3/12 text-font text-center flex justify-evenly flex-col mx-2">
+                    <g-image src="~/assets/book.png" width="175" class="text-center mx-auto" />
+                    <div>
+                        À la recherche de plus de contenu? N'hésitez pas à <g-link to="/contribuer">
+                            contribuer
+                        </g-link>!
+                    </div>
+                </div>
+            </div>
         </div>
     </Layout>
 </template>
@@ -38,28 +98,21 @@
         We'll make a custom plugin for this or add a package later on in the developpement I guess - erika, 2020-01-19
     */
     .featured-class__link::after {
-        @apply rounded absolute top-0 bottom-0 right-0 left-0;
+        @apply rounded-md absolute top-0 bottom-0 right-0 left-0;
 
         content: "";
-        opacity: 0.45;
         background:
             linear-gradient(
                 to bottom,
                 transparent 0,
                 rgba(0, 0, 0, 0) 30%,
                 rgba(0, 0, 0, 0.1) 50%,
-                rgba(0, 0, 0, 0.6) 80%,
-                rgba(0, 0, 0, 0.7) 100%
+                rgba(0, 0, 0, 0.4) 75%,
+                rgba(0, 0, 0, 0.55) 100%
             );
     }
 
     .featured-class {
-        & h2 {
-            @apply text-2xl;
-        }
-
-        max-height: 315px;
-
         &:first-of-type {
             & h2 {
                 @apply text-3xl;
@@ -80,11 +133,30 @@
             flex-basis: calc(45% - 0.5rem * 2);
         }
     }
+
+    .game-engine-class__link::after {
+        @apply rounded-md absolute top-0 bottom-0 right-0 left-0;
+
+        content: "";
+        background:
+            linear-gradient(
+                to bottom,
+                transparent 0,
+                rgba(0, 0, 0, 0) 30%,
+                rgba(0, 0, 0, 0.3) 70%,
+                rgba(0, 0, 0, 0.4) 80%,
+                rgba(0, 0, 0, 0.6) 100%
+            );
+    }
+
+    .game-engine-class {
+        flex-basis: 16%;
+    }
 </style>
 
 <page-query>
     query {
-        featuredCourses: allCourse(filter: { featured: { gt: 0 }}, sortBy: "featured") {
+        featuredCourses: allCourse(filter: { featured: { gt: 0 }}, sortBy: "featured", order: ASC) {
             edges {
                 node {
                     id
@@ -94,5 +166,28 @@
                 }
             }
         }
+
+        # TODO: Look if it'd be worth it to merge those two requests? We could filter them in Javascript instead.
+        gameEngineCourses: allCourse(filter: { engine_name: { ne: null }}) {
+            edges {
+                node {
+                    id
+                    title
+                    engine_name
+                    path
+                }
+            }
+        }
+
+        otherCourses: allCourse(filter: { engine_name: { eq: null }}) {
+            edges {
+                node {
+                    id
+                    title
+                    path
+                }
+            }
+        }
+
     }
 </page-query>

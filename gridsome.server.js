@@ -48,6 +48,7 @@ module.exports = function (api) {
                 id: course,
                 slug: course,
                 chapters: chapterList,
+                engine_name: courseMeta.engine_name || null,
                 ...courseMeta,
             });
         });
