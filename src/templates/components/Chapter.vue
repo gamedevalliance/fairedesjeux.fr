@@ -23,7 +23,7 @@
 
 <script>
     module.exports = {
-        name: 'asidechapter',
+        name: 'Chapter',
         components: {},
         props: {
             isopen: {

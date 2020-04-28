@@ -2,9 +2,9 @@
 title: "Installer le site localement"
 ---
 
-https://desktop.github.com/
+Si vous souhaitez proposer des contributions plus importantes que des simples corrections, il est très probable que vous souhaitiez télécharger le code source du site directement sur votre ordinateur. Cela vous permettra de travailler avec vos outils favoris, de modifier très facilement les fichiers ou le code, et enfin de visualiser vos modifications avant de les publier !
 
-En premier lieu, vous devez télécharger le site :
+Voici un petit guide sous Windows, mais les étapes sont globalement les mêmes sous MacOS et Linux. En premier lieu, vous devez télécharger le site :
 
 - Si vous connaissez git, vous pouvez tout simplement cloner `github.com/gamedevalliance/fairedesjeux.fr`.
 - Si vous débutez, installez [Github Desktop](https://desktop.github.com/) qui vous facilitera la tâche. Puis sur la page du [repository](https://github.com/gamedevalliance/fairedesjeux.fr), cliquez sur le bouton vert puis "Open in Desktop". Vous pouvez garder les paramètres par défaut.

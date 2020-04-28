@@ -8,15 +8,15 @@
                          :key="chapter.id"
                          class="bg-area text-font rounded-lg py-4 px-5 mb-6"
                     >
-                        <Asidechapter :chapter="chapter"
-                                      :isopen="chapter.id == $page.section.chapter.id ? true : false"
+                        <Chapter :chapter="chapter"
+                                 :isopen="chapter.id == $page.section.chapter.id ? true : false"
                         />
                     </div>
                 </aside>
                 <!-- content -->
                 <main>
                     <div>
-                        <h2 class="mt-3 font-bold text-5xl leading-normal
+                        <h2 class="my-4 font-bold text-5xl leading-tight
                 text-astride font-title tracking-title;"
                             v-html="$page.section.title"
                         ></h2>
@@ -31,11 +31,11 @@
 </template>
 
 <script>
-    import Asidechapter from './partials/Aside-chapter.vue';
+    import Chapter from './components/Chapter.vue';
 
     export default {
         components: {
-            Asidechapter,
+            Chapter,
         },
     };
 </script>
@@ -65,11 +65,19 @@
             @apply mx-auto mb-6 mt-3 font-semibold leading-normal text-font-2 font-title text-center tracking-title;
         }
 
+        & table {
+            @apply w-auto my-3 mx-auto table-fixed max-w-full text-font;
+            border-spacing: 0;
+        }
+
+        & td, & th {
+            @apply border-b border-font-2 border-solid py-2 px-4 align-text-top;
+        }
+
         & .content {
             & img {
                 @apply max-w-full mx-auto;
             }
-
             /*
                 NOTE: This style is used for captions of images and videos. Very practical for the authors
                 as they only have to do a line return and write in italics. - nev, 2020-04-24
@@ -80,10 +88,13 @@
         }
 
         & pre, & code {
-            @apply border-0 bg-area text-sm mb-6 mt-3;
-
+            @apply border-0 bg-area text-sm mb-6 mt-3 rounded-md;
             text-shadow: none;
             box-shadow: none;
+        }
+
+        & code {
+            @apply px-2 py-1;
         }
 
         & blockquote {
