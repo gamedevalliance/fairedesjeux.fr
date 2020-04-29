@@ -24,24 +24,58 @@
                         :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.course.id}/cover-wide.png`)"
                         class="rounded-md h-featuredClass w-full object-cover"
                     />
-                    <div v-if="$page.course.medal === 'bronze'">
-                        <p class="font-bold">
-                            Cette formation ne correspond pas à nos critères de qualité :
+                    <div v-if="$page.course.medal === 'bronze'" class="bg-red-900 text-base rounded-md mt-4">
+                        <p class="px-4 py-2">
+                            <g-image
+                                src="~/assets/medals/medal-bronze.png"
+                                class="h-5 w-5 inline-block object-cover"
+                            />
+                            <span class="font-bold">
+                                Cette formation ne correspond pas à
+                                <g-link to="/contribuer/avant-propos/charte-de-qualite/">
+                                    nos critères de qualité
+                                </g-link> :
+                            </span>
+                            <br />
+                            {{ $page.course.message }}
                         </p>
                     </div>
-                    <div v-else-if="$page.course.medal === 'argent'">
-                        <p class="font-bold">
-                            Cette formation ne correspond plus à nos critères de qualité :
+                    <div v-if="$page.course.medal === 'argent'" class="bg-area text-base rounded-md mt-4">
+                        <p class="px-4 py-2">
+                            <g-image
+                                src="~/assets/medals/medal-argent.png"
+                                class="h-5 w-5 inline-block object-cover"
+                            />
+                            <span class="font-bold">
+                                Cette formation ne correspond plus à
+                                <g-link to="/contribuer/avant-propos/charte-de-qualite/">
+                                    nos critères de qualité
+                                </g-link> :
+                            </span>
+                            <br />
+                            {{ $page.course.message }}
                         </p>
                     </div>
-                    <div v-else-if="$page.course.medal === 'or'">
-                        <p class="font-bold">
-                            Vous lisez une formation de qualité.
+                    <div v-if="$page.course.medal === 'or'" class="text-base mt-4">
+                        <p class="px-4 py-2">
+                            <g-image
+                                src="~/assets/medals/medal-or.png"
+                                class="h-5 w-5 inline-block object-cover"
+                            />
+                            <span class="font-bold">
+                                Vous lisez une formation de qualité.
+                            </span>
                         </p>
                     </div>
-                    <div v-else-if="$page.course.medal === 'platine'">
-                        <p class="font-bold">
-                            Vous lisez notre meilleure formation !
+                    <div v-if="$page.course.medal === 'platine'" class="text-base mt-4">
+                        <p class="px-4 py-2">
+                            <g-image
+                                src="~/assets/medals/medal-platine.png"
+                                class="h-5 w-5 inline-block object-cover"
+                            />
+                            <span class="font-bold">
+                                Vous lisez notre meilleure formation !
+                            </span>
                         </p>
                     </div>
                     <p v-html="$page.course.description"></p>
@@ -70,6 +104,7 @@
             id
             description
             medal
+            message
             chapters(sort: {by: "id", order:ASC}) {
                 id
                 title
