@@ -1,5 +1,5 @@
 <template>
-    <div class="nav--socials inline-block mr-2 float-right text-xl text-font-2">
+    <div class="nav--socials inline-block float-right text-xl text-font-2">
         <a href="#"><font-awesome :icon="['fab', 'twitter']" /></a>
         <a href="#"><font-awesome :icon="['fab', 'facebook-f']" /></a>
         <a href="#"><font-awesome :icon="['fab', 'github']" /></a>
@@ -11,7 +11,7 @@
         line-height: 55px;
 
         & a {
-            @apply inline-block mr-4;
+            @apply inline-block ml-4;
 
             & .fa-twitter:hover {
                 @apply text-blue-400;
