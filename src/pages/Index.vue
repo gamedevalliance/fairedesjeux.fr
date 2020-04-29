@@ -111,7 +111,7 @@
                 @apply text-3xl;
             }
 
-            flex-basis: calc(60% - 0.5rem * 2);
+            flex-basis: calc(60% - 0.5rem);
         }
 
         &:last-of-type {
@@ -119,15 +119,15 @@
         }
 
         &:nth-of-type(2) {
-            flex-basis: calc(40% - 0.5rem * 2);
+            flex-basis: calc(40% - 0.5rem);
         }
 
         &:nth-of-type(3) {
-            flex-basis: calc(55% - 0.5rem * 2);
+            flex-basis: calc(55% - 0.5rem);
         }
 
         &:nth-of-type(4) {
-            flex-basis: calc(45% - 0.5rem * 2);
+            flex-basis: calc(45% - 0.5rem);
         }
     }
 

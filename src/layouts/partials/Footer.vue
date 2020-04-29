@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="float-right text-font">
-                <h2>Game Dev Alliance</h2>Association loi 1901.
+                <h2>Game Dev Alliance</h2>Association loi 1901
             </div>
         </div>
     </footer>
