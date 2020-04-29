@@ -6,6 +6,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 const fs = require('fs');
+const unified = require('unified');
+const markdown = require('remark-parse');
+const html = require('remark-html');
 
 module.exports = function (api) {
     api.loadSource(({ addCollection, getCollection }) => {
@@ -44,12 +47,19 @@ module.exports = function (api) {
                 }).id);
             });
 
+            let description = '';
+            unified().use(markdown).use(html).process(courseMeta.description, (err, file) => {
+                description = String(file);
+            });
+
             coursesCollection.addNode({
+                ...courseMeta,
                 id: course,
                 slug: course,
                 chapters: chapterList,
+                description,
                 engine_name: courseMeta.engine_name || null,
-                ...courseMeta,
+
             });
         });
     });
