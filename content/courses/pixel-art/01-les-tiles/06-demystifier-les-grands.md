@@ -5,6 +5,8 @@ description: "Dessinez les décors de votre jeu vidéo, en commençant par un pr
 
 Si vous aimez les RPG, vous avez sûrement déjà joué aux icônes du genre. Ce qu'on va faire dans ce chapitre, c'est les décomposer pour voir ce qui les rend aussi iconiques.
 
+### Secret of Mana 3
+
 Parlons de Secret of Mana 3, qui est probablement le jeu le plus beau que j'ai jamais vu :
 
 ![Images de Secret of Mana 3](./secret-of-mana-3.png)
@@ -115,19 +117,19 @@ La zone humide n'est que la deuxième plus sombre, avec aucune autre teinte... P
 
 La zone séparant le sable clair et la zone humide n'est qu'une longue ligne de pixels d'une teinte intermédiaire. Le sable clair est juste la teinte la plus claire. Pour avoir les creux et courbes du sable, ainsi que ses dunes, la seconde teinte la plus claire est utilisée pour les plus petites zones... Pour les grandes ombres, ce sont simplement les teintes claires à foncées, la plus foncée étant là où la dune est la plus haute, et projettant donc le plus d'ombre.
 
-C'est plutôt subtil, mais la teinte la plus foncée n'est pas juste un jaune foncé. Il y a un peu de bleu dedans... Je pensais juste le souligner, heh.
+C'est plutôt subtil, mais la teinte la plus foncée n'est pas juste un jaune foncé. Il y a un peu de bleu dedans... Je pensais juste le souligner, heh. Au programme ensuite : le génial et très connu Final Fantasy III.
 
-Au programme ensuite : le génial et très connu Final Fantasy 3. Hailed a la meilleure apparence des Final Fantasy originaux, et pour une bonne raison comme vous pouvez le voir :
+### Final Fantasy III
 
-![Screens de Final Fantasy 3](./ff3-1.png)
+Hailed a la meilleure apparence des Final Fantasy originaux, et pour une bonne raison comme vous pouvez le voir :
 
-![Screens de Final Fantasy 3](./ff3-2.png)
+![Screens de Final Fantasy 3](./ff3-quatre-screens.png)
 
 FF3 est moins extravaguant que Secret of Mana 3, mais SoM3 a été fait après, donc c'était attendu.
 
 Bref, FF3 n'est pas aussi impressionnant, mais si vous pouvez faire des graphismes comme ça, prenez ma place et écrivez ce cours. Enfin, on est là pour apprendre de ces screens, donc commençons par celui en haut à gauche : 
 
-![Sol de Final Fantasy 3](./ff3-sol1.png)
+![Sol de Final Fantasy 3](./ff3-sol.png)
 
 C'est un tile de sol des sections importantes de la ville. J'ai une version tile, une version étalée et une version à 900%, heh... En ignorant les pierres marrons pour le moment, les pierres grises consitent en... Devinez combien de teintes... Quatre. Surprise, surprise.
 
@@ -137,9 +139,7 @@ Comme vous pouvez le voir, utiliser la pierre dans le tile fait apparaître la g
 
 Ecoutez moi, je suis en train de critiquer Squaresoft, heh... Bref la suite, parlons "intéressant" un instant : 
 
-![Rue de Final Fantasy 3](./ff3-sol2.png)
-
-![Rue de Final Fantasy 3](./ff3-sol3.png)
+![Rue de Final Fantasy 3](./ff3-rue.png)
 
 Regardez l'image de gauche. C'est intéressant... Mais pourquoi ? C'est grâce à l'attention donnée aux détails.
 
