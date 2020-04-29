@@ -20,7 +20,7 @@ module.exports = {
         'gridsome'
     ],
     rules: {
-        'max-len': ['error', 120, 2, {
+        'max-len': ['error', 130, 2, {
             ignoreUrls: true,
             ignoreComments: true,
             ignoreRegExpLiterals: true,

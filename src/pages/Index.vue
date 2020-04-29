@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <h3 class="text-2xl text-white m-2 mt-3 ml-5 block container">
+            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container">
                 Faire des jeux avec...
             </h3>
 
@@ -38,17 +38,10 @@
                         </div>
                     </g-link>
                 </div>
-                <div v-if="$page.gameEngineCourses.edges.length < 5" class="bg-area rounded w-3/12 text-font text-center flex justify-evenly flex-col mx-2">
-                    <g-image src="~/assets/book.png" width="175" class="text-center mx-auto" />
-                    <div>
-                        À la recherche de plus de contenu? N'hésitez pas à <g-link to="/contribuer">
-                            contribuer
-                        </g-link>!
-                    </div>
-                </div>
+                <contribute-c-t-a v-if="$page.gameEngineCourses.edges.length < 5" />
             </div>
 
-            <h3 class="text-2xl text-white m-2 mt-3 ml-5 block container">
+            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container">
                 Autres compétences :
             </h3>
 
@@ -68,21 +61,19 @@
                         </div>
                     </g-link>
                 </div>
-                <div v-if="$page.otherCourses.edges.length < 5" class="bg-area rounded w-3/12 text-font text-center flex justify-evenly flex-col mx-2">
-                    <g-image src="~/assets/book.png" width="175" class="text-center mx-auto" />
-                    <div>
-                        À la recherche de plus de contenu? N'hésitez pas à <g-link to="/contribuer">
-                            contribuer
-                        </g-link>!
-                    </div>
-                </div>
+                <contribute-c-t-a v-if="$page.otherCourses.edges.length < 5" />
             </div>
         </div>
     </Layout>
 </template>
 
 <script>
+    import ContributeCTA from './components/Index/ContributeCTA.vue';
+
     export default {
+        components: {
+            ContributeCTA,
+        },
         metaInfo: {
             /* NOTE: On the index page we don't have a subtitle for the page, it's only the site title
                If we were to change title (instead of titleTemplate) we'd have the following structure: title - title
@@ -114,11 +105,17 @@
 
     .featured-class {
         &:first-of-type {
+            @apply ml-0;
+
             & h2 {
                 @apply text-3xl;
             }
 
             flex-basis: calc(60% - 0.5rem * 2);
+        }
+
+        &:last-of-type {
+            @apply mr-0;
         }
 
         &:nth-of-type(2) {
