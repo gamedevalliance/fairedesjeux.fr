@@ -12,7 +12,7 @@ Beaucoup de jeux laissent voir cette grille qui crie en permanence aux joueurs e
 ![](./alber-odyssey.png)
 *Alber Odyssey*
 
-![](./final-fantasy-3.png)
+![](./ff3.png)
 *Final Fantasy 3*
 
 Ces jeux parviennent très bien à casser la grille. Essayez de vous la représenter mentalement, de voir où les tiles commencent et se terminent... Pas facile n'est ce pas ? Bien sûr, certains endroits sont simples, comme le toit marron de la première image, le tapis de la seconde ou les grilles de la dernière... mais tout de même !

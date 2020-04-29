@@ -11,7 +11,7 @@
         line-height: 55px;
 
         & a {
-            @apply inline-block ml-4;
+            @apply inline-block ml-4 border-none text-font;
 
             & .fa-twitter:hover {
                 @apply text-blue-400;

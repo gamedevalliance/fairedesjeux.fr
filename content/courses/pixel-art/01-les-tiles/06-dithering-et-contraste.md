@@ -5,13 +5,13 @@ description: "Dessinez les décors de votre jeu vidéo, en commençant par un pr
 
 Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.
 
-![](./final-fantasy-1.png)
+![](./ff1.png)
 
 « Ce tutoriel était censé m'apprendre à faire du bon pixel art... Alors pourquoi étudier des jeux datant de la NES ? En plus ils n'utilisent que 16 couleurs, non ? » Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consoles n'avaient pas de palettes dépassant les 256 couleurs, on ne pouvait donc pas faire les fameux dégradés que l'on a vu plus haut... Et c'est en cela que les vieux jeux sont intéressants à étudier : ils regorgent d'astuces que d'ingénieux et d'ingénieuses graphistes ont inventées pour rendre leurs tiles lisibles malgré cette contrainte.
 
 Regardons d'un peu plus près ce Final Fantasy 1.
 
-![](./final-fantasy-1-tiles.png)
+![](./ff1-tiles.png)
 
 Le premier tile est celui du sol. Comme vous pouvez le voir, il ne parvient pas à effacer la grille, mais il faut dire que ce n'était pas une priorité à l'époque... Les développeurs et développeuses ne cherchaient pas encore à rendre leurs jeux beaux mais compréhensibles. Or en voyant ce tile sur la map, vous savez qu'il s'agit d'un sol et qu'il est fait de pierres ; pourtant il n'utilise que deux couleurs !
 

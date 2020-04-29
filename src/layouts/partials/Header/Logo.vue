@@ -1,6 +1,6 @@
 <template>
     <div class="inline-block">
-        <a class="inline-block" href="/">
+        <a class="inline-block border-none" href="/">
             <g-image src="~/assets/logo.png"
                      width="60px"
                      class="float-left"
