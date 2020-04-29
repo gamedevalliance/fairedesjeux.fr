@@ -67,7 +67,10 @@
                 </div>
             </div>
             <div class="float-right text-font">
-                <h2>Game Dev Alliance</h2>Association loi 1901.
+                <h2 class="text-font text-2xl my-0 leading-none">
+                    Game Dev Alliance
+                </h2>
+                Association loi 1901.
             </div>
         </div>
     </footer>
@@ -75,7 +78,7 @@
 
 <style lang="postcss" scoped>
     a {
-        @apply text-font-3;
+        @apply text-font-3 border-none;
 
         &:hover {
             @apply text-font-2 underline;
