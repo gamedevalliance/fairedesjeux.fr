@@ -30,8 +30,11 @@ import Layout from './layouts/Default.vue';
 config.autoAddCss = false;
 library.add(faFacebookF, faGithub, faTwitter, faInstagram, faLinkedinIn, faGlobeEurope, faExternalLinkAlt);
 
-export default function (Vue) {
+export default function (Vue, { head }) {
     // Set default layout as a global component
     Vue.component('Layout', Layout);
     Vue.component('font-awesome', FontAwesomeIcon);
+
+    // eslint-disable-next-line no-param-reassign
+    head.bodyAttrs = { class: 'bg-area' };
 }

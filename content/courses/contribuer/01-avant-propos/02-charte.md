@@ -27,7 +27,7 @@ Enfin, sachez que l'équipe de modération et les autres contributeurs sont à v
 
 Afin de permettre aux lecteurs de connaître la qualité d'une formation qu'ils sont en train de lire, mais également aux contributeurs de savoir quels formations ont besoin d'être actualisés, nous avons mis en place un système de médailles accompagné d'un commentaire justifiant cette note.
 
-![](./médailles.png)
+![](./medailles.png)
 
 La médaille **bronze** signale qu'une formation est obsolète et qu'elle ne correspond plus du tout à nos critères de qualité. Ces formations nécessite sans doute d'être complètement ré-écrite.
 
