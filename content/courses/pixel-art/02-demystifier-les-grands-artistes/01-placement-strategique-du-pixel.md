@@ -1,5 +1,5 @@
 ---
-title: "Secret of Mana 3"
+title: "Le placement stratégique du pixel"
 description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
 ---
 
