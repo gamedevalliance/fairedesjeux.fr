@@ -35,7 +35,7 @@
                                 </g-link> :
                             </span>
                             <br />
-                            {{ $page.course.message }}
+                            {{ $page.course.medal_message }}
                         </p>
                     </div>
                     <div v-if="$page.course.medal === 'SILVER'" class="bg-area text-base rounded-md mt-4">
@@ -51,7 +51,7 @@
                                 </g-link> :
                             </span>
                             <br />
-                            {{ $page.course.message }}
+                            {{ $page.course.medal_message }}
                         </p>
                     </div>
                     <div v-if="$page.course.medal === 'GOLD'" class="text-base mt-4">
