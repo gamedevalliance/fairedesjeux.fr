@@ -4,7 +4,11 @@ engine_name: "RPG Maker"
 date: "2020-04-18"
 author: "Aurélien"
 medal: BRONZE
-medal_message: "Archive de notre ancien wiki, étant un contenu unique en français et une archive historique des origines de Game Dev Alliance, nous avons décider de la conserver en l'état."
+medal_message: "Ce cours est une archive de notre ancien wiki. Étant un contenu unique en français et une archive des origines de Game Dev Alliance, nous avons décidé de le conserver dans un état imparfait. Une réécriture de certaines sections serait préférable."
 ---
 
 Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces.
+
+RPG Maker est un logiciel permettant de créer des JRPG en 2D. Il inclut des musiques et des graphismes colorés ainsi qu'un système de combat au tour par tour pour faire son RPG old school très facilement. Il existe plusieurs versions de RPG Maker, toutes différentes et possédant leurs avantages et inconvénients. Aujourd'hui, les versions les plus utilisées sont RPG Maker VX Ace et MV.
+
+Parfois, le système de combat du logiciel est délaissé pour réaliser des jeux narratifs et centrés sur l'exploration des cartes, tels que les célèbres *To the Moon* et *Yume Nikki*. De plus, les programmeurs peuvent passer outre les limites du logiciel en utilisant un langage de script.
