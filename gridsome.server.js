@@ -1,85 +1,47 @@
-// Server API makes it possible to hook into various parts of Gridsome
-// on server-side and add custom data to the GraphQL data layer.
-// Learn more: https://gridsome.org/docs/server-api/
-
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+/*
+    NOTE: We have to disable those two rules because Gridsome force us to modify nodes in a way ESlint is not happy
+    about, this won't be needed if we'd be able to remove onCreateNode completely - erika, 2020-04-19
+*/
+
+/* eslint-disable no-param-reassign */
+/* eslint-disable consistent-return */
+
 const fs = require('fs');
-const unified = require('unified');
-const markdown = require('remark-parse');
-const html = require('remark-html');
 
+// eslint-disable-next-line func-names
 module.exports = function (api) {
-    api.loadSource(({ addCollection, getCollection }) => {
-        // TODO: Define these collections in a .graphql file like we do on GDA, it'd allow us to have stricter schema - erika, 2020-04-18
-        const coursesCollection = addCollection('Course');
-        const chaptersCollection = addCollection('Chapter');
-        const postsCollection = getCollection('Section');
+    api.loadSource(({ addSchemaTypes, addCollection }) => {
+        const typeSchema = fs.readFileSync('./types.graphql', 'utf-8');
+        addSchemaTypes(typeSchema);
 
-        coursesCollection.addReference('chapters', 'Chapter');
-        chaptersCollection.addReference('course', 'Course');
-        chaptersCollection.addReference('sections', 'Section');
-        postsCollection.addReference('chapter', 'Chapter');
-
-        const courses = fs.readdirSync('content/courses', { withFileTypes: true })
-            .filter((dirent) => dirent.isDirectory())
-            .filter((dirent) => fs.existsSync(`content/courses/${dirent.name}/course.json`))
-            .map((dirent) => dirent.name);
-
-        courses.forEach((course) => {
-            const courseMeta = JSON.parse(fs.readFileSync(`content/courses/${course}/course.json`));
-
-            const chapters = fs.readdirSync(`content/courses/${course}/`, { withFileTypes: true })
-                .filter((dirent) => dirent.isDirectory())
-                .filter((dirent) => fs.existsSync(`content/courses/${course}/${dirent.name}/chapter.json`))
-                .map((dirent) => dirent.name);
-
-            const chapterList = [];
-            chapters.forEach((chapter) => {
-                const chapterMeta = JSON.parse(fs.readFileSync(`content/courses/${course}/${chapter}/chapter.json`));
-
-                chapterList.push(chaptersCollection.addNode({
-                    id: `${course}/${chapter.substring(0, 2)}`,
-                    slug: `${chapter.substring(3)}`,
-                    course,
-                    ...chapterMeta,
-                }).id);
-            });
-
-            let description = '';
-            unified().use(markdown).use(html).process(courseMeta.description, (err, file) => {
-                description = String(file);
-            });
-
-            coursesCollection.addNode({
-                ...courseMeta,
-                id: course,
-                slug: course,
-                chapters: chapterList,
-                description,
-                engine_name: courseMeta.engine_name || null,
-
-            });
-        });
+        /*
+            NOTE: I'm not sure quite why this is needed. If we don't do that, Gridsome doesn't add all the sorting &
+            filtering arguments. However, if we do this, it does.. How weird - erika, 2020-04-30
+        */
+        const chapterCollection = addCollection('Chapter');
+        chapterCollection.addReference('sections', '[Section]');
     });
 
     /*
-        NOTE: We have to disable those two rules because Gridsome force us to modify nodes in a way ESlint is not happy
-        about, this won't be needed once the next NOTE is solved because the whole onCreateNode thing would go away - erika, 2020-04-19
-    */
-    /* eslint-disable no-param-reassign */
-    /* eslint-disable consistent-return */
+        TODO: Refactor and document what we are doing here better. What's the purpose of tempMap and tempMap2?
 
+        The first one is the list of Section, it's a key-value where the key is the id of the chapter and the value is
+        the chapter it's in
+
+        The second one is the list of Chapter, same thing as the first one except the key is the name of the chapter and
+        the value is the course that it's in.
+    */
     const tempMap = {};
+    const tempMap2 = {};
     api.onCreateNode((options) => {
         if (options.internal.typeName === 'Section') {
             /*
                 NOTE: So far there's no problem with doing this, however in the future it'd be more optimal if we could
                 add the chapter to the node in loadSource or through a plugin instead of adding it here. It'd allow us
-                to directly refer to the chapter in the templates definitions. Also, if we could access the chapter before
-                (or inversely, get the posts related to a chapter) we could reverse the architecture and uses BelongsTo
-                instead of finding the course from the chapter from the section. Confusing. - erika, 2020-04-20
+                to directly refer to the chapter in the templates definitions which would make it cleaner. - erika, 2020-04-20
             */
             options.chapter = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3);
             tempMap[options.id] = options.chapter;
@@ -90,14 +52,36 @@ module.exports = function (api) {
         }
 
         if (options.internal.typeName === 'Chapter') {
+            options.name = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3);
+            options.course = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/'));
+
             const tempList = [];
             Object.entries(tempMap).forEach(([key, value]) => {
-                if (value === options.id) {
+                if (value === options.name) {
                     tempList.push(key);
                 }
             });
             options.sections = tempList;
+            tempMap2[options.name] = options.course;
 
+
+            return {
+                ...options,
+            };
+        }
+
+        if (options.internal.typeName === 'Course') {
+            options.name = options.fileInfo.directory;
+            options.engine_name = options.engine_name || null;
+
+            const tempList = [];
+            Object.entries(tempMap2).forEach(([key, value]) => {
+                if (value === options.name) {
+                    tempList.push(key);
+                }
+            });
+
+            options.chapters = tempList;
 
             return {
                 ...options,

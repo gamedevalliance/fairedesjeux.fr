@@ -8,7 +8,7 @@
                      :title="featuredCourse.node.title"
                 >
                     <g-link :to="featuredCourse.node.path" class="featured-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.id}/cover-wide.png`)" class="rounded-md h-full object-cover" />
+                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.name}/cover-wide.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ featuredCourse.node.title }}
@@ -30,7 +30,7 @@
                     :title="gameEngineCourse.node.title"
                 >
                     <g-link :to="gameEngineCourse.node.path" class="game-engine-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.id}/cover-tall.png`)" class="rounded-md h-full object-cover" />
+                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ gameEngineCourse.node.engine_name }}
@@ -53,10 +53,10 @@
                     :title="otherCourse.node.title"
                 >
                     <g-link :to="otherCourse.node.path" class="game-engine-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${otherCourse.node.id}/cover-tall.png`)" class="rounded-md h-full object-cover" />
+                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${otherCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
-                                {{ otherCourse.node.skill }}
+                                {{ otherCourse.node.short_title || otherCourse.node.title }}
                             </h2>
                         </div>
                     </g-link>
@@ -157,6 +157,7 @@
             edges {
                 node {
                     id
+                    name
                     featured
                     title
                     path
@@ -169,6 +170,7 @@
             edges {
                 node {
                     id
+                    name
                     title
                     engine_name
                     path
@@ -180,7 +182,9 @@
             edges {
                 node {
                     id
+                    name
                     title
+                    short_title
                     path
                     skill
                 }

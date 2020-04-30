@@ -19,10 +19,10 @@
 
                     <!-- medal start -->
                     <g-image
-                        :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.course.id}/cover-wide.png`)"
+                        :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.course.name}/cover-wide.png`)"
                         class="rounded-md h-featuredClass w-full object-cover"
                     />
-                    <div v-if="$page.course.medal === 'bronze'" class="bg-red-900 rounded-md mt-4">
+                    <div v-if="$page.course.medal === 'BRONZE'" class="bg-red-900 rounded-md mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-bronze.png"
@@ -38,7 +38,7 @@
                             {{ $page.course.message }}
                         </p>
                     </div>
-                    <div v-if="$page.course.medal === 'argent'" class="bg-area text-base rounded-md mt-4">
+                    <div v-if="$page.course.medal === 'SILVER'" class="bg-area text-base rounded-md mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-argent.png"
@@ -54,7 +54,7 @@
                             {{ $page.course.message }}
                         </p>
                     </div>
-                    <div v-if="$page.course.medal === 'or'" class="text-base mt-4">
+                    <div v-if="$page.course.medal === 'GOLD'" class="text-base mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-or.png"
@@ -65,7 +65,7 @@
                             </span>
                         </p>
                     </div>
-                    <div v-if="$page.course.medal === 'platine'" class="text-base mt-4">
+                    <div v-if="$page.course.medal === 'PLATINUM'" class="text-base mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-platine.png"
@@ -78,7 +78,7 @@
                     </div>
                     <!-- medal end -->
 
-                    <p v-html="$page.course.description"></p>
+                    <p v-html="$page.course.content"></p>
 
                     <g-link :to="$page.course.chapters[0].sections[0].path"
                             class="w-full text-center text-font border-none font-bold hover:text-font"
@@ -108,12 +108,13 @@
 <page-query>
     query ($path: String!) {
         course(path: $path) {
-            title
             id
-            description
+            title
+            name
+            content
             medal
-            message
-            chapters(sort: {by: "id", order:ASC}) {
+            medal_message
+            chapters(sort: {by: "name", order:ASC}) {
                 id
                 title
                 sections(sort: {by: "fileInfo.name", order:ASC}) {
@@ -136,11 +137,12 @@
             as they only have to do a line return and write in italics. - nev, 2020-04-24
         */
         & img + noscript + em {
-                @apply text-center text-sm text-font-2 mt-6 mb-0 block;
-            }
+            @apply text-center text-sm text-font-2 mt-6 mb-0 block;
+        }
 
         & pre, & code {
             @apply border-0 bg-area text-sm mb-6 mt-3 rounded-md font-display;
+
             text-shadow: none;
             box-shadow: none;
         }

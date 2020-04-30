@@ -1,0 +1,32 @@
+enum Medal {
+    BRONZE,
+    SILVER,
+    GOLD,
+    PLATINUM
+}
+
+type Course implements Node @infer {
+    title: String!
+    short_title: String
+    name: String
+    featured: Int
+    header: Int
+    engine_name: String
+    skill: String
+    chapters: [Chapter] @reference(by: "name")
+    medal: Medal
+    medal_message: String
+}
+
+type Chapter implements Node @infer {
+    title: String!
+    name: String
+    slug: String
+    sections: [Section]
+    course: Course @reference(by: "name")
+}
+
+type Section implements Node @infer {
+    name: String
+    chapter: Chapter @reference(by: "name")
+}

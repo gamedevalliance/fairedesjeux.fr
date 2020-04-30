@@ -1,5 +1,5 @@
 ---
-title: Pourquoi-fdj
+title: Pourquoi Fairedesjeux.fr?
 description: "Manifeste du site FaireDesJeux.FR, par Game Dev Alliance."
 ---
 

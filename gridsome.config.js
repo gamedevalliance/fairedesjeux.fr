@@ -15,7 +15,23 @@ module.exports = {
             options: {
                 typeName: 'Section',
                 baseDir: './content/courses/',
-                path: '**/*.md',
+                path: ['**/*.md', '!**/course.md'],
+            },
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Chapter',
+                baseDir: './content/courses',
+                path: '**/chapter.json',
+            },
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Course',
+                baseDir: './content/courses/',
+                path: '**/course.md',
             },
         },
     ],
@@ -23,16 +39,18 @@ module.exports = {
         Section: [{
             path: (node) => {
                 /*
-                    NOTE : Black magic, since we can't get the chapter name from the node itself since it's added to it
-                    later (in onCreateNode) we can't get it here so we have to get it ourselves - erika, 2020-04-20
+                    NOTE : Since we can't get the chapter name from the node itself due to it being added later
+                    (in onCreateNode) we can't get it here (why) so we have to get it ourselves - erika, 2020-04-20
                 */
-                const idToRemove = node.fileInfo.directory.substring(node.fileInfo.directory.indexOf('/', 2) + 1, node.fileInfo.directory.indexOf('/', 2) + 4);
-                return `/${node.fileInfo.directory.replace(idToRemove, '')}/${slugify(node.title)}`;
+                const slashPosition = node.fileInfo.directory.indexOf('/');
+                const idToRemove = node.fileInfo.directory.substr(slashPosition + 1, 3);
+
+                return `/${node.fileInfo.directory.replace(idToRemove, '')}/${node.slug !== undefined ? slugify(node.slug) : slugify(node.fileInfo.name.substr(3))}`;
             },
             component: './src/templates/Sections.vue',
         }],
         Course: [{
-            path: '/:slug',
+            path: '/:fileInfo__directory',
             component: './src/templates/Courses.vue',
         }],
     },

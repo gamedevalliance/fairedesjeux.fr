@@ -57,7 +57,7 @@
                             class="my-2"
                         >
                             <g-link :to="course.node.path">
-                                {{ course.node.title }}
+                                {{ course.node.short_title || course.node.title }}
                             </g-link>
                         </li>
                         <li class="text-font-3">
@@ -110,6 +110,7 @@
                 node {
                     id
                     title
+                    short_title
                     path
                 }
             }

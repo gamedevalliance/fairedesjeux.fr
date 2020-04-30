@@ -8,7 +8,7 @@
                         <g-link :to="$page.section.chapter.course.path"
                                 class="text-font-2 border-transparent hover:border-font hover:text-font"
                         >
-                            « Retour vers {{ $page.section.chapter.course.engine_name || $page.section.chapter.course.skill }}
+                            « Retour vers {{ $page.section.chapter.course.engine_name || $page.section.chapter.course.short_name }}
                         </g-link>
                     </div>
                     <div v-for="chapter in $page.section.chapter.course.chapters"
@@ -51,12 +51,13 @@
             as they only have to do a line return and write in italics. - nev, 2020-04-24
         */
         & img + noscript + em {
-                @apply text-center text-sm text-font-2 mt-6 mb-0 block;
-            }
+            @apply text-center text-sm text-font-2 mt-6 mb-0 block;
+        }
 
 
         & pre, & code {
             @apply border-0 bg-area text-sm mb-6 mt-3 rounded-md font-display;
+
             text-shadow: none;
             box-shadow: none;
         }
@@ -88,7 +89,8 @@
                     path
                     engine_name
                     skill
-                    chapters(sort: {by: "id", order:ASC}) {
+                    short_title
+                    chapters(sort: {by: "name", order:ASC}) {
                         title
                         id
                         sections(sort: {by: "fileInfo.name", order:ASC}) {
