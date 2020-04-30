@@ -20,8 +20,8 @@
                         :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.course.id}/cover-wide.png`)"
                         class="rounded-md h-featuredClass w-full object-cover"
                     />
-                    <div v-if="$page.course.medal === 'bronze'" class="bg-red-900 text-base rounded-md mt-4">
-                        <p class="px-4 py-2">
+                    <div v-if="$page.course.medal === 'bronze'" class="bg-red-900 rounded-md mt-4">
+                        <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-bronze.png"
                                 class="h-5 w-5 inline-block object-cover"
@@ -37,7 +37,7 @@
                         </p>
                     </div>
                     <div v-if="$page.course.medal === 'argent'" class="bg-area text-base rounded-md mt-4">
-                        <p class="px-4 py-2">
+                        <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-argent.png"
                                 class="h-5 w-5 inline-block object-cover"
@@ -53,7 +53,7 @@
                         </p>
                     </div>
                     <div v-if="$page.course.medal === 'or'" class="text-base mt-4">
-                        <p class="px-4 py-2">
+                        <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-or.png"
                                 class="h-5 w-5 inline-block object-cover"
@@ -64,7 +64,7 @@
                         </p>
                     </div>
                     <div v-if="$page.course.medal === 'platine'" class="text-base mt-4">
-                        <p class="px-4 py-2">
+                        <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-platine.png"
                                 class="h-5 w-5 inline-block object-cover"

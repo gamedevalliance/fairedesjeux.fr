@@ -4,6 +4,13 @@
             <div class="grid grid-cols-cont gap-col">
                 <!-- left nav -->
                 <aside class="mt-12">
+                    <div class="area text-font mb-6">
+                        <g-link :to="$page.section.chapter.course.path"
+                                class="text-font-2 border-transparent hover:border-font hover:text-font"
+                        >
+                            « Retour vers {{ $page.section.chapter.course.engine_name || $page.section.chapter.course.skill }}
+                        </g-link>
+                    </div>
                     <div v-for="chapter in $page.section.chapter.course.chapters"
                          :key="chapter.id"
                          class="area text-font mb-6"
@@ -77,6 +84,10 @@
             chapter {
                 id
                 course {
+                    title
+                    path
+                    engine_name
+                    skill
                     chapters(sort: {by: "id", order:ASC}) {
                         title
                         id
