@@ -10,7 +10,7 @@
                     <g-link :to="featuredCourse.node.path" class="featured-class__link">
                         <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.id}/cover-wide.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                            <h2 class="text-white font-bold leading-articleTitle mt-2 text-2xl">
+                            <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ featuredCourse.node.title }}
                             </h2>
                         </div>
@@ -32,7 +32,7 @@
                     <g-link :to="gameEngineCourse.node.path" class="game-engine-class__link">
                         <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.id}/cover-tall.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                            <h2 class="text-white font-bold leading-articleTitle mt-2 text-2xl">
+                            <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ gameEngineCourse.node.engine_name }}
                             </h2>
                         </div>
@@ -55,8 +55,8 @@
                     <g-link :to="otherCourse.node.path" class="game-engine-class__link">
                         <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${otherCourse.node.id}/cover-tall.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                            <h2 class="text-white font-bold leading-articleTitle mt-2 text-2xl">
-                                {{ otherCourse.node.title }}
+                            <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
+                                {{ otherCourse.node.skill }}
                             </h2>
                         </div>
                     </g-link>
@@ -182,6 +182,7 @@
                     id
                     title
                     path
+                    skill
                 }
             }
         }
