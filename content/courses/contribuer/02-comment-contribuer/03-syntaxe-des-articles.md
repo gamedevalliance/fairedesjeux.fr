@@ -2,21 +2,21 @@
 title: "Syntaxe des articles"
 ---
 
-Les articles de FaireDesJeux.FR sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voilà un très rapide tour d’horizon des fonctionnalités disponibles !
+Les articles de FaireDesJeux.fr sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voici un très rapide tour d'horizon des fonctionnalités disponibles !
 
 ### Mise en forme
 
 ### Titres
 
-Pour créer un titre, ajoutez un ou plusieurs `#` avant le texte.
+Pour créer un titre, ajoutez des `#` avant le texte.
 
 ```md
-# Titre d'article
-## Titre de section
-### Titre de sous-section
+## Titre d'article
+### Titre de section
+#### Titre de sous-section
 ```
 
-Le premier niveau de titre s'affiche comme le titre d'une page en orange. Pour éditer le contenu d'un article, on utilise donc des titres de deuxième ou troisième niveau.
+Le premier niveau de titre s'affiche comme le titre d'une page en violet. Pour éditer le contenu d'un article, on utilise donc des titres de deuxième ou troisième niveau.
 
 ### Emphases
 
@@ -96,37 +96,20 @@ Créez un lien en entourant le texte cliquable de crochets `[]`, puis en entoura
 Voici le [serveur Discord](https://discord.gg/RrBppaj) de GDA.
 ```
 
-Le shortcode `ref` génère un lien vers une page du wiki. Ecrivez directement le nom du fichier Markdown `.md`. Pour pointer vers un titre précis d'une page, ajoutez son ancre `#` comme elle apparait dans l'URL.
-
-```
-{{</* ref "scripts.md" */>}}              => https://wiki.gamedevalliance.fr/scripts
-{{</* ref "scripts/fullscreen++.md" */>}} => https://wiki.gamedevalliance.fr/scripts/fullscreen++
-{{</* ref "jeux.md#laxius-power" */>}}    => https://wiki.gamedevalliance.fr/jeux#laxius-power
-```
-
-Combinez ce shortcode avec un lien Markdown pour obtenir un résultat agréable :
-
-```md
-Choisissez le [déclencheur]({{</* ref "evenements.md#declenchement" */>}}) de votre évènement.
-```
-
 ### Images et figures
 
-En Markdown, on crée une image en commençant par un point d'exclamation `!`, en entourant le texte alternatif de crochets `[]` et en entourant le lien vers l'image de parenthèses `()`. Le texte alternatif est utilisé lorsque l'image ne peut pas être affichée.
-
-Les images sont à ajouter dans `/static/images`, où chaque page possède son propre dossier. Référencez ensuite votre image ainsi :
+En Markdown, on crée une image en commençant par un point d'exclamation `!`, en entourant le texte alternatif de crochets `[]` et en entourant le lien vers l'image de parenthèses `()`. Le texte alternatif est utilisé lorsque l'image ne peut pas être affichée, mais permet aussi de décrire le contenu pour les malvoyants et les robots.
 
 ```md
-![Texte alternatif](/images/article/exemple.png)
+![Description alternative](./exemple.png)
 ```
 
-Cependant, cette syntaxe est parfois insuffisante. En HTML, l'élément `<figure>` permet d'ajouter une légende sous l'image. Le shortcode suivant permet de générer facilement une figure :
+Ajoutez une légende sous l'image en écrivant un texte en italique en dessous :
 
-```go
-{{</* figure class="align-right" src="/images/article/exemple.png" alt="Texte alternatif" caption="Légende" */>}}
+```md
+![Description alternative](./exemple.png)
+*En voilà une belle image !*
 ```
-
-Alignez l'image à gauche ou à droite avec `class="align-left"` ou `class="align-right"`. Retirez ce paramètre pour garder l'image au centre. Affichez une légende sous l'image avec `caption="Légende"`. Ajoutez un texte alternatif décrivant le contenu de l'image pour les malvoyants et les robots avec `alt="Texte"`.
 
 ### Vidéos et intégrations
 

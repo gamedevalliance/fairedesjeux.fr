@@ -2,7 +2,7 @@
 title: "Installer le site localement"
 ---
 
-Si vous souhaitez proposer des contributions plus importantes que des simples corrections, il est très probable que vous souhaitiez télécharger le code source du site directement sur votre ordinateur. Cela vous permettra de travailler avec vos outils favoris, de modifier très facilement les fichiers ou le code, et enfin de visualiser vos modifications avant de les publier !
+Si vous souhaitez proposer des contributions plus importantes que de simples corrections, il est très probable que vous souhaitiez télécharger le code source du site. Cela vous permettra de lancer le site sur votre ordinateur, afin de travailler avec vos outils favoris, de modifier très facilement les fichiers ou le code, et de visualiser vos modifications en direct avant de les publier !
 
 Voici un petit guide sous Windows, mais les étapes sont globalement les mêmes sous MacOS et Linux. En premier lieu, vous devez télécharger le site :
 
