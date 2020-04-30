@@ -45,6 +45,10 @@ module.exports = {
                 1000: '100vw',
             },
 
+            minWidth: {
+                6: '6rem',
+            },
+
             margin: {
                 content: '18rem',
             },

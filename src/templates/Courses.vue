@@ -16,6 +16,8 @@
                     <div>
                         <h2 v-html="$page.course.title"></h2>
                     </div>
+
+                    <!-- medal start -->
                     <g-image
                         :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.course.id}/cover-wide.png`)"
                         class="rounded-md h-featuredClass w-full object-cover"
@@ -74,7 +76,17 @@
                             </span>
                         </p>
                     </div>
+                    <!-- medal end -->
+
                     <p v-html="$page.course.description"></p>
+
+                    <g-link :to="$page.course.chapters[0].sections[0].path"
+                            class="w-full text-center text-font border-none font-bold hover:text-font"
+                    >
+                        <div class="bg-remi hover:bg-marvin rounded-md w-64 block mx-auto text-center px-4 py-3 duration-200">
+                            Commencer la formation
+                        </div>
+                    </g-link>
                 </main>
                 <!-- right nav -->
                 <!-- TO DO !!! -->
