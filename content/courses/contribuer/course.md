@@ -1,5 +1,6 @@
 ---
-title: "Comment contribuer"
+title: "Contribuer sur FaireDesJeux.FR"
+short_title: "Contribuer"
 date: "2020-04-18"
 author: "Aurélien"
 medal: GOLD

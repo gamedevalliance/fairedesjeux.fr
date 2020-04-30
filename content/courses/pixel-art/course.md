@@ -4,6 +4,7 @@ short_title: "Pixel Art"
 date: "2020-04-18"
 author: "Nolwenn"
 medal: GOLD
+header: 3
 ---
 
 Cet article est la traduction française de ["So you want to be a pixel artist ?"](http://www.yarrninja.com/pixeltutorial/index.html), un célèbre tutoriel anglais écrit par Tsugumo en 2001.

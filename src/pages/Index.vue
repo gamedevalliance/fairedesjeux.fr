@@ -186,7 +186,6 @@
                     title
                     short_title
                     path
-                    skill
                 }
             }
         }

@@ -5,6 +5,7 @@ date: "2020-04-18"
 author: "Aurélien"
 medal: PLATINUM
 featured: 1
+header: 1
 ---
 
 Ren'Py est un moteur entièrement gratuit et open source permettant de créer des visual novels, un genre de jeu assez populaire au Japon et proche des livres dont vous êtes le héros.

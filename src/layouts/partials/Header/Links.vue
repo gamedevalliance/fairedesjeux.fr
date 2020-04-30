@@ -5,7 +5,7 @@
                 :to="headerCourses.node.path"
                 class="font-semibold text-font border-none"
         >
-            {{ headerCourses.node.engine_name || headerCourses.node.skill }}
+            {{ headerCourses.node.short_title || headerCourses.node.engine_name }}
         </g-link>
         <g-link to="/contribuer/" class="font-semibold text-font border-none">
             Contribuer
@@ -31,14 +31,14 @@
 
 <static-query>
     query {
-        headerCourses: allCourse(filter: { header: { ne: null }}, limit: 3) {
+        headerCourses: allCourse(filter: { header: { gt: 0 }}, sortBy: "header", order: ASC) {
             edges {
                 node {
                     title
                     header
                     path
                     engine_name
-                    skill
+                    short_title
                 }
             }
         }

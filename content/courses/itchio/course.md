@@ -1,5 +1,6 @@
 ---
 title: "Publier sur itch.io"
+short_title: "Publier sur itch.io"
 date: "2020-04-18"
 author: "Aurélien"
 medal: SILVER
