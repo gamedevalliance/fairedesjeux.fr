@@ -33,7 +33,7 @@
                         <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
-                                {{ gameEngineCourse.node.engine_name }}
+                                {{ gameEngineCourse.node.short_title || gameEngineCourse.node.title }}
                             </h2>
                         </div>
                     </g-link>
@@ -47,21 +47,21 @@
 
             <div class="flex flex-wrap">
                 <div
-                    v-for="otherCourse in $page.otherCourses.edges"
-                    :key="otherCourse.node.id"
+                    v-for="skillCourse in $page.skillCourses.edges"
+                    :key="skillCourse.node.id"
                     class="game-engine-class h-gameEngineClass relative mx-2"
-                    :title="otherCourse.node.title"
+                    :title="skillCourse.node.title"
                 >
-                    <g-link :to="otherCourse.node.path" class="game-engine-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${otherCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
+                    <g-link :to="skillCourse.node.path" class="game-engine-class__link">
+                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${skillCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-bold leading-articleTitle mt-2 mb-0 text-2xl">
-                                {{ otherCourse.node.short_title || otherCourse.node.title }}
+                                {{ skillCourse.node.short_title || skillCourse.node.title }}
                             </h2>
                         </div>
                     </g-link>
                 </div>
-                <contribute-c-t-a v-if="$page.otherCourses.edges.length < 5" />
+                <contribute-c-t-a v-if="$page.skillCourses.edges.length < 5" />
             </div>
         </div>
     </Layout>
@@ -166,19 +166,7 @@
         }
 
         # TODO: Look if it'd be worth it to merge those two requests? We could filter them in Javascript instead.
-        gameEngineCourses: allCourse(filter: { engine_name: { ne: null }}) {
-            edges {
-                node {
-                    id
-                    name
-                    title
-                    engine_name
-                    path
-                }
-            }
-        }
-
-        otherCourses: allCourse(filter: { engine_name: { eq: null }}) {
+        gameEngineCourses: allCourse(filter: { type: { eq: ENGINE }}) {
             edges {
                 node {
                     id
@@ -186,7 +174,18 @@
                     title
                     short_title
                     path
-                    skill
+                }
+            }
+        }
+
+        skillCourses: allCourse(filter: { type: { eq: SKILL }}) {
+            edges {
+                node {
+                    id
+                    name
+                    title
+                    short_title
+                    path
                 }
             }
         }

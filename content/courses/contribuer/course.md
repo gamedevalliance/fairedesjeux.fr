@@ -1,4 +1,5 @@
 ---
+type: SKILL
 title: "Comment contribuer"
 date: "2020-04-18"
 author: "Aurélien"

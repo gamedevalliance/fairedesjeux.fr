@@ -94,18 +94,18 @@
 
 <static-query>
     query {
-        gameEngineCourses: allCourse(filter: { engine_name: { ne: null }}, limit: 4) {
+        gameEngineCourses: allCourse(filter: { type: { eq: ENGINE }}, limit: 4) {
             edges {
                 node {
                     id
                     title
-                    engine_name
+                    short_title
                     path
                 }
             }
         }
 
-        otherCourses: allCourse(filter: { engine_name: { eq: null }}, limit: 4) {
+        otherCourses: allCourse(filter: { type: { eq: SKILL }}, limit: 4) {
             edges {
                 node {
                     id

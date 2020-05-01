@@ -1,4 +1,5 @@
 ---
+type: SKILL
 title: "Alors comme ça, vous voulez devenir pixel artiste ?"
 short_title: "Pixel Art"
 date: "2020-04-18"

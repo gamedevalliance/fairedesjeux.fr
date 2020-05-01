@@ -1,6 +1,7 @@
 ---
+type: ENGINE
 title: "Créer des visual novels avec Ren'Py !"
-engine_name: "Ren'Py"
+short_title: "Ren'Py"
 date: "2020-04-18"
 author: "Aurélien"
 medal: PLATINUM

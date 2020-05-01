@@ -1,11 +1,12 @@
 <template>
     <nav class="inline-block absolute ml-6">
-        <g-link v-for="headerCourses in $static.headerCourses.edges"
-                :key="headerCourses.node.header"
-                :to="headerCourses.node.path"
+        <g-link v-for="headerCourse in $static.headerCourses.edges"
+                :key="headerCourse.node.header"
+                :to="headerCourse.node.path"
                 class="font-semibold text-font border-none"
+                :title="headerCourse.node.title"
         >
-            {{ headerCourses.node.engine_name || headerCourses.node.skill }}
+            {{ headerCourse.node.short_title || headerCourse.node.title }}
         </g-link>
         <g-link to="/contribuer/" class="font-semibold text-font border-none">
             Contribuer
@@ -35,10 +36,9 @@
             edges {
                 node {
                     title
+                    short_title
                     header
                     path
-                    engine_name
-                    skill
                 }
             }
         }

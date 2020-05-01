@@ -1,6 +1,7 @@
 ---
+type: ENGINE
 title: "RPG Maker"
-engine_name: "RPG Maker"
+short_title: "RPG Maker"
 date: "2020-04-18"
 author: "Aurélien"
 medal: BRONZE
