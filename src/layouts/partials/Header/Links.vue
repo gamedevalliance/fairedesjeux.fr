@@ -31,30 +31,37 @@
             }
         }
     }
-    .gda span {
-        @apply inline-block;
-    }
-    .gda:hover span { animation:bounce .45s; }
+
     @keyframes bounce {
-      0%,100%{ transform:translate(0); }
-      20%{ transform:rotateX(20deg) translateY(1px) rotate(-3deg); }
-      40%{ transform:translateY(-5px) rotate(3deg) scale(1.1);  }
+        0%, 100% { transform: translate(0); }
+        20% { transform: rotateX(20deg) translateY(1px) rotate(-3deg); }
+        40% { transform: translateY(-5px) rotate(3deg) scale(1.1); }
     }
 
-    .gda span:nth-child(2){ animation-delay:.05s; }
-    .gda span:nth-child(3){ animation-delay:.1s; }
-    .gda span:nth-child(4){ animation-delay:.15s; }
-    .gda span:nth-child(5){ animation-delay:.2s; }
-    .gda span:nth-child(6){ animation-delay:.25s; }
-    .gda span:nth-child(7){ animation-delay:.3s; }
-    .gda span:nth-child(8){ animation-delay:.35s; }
-    .gda span:nth-child(9){ animation-delay:.4s; }
-    .gda span:nth-child(10){ animation-delay:.45s; }
-    .gda span:nth-child(11){ animation-delay:.5s; }
-    .gda span:nth-child(12){ animation-delay:.55s; }
-    .gda span:nth-child(13){ animation-delay:.6s; }
-    .gda span:nth-child(14){ animation-delay:.65s; }
-    .gda span:nth-child(15){ animation-delay:.7s; }
+    .gda span {
+        @apply inline-block;
+
+        backface-visibility: hidden;
+    }
+
+    .gda:hover span {
+        animation: bounce 0.45s;
+    }
+
+    .gda span:nth-child(2) { animation-delay: 0.05s; }
+    .gda span:nth-child(3) { animation-delay: 0.1s; }
+    .gda span:nth-child(4) { animation-delay: 0.15s; }
+    .gda span:nth-child(5) { animation-delay: 0.2s; }
+    .gda span:nth-child(6) { animation-delay: 0.25s; }
+    .gda span:nth-child(7) { animation-delay: 0.3s; }
+    .gda span:nth-child(8) { animation-delay: 0.35s; }
+    .gda span:nth-child(9) { animation-delay: 0.4s; }
+    .gda span:nth-child(10) { animation-delay: 0.45s; }
+    .gda span:nth-child(11) { animation-delay: 0.5s; }
+    .gda span:nth-child(12) { animation-delay: 0.55s; }
+    .gda span:nth-child(13) { animation-delay: 0.6s; }
+    .gda span:nth-child(14) { animation-delay: 0.65s; }
+    .gda span:nth-child(15) { animation-delay: 0.7s; }
 </style>
 
 <static-query>
