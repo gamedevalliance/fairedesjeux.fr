@@ -31,7 +31,9 @@ Notez la partie du mur qui descend dans l'eau. A droite, c'est juste le même ti
 
 ![Mur de roches de Final Fantasy 3](./ff3-rochers.png)
 
-La grande question que vous vous posez, c'est probablement "Comment diable ont-ils faits ces rochers ?!"
+:::marvin
+Comment diable ont-ils faits ces rochers ?!
+:::
 
 Je n'en ai honnêtement aucune idée... Je pourrais probablement diviser tous les tiles pour trouver lesquels ils utilisent où et combien il y en a, mais je vous laisse faire cet exercice... Si je m'étais lancé dans une telle entreprise, j'écrirais ce cours depuis ma tombe et je serais encore loin d'avoir fini.
 

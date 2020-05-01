@@ -19,9 +19,13 @@ Bien sûr, tout est extrêmement bien dessiné, mais ça ne veut pas dire que pe
 
 ![Zoom sur l'herbe de Secret of Mana 3](./secret-of-mana-herbe.png)
 
-Maintenant, concentrons-nous sur l'herbe. Comptez le nombre de couleurs utilisées. Trois. Eh oui, seulement trois, comme l'herbe que l'on a faite plus tôt dans ce cours. "Mais on dirait pas qu'il y a que trois couleurs ! Quand on regarde de loin, on dirait qu'il y a plein de teintes !" C'est vrai, mais souvenez-vous que ce n'est fait qu'avec trois teintes.
+Maintenant, concentrons-nous sur l'herbe. Comptez le nombre de couleurs utilisées. Trois. Eh oui, seulement trois, comme l'herbe que l'on a faite plus tôt dans ce cours.
 
-Regardez une des larges touffes d'herbe, avec les grands brins. Vous pouvez voir que les brins sont dessinés en grande partie avec le vert le plus clair. Ils ont aussi utilisé le vert intermédiaire pour souligner cette teinte claire, mais il y en a peu.
+:::marvin
+Mais on ne dirait pas qu'il y a que trois couleurs ! Quand on regarde de loin, on dirait qu'il y a plein de teintes !
+:::
+
+C'est vrai, mais souvenez-vous que ce n'est fait qu'avec trois teintes. Regardez une des larges touffes d'herbe, avec les grands brins. Vous pouvez voir que les brins sont dessinés en grande partie avec le vert le plus clair. Ils ont aussi utilisé le vert intermédiaire pour souligner cette teinte claire, mais il y en a peu.
 
 Maintenant, attardez-vous sur une zone qui semble plus plate, en bas au centre par exemple. Cette fois, ils n'ont utilisé que le vert foncé et le vert intermédiaire. Il n'y a que quelques points ici et là de teinte claire, pour donner l'illusion de brins d'herbe qui pointent, attrapant la lumière. Le reste est composé de pixels éparpillés. La plupart n'ont même pas la forme d'un brin d'herbe ! Vous pouvez voir des amas de vert intermédiaire qui ont la forme de carrés, de gribouillis, de tetrominos... Mais quand vous êtes en train de jouer, ça ressemble à de l'herbe. 
 
@@ -37,7 +41,11 @@ C'est juste placé à quelques endroits... mais ça fait plus que vous ne pourri
 
 ![Zoom sur la terre de Secret of Mana 3](./secret-of-mana-terre2.png)
 
-"Qu'est-ce qui s'est passé ? C'est tout plat maintenant !" C'est vrai. Non seulement c'est plat, mais si vous plissez les yeux pour que les couleurs soient un peu floues, vous remarquerez que vous pouvez toujours dire où est l'herbe et où est la terre dans le screen original. Par contre, si vous regardez ma version éditée, vous voyez que la terre et l'herbe commencent à un peu trop se mélanger. 
+:::marvin
+Qu'est-ce qui s'est passé ? C'est tout plat maintenant !
+:::
+
+C'est vrai. Non seulement c'est plat, mais si vous plissez les yeux pour que les couleurs soient un peu floues, vous remarquerez que vous pouvez toujours dire où est l'herbe et où est la terre dans le screen original. Par contre, si vous regardez ma version éditée, vous voyez que la terre et l'herbe commencent à un peu trop se mélanger. 
 
 Aussi, si vous regardez au centre de la terre, ça semble plus lisse, moins rocailleux qu'avant.
 
@@ -61,7 +69,11 @@ Passons désormais à l'arbre :
 
 ![L'arbre de Secret of Mana 3](./arbre.png)
 
-Pas mal l'arbre, hein ? Regardez-le de près, en commençant par la grande zone verte. En mettant de côté les pixels les plus foncés, pratiquement noirs, mis ici et là, vous avez cinq teintes de vert. Seulement cinq. "Mais ça ressemble tellement à... un arbre... et c'est... gonflé... Comment ?!"
+Pas mal l'arbre, hein ? Regardez-le de près, en commençant par la grande zone verte. En mettant de côté les pixels les plus foncés, pratiquement noirs, mis ici et là, vous avez cinq teintes de vert. Seulement cinq.
+
+:::marvin
+Mais ça ressemble tellement à... un arbre... et c'est... gonflé... Comment ?!
+:::
 
 Si vous vous reculez un peu, vous verrez comme des gros amas de feuilles, et pourtant elles ne sont pas séparées par des lignes noires ou que sais-je... On ressent juste leur présence. 
 

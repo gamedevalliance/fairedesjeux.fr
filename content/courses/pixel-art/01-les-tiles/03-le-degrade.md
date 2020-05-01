@@ -6,10 +6,16 @@ description: "Dessinez les décors de votre jeu vidéo, en commençant par un pr
 Désolé, mais l'outil dégradé est une création de Satan. « Quoi ? Mais comment vais-je donc faire mes ombres sans lui ? L'outil dégradé est le meilleur outil de tout les temps ! » Ok, je vais préciser ma pensée. L'outil dégradé *peut* être bien utilisé... Cependant la plupart des gens ne comprennent pas à quoi il sert et l'utilisent en permanence.
 
 ![](./montagne-contour.png)
-*Ok, j'ai dessiné le contour de ma montagne...*
+
+:::marvin
+Ok, j'ai dessiné le contour de ma montagne...
+:::
 
 ![](./montagne-degrade.png)
-*Remplissage dégradé... et j'ai fini ! C'est tellement réaliste !*
+
+:::marvin
+Remplissage dégradé... et j'ai fini ! C'est tellement réaliste !
+:::
 
 Sincèrement, est ce que cela ressemble vraiment à une montagne ? Qui est faite de rochers, de pierres, de falaises... Pas vraiment.
 
@@ -33,4 +39,4 @@ Reprenons la même map avec des textures faites à la main :
 
 ![](./cabane-texture.png)
 
-Les textures de la seconde méthode sont plus intéressantes : le bois ressemble réellement à du bois, les arbres semblent avoir des feuilles et les briques grises ressemblent vraiment à de la pierre. Bon, la map n'est toujours pas très intéressante, mais on parle ici seulement de texture, pas encore de composition.
+Les textures de la seconde méthode sont plus intéressantes : le bois ressemble réellement à du bois, les arbres semblent avoir des feuilles et les briques grises ressemblent vraiment à de la pierre. Bon, la map n'est toujours pas très charmante, mais on parle ici seulement de texture, pas encore de composition.
