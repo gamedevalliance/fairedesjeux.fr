@@ -28,7 +28,7 @@
                     <div class="content" v-html="$page.section.content"></div>
                 </main>
                 <!-- right nav -->
-                <!-- TO DO !!! -->
+                <Toc />
             </div>
         </article>
     </Layout>
@@ -36,10 +36,12 @@
 
 <script>
     import Chapter from './components/Chapter.vue';
+    import Toc from './components/Toc.vue';
 
     export default {
         components: {
             Chapter,
+            Toc,
         },
     };
 </script>
@@ -81,6 +83,13 @@
         section(id: $id) {
             title
             content
+            fileInfo {
+                path
+            }
+            headings {
+                value
+                anchor
+            }
             chapter {
                 id
                 course {

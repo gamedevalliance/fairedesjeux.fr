@@ -8,7 +8,9 @@
                     </h4>
                     <ul class="mt-3">
                         <li class="my-2 text-font-3">
-                            <g-link to="/contribuer/">
+                            <g-link to="/contribuer/"
+                                    class="smola"
+                            >
                                 Contribuer
                             </g-link>
                         </li>
@@ -35,7 +37,9 @@
                             :title="course.node.title"
                             class="my-2"
                         >
-                            <g-link :to="course.node.path">
+                            <g-link :to="course.node.path"
+                                    class="smola"
+                            >
                                 {{ course.node.short_title }}
                             </g-link>
                         </li>
@@ -56,7 +60,9 @@
                             :title="course.node.title"
                             class="my-2"
                         >
-                            <g-link :to="course.node.path">
+                            <g-link :to="course.node.path"
+                                    class="smola"
+                            >
                                 {{ course.node.short_title || course.node.title }}
                             </g-link>
                         </li>
@@ -75,16 +81,6 @@
         </div>
     </footer>
 </template>
-
-<style lang="postcss" scoped>
-    a {
-        @apply text-font-3 border-none;
-
-        &:hover {
-            @apply text-font-2 underline;
-        }
-    }
-</style>
 
 <script>
     export default {

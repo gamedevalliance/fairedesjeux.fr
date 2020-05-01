@@ -9,7 +9,9 @@
                     <li v-for="section in chapter.sections"
                         :key="section.title"
                     >
-                        <g-link :to="section.path">
+                        <g-link :to="section.path"
+                                class="smola leading-snug"
+                        >
                             {{ section.title }}
                         </g-link>
                     </li>
@@ -60,17 +62,6 @@
 
             & li {
                 @apply mb-1
-            }
-
-            & a {
-                @apply mb-6 mt-3 leading-normal text-marvin no-underline text-sm text-font-3 border-solid border-0;
-
-                padding-bottom: 1px;
-                transition: border-color 0.12s ease, color 0.12s ease;
-
-                &:hover {
-                    @apply border-b text-font-2 border-font-2;
-                }
             }
         }
     }

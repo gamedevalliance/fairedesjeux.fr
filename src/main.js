@@ -36,5 +36,5 @@ export default function (Vue, { head }) {
     Vue.component('font-awesome', FontAwesomeIcon);
 
     // eslint-disable-next-line no-param-reassign
-    head.bodyAttrs = { class: 'bg-area' };
+    head.bodyAttrs = { class: 'bg-area smooth' };
 }

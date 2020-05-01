@@ -28,6 +28,7 @@ module.exports = {
 
             inset: {
                 '1px': '1px',
+                20: '20px',
             },
 
             height: {
@@ -200,6 +201,9 @@ module.exports = {
                 },
             });
             addComponents({
+                '.smooth': {
+                    scrollBehavior: 'smooth',
+                },
                 '.area': {
                     backgroundColor: config('theme.backgroundColor.area'),
                     paddingTop: '0.75rem',
@@ -208,6 +212,16 @@ module.exports = {
                     paddingRight: '1rem',
                     border: '0px',
                     borderRadius: config('theme.borderRadius.md'),
+                },
+                '.smola': {
+                    color: config('theme.textColor.font-3'),
+                    border: 'none',
+                    textDecoration: 'none',
+
+                    '&:hover': {
+                        color: config('theme.textColor.font-2'),
+                        textDecoration: 'underline',
+                    },
                 },
             });
         },
