@@ -36,7 +36,7 @@
                             class="my-2"
                         >
                             <g-link :to="course.node.path">
-                                {{ course.node.engine_name }}
+                                {{ course.node.short_title }}
                             </g-link>
                         </li>
                         <li class="text-font-3">
