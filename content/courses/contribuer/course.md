@@ -1,6 +1,7 @@
 ---
 type: SKILL
 title: "Comment contribuer"
+short_title: "Contribuer"
 date: "2020-04-18"
 author: "Aurélien"
 medal: GOLD

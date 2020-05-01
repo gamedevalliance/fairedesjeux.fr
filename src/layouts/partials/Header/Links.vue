@@ -32,7 +32,7 @@
 
 <static-query>
     query {
-        headerCourses: allCourse(filter: { header: { ne: null }}, limit: 3) {
+        headerCourses: allCourse(filter: { header: { gt: 0 }}, sortBy: "header", order: ASC) {
             edges {
                 node {
                     title

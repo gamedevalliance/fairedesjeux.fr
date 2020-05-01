@@ -1,5 +1,5 @@
 ---
-title: "Quelle version choisir ?"
+title: "Quel RPG Maker choisir ?"
 description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
 ---
 
