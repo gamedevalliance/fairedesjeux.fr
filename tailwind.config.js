@@ -37,6 +37,7 @@ module.exports = {
             },
 
             width: {
+                404: '40rem',
                 900: '90%',
                 1000: '100vw',
             },
@@ -62,6 +63,7 @@ module.exports = {
             fontSize: {
                 sm: '15px',
                 lg: '18.5px',
+                404: '7rem',
             },
         },
     },

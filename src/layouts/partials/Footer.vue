@@ -21,7 +21,11 @@
                             Information légales
                         </li>
                         <li class="my-2 text-font-3">
-                            Code source
+                            <a href="https://github.com/gamedevalliance/fairedesjeux.fr"
+                               class="smola"
+                            >
+                                Code source
+                            </a>
                         </li>
                     </ul>
                 </div>
