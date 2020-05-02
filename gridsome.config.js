@@ -63,11 +63,28 @@ module.exports = {
     },
     transformers: {
         remark: {
-            options: {
+            imageQuality: 100,
+            config: {
                 footnotes: true,
             },
             plugins: [
                 '@gridsome/remark-prismjs',
+                ['gridsome-plugin-remark-container', {
+                    customTypes: {
+                        astride: {
+                            defaultTitle: 'Astride',
+                        },
+                        marvin: {
+                            defaultTitle: 'Marvin',
+                        },
+                        remi: {
+                            defaultTitle: 'Rémi',
+                        },
+                    },
+                    useDefaultTypes: false,
+                    icons: 'none',
+                    classMaster: 'bubble',
+                }],
             ],
         },
     },

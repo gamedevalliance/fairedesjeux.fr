@@ -74,6 +74,8 @@ Essayez d'écrire les conditions correspondant aux 4 directions. Pour écrire le
 
 ![Code final de l'étape](./p-speed.png)
 
-« Pourquoi s'embêter à créer une variable `speed` alors que je peux directement écrire le chiffre que je veux dans `_update()` ? »
+:::marvin
+Pourquoi s'embêter à créer une variable `speed` alors que je peux directement écrire le chiffre que je veux dans `_update()` ?
+:::
 
 D'une part, c'est un peu plus propre : la prochaine fois que vous voudrez changer la vitesse, il suffira de modifier cette variable dans `_init()` plutôt que de la changer à 4 endroits différents. Mais cela vous permettra aussi de la manipuler en jeu ! Par exemple, pour créer un power-up qui double votre vitesse, il suffirait d'écrire `p.speed *= 2`.

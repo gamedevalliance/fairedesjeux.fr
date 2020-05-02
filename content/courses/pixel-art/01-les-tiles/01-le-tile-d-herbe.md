@@ -30,17 +30,29 @@ La quatrième technique permet également de faire facilement des hautes herbes,
 Vous pouvez utiliser la technique que vous souhaitez, et il en existe encore pleins d'autres... Mais souvenez-vous que le résultat ne doit ni paraître plat, ni être trop similaire à d'autres terrains :
 
 ![](./herbe1.png)
-*Ok, j'ai mon tile d'herbe...*
+
+:::marvin
+Ok, j'ai mon tile d'herbe...
+:::
 
 ![](./terre.png)
-*Et maintenant c'est un tile de terre !*
+
+:::marvin
+Et maintenant c'est un tile de terre !
+:::
 
 ![](./eau.png)
-*Et de l'eau ! Ha ha ha !*
+
+:::marvin
+Et de l'eau ! Ha ha ha !
+:::
 
 ![](./sable.png)
-*Et voilà le désert ! Je suis un GÉNIE !*
+
+:::marvin
+Et voilà le désert ! Je suis un GÉNIE !
+:::
 
 ![](./mauvaise-idee.png)
 
-Jamais, au grand jamais, vous ne devriez faire ça ! Hormis le fait que c'est vraiment moche, reprendre le même motif et varier les couleurs est trop répétitif. Imaginez-vous à l'époque où les consoles ne faisaient pas défiler les maps pixel par pixel mais tile par tile. Se déplacer dans un tel paysage se résumerait à voir les mêmes tiles changer de couleur de temps en temps ! Sans différences de texture, cela devient vite ennuyeux et les yeux ont du mal à se concentrer sur autre chose que ce pattern répété en boucle... Et comment se repérer quand toute la map se ressemble ?
+Non non non ! Jamais, au grand jamais, vous ne devriez faire ça ! Hormis le fait que ce n'est pas très beau, reprendre le même motif et varier les couleurs est trop répétitif. Imaginez-vous à l'époque où les consoles ne faisaient pas défiler les maps pixel par pixel mais tile par tile. Se déplacer dans un tel paysage se résumerait à voir les mêmes tiles changer de couleur de temps en temps ! Sans différences de texture, cela devient vite ennuyeux et les yeux ont du mal à se concentrer sur autre chose que ce pattern répété en boucle... Et comment se repérer quand toute la map se ressemble ?

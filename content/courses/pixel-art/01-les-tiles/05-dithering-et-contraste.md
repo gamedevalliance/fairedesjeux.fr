@@ -7,7 +7,11 @@ Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.
 
 ![](./ff1.png)
 
-« Ce tutoriel était censé m'apprendre à faire du bon pixel art... Alors pourquoi étudier des jeux datant de la NES ? En plus ils n'utilisent que 16 couleurs, non ? » Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consoles n'avaient pas de palettes dépassant les 256 couleurs, on ne pouvait donc pas faire les fameux dégradés que l'on a vu plus haut... Et c'est en cela que les vieux jeux sont intéressants à étudier : ils regorgent d'astuces que d'ingénieux et d'ingénieuses graphistes ont inventées pour rendre leurs tiles lisibles malgré cette contrainte.
+:::marvin
+Ce cours était censé m'apprendre à faire du bon pixel art... Alors pourquoi étudier des jeux datant de la NES ? En plus ils n'utilisent que 16 couleurs, non ?
+:::
+
+Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consoles n'avaient pas de palettes dépassant les 256 couleurs, on ne pouvait donc pas faire les fameux dégradés que l'on a vu plus haut... Et c'est en cela que les vieux jeux sont intéressants à étudier : ils regorgent d'astuces que d'ingénieux et d'ingénieuses graphistes ont inventées pour rendre leurs tiles lisibles malgré cette contrainte.
 
 Regardons d'un peu plus près ce Final Fantasy 1.
 
@@ -15,7 +19,11 @@ Regardons d'un peu plus près ce Final Fantasy 1.
 
 Le premier tile est celui du sol. Comme vous pouvez le voir, il ne parvient pas à effacer la grille, mais il faut dire que ce n'était pas une priorité à l'époque... Les développeurs et développeuses ne cherchaient pas encore à rendre leurs jeux beaux mais compréhensibles. Or en voyant ce tile sur la map, vous savez qu'il s'agit d'un sol et qu'il est fait de pierres ; pourtant il n'utilise que deux couleurs !
 
-« Mais si l'on n'a que deux couleurs, on peut uniquement faire les contours de rochers puis l'intérieur. Comment faire des effets d'ombrage ? » Bienvenue dans le monde merveilleux du dithering ! Le dithering est l'action de réaliser des patterns de pixels de différentes couleurs pour donner une nouvelle teinte... Utilisé principalement aux commencements du jeu vidéo, le dithering reste une technique très utile quand vous êtes limités en nombre de couleurs.
+:::marvin
+Mais si l'on n'a que deux couleurs, on peut uniquement faire les contours de rochers puis l'intérieur. Comment faire des effets d'ombrage ?
+:::
+
+Bienvenue dans le monde merveilleux du dithering ! Le dithering est l'action de réaliser des patterns de pixels de différentes couleurs pour donner une nouvelle teinte... Utilisé principalement aux commencements du jeu vidéo, le dithering reste une technique très utile quand vous êtes limités en nombre de couleurs.
 
 Avant de voir comment réaliser du dithering, regardons le reste des tiles de FF1. Le second tile représente des briques plus claires, et utilise une troisième couleur : le blanc. Il est beaucoup plus clair que le troisième, qui utilise les pixels noirs pour représenter plus d'ombre, et représente la lumière avec des pixels gris plutôt que des pixels blancs.
 
