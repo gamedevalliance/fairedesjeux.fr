@@ -4,7 +4,7 @@
             <div class="grid grid-cols-cont gap-col">
                 <!-- left nav -->
                 <aside class="mt-12">
-                    <div v-for="chapter in $page.course.chapters"
+                    <div v-for="chapter in $page.section.chapters"
                          :key="chapter.id"
                          class="area text-font mb-6"
                     >
@@ -14,15 +14,15 @@
                 <!-- content -->
                 <main>
                     <div>
-                        <h2 v-html="$page.course.title"></h2>
+                        <h2 v-html="$page.section.title"></h2>
                     </div>
 
                     <!-- medal start -->
                     <g-image
-                        :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.course.name}/cover-wide.png`)"
+                        :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.section.name}/cover-wide.png`)"
                         class="rounded-md h-featuredClass w-full object-cover"
                     />
-                    <div v-if="$page.course.medal === 'BRONZE'" class="bg-red-900 rounded-md mt-4">
+                    <div v-if="$page.section.medal === 'BRONZE'" class="bg-red-900 rounded-md mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-bronze.png"
@@ -35,10 +35,10 @@
                                 </g-link> :
                             </span>
                             <br />
-                            {{ $page.course.medal_message }}
+                            {{ $page.section.medal_message }}
                         </p>
                     </div>
-                    <div v-if="$page.course.medal === 'SILVER'" class="bg-area text-base rounded-md mt-4">
+                    <div v-if="$page.section.medal === 'SILVER'" class="bg-area text-base rounded-md mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-argent.png"
@@ -51,10 +51,10 @@
                                 </g-link> :
                             </span>
                             <br />
-                            {{ $page.course.medal_message }}
+                            {{ $page.section.medal_message }}
                         </p>
                     </div>
-                    <div v-if="$page.course.medal === 'GOLD'" class="text-base mt-4">
+                    <div v-if="$page.section.medal === 'GOLD'" class="text-base mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-or.png"
@@ -65,7 +65,7 @@
                             </span>
                         </p>
                     </div>
-                    <div v-if="$page.course.medal === 'PLATINUM'" class="text-base mt-4">
+                    <div v-if="$page.section.medal === 'PLATINUM'" class="text-base mt-4">
                         <p class="px-4 py-2 text-sm">
                             <g-image
                                 src="~/assets/medals/medal-platine.png"
@@ -78,11 +78,11 @@
                     </div>
                     <!-- medal end -->
 
-                    <p v-html="$page.course.content"></p>
+                    <p v-html="$page.section.content"></p>
 
                     <h3>Commencer la formation en mode..</h3>
                     <div class="flex justify-center">
-                        <g-link :to="$page.course.chapters[0].video ? $page.course.chapters[0].sections[1].path : $page.course.chapters[0].sections[0].path"
+                        <g-link :to="$page.section.chapters[0].sections[0].path"
                                 class="mx-2 text-center text-font border-none font-bold hover:text-font"
                         >
                             <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
@@ -90,8 +90,8 @@
                             </div>
                         </g-link>
 
-                        <g-link v-if="$page.course.chapters[0].video"
-                                :to="$page.course.chapters[0].video.path"
+                        <g-link v-if="$page.section.chapters[0].video"
+                                :to="$page.section.chapters[0].video.path"
                                 class="mx-2 text-center text-font border-none font-bold hover:text-font"
                         >
                             <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
@@ -110,7 +110,7 @@
                     </div>
                 </main>
                 <!-- right nav -->
-                <!-- TO DO !!! -->
+                <Toc />
             </div>
         </article>
     </Layout>
@@ -118,23 +118,32 @@
 
 <script>
     import Chapter from './components/Chapter.vue';
+    import Toc from './components/Toc.vue';
 
     export default {
         components: {
             Chapter,
+            Toc,
         },
     };
 </script>
 
 <page-query>
     query ($path: String!) {
-        course(path: $path) {
+        section: course(path: $path) {
             id
             title
             name
             content
             medal
             medal_message
+            fileInfo {
+                path
+            }
+            headings {
+                anchor
+                value
+            }
             chapters(sort: {by: "name", order:ASC}) {
                 id
                 title
@@ -146,9 +155,6 @@
                     id
                     title
                     path
-                    fileInfo {
-                        name
-                    }
                 }
             }
         }

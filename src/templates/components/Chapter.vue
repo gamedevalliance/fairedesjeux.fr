@@ -6,6 +6,13 @@
         <transition name="fade">
             <div v-if="isOpen" class="chapter">
                 <ul>
+                    <li v-if="chapter.video">
+                        <g-link :to="chapter.video.path"
+                                class="smola leading-snug"
+                        >
+                            {{ chapter.video.title }}
+                        </g-link>
+                    </li>
                     <li v-for="section in chapter.sections"
                         :key="section.title"
                     >
@@ -55,13 +62,16 @@
             @apply text-astride;
         }
 
-        & .chapter   {
+        & .chapter {
             & ul {
                 @apply list-none list-inside mb-0 mt-3 font-semibold text-sm leading-none text-font-2;
             }
 
             & li {
                 @apply mb-1
+
+
+            
             }
         }
     }

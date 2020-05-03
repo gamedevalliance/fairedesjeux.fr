@@ -74,20 +74,24 @@
                 @apply m-5 italic;
             }
         }
+
         & .bubble {
             & .bubble-content {
                 @apply inline-block text-left bg-area py-2 px-8 my-4 rounded-full;
+
                 max-width: 89%;
                 margin-right: -20px;
             }
 
             & h5 {
                 @apply inline-block text-right m-0 py-1 px-5 relative text-lg bg-area-2 rounded-lg;
+
                 top: 2rem;
                 right: 116px;
                 margin-top: -2rem;
             }
         }
+
         & .bubble-marvin {
             @apply text-right;
 
@@ -101,9 +105,9 @@
                 float: right;
                 width: 100px;
                 height: 100px;
-                bottom: 0px;
+                bottom: 0;
                 position: relative;
-                display: inline-block;;
+                display: inline-block;
             }
         }
     }

@@ -51,10 +51,10 @@ module.exports = function (api) {
                 tempMap[options.chapter] = { sections: [], video: '' };
             }
 
-            tempMap[options.chapter].sections.push(options.id);
-
             if (options.name === '00-video') {
                 tempMap[options.chapter].video = options.id;
+            } else {
+                tempMap[options.chapter].sections.push(options.id);
             }
 
             return {
