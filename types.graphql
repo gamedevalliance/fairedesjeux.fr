@@ -27,9 +27,13 @@ type Chapter implements Node @infer {
     name: String
     sections: [Section]
     course: Course! @reference(by: "name")
+    video: Section
 }
 
 type Section implements Node @infer {
     slug: String
+    name: String
     chapter: Chapter @reference(by: "name")
+    next: Section @reference(by: "name")
+    previous: Section @reference(by: "name")
 }

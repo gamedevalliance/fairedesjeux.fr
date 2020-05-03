@@ -80,13 +80,34 @@
 
                     <p v-html="$page.course.content"></p>
 
-                    <g-link :to="$page.course.chapters[0].sections[0].path"
-                            class="w-full text-center text-font border-none font-bold hover:text-font"
-                    >
-                        <div class="bg-remi hover:bg-marvin rounded-md w-64 block mx-auto text-center px-4 py-3 duration-200">
-                            Commencer la formation
+                    <h3>Commencer la formation en mode..</h3>
+                    <div class="flex justify-center">
+                        <g-link :to="$page.course.chapters[0].video ? $page.course.chapters[0].sections[1].path : $page.course.chapters[0].sections[0].path"
+                                class="mx-2 text-center text-font border-none font-bold hover:text-font"
+                        >
+                            <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
+                                Texte
+                            </div>
+                        </g-link>
+
+                        <g-link v-if="$page.course.chapters[0].video"
+                                :to="$page.course.chapters[0].video.path"
+                                class="mx-2 text-center text-font border-none font-bold hover:text-font"
+                        >
+                            <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
+                                Vidéo
+                            </div>
+                        </g-link>
+                        <div
+                            v-else
+                            class="mx-2 text-center text-font border-none font-bold opacity-75"
+                            title="Vidéo indisponible pour le moment!"
+                        >
+                            <div class="bg-gray-800 rounded-md w-64 inline-block text-center px-4 py-3 text-gray-600">
+                                Vidéo
+                            </div>
                         </div>
-                    </g-link>
+                    </div>
                 </main>
                 <!-- right nav -->
                 <!-- TO DO !!! -->
@@ -117,6 +138,10 @@
             chapters(sort: {by: "name", order:ASC}) {
                 id
                 title
+                video {
+                    path
+                    title
+                }
                 sections(sort: {by: "fileInfo.name", order:ASC}) {
                     id
                     title

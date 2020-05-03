@@ -38,13 +38,24 @@ module.exports = function (api) {
     const tempMap2 = {};
     api.onCreateNode((options) => {
         if (options.internal.typeName === 'Section') {
+            options.name = options.fileInfo.name;
+
             /*
                 NOTE: So far there's no problem with doing this, however in the future it'd be more optimal if we could
                 add the chapter to the node in loadSource or through a plugin instead of adding it here. It'd allow us
                 to directly refer to the chapter in the templates definitions which would make it cleaner. - erika, 2020-04-20
             */
             options.chapter = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3);
-            tempMap[options.id] = options.chapter;
+
+            if (tempMap[options.chapter] === undefined) {
+                tempMap[options.chapter] = { sections: [], video: '' };
+            }
+
+            tempMap[options.chapter].sections.push(options.id);
+
+            if (options.name === '00-video') {
+                tempMap[options.chapter].video = options.id;
+            }
 
             return {
                 ...options,
@@ -56,14 +67,14 @@ module.exports = function (api) {
             options.course = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/'));
 
             const tempList = [];
-            Object.entries(tempMap).forEach(([key, value]) => {
-                if (value === options.name) {
-                    tempList.push(key);
-                }
-            });
-            options.sections = tempList;
-            tempMap2[options.name] = options.course;
+            if (tempMap[options.name] !== undefined) {
+                tempMap[options.name].sections.forEach((section) => tempList.push(section));
+                options.sections = tempList;
 
+                options.video = tempMap[options.name].video;
+            }
+
+            tempMap2[options.name] = options.course;
 
             return {
                 ...options,
