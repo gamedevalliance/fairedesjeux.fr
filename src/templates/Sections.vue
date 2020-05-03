@@ -77,6 +77,7 @@
         & .bubble {
             & .bubble-content {
                 @apply inline-block text-left bg-area py-2 px-8 my-4 rounded-full;
+                max-width: 89%;
                 margin-right: -20px;
             }
 
