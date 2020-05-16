@@ -5,4 +5,4 @@ description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier
 
 Dans cette étape, nous allons créer une grotte et y ajouter des groupes monstres et des énigmes utilisant les interrupteurs.
 
-https://www.youtube.com/watch?v=yTmpdDe77C8
+`youtube:https://www.youtube.com/watch?v=yTmpdDe77C8`

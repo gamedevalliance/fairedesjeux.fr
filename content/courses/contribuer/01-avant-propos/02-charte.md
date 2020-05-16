@@ -23,7 +23,7 @@ Vos lecteurs doivent pouvoir vous faire confiance. Ne tentez pas de créer un bi
 
 #### Organisation
 
-Votre formation commencera par une introduction engageante expliquant pourquoi suivre le cours et quelles compétences vont y être abordées. Le reste de votre formation doit être découpé en chapitres, donnant des objectifs clairs et accessibles, eux-mêmes découpés en quatre ou cinq pages qui vont donneront le rythme de votre formation.
+Votre formation commencera par une introduction engageante expliquant pourquoi suivre le cours et quelles compétences vont y être abordées. Le reste de votre formation doit être découpé en chapitres, donnant des objectifs clairs et accessibles, eux-mêmes découpés en quatre ou cinq pages qui donneront le rythme de votre formation.
 
 La conclusion de votre formation doit inciter le lecteur à s'autonomiser : montrez-lui la documentation officielle et comment s'en servir, proposez-lui plusieurs sites pertinents proposant des ressources utiles, et abordez les éventuelles difficultés qu'il risque de rencontrer.
 
@@ -35,7 +35,7 @@ Afin de permettre aux lecteurs de connaître la qualité d'une formation, mais �
 
 ![](./medailles.png)
 
-La médaille **bronze** signale qu'une formation est obsolète et qu'elle ne correspond plus du tout à nos critères de qualité. Ces formations nécessite souvent d'être complètement réécrites.
+La médaille **bronze** signale qu'une formation est obsolète et qu'elle ne correspond plus du tout à nos critères de qualité. Ces formations nécessitent souvent d'être complètement réécrites.
 
 La médaille **argent** signifie qu'une formation a besoin d'une actualisation, soit parce que l'outil à été mis à jour, soit parce que les critères de qualité du site ont évolué.
 
@@ -43,4 +43,4 @@ La médaille **or** indique qu'une formation correspond aux critères de qualit�
 
 Enfin, la médaille **platine** ne peut être donnée qu'à la meilleure formation du site. Elle sert de mesure étalon à la qualité des formations et les contributeurs sont encouragés à placer cette barre toujours plus haut !
 
-Vous pouvez consulter la notation d'une formation directement depuis son accueil ou sur GitHub Projects. Et vous pouvez à tout moment ouvrir une issue GitHub pour demander la requalification d'une formation. (Lire le tutoriel sur le fonctionnement de notre repo Github)
+Vous pouvez consulter la notation d'une formation directement depuis son accueil ou sur GitHub Projects. Et vous pouvez à tout moment ouvrir une issue GitHub pour demander la requalification d'une formation. Si vous vous demandez ce que cela veut dire, nous allons voir ça dans la section suivante !

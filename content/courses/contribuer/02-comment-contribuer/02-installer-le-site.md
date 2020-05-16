@@ -1,5 +1,5 @@
 ---
-title: "Installer le site localement"
+title: "Installer le site chez soi"
 ---
 
 Nous avons vu comment créer un fork et écrire des petites modifications depuis votre navigateur. Si vous souhaitez proposer des contributions plus importantes, comme par exemple ajouter des nouvelles pages et formations, cela ne serait pas très pratique, car vous ne pouvez pas voir le résultat de ce que vous écrivez.
@@ -11,10 +11,10 @@ Pour cela, vous pouvez télécharger le site sur votre ordinateur et lancer un s
 En premier lieu, vous devez télécharger le site.
 
 :::remi
-Si vous connaissez git, vous pouvez tout simplement cloner votre fork.
+Si vous connaissez déjà git, vous pouvez simplement cloner votre fork.
 :::
 
-Si vous débutez, installez [Github Desktop](https://desktop.github.com/) qui vous facilitera la tâche. La première fois, le logiciel propose un petit tutoriel très rapide que je vous conseille de suivre. Vous pouvez maintenant télécharger votre fork de deux manières :
+Si vous débutez, installez [Github Desktop](https://desktop.github.com/) qui vous facilitera la tâche. La première fois, le logiciel propose un petit tutoriel très rapide que je vous conseille de suivre. Vous pouvez ensuite télécharger votre fork de deux manières :
 
 - Dans Github Desktop, cliquez sur "File" puis "Clone repository" et choisissez votre fork dans la liste.
 - Sur la page de votre fork sur GitHub, cliquez sur le bouton vert puis "Open in Desktop".
@@ -45,9 +45,7 @@ cd Documents\Github\fairedesjeux.fr
 npm install
 ```
 
-:::Note
-npm ne fonctionnera pas si vous ouvrez l'invite de commandes depuis Github Desktop. Il est conseillé d'ouvrir cmd séparément, mais lancer Github Desktop en tant qu'administrateur fonctionne aussi.
-:::
+> npm ne fonctionnera pas si vous ouvrez l'invite de commandes depuis Github Desktop. Il est conseillé d'ouvrir cmd séparément, mais lancer Github Desktop en tant qu'administrateur fonctionne aussi.
 
 ![](./npm-install.png)
 *Là aussi, cela peut prendre un moment. C'est l'occasion de boire votre café.*
@@ -71,9 +69,44 @@ gridsome develop
 
 Tapez maintenant `localhost:8080` dans la barre d'adresse de votre navigateur. Magie, vous êtes sur le site !
 
+Dorénavant, pour lancer le site, il vous suffira d'ouvrir un terminal dans le dossier `fairedesjeux.fr` (vous pouvez le faire depuis Github Desktop : "Repository > Open in Command Prompt") et d'écrire `gridsome develop`.
+
+### Sur macOS
+
+Téléchargez Node.js sur le [site officiel](https://nodejs.org/en/). Choisir entre la version LTS et Current ne devrait pas faire de différence, mais nous utiliserons ici la version Current. Suivez le processus d'installation.
+
+Nous allons maintenant télécharger le site. Si vous connaissez git, vous pouvez tout simplement cloner votre fork. Mais si vous débutez, installez [Github Desktop](https://desktop.github.com/) qui vous facilitera la tâche. La première fois, le logiciel propose un petit tutoriel très rapide que je vous conseille de suivre. Vous pouvez maintenant télécharger votre fork de deux manières :
+
+- Dans Github Desktop, cliquez sur "File" puis "Clone repository" et choisissez votre fork dans la liste.
+- Sur la page de votre fork sur GitHub, cliquez sur le bouton vert puis "Open in Desktop".
+
+Ouvrez le terminal dans le dossier `fairedesjeux.fr` nouvellement créé. Vous pouvez le faire depuis Github Desktop : *Repository* > *Open in Command Prompt*. Autrement, allez dans *Préférences système* > *Clavier* > *Raccourcis* > *Services* > *Nouveau terminal dans le dossier*. Maintenant, vous pouvez ouvrir un terminal dans un dossier avec un clic droit dans Finder.
+
+Une fois dans le dossier `fairedesjeux.fr`, tapez cette commande pour installer les dépendances :
+
+```
+npm install
+```
+
+Lorsque c'est terminé, installez Gridsome :
+
+```
+npm install --global @gridsome/cli
+```
+
+Vous avez tout installé ! Vous pouvez maintenant lancer le serveur local :
+
+```
+gridsome develop
+```
+
+Le site devient alors disponible à l'adresse `localhost:8080` sur votre navigateur, et se recharge en direct lorsque vous faites des changements.
+
+Désormais, lorsque vous souhaiterez lancer le site, il vous suffira d'ouvrir un terminal dans le dossier `fairedesjeux.fr` et d'écrire `gridsome develop`.
+
 ### Sur Linux
 
-Dans le terminal, entrez cette commande pour installer Node et npm :
+Dans le terminal, entrez cette commande pour installer Node et npm :
 
 ```
 sudo apt install nodejs
@@ -81,25 +114,25 @@ sudo apt install nodejs
 
 Cette commande fonctionne sur les distributions basées sur la dernière version d'Ubuntu. Vous pouvez consulter la [page officielle d'installation](https://nodejs.org/en/download/package-manager/) pour des informations sur une autre distribution.
 
-Ouvrez ensuite le terminal dans le dossier où vous souhaitez télécharger le site, puis écrivez ceci pour cloner votre fork :
+Ouvrez ensuite le terminal dans le dossier où vous souhaitez télécharger le site, puis écrivez ceci pour cloner votre fork :
 
 ```
 git clone https://github.com/votre-pseudo/fairedesjeux.fr
 ```
 
-Entrez dans le dossier avec `cd fairedesjeux.fr` puis installez les dépendances :
+Entrez dans le dossier avec `cd fairedesjeux.fr` puis installez les dépendances :
 
 ```
 sudo npm install
 ```
 
-Quand c'est terminé, installez Gridsome :
+Quand c'est terminé, installez Gridsome :
 
 ```
 sudo npm install --global @gridsome/cli
 ```
 
-Et voilà ! Désormais, lorsque vous souhaiterez lancer le site, il vous suffira d'ouvrir un terminal dans le dossier `fairedesjeux.fr` et d'écrire :
+Et voilà ! Désormais, lorsque vous souhaiterez lancer le site, il vous suffira d'ouvrir un terminal dans le dossier `fairedesjeux.fr` et d'écrire :
 
 ```
 gridsome develop
