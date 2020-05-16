@@ -14,7 +14,7 @@ Vous vous demandez peut-être : « Mais pourquoi séparer update et draw alors
 
 Quand tout se passe normalement, ça ne fait pas de différence de tout écrire dans la même fonction, en effet. Par contre, c'est utile si le jeu devient trop gourmand pour la petite machine virtuelle et se met à ralentir ! Si PICO-8 n'arrive pas à dessiner les frames à temps, `_draw()` sera appelé à 15 FPS, et `update()` sera appelé deux fois par frame pour compenser. Ainsi le gameplay continue de fonctionner à la vitesse normale même quand l'affichage est ralenti !
 
-> **Note :** Si vous préférez que votre jeu tourne à 60 FPS, remplacez `_update()` par `_update60()`. Chaque frame aura donc moitié moins de puissance processeur pour être calculée, mais cela suffit largement pour les jeux les plus simples.
+> Si vous préférez que votre jeu tourne à 60 FPS, remplacez `_update()` par `_update60()`. Chaque frame aura donc moitié moins de puissance processeur pour être calculée, mais cela suffit largement pour les jeux les plus simples.
 
 Pour rappel, notre but est de faire bouger le vaisseau en utilisant les flèches. Dans notre cas, nous allons utiliser `_init()` pour définir la position de départ du vaisseau, puis `_update()` regardera si une touche est appuyée pour changer la valeur X ou Y, et enfin `_draw()` affichera le sprite au bon endroit.
 
@@ -30,7 +30,7 @@ Nous devons maintenant définir des variables pour la position du joueur. Pour �
 En Lua, un tableau peut se créer ainsi :
 
 ```lua
-player = { x = 60, y = 80, speed = 4 }
+player = {x = 60, y = 80, speed = 4}
 ```
 
 Et ensuite, on peut accéder aux valeurs en écrivant ceci :
