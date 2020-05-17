@@ -46,7 +46,7 @@ Vous pouvez l'écrire comme vous préférez, mais personnellement je vais nommer
 ![](./function-init.png)
 *N'oubliez pas de changer les arguments de spr() pour qu'ils pointent vers vos variables !*
 
-Parfait ! Nous allons pouvoir ajouter un peu d'interactivité maintenant. Ajoutez une fonction `_update()` ou `_update60()` et écrivez-y cette condition :
+Parfait ! Nous allons pouvoir ajouter un peu d'interactivité maintenant. Ajoutez une fonction `_update()` ou `_update60()` (je vous conseille la version à 60 FPS, la fluidité est très appréciable) et écrivez-y cette condition :
 
 ![](./premier-if.png)
 *Pour écrire la flèche, tapez Maj+R (pour Right).*
