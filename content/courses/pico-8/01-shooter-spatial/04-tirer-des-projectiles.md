@@ -2,7 +2,7 @@
 title: "Tirer des projectiles"
 ---
 
-Un tir aura deux propriétés : une position X et une position Y. Pour l'instant, on n'a pas encore d'ennemis. On va donc commencer par faire avancer les projectiles à chaque frame, puis les supprimer quand ils atteignent le bord de l'écran, afin de ne pas nous retrouver avec une quantité gigantesque de projectiles au bout de quelques minutes.
+Un tir aura trois propriétés : une position X, une position Y, et une vitesse. Pour l'instant, on n'a pas encore d'ennemi. On va donc commencer par faire avancer les projectiles à chaque frame, puis les supprimer quand ils atteignent le bord de l'écran, afin de ne pas nous retrouver avec une quantité gigantesque de projectiles au bout de quelques minutes.
 
 Mais d'abord, dessinons notre petit projectile !
 
@@ -16,9 +16,11 @@ Nous allons créer un tableau `bullets` qui contiendra tous nos projectiles. Dé
 
 Je vous propose de créer un nouvel onglet pour y voir plus clair, dans lequel on mettra tout ce qui concerne les balles. Si vous écrivez un commentaire à la première ligne de l'onglet, cela affichera un petit nom lorsque vous passerez la souris dessus.
 
+![Nouvel onglet](./fonction-shoot.png)
+
 Créez une fonction `shoot()` que l'on appellera dès que le vaisseau doit tirer. Cette fonction va créer une nouvelle balle à l'endroit où se situe le joueur. Définissons la balle dans un tableau :
 
-![Fonction shoot](./fonction-shoot.png)
+![Tableau new bullet](./new-bullet.png)
 
 Vous voyez que comme pour le vaisseau, on définit une vitesse que l'on utilisera plus tard. `local` signifie que cette variable est locale : lorsque nous quitterons la fonction, elle sera détruite. C'est une bonne pratique de créer une variable locale si vous n'en avez pas besoin en dehors du bloc où vous la créez.
 
@@ -28,7 +30,7 @@ Nous avions préparé un tableau `bullets` pour contenir toutes nos balles. Dans
 add(tableau, nouvel_element)
 ```
 
-Dans notre cas, on ajoute le contenu de la variable locale `bullet` dans un nouvel emplacement de notre tableau `bullets`.
+Dans notre cas, on ajoute le contenu de la variable locale `new_bullet` dans un nouvel emplacement de notre tableau `bullets`.
 
 ![Commande Add](./commande-add.png)
 
@@ -69,7 +71,7 @@ end
 
 `i` est une variable locale qui vaudra 1, 2... jusqu'à 10 à l'intérieur de la boucle. Vous pouvez nommer `i` comme vous voulez.
 
-Nous pouvons utiliser une boucle for pour parcourir un tableau. La boucle sera jouera une fois par élément du tableau. Chaque élément de `bullets` étant une balle, la boucle va se jouer une fois par balle !
+Une boucle for peut également parcourir un tableau. Cela veut dire qu'elle se jouera une fois par élément du tableau. Chaque élément de `bullets` étant une balle, la boucle va se jouer une fois par balle !
 
 ```lua
 for b in all(bullets) do
@@ -77,11 +79,33 @@ for b in all(bullets) do
 end
 ```
 
-Chaque balle que nous avions créée possède une valeur X et Y. C'est pour ça que l'on peut les afficher au bon endroit.
+![](./boucle-for-sprite-2.png)
+
+Chaque balle que nous avions créée possède une valeur X et Y. C'est pour ça que l'on peut les afficher au bon endroit. N'oubliez pas que `b` est simplement le nom de la variable locale qui parcourt le tableau. Elle peut être nommée comme vous le souhaitez.
 
 Testez le jeu, et... les balles s'affichent, mais restent immobiles à l'endroit où elles ont été tirées. Nous avons fait le plus gros du travail ! Il faut maintenant les faire avancer.
 
 ### Déplacer les projectiles
+
+Comme déplacer les balles n'est pas une question d'affichage, mais plutôt de gestion du jeu, ça a sa place dans update. Encore une fois, pour rester bien organisés, nous allons créer une fonction `update_bullets()` dans l'onglet des bullets.
+
+![Création de la fonction Update bullets](./fonction-update-bullets.png)
+
+En français, la fonction doit faire ceci : « Pour chaque élément dans `bullets`, le déplacer vers le haut. » On utilise donc une boucle for !
+
+![Boucle for pour déplacer les balles](./boucle-for-deplacement-balle.png)
+
+Notez qu'on diminue Y pour aller vers le haut de l'écran. Dans mon cas, ma vitesse est de 4, donc c'est comme si j'avais écrit `b.y -= 4`. N'oublions pas de supprimer les balles qui sortent de l'écran, sinon la console va ramer au bout de quelques minutes. Comme le haut de l'écran est `y = 0` et qu'un sprite fait 8 pixels de haut, on ne voit plus la balle si sa position Y est inférieure à -8.
+
+![Condition pour détruire les balles](./destruction-bullets.png)
+
+`del()` fonctionne comme `add()`, mais pour enlever un élément d'un tableau.
+
+Nous allons exécuter cette fonction à chaque frame, dans update.
+
+![Appel de la fonction Update bullets](./appel-update-bullets.png)
+
+Testez le jeu. Tadaam ! Pas mal, non ?
 
 ### L'effet sonore
 
@@ -91,7 +115,7 @@ Un tir de vaisseau spatial sans son "piou piou", ce n'est pas un vrai tir ! Dan
 
 Dessinez dans le cadre noir et appuyez sur Espace pour jouer le son. Vous allez voir, c'est magique !
 
-N'hésitez pas à essayer les 8 différents instruments. Pour changer l'instrument des notes déjà dessinées, faites Shift+Clic sur l'instrument.
+N'hésitez pas à essayer les 8 instruments différents. Pour changer l'instrument des notes déjà dessinées, faites Shift+Clic sur l'instrument.
 
 En haut à gauche, c'est le numéro du son que vous éditez. A côté, vous pouvez changer la vitesse du son avec le clic gauche et le clic droit. Pour un effet sonore, la vitesse doit être très rapide, tandis que pour une mélodie, elle doit être plus lente.
 
@@ -99,4 +123,8 @@ En bas de l'écran, vous pouvez modifier le volume. Baisser le volume à zéro s
 
 ![Son de tir finalisé](./son-de-tir.png)
 
-Dans la fonction `shoot()`, jouez le son numéro 0 avec `sfx(0)`. Essayez-le jeu, et vous allez voir : ça change tout !
+Dans la fonction `shoot()`, jouez le son numéro 0 avec `sfx(0)`.
+
+![Commande SFX](./sfx-0.png)
+
+Essayez-le jeu et écoutez : ça change tout !
