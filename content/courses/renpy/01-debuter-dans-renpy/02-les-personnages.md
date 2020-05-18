@@ -35,6 +35,6 @@ label start:
 ![](./couleur-du-nom.png)
 *Le nom est bel et bien rouge pâle.*
 
-Dans la prochaine partie, nous allons enrichir le jeu avec des illustrations et des musiques.
+> Lorsque vous testez le jeu, appuyez sur Maj+R pour activer le mode autoreload. Le jeu sera actualisé dès que vous changerez le script. En combinant cela avec la sauvegarde automatique de votre éditeur, vous pouvez économiser beaucoup de temps !
 
-[Suite](images-et-sons)
+Dans la prochaine partie, nous allons enrichir le jeu avec des illustrations et des musiques.

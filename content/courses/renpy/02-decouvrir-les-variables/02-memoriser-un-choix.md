@@ -1,5 +1,5 @@
 ---
-title: "Mémoriser un choix au cours du jeu"
+title: "Mémoriser un choix"
 ---
 
 Vous savez déjà faire des choix en créant un `menu`. Cela dit, il seraient plus utiles si les personnages du jeu pouvaient se souvenir de vos réponses et vous en reparler plus tard. C'est exactement ce que nous allons faire ici !
@@ -9,12 +9,10 @@ Vous savez déjà faire des choix en créant un `menu`. Cela dit, il seraient pl
 Voici les nouvelles images que je vais utiliser, si vous souhaitez avoir les mêmes que moi :
 
 ![](./chambre.jpg)
-*chambre.jpg*
+*chambre.jpg (provient de [ce site](http://www7b.biglobe.ne.jp/~osumashi/free_bg.html))*
 
 ![](./amelie.png)
-*amelie.png*
-
-Le fond vient de [ce site](http://www7b.biglobe.ne.jp/~osumashi/free_bg.html) et le personnage vient du même [générateur](http://www.rinmarugames.com/playgame.php?game_link=witch-apprentice-creator) que précédemment.
+*amelie.png (créée avec le même [générateur](http://www.rinmarugames.com/playgame.php?game_link=witch-apprentice-creator) que précédemment)*
 
 Préparons le terrain avec une scène toute simple :
 
@@ -32,10 +30,10 @@ Maintenant, Amélie va nous demander si on aime le chocolat, et nous allons enre
 
 ### Créer une variable
 
-Cette variable ne pourra avoir que deux états : soit on aime le chocolat, soit on n'aime pas. On peut donc en faire un booléen, qui s'appelle `AimeLeChocolat` et qui vaut vrai ou faux (`True` ou `False`). Déclarons la variable avec une valeur de base. On commence la ligne par un `$` pour dire que l'on va écrire une instruction en Python :
+Cette variable ne pourra avoir que deux états : soit on aime le chocolat, soit on n'aime pas. On peut donc en faire un booléen, qui s'appelle `aime_le_chocolat` et qui vaut vrai ou faux (`True` ou `False`). Déclarons la variable avec une valeur de base. On commence la ligne par un `$` pour dire que l'on va écrire une instruction en Python :
 
 ```python
-$ AimeLeChocolat = False
+$ aime_le_chocolat = False
 ```
 
 En Python, on ne dit pas directement si la variable est un booléen, un entier ou un texte. On lui assigne tout simplement une valeur, et le programme déduira quel est le type de la variable. En écrivant `True` ou `False`, la variable devient donc automatiquement un booléen.
@@ -46,18 +44,18 @@ label start:
     show amelie
     ame "Bonjour Marvin ! J'ai une question à te poser."
 
-    $ AimeLeChocolat = False
+    $ aime_le_chocolat = False
 
     menu:
         ame "Est-ce que tu aimes le chocolat ?"
         "Oh oui !":
-            $ AimeLeChocolat = True
+            $ aime_le_chocolat = True
             ame "C'est super, moi aussi j'adore ça !"
         "Beurk, non !":
             ame "Non, sérieusement ?"
 ```
 
-Si on répond oui, on change la valeur de `AimeLeChocolat`. Si on répond non, pas besoin de la changer : elle valait déjà `False` !
+Si on répond oui, on change la valeur de `aime_le_chocolat`. Si on répond non, pas besoin de la changer : elle valait déjà `False` !
 
 Parfait ! Il ne nous manque plus qu'à créer une scène qui arriverait plus tard dans le jeu.
 
@@ -71,7 +69,7 @@ label anniversaire_de_marvin:
     ame "Joyeux anniversaire ! Tu peux ouvrir ton cadeau."
 ```
 
-Selon la valeur de `AimeLeChocolat`, Marvin obtiendra un cadeau différent. Mais comment vérifier cela ?
+Selon la valeur de `aime_le_chocolat`, Marvin obtiendra un cadeau différent. Mais comment vérifier cela ?
 
 ### Les conditions
 
@@ -79,10 +77,10 @@ En programmation, une condition vérifie une question. Si la réponse est "vrai"
 
 ![Schéma d'une condition](./condition.png)
 
-Dans notre cas, la question que l'on veut poser est : « Est-ce que `AimeLeChocolat` vaut `True` ? » Sur Ren'Py, on l'écrit ainsi :
+Dans notre cas, la question que l'on veut poser est : « Est-ce que `aime_le_chocolat` vaut `True` ? » Sur Ren'Py, on l'écrit ainsi :
 
 ```python
-if AimeLeChocolat == True:
+if aime_le_chocolat == True:
     ame "Je sais que tu aimes les chocolats, alors je t'en ai acheté !"
 
 "Suite de l'histoire"
@@ -92,10 +90,10 @@ Remarquez qu'on écrit un double égal `==`. En fait, un égal simple `=` permet
 
 N'hésitez pas à tester la condition pour vous rendre compte de son fonctionnement !
 
-Actuellement, Marvin ne reçoit de cadeau que s'il aime les chocolats. Nous devons ajouter un "sinon" à la condition, pour dire ce qu'il se passe quand `AimeLeChocolat` vaut `False`.
+Actuellement, Marvin ne reçoit de cadeau que s'il aime les chocolats. Nous devons ajouter un "sinon" à la condition, pour dire ce qu'il se passe quand `aime_le_chocolat` vaut `False`.
 
 ```python
-if AimeLeChocolat:
+if aime_le_chocolat:
     ame "Je sais que tu aimes les chocolats, alors je t'en ai acheté !"
 else:
     ame "Je ne savais pas trop quoi t'offrir, alors voici un vélo !"
@@ -104,4 +102,8 @@ else:
 "Suite de l'histoire"
 ```
 
-Vous savez maintenant comment retenir des informations binaires (vraies ou fausses) au cours de votre jeu. Mais bien sûr, vous pourriez parfois avoir besoin de retenir des informations plus complexes, comme des nombres. C'est ce que nous allons voir à l'étape suivante !
+:::marvin
+Cette Amélie a l'air très gentille, mais elle est un peu bizarre !
+:::
+
+Vous savez maintenant comment retenir des informations binaires (vraies ou fausses) au cours de votre jeu. Mais bien sûr, vous pourriez parfois avoir besoin de retenir des informations plus complexes, comme des nombres. C'est ce que nous allons voir dans l'étape suivante !

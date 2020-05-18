@@ -14,12 +14,12 @@ Ajoutez un fichier de musique directement dans ce dossier. Ren'Py supporte les f
 Pour ajouter les images, entrez dans le dossier `images`, qui devrait être vide pour le moment. Voici les deux images que je vais utiliser dans ce cours, mais n'hésitez pas à créer les vôtres.
 
 ![](./ecole.jpg)
-*ecole.jpg*
+*ecole.jpg (provient du jeu "La Question")*
 
 ![](./astride.png)
-*astride.png*
+*astride.png (créée avec [ce générateur](http://www.rinmarugames.com/playgame.php?game_link=witch-apprentice-creator))*
 
-La première image vient du jeu "La Question" et le personnage vient de [ce générateur](http://www.rinmarugames.com/playgame.php?game_link=witch-apprentice-creator).
+La première image vient du jeu "La Question" et le personnage vient de .
 
 ### Afficher les images
 
@@ -101,5 +101,3 @@ label start:
 ```
 
 Dans la partie suivante, on va pimenter le jeu en ajoutant des choix de dialogue.
-
-[Suite](les-choix-de-dialogue)

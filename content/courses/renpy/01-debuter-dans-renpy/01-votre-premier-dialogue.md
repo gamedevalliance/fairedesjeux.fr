@@ -15,21 +15,33 @@ La fenêtre qui s'ouvre devant vous est le lanceur de Ren'Py (ou *launcher*). Vo
 
 Deux projets sont déja disponibles : le tutoriel donne plein de renseignements assez poussés sur toutes les possibilités de Ren'Py, tandis que "La Question" est une petite histoire d'exemple avec deux personnages et différents décors. N'hésitez pas à l'essayer et à examiner son script !
 
+:::astride
+Ces deux projets contiennent aussi des images que vous pouvez récupérer pour vous entraîner.
+:::
+
 ### Créer son projet
 
-Cliquez ensuite sur "Créer un nouveau projet". Ren'Py va alors vous demander plusieurs informations : emplacement où créer le projet, son nom... Laissez-vous guider puis patientez pendant que le moteur génère les fichiers. Vous pouvez ensuite lancer le jeu pour découvrir ce qu'il contient !
+Cliquez sur "Créer un nouveau projet". Ren'Py va alors vous demander plusieurs informations : emplacement où créer le projet, son nom... Laissez-vous guider puis patientez pendant que le moteur génère les fichiers. Vous pouvez ensuite lancer le jeu pour découvrir ce qu'il contient !
 
 ### Ouvrir le script du jeu
 
 Comme une pièce de théatre ou un film, un visual novel suit un script contenant tous les dialogues, les informations sur les décors, les personnages... Lorsqu'un joueur lance le jeu, celui-ci va suivre le script du début à la fin en réalisant les instructions que vous y aurez indiquées.
 
-Pour modifier ce fameux script, cliquez sur `script.rpy` en haut à droite du launcher. Ren'Py va alors vous demander quel éditeur vous souhaitez utiliser. Si vous n'avez jamais développé de jeu, vous pourriez penser qu'il s'agit d'un éditeur de texte tel que Word, mais on parle plutôt d'éditeur de code, qu'on utilise en programmation.
+Pour modifier ce fameux script, cliquez sur `script.rpy` en haut à droite du launcher. Ren'Py va alors vous demander quel éditeur de texte vous souhaitez utiliser.
+
+:::marvin
+Un éditeur de texte ? Comme Word ?
+:::
+
+:::astride
+Non, il s'agit plutôt d'un éditeur de code, comme ceux qu'on utilise en programmation.
+:::
 
 ![Choix de l'éditeur](./selection-editeur.png)
 
-Ne vous tracassez pas sur le choix de l'éditeur au début : ils se ressemblent tous quand on débute. Je vous conseille de choisir [Atom](https://renpy.org/latest.html) pour commencer, mais vous pouvez utiliser n'importe quel éditeur, comme [Visual Studio Code](https://code.visualstudio.com/) ou [Emacs](https://www.gnu.org/software/emacs/) par exemple, en cliquant sur "System Editor" et en sélectionnant votre éditeur préféré comme logiciel par défaut pour ouvrir les fichiers `.rpy`.
+Ne vous tracassez pas sur le choix de l'éditeur au début : ils se ressemblent tous quand on débute. Je vous conseille de choisir Atom pour commencer, mais vous pouvez utiliser n'importe quel éditeur, comme [Visual Studio Code](https://code.visualstudio.com/) ou [Emacs](https://www.gnu.org/software/emacs/) par exemple, en cliquant sur "System Editor" et en sélectionnant votre éditeur préféré comme logiciel par défaut pour ouvrir les fichiers `.rpy`.
 
-Vous voilà donc dans le fichier de script ! Il contient déjà du texte par défaut, qui ressemble à ceci :
+Vous voilà donc dans le fichier de script ! Il contient déjà du texte qui ressemble à ceci :
 
 ```python
 # Déclarez les personnages utilisés dans le jeu.
@@ -66,5 +78,3 @@ Retournez sur le launcher pour essayer votre jeu. Vous avez affiché votre premi
 
 ![Screenshot du projet](./premier-texte.png)
 *C'est un bon début !*
-
-[Suite](../les-personnages)

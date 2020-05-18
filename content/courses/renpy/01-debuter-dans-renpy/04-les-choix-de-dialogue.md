@@ -77,5 +77,3 @@ Les sauts sont très utiles étant donné qu'en temps normal, Ren'Py lit le scri
 D'ailleurs, si vous testez le jeu, vous remarquerez qu'en choisissant le jeu d'horreur, Ren'Py va lire le `label horreur`, mais aussi le `label romance` puisqu'il est situé juste à la suite ! Maintenant que vous savez utiliser les jumps et les labels, je ne doute pas que vous parviendrez à régler ce problème.
 
 Le chapitre est bientôt terminé ! Dans la dernière étape, nous allons ajouter des fins au jeu et l'exporter pour le publier.
-
-[Suite](ajouter-des-fins)

@@ -4,11 +4,33 @@ title: "Le principe des variables"
 
 Dans le premier chapitre, vous avez pu réaliser un premier petit jeu qui fontionne entièrement. C'était plutôt simple, pas vrai ? Je vous propose de continuer sur cette lancée : on va voir comment ajouter de l'interaction et des mécaniques de gameplay à votre jeu, en utilisant les variables. Qu'est-ce que c'est, me dites-vous ? Vous le saurez dans un instant.
 
-Dans Ren'Py, il y a deux langages qui se mélangent. Jusqu'ici, nous avons vu le langage propre à Ren'Py, qui propose des commandes très simples telles que `scene`, `play music`, etc. Lorsque ces commandes ne suffisent plus, on peut utiliser le Python, un langage dont vous avez peut-être entendu parler puisqu'il est utilisé dans le jeu vidéo et dans le monde scientifique par exemple.
+Dans Ren'Py, il y a deux langages qui se mélangent. Jusqu'ici, nous avons vu le langage propre à Ren'Py, qui propose des commandes très simples telles que `scene`, `play music`, etc. Lorsque ces commandes ne suffisent plus, on peut utiliser le Python, un langage dont vous avez peut-être entendu parler puisqu'il est utilisé dans le jeu vidéo et dans le monde scientifique par exemple. Grâce à ce langage de script, vous pouvez personnaliser votre jeu en profondeur. 
 
-Grâce à ce langage de script, vous pouvez modifier votre jeu en profondeur pour créer de nouvelles interfaces, des mini-jeux, et plein d'autres choses. Vous vous demandez peut-être jusqu'où on peut aller ? Eh bien pour vous donner une idée, sachez que le launcher Ren'Py a été réalisé avec Ren'Py lui-même ! Etonnant non ?
+:::marvin
+Est-ce que je peux vraiment faire *tout ce que je veux* ?
+:::
 
-Dans ce chapitre, nous allons écrire du Python pour créer des variables. Une variable a un nom et une valeur qui est stockée à l'intérieur.
+:::astride
+Bien sûr. Tu peux créer tes propres menus, des mini-jeux, et plein d'autres choses !
+:::
+
+:::marvin
+Mais est-ce que je peux faire un FPS ?!
+:::
+
+:::astride
+...Non, Marvin, tu ne peux pas faire de FPS.
+:::
+
+:::remi
+Cela dit, on pourrait y écrire des logiciels, par exemple. Savais-tu que le launcher de Ren'Py a été fait avec Ren'Py lui-même ?
+:::
+
+:::marvin
+Wahou ! C'est dingue !
+:::
+
+Dans ce chapitre, nous allons écrire du Python pour créer des variables. Une variable a un nom et une valeur qui est stockée à l'intérieur :
 
 ```python
 ma_variable = valeur
