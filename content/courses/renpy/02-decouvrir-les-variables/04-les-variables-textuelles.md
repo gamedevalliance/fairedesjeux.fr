@@ -9,7 +9,7 @@ Changeons de décor ! Je vous propose d'utiliser cette image :
 ![Décor de devanture de magasin](./magasin.jpg)
 *L'image provient de [ce site](https://k-after.at.webry.info/) ([page](https://k-after.at.webry.info/200806/article_28.html)).*
 
-```python
+```renpy
 define m = Character("Marvin", color="ffc8c8")
 define a = Character("Amélie", color="f4cdb5")
 
@@ -27,7 +27,7 @@ Avec les guillemets, on fait comprendre à Ren'Py que la variable est un texte (
 
 Plus tard dans le jeu, c'est l'anniversaire d'Amélie, qui aime beaucoup le chocolat :
 
-```python
+```renpy
 scene chambe
 show amelie
 m "Tu peux ouvrir ton cadeau !"
@@ -38,7 +38,7 @@ if cadeau == "chocolat":
 
 On retrouve `==` qui permet de vérifier la valeur que contient la variable. Par contre, si on offre du reblochon à Amélie, elle va trouver ça immonde. Il y a plusieurs façon de l'écrire : dans une autre condition `if`, à la suite avec `elif`, ou encore avec `else`. Comme nous n'avons que deux cas de figure possibles, les trois solutions produisent le même résultat.
 
-```python
+```renpy
 if cadeau == "chocolat":
     a "Oh, c'est merveilleux !"
 else:

@@ -4,7 +4,7 @@ title: "Choisir le nom du héros"
 
 Les visual novels sont souvent basés sur des choix et des fins multiples. Vous vous êtes donc peut-être déjà demandé comment laisser le choix du nom aux joueurs et joueuses pour qu'elles s'approprient encore plus leur personnage !
 
-```python
+```renpy
 label start:
     scene magasin
     "Comment vous appelez-vous ?"
@@ -14,25 +14,25 @@ label start:
 
 On ne peut pas écrire le texte directement ! C'est les joueurs et joueuses qui doivent l'écrire. Il y a une fonction de Ren'Py pour ça :
 
-```python
+```renpy
 $ nom_du_perso = renpy.input()
 ```
 
 Dans cette fonction, on peut préciser un texte qui va s'afficher avec le champ.
 
-```python
+```renpy
 $ nom_du_perso = renpy.input("Entrez un nom.")
 ```
 
 Pour afficher le nom dans un message, écrivez le nom de la variable entre crochets :
 
-```python
+```renpy
 "Vous vous appelez [nom_du_perso] !"
 ```
 
 Il faudrait aussi afficher le nouveau nom en haut des messages. Définissez un nouveau personnage, et là où vous devez écrire le nom, mettez la variable !
 
-```python
+```renpy
 define perso = Character("[nom_du_perso]", color="ffc8c8")
 ```
 
@@ -43,7 +43,7 @@ Essayez votre système, et vous verrez que ça marche du tonnerre ! Excepté qu
 
 On peut contrer ce problème avec `strip()` :
 
-```python
+```renpy
 $ nom_du_perso = renpy.input("Entrez un nom.")
 $ nom_du_perso = nom_du_perso.strip()
 "Vous vous appelez [nom_du_perso] !"
@@ -57,7 +57,7 @@ Et si... on écrit rien du tout ?
 
 C'est vrai, les joueurs et joueuses malicieuses pourraient faire ça. Nous pouvons le détecter avec la condition `if not nom_du_perso`, qui signifie « Si la variable n'a pas de valeur ».
 
-```python
+```renpy
 if not nom_du_perso:
     $ nom_du_heros = "Sam"
 ```

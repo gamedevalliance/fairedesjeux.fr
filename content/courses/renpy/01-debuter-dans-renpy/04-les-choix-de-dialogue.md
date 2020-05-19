@@ -11,7 +11,7 @@ Il ne reste plus qu'une chose avant que vous ne puissiez réellement créer un p
 
 Un menu de choix se présente ainsi :
 
-```python
+```renpy
 menu:
     m "Je voudrais créer..."
     "Un jeu d'horreur !":
@@ -30,7 +30,7 @@ Je vous explique juste après ce que signifie l'instruction `jump`. Mais tout d'
 
 Souvenez-vous ! Vous avez déjà utilisé un label dans votre script :
 
-```python
+```renpy
 label start:
 ```
 
@@ -38,7 +38,7 @@ Le `label start` permet en effet d'indiquer à Ren'Py où commence votre jeu. Il
 
 Ainsi, l'instruction `label` doit s'accompagner d'un nom. `start` est prédéfini par Ren'Py, mais vous pouvez nommer librement vos autres labels. Dans notre exemple, nous allons créer un label `horreur` et un label `romance` pour coller avec les deux choix possibles et créer leurs embranchements :
 
-```python
+```renpy
 label horreur:
     a "Très bonne idée, Ren'Py est tout à fait adapté pour une histoire terrifiante !"
 
@@ -48,7 +48,7 @@ label romance:
 
 Revenons maintenant à notre menu de choix :
 
-```python
+```renpy
 define m = Character("Marvin", color="#ffc8c8")
 define a = Character("Astride", color="#c8c8ff")
 

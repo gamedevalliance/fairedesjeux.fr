@@ -5,7 +5,7 @@ description: "Ajouter une ou plusieurs fins à votre jeu Ren'Py puis compilez-le
 
 Vous pouvez terminer le jeu avec l'instruction `return`, qui renvoie immédiatement à l'écran-titre. En ajoutant plusieurs `return` à différents endroits, vous pouvez créer plusieurs fins à votre histoire.
 
-```python
+```renpy
 label horreur:
     a "Très bonne idée, Ren'Py est tout à fait adapté pour une histoire terrifiante !"
     return
@@ -19,7 +19,7 @@ Testez le jeu, et vous verrez que la fin est plutôt abrupte. On va ajouter un f
 
 Souvenez-vous : `scene` permet de changer l'image de fond. En écrivant `scene black`, vous pouvez obtenir un fond noir sans avoir à créer une image. Ajoutez à cela un fondu, et le tour est joué !
 
-```python
+```renpy
 scene black
 with dissolve
 return

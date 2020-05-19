@@ -43,7 +43,7 @@ Ne vous tracassez pas sur le choix de l'éditeur au début : ils se ressemblent 
 
 Vous voilà donc dans le fichier de script ! Il contient déjà du texte qui ressemble à ceci :
 
-```python
+```renpy
 # Déclarez les personnages utilisés dans le jeu.
 define e = Character('Eileen', color="#c8ffc8")
 
@@ -60,7 +60,7 @@ Nous verrons au fur et à mesure comment tout cela fonctionne, mais vous pouvez 
 
 Je vous propose d'effacer le contenu par défaut pour que l'on écrive quelque chose ensemble :
 
-```python
+```renpy
 label start:
     "Dans une contrée lointaine, très lointaine..."
     "Marvin" "J'aimerais créer un \"visual novel\"."

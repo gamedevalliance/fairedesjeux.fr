@@ -25,7 +25,7 @@ La première image vient du jeu "La Question" et le personnage vient de .
 
 Bien ! Afficher une image est très simple. Pour afficher le fond, écrivez `scene` suivi du nom de votre image. Pour le personnage, écrivez `show` puis le nom.
 
-```python
+```renpy
 scene ecole
 show astride
 ```
@@ -34,7 +34,7 @@ show astride
 
 Essayez votre jeu, et vous verrez que les images s'affichent soudainement. On pourrait ajouter un fondu pour rendre ça plus élégant. A la suite d'une commande pour afficher une image, écrivez `with` pour qu'elle s'affiche avec une transition :
 
-```python
+```renpy
 scene ecole
 with dissolve
 
@@ -46,7 +46,7 @@ with dissolve
 
 Il y a plusieurs façons d'utiliser `with`. Dans l'exemple ci-dessus, `ecole` va s'afficher en fondu, puis `astride` s'affichera en fondu à son tour. Mais vous pourriez également faire en sorte que les deux images s'affichent en fondu en même temps :
 
-```python
+```renpy
 scene ecole
 show astride
 with dissolve
@@ -58,13 +58,13 @@ with dissolve
 
 Pour jouer une musique de fond, il suffit d'écrire cette commande :
 
-```python
+```renpy
 play music "darude - sandstorm.mp3"
 ```
 
 Pensez bien à écrire l'extension du fichier pour les musiques. On peut également jouer un simple bruitage avec `play sound`, ou encore préciser une durée de transition grâce à `fadein`.
 
-```python
+```renpy
 play music "mozart.ogg" fadein 1.0
 play sound "woof.mp3"
 play music ["a.ogg", "b.ogg"] # La musique a.ogg sera jouée, puis la musique b.ogg
@@ -72,7 +72,7 @@ play music ["a.ogg", "b.ogg"] # La musique a.ogg sera jouée, puis la musique b.
 
 Pour arrêter la musique, utilisez l'instruction `stop` suivie si vous le souhaitez d'une transition `fadeout`.
 
-```python
+```renpy
 stop music
 stop sound fadeout 1.0
 ```
@@ -81,7 +81,7 @@ Si la musique vous gêne pendant que vous travaillez, pas de problème : vous p
 
 On a bien avancé ! Si vous êtes perdu·e, voici un petit récapitulatif de ce que pourrait donner un script complet :
 
-```python
+```renpy
 define m = Character("Marvin", color="#ffc8c8")
 define a = Character("Astride", color="#c8c8ff")
 

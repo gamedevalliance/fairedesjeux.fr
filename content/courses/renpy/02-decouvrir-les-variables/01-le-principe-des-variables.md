@@ -32,25 +32,25 @@ Wahou ! C'est dingue !
 
 Dans ce chapitre, nous allons écrire du Python pour créer des variables. Une variable a un nom et une valeur qui est stockée à l'intérieur :
 
-```python
+```renpy
 ma_variable = valeur
 ```
 
 Dit comme ça, c'est un peu... abstrait. Concrètement, vous pouvez stocker plusieurs types de valeurs dans une variable. Vous pourriez y mettre un **nombre entier** :
 
-```python
+```renpy
 niveau = 12
 ```
 
 Ou bien y stocker du **texte** :
 
-```python
+```renpy
 prenom = "Aurélien"
 ```
 
 Votre variable peut aussi être un **booléen**, cela signifie qu'elle peut valoir vrai ou faux (`True` ou `False`) :
 
-```python
+```renpy
 mode_tutoriel = True
 ```
 

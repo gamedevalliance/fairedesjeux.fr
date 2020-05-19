@@ -16,7 +16,7 @@ Voici les nouvelles images que je vais utiliser, si vous souhaitez avoir les mê
 
 Préparons le terrain avec une scène toute simple :
 
-```python
+```renpy
 define mar = Character("Marvin", color="#ffc8c8")
 define ame = Character("Amélie", color="#f4cdb5")
 
@@ -32,13 +32,13 @@ Maintenant, Amélie va nous demander si on aime le chocolat, et nous allons enre
 
 Cette variable ne pourra avoir que deux états : soit on aime le chocolat, soit on n'aime pas. On peut donc en faire un booléen, qui s'appelle `aime_le_chocolat` et qui vaut vrai ou faux (`True` ou `False`). Déclarons la variable avec une valeur de base. On commence la ligne par un `$` pour dire que l'on va écrire une instruction en Python :
 
-```python
+```renpy
 $ aime_le_chocolat = False
 ```
 
 En Python, on ne dit pas directement si la variable est un booléen, un entier ou un texte. On lui assigne tout simplement une valeur, et le programme déduira quel est le type de la variable. En écrivant `True` ou `False`, la variable devient donc automatiquement un booléen.
 
-```python
+```renpy
 label start:
     scene ecole
     show amelie
@@ -59,7 +59,7 @@ Si on répond oui, on change la valeur de `aime_le_chocolat`. Si on répond non,
 
 Parfait ! Il ne nous manque plus qu'à créer une scène qui arriverait plus tard dans le jeu.
 
-```python
+```renpy
 label anniversaire_de_marvin:
     scene chambre
     with dissolve
@@ -79,7 +79,7 @@ En programmation, une condition vérifie une question. Si la réponse est "vrai"
 
 Dans notre cas, la question que l'on veut poser est : « Est-ce que `aime_le_chocolat` vaut `True` ? » Sur Ren'Py, on l'écrit ainsi :
 
-```python
+```renpy
 if aime_le_chocolat == True:
     ame "Je sais que tu aimes les chocolats, alors je t'en ai acheté !"
 
@@ -92,7 +92,7 @@ N'hésitez pas à tester la condition pour vous rendre compte de son fonctionnem
 
 Actuellement, Marvin ne reçoit de cadeau que s'il aime les chocolats. Nous devons ajouter un "sinon" à la condition, pour dire ce qu'il se passe quand `aime_le_chocolat` vaut `False`.
 
-```python
+```renpy
 if aime_le_chocolat:
     ame "Je sais que tu aimes les chocolats, alors je t'en ai acheté !"
 else:

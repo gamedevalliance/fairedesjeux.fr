@@ -8,7 +8,7 @@ Dans cette étape, on va créer un mini-jeu de gestion, dans lequel le personnag
 
 Nous allons définir nos statistiques de base :
 
-```python
+```renpy
 define m = Character("Marvin", color="#ffc8c8")
 
 label start:
@@ -21,7 +21,7 @@ label start:
 
 L'avantage des nombres, c'est qu'on va pouvoir les additionner et faire plein d'autres calculs dessus. Proposons un choix entre deux activités :
 
-```python
+```renpy
 menu:
     m "Que faire ?"
     "Faire du sport":
@@ -35,7 +35,7 @@ menu:
 
 Prenons un instant pour examiner le fonctionnement de ces `+=` et `-=`. Vous savez que l'opérateur `=` donne une nouvelle valeur à une variable, et ce faisant, il remplace l'ancienne valeur. Ainsi, pour additionner avec `=`, il faudrait écrire :
 
-```python
+```renpy
 points_force = points_force + 5
 ```
 
@@ -45,7 +45,7 @@ L'opérateur `+=` fait la même chose avec une écriture plus courte. Cela fonct
 
 Nous pouvons changer les dialogues du jeu en fonction de l'état du personnage avec des conditions :
 
-```python
+```renpy
 if points_fatigue >= 50:
     m "Je devrais prendre des vacances."
 elif points_fatigue < 10:
@@ -64,7 +64,7 @@ Changer les dialogues, c'est bien, mais on peut aller encore plus loin, et modif
 
 Faisons en sorte que si Marvin est trop fatigué, il ne puisse plus faire de sport. C'est très simple : il suffit d'écrire une condition à côté du choix.
 
-```python
+```renpy
 menu:
     m "Que faire ?"
     "Faire du sport" if points_fatigue < 30:
