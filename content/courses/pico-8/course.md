@@ -9,3 +9,5 @@ header: 2
 ---
 
 Apprenez à programmer pour la première fois en créant des supers petits jeux simplement.
+
+video splore-online.mp4

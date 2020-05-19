@@ -16,6 +16,8 @@ Quand tout se passe normalement, ça ne fait pas de différence de tout écrire 
 
 > Si vous préférez que votre jeu tourne à 60 FPS, remplacez `_update()` par `_update60()`. Chaque frame aura donc moitié moins de puissance processeur pour être calculée, mais cela suffit largement pour les jeux les plus simples.
 
+### Déplacer le vaisseau
+
 Pour rappel, notre but est de faire bouger le vaisseau en utilisant les flèches. Dans notre cas, nous allons utiliser `_init()` pour définir la position de départ du vaisseau, puis `_update()` regardera si une touche est appuyée pour changer la valeur X ou Y, et enfin `_draw()` affichera le sprite au bon endroit.
 
 Commencez par mettre le code que vous aviez déjà écrit dans la fonction `_draw()` :

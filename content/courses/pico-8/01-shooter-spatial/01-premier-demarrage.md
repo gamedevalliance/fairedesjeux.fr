@@ -29,10 +29,12 @@ Vous pouvez aussi voir comment le jeu a été programmé ! Faites Echap pour rev
 
 ![Les trois écrans de PICO-8](./screens.png)
 
-Toutes ces petites démos sont sympathiques, mais vous aurez peut-être envie d'essayer des jeux ayant un peu plus de panache. Appuyez sur Echap pour revenir à l'écran de commande, et tapez `splore` pour entrer dans le navigateur des jeux publiés sur le site de PICO-8.
+Toutes ces petites démos sont sympathiques, mais vous avez peut-être envie d'essayer des jeux ayant un peu plus de panache. Faites `cd ..` pour remonter d'un dossier et `install_games` pour installer une sélection de jeux comprenant Celeste Classic, la version PICO-8 à l'origine du jeu à succès.
 
-![Splore](./splore.gif)
+La commande `splore` démarre un navigateur plus confortable pour essayer les jeux installés ainsi que ceux étant publiés sur le site de PICO-8.
+
+Vidéo splore-demos.mp4
 
 Cerise sur le gâteau : en appuyant sur Echap pendant un jeu, vous pouvez examiner comment ont été faits le code, les graphismes et la musique.
 
-Vous pouvez également trouver des tas de supers jeux PICO-8 jouables dans votre navigateur [sur itch.io](https://itch.io/games/tag-pico-8) !
+Je vous conseille également de chercher votre bonheur dans les supers jeux PICO-8 jouables dans le navigateur [sur itch.io](https://itch.io/games/tag-pico-8) !
