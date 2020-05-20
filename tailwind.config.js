@@ -1,4 +1,9 @@
 module.exports = {
+    purge: [
+        './src/**/*.html',
+        './src/**/*.vue',
+        './src/**/*.js',
+    ],
     theme: {
         fontFamily: {
             display: ['Source Code Pro'],
