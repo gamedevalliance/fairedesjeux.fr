@@ -122,6 +122,15 @@ module.exports = {
                     marginBottom: '0.5rem',
                 },
 
+                h4: {
+                    color: config('theme.textColor.font'),
+                    fontFamily: config('theme.fontFamily.title'),
+                    fontSize: config('theme.fontSize.xl'),
+                    fontWeight: '700',
+                    lineHeight: '1.5',
+                    letterSpacing: config('theme.letterSpacing.title'),
+                },
+
                 h5: {
                     color: config('theme.textColor.font-2'),
                     fontFamily: config('theme.fontFamily.title'),
