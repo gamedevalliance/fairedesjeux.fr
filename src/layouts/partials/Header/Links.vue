@@ -1,37 +1,27 @@
 <template>
-    <nav class="inline-block absolute ml-6">
+    <nav class="inline-block absolute ml-6 py-4">
         <g-link v-for="headerCourse in $static.headerCourses.edges"
                 :key="headerCourse.node.header"
                 :to="headerCourse.node.path"
-                class="font-semibold text-font border-none"
+                class="font-semibold text-font border-none inline-block mr-6"
                 :title="headerCourse.node.title"
         >
             {{ headerCourse.node.short_title || headerCourse.node.title }}
         </g-link>
-        <g-link to="/contribuer/" class="font-semibold text-font border-none">
+        <g-link to="/contribuer/" class="font-semibold text-font border-none inline-block mr-6">
             Contribuer
         </g-link>
-        <a href="https://gamedevalliance.fr" class="font-semibold text-marvin border-none gda">
-            <span>G</span><span>a</span><span>m</span><span>e</span><span>D</span><span>e</span><span>v</span>
-            <span>A</span><span>l</span><span>l</span><span>i</span><span>a</span><span>n</span><span>c</span><span>e</span>
+        <a href="https://gamedevalliance.fr" aria-label="Game Dev Alliance" class="font-semibold text-marvin border-none inline-block mr-6">
+            <span class="gda" aria-hidden="true">
+                <span>G</span><span>a</span><span>m</span><span>e</span><span>D</span><span>e</span><span>v</span>
+                <span>A</span><span>l</span><span>l</span><span>i</span><span>a</span><span>n</span><span>c</span><span>e</span>
+            </span>
         </a>
-        <a href="https://discord.gg/RrBppaj" class="font-semibold text-purple-600 border-none">Rejoindre Discord</a>
+        <a href="https://discord.gg/RrBppaj" class="font-semibold text-purple-600 border-none inline-block">Rejoindre Discord</a>
     </nav>
 </template>
 
 <style lang="postcss" scoped>
-    nav {
-        line-height: 55px;
-
-        & a {
-            @apply inline-block mr-6;
-
-            &:hover {
-                @apply text-marvin;
-            }
-        }
-    }
-
     @keyframes bounce {
         0%, 100% { transform: translate(0); }
         20% { transform: rotateX(20deg) translateY(1px) rotate(-3deg); }

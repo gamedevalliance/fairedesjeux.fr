@@ -1,9 +1,9 @@
 <template>
-    <header class="bg-body text-font font-semibold">
+    <header class="bg-body text-font font-semibold clearfix">
         <div class="container mx-auto">
             <Logo />
             <Links />
-            <Socials />
+            <Socials class="float-right py-3" />
             <!--
             <Search />
             <ThemesSwitcher />
@@ -15,7 +15,7 @@
 <script>
     import Logo from './Header/Logo.vue';
     import Links from './Header/Links.vue';
-    import Socials from './Header/Socials.vue';
+    import Socials from '../components/Socials.vue';
 
     /*
     import Search from './Header/Search.vue'

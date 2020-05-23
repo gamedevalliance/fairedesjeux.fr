@@ -77,7 +77,8 @@
                 </div>
             </div>
             <div class="float-right text-font">
-                <h2 class="text-font text-2xl my-0 leading-none">
+                <Socials />
+                <h2 class="text-font text-2xl my-0 mt-2 leading-none">
                     Game Dev Alliance
                 </h2>
                 Association loi 1901.
@@ -87,8 +88,12 @@
 </template>
 
 <script>
-    export default {
+    import Socials from '../components/Socials.vue';
 
+    export default {
+        components: {
+            Socials,
+        },
     };
 </script>
 
