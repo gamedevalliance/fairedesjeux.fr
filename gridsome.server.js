@@ -45,15 +45,23 @@ module.exports = function (api) {
             options.course = options.chapter.substring(0, options.chapter.indexOf('/'));
 
             if (tempMap[options.chapter] === undefined) {
-                tempMap[options.chapter] = { sections: [], video: '' };
+                const sectionPath = `./content/courses/${options.fileInfo.directory}/`;
+                const sectionCount = fs.readdirSync(sectionPath).filter((file) => file.endsWith('.md')).length;
+
+                const chapterPath = `./content/courses/${options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/', 2))}/`;
+                const chapterCount = fs.readdirSync(chapterPath).filter((dir) => dir.charAt(2) === '-').length;
+
+                tempMap[options.chapter] = {
+                    sections: [], video: '', sectionCount, chapterCount,
+                };
             }
 
             if (options.fileInfo.name === '00-video') {
                 tempMap[options.chapter].video = options.id;
 
                 /*
-                    For videos we assume that if a previous chapter exist, the video for it exists as well,
-                    there shouldn't be any cases where that isn't the case, erika - 2020-05-24
+                    For videos we assume that if a previous chapter exist, the video for it exists as well.
+                    There shouldn't be any cases where that isn't the case, erika - 2020-05-24
                 */
                 if (lastSection) {
                     if (lastSection.course === options.course) {
@@ -67,6 +75,15 @@ module.exports = function (api) {
                     if (lastSection.course === options.course) {
                         options.previous = lastSection.name;
                     }
+                }
+
+                // Weird stuff
+                const currentId = parseInt(options.name.slice(-2), 10);
+                const currentChapterId = parseInt(options.chapter.slice(-2), 10);
+                if (tempMap[options.chapter].sectionCount > currentId) {
+                    options.next = `${options.chapter}/${String(currentId + 1).padStart(2, '0')}`;
+                } else if (tempMap[options.chapter].chapterCount > currentChapterId) {
+                    options.next = `${options.course}/${String(currentChapterId + 1).padStart(2, '0')}/01`;
                 }
 
                 lastSection = options;
