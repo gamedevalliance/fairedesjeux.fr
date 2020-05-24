@@ -3,14 +3,11 @@ title: "Quel RPG Maker choisir ?"
 description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
 ---
 
-Souvent chez les débutants revient la question du meilleur RPG Maker à utiliser. La réponse n'est pas simple, puisqu'aucun RPG Maker n'est absolument meilleur qu'un autre : chaque version possède des avantages et des inconvénients, qui pèseront différemment dans la balance en fonction du projet que vous souhaitez réaliser.
+Souvent chez les débutants et débutantes revient la question du meilleur RPG Maker à utiliser. La réponse n'est pas simple, puisqu'aucun RPG Maker n'est absolument meilleur qu'un autre : chaque version possède des avantages et des inconvénients, qui pèseront différemment dans la balance en fonction du projet que vous souhaitez réaliser.
 
-La plupart des utilisateurs s'accordent à dire que RPG Maker VX Ace est la version la plus agréable à utiliser pour un débutant. La base de données est complète et bien organisée et le mapping, bien que relativement limité, est très simple à prendre en main.
+RPG Maker VX Ace est probablement la version la plus agréable à utiliser pour un débutant. La base de données est complète et bien organisée, et le mapping est très simple à prendre en main.
 
-RPG Maker MV lui ressemble beaucoup et on pourrait croire qu'il est aussi simple. Cependant, il existe des différences auxquelles on ne s'attend pas et qui peuvent être source d'erreurs et de découragements :
-
-- Les scripts sont inaccessibles depuis l'éditeur et sont moins bien organisés, ce qui a tendance à rebuter les curieux souhaitant comprendre le code du jeu.
-- Des utilisateurs ont parfois des erreurs de fichiers corrompus dans leur projet, impossibles à restaurer, malgré une utilisation normale du logiciel.
+RPG Maker MV lui ressemble beaucoup et on pourrait croire qu'il est aussi simple. Cependant, il existe quelques différences auxquelles on ne s'attend pas qui peuvent être source d'erreurs. Des utilisateurs ont parfois des erreurs de fichiers corrompus dans leur projet, impossibles à restaurer, malgré une utilisation normale du logiciel.
 - Certains projets contiennent des bugs après les mises à jour, qui sont pourtant automatiques.
 
 Vous l'aurez compris, il vaut mieux faire des sauvegardes fréquentes de son projet RPG Maker MV pour ne pas vivre un drame !

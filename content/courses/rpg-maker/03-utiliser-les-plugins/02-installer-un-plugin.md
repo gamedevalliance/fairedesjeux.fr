@@ -36,3 +36,7 @@ Sélectionnez le contenu du script et copiez-le. Retournez dans RPG Maker et ouv
 La plupart des scripts que vous trouverez sur Internet doivent être copiés *au-dessus* du script Main mais *en-dessous* de tous les autres scripts de base. Sur RPG Maker VX Ace, une catégorie Materials est présente pour vous aider à choisir un emplacement. Cliquez-droit sur l'emplacement désiré puis choisissez Insérer. Vous pouvez alors nommer votre script comme bon vous semble et copier son contenu dans le grand champ de texte à droite.
 
 Les écritures en vert sont des commentaires, ignorés par le programme car destinés uniquement aux humains. Les programmeurs s'en servent généralement pour expliquer le fonctionnement de leurs scripts. Lisez attentivement les commentaires si vous ne savez pas comment utiliser un script.
+
+### Conclusion
+
+Cette formation touche à sa fin ! Vous devriez maintenant être plus à l'aise avec les bases de RPG Maker, et vous pourrez découvrir les autres fonctionnalités du logiciel par vous-même. En cas de doute dans un menu, prenez l'habitude de passer la souris sur un texte pour ouvrir l'infobulle, et de consulter le manuel du logiciel, et vous deviendrez incollable en un rien de temps. Pour approfondir vos connaissances, vous pouvez également lire [notre wiki](https://wiki.gamedevalliance.fr) et regarder [nos autres vidéos sur RPG Maker](https://www.youtube.com/playlist?list=PLHKUrXMrDS5ttOdEh5tNuEi96Vv--TVLE). Bonne continuation et amusez-vous bien !
