@@ -36,26 +36,42 @@ module.exports = function (api) {
     */
     const tempMap = {};
     const tempMap2 = {};
+    let lastSection = {};
     api.onCreateNode((options) => {
         if (options.internal.typeName === 'Section') {
-            options.name = options.fileInfo.name;
-
-            /*
-                NOTE: So far there's no problem with doing this, however in the future it'd be more optimal if we could
-                add the chapter to the node in loadSource or through a plugin instead of adding it here. It'd allow us
-                to directly refer to the chapter in the templates definitions which would make it cleaner. - erika, 2020-04-20
-            */
-            options.chapter = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3);
+            // Format: {course-name}/{chapter-id}/{course-id}
+            options.name = `${options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3)}/${options.fileInfo.name.substring(0, 2)}`;
+            options.chapter = options.name.substring(0, options.name.indexOf('/') + 3);
+            options.course = options.chapter.substring(0, options.chapter.indexOf('/'));
 
             if (tempMap[options.chapter] === undefined) {
                 tempMap[options.chapter] = { sections: [], video: '' };
             }
 
-            if (options.name === '00-video') {
+            if (options.fileInfo.name === '00-video') {
                 tempMap[options.chapter].video = options.id;
+
+                /*
+                    For videos we assume that if a previous chapter exist, the video for it exists as well,
+                    there shouldn't be any cases where that isn't the case, erika - 2020-05-24
+                */
+                if (lastSection) {
+                    if (lastSection.course === options.course) {
+                        options.previous = `${lastSection.chapter}/00`;
+                    }
+                }
             } else {
                 tempMap[options.chapter].sections.push(options.id);
+
+                if (lastSection) {
+                    if (lastSection.course === options.course) {
+                        options.previous = lastSection.name;
+                    }
+                }
+
+                lastSection = options;
             }
+
 
             return {
                 ...options,

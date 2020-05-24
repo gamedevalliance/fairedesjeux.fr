@@ -192,6 +192,10 @@
                     chapters(sort: {by: "name", order:ASC}) {
                         title
                         id
+                        video {
+                            path
+                            title
+                        }
                         sections(sort: {by: "fileInfo.name", order:ASC}) {
                             title
                             path
