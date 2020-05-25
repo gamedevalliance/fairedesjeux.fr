@@ -12,7 +12,7 @@ Lorsque vous êtes connecté·e au site, vous pouvez accéder à toutes les fonc
 
 Menu                                                 | Description
 -----------------------------------------------------|-------------
-[Game jams](https://itch.io/jams)                    | Gestion des jams et calendrier public.
+[Game jams](https://itch.io/jams)                    | Consulter le calendrier des jams du site.
 [Dashboard](https://itch.io/dashboard)               | Tableau de bord de créateur.
 [Upload new projet](https://itch.io/game/new)        | Créer une nouvelle page de jeu ou d'asset.
 [Sales & bundles](https://itch.io/dashboard/sales)   | Lancer des opérations commerciales et des bundles.
