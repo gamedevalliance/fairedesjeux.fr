@@ -113,7 +113,7 @@
             }
 
             &::after {
-                background-image: url("~@avatar/marvin.png");
+                background-image: url("~@avatars/marvin.png");
                 content: "";
                 float: right;
                 width: 100px;
@@ -134,7 +134,7 @@
             }
 
             &::after {
-                background-image: url("~@avatar/astride.png");
+                background-image: url("~@avatars/astride.png");
                 content: "";
                 float: left;
                 width: 100px;
@@ -155,7 +155,7 @@
             }
 
             &::after {
-                background-image: url("~@avatar/remi.png");
+                background-image: url("~@avatars/remi.png");
                 content: "";
                 float: left;
                 width: 100px;

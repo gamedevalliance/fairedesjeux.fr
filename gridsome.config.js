@@ -91,6 +91,7 @@ module.exports = {
     },
     chainWebpack: (config) => {
         config.resolve.alias.set('@coursesCovers', '@/assets/courses');
-        config.resolve.alias.set('@avatar', '@/assets/avatar');
+        config.resolve.alias.set('@avatars', '@/assets/avatar');
+        config.resolve.alias.set('@medals', '@/assets/medals');
     },
 };
