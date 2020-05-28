@@ -79,7 +79,7 @@ module.exports = {
             addBase, addComponents, theme,
         }) => {
             addBase({
-                'section>p': {
+                'section p': {
                     color: theme('textColor.font'),
                     fontSize: theme('fontSize.lg'),
                     lineHeight: '1.5',

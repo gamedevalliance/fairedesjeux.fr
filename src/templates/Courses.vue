@@ -144,7 +144,7 @@
 </page-query>
 
 <style lang="postcss" scoped>
-    section >>> {
+    article >>> {
         /*
             NOTE: This style is used for captions of images and videos. Very practical for the authors
             as they only have to do a line return and write in italics. - nev, 2020-04-24
