@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="container mx-auto">
+        <main>
             <div class="pt-4 flex flex-wrap">
                 <div v-for="featuredCourse in $page.featuredCourses.edges"
                      :key="featuredCourse.node.id"
@@ -63,7 +63,7 @@
                 </div>
                 <contribute-c-t-a v-if="$page.skillCourses.edges.length < 5" />
             </div>
-        </div>
+        </main>
     </Layout>
 </template>
 

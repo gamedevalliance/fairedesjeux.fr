@@ -1,45 +1,39 @@
 <template>
     <Layout>
-        <article class="container mx-auto">
-            <div class="grid grid-cols-cont gap-col">
-                <!-- left nav -->
-                <aside class="mt-12">
-                    <div v-for="chapter in $page.section.chapters"
-                         :key="chapter.id"
-                         class="area text-font mb-6"
-                    >
-                        <Chapter :chapter="chapter" :isopen="true" />
-                    </div>
-                </aside>
-                <!-- content -->
-                <main>
-                    <div>
-                        <h2 v-html="$page.section.title"></h2>
-                    </div>
+        <div class="grid grid-cols-cont gap-col">
+            <!-- left nav -->
+            <aside class="mt-12">
+                <div v-for="chapter in $page.section.chapters" :key="chapter.id" class="area text-font mb-6">
+                    <Chapter :chapter="chapter" :isopen="true" />
+                </div>
+            </aside>
+
+            <main>
+                <article>
+                    <header>
+                        <h2>{{ $page.section.title }}</h2>
+
+                        <g-image
+                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.section.name}/cover-wide.png`)"
+                            class="rounded-md h-featuredClass w-full object-cover"
+                        />
+                    </header>
 
                     <!-- medal start -->
-                    <g-image
-                        :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.section.name}/cover-wide.png`)"
-                        class="rounded-md h-featuredClass w-full object-cover"
-                    />
                     <div v-if="$page.section.medal === 'BRONZE'" class="bg-red-900 rounded-md mt-4">
-                        <p class="px-4 py-2 text-sm">
-                            <g-image
-                                src="~/assets/medals/medal-bronze.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
+                        <div class="px-4 py-2 text-sm text-font">
+                            <div class="font-bold">
+                                <g-image src="~/assets/medals/medal-bronze.png" class="h-5 w-5 inline-block object-cover" />
                                 Cette formation ne correspond pas à
                                 <g-link to="/contribuer/avant-propos/charte-de-qualite/">
                                     nos critères de qualité
                                 </g-link> :
-                            </span>
-                            <br />
-                            {{ $page.section.medal_message }}
-                        </p>
+                            </div>
+                            <div v-html="$page.section.medal_message"></div>
+                        </div>
                     </div>
                     <div v-if="$page.section.medal === 'SILVER'" class="bg-area text-base rounded-md mt-4">
-                        <p class="px-4 py-2 text-sm">
+                        <div class="px-4 py-2 text-sm text-font">
                             <g-image
                                 src="~/assets/medals/medal-argent.png"
                                 class="h-5 w-5 inline-block object-cover"
@@ -51,11 +45,11 @@
                                 </g-link> :
                             </span>
                             <br />
-                            {{ $page.section.medal_message }}
-                        </p>
+                            <span v-html="$page.section.medal_message"></span>
+                        </div>
                     </div>
                     <div v-if="$page.section.medal === 'GOLD'" class="text-base mt-4">
-                        <p class="px-4 py-2 text-sm">
+                        <div class="px-4 py-2 text-sm text-font">
                             <g-image
                                 src="~/assets/medals/medal-or.png"
                                 class="h-5 w-5 inline-block object-cover"
@@ -63,10 +57,10 @@
                             <span class="font-bold">
                                 Vous lisez une formation de qualité.
                             </span>
-                        </p>
+                        </div>
                     </div>
                     <div v-if="$page.section.medal === 'PLATINUM'" class="text-base mt-4">
-                        <p class="px-4 py-2 text-sm">
+                        <div class="px-4 py-2 text-sm text-font">
                             <g-image
                                 src="~/assets/medals/medal-platine.png"
                                 class="h-5 w-5 inline-block object-cover"
@@ -74,56 +68,44 @@
                             <span class="font-bold">
                                 Vous lisez notre meilleure formation !
                             </span>
-                        </p>
+                        </div>
                     </div>
                     <!-- medal end -->
 
-                    <p v-html="$page.section.content"></p>
+                    <section v-html="$page.section.content"></section>
 
                     <h3>Commencer la formation en mode..</h3>
-                    <div class="flex justify-center">
-                        <g-link :to="$page.section.chapters[0].sections[0].path"
-                                class="mx-2 text-center text-font border-none font-bold hover:text-font"
-                        >
-                            <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
-                                Texte
-                            </div>
-                        </g-link>
+                    <div class="flex justify-center mt-4">
+                        <Button :src="$page.section.chapters[0].sections[0].path" class="w-64">
+                            Texte
+                        </Button>
 
-                        <g-link v-if="$page.section.chapters[0].video"
-                                :to="$page.section.chapters[0].video.path"
-                                class="mx-2 text-center text-font border-none font-bold hover:text-font"
-                        >
-                            <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
-                                Vidéo
-                            </div>
-                        </g-link>
-                        <div
-                            v-else
-                            class="mx-2 text-center text-font border-none font-bold opacity-75"
-                            title="Vidéo indisponible pour le moment!"
-                        >
-                            <div class="bg-gray-800 rounded-md w-64 inline-block text-center px-4 py-3 text-gray-600">
-                                Vidéo
-                            </div>
-                        </div>
+                        <Button v-if="$page.section.chapters[0].video" :src="$page.section.chapters[0].video.path" class="w-64">
+                            Video
+                        </Button>
+                        <Button v-else disabled class="w-64" title="Vidéo indisponible pour le moment!">
+                            Vidéo
+                        </Button>
                     </div>
-                </main>
-                <!-- right nav -->
-                <Toc />
-            </div>
-        </article>
+                </article>
+            </main>
+
+            <!-- right nav -->
+            <Toc />
+        </div>
     </Layout>
 </template>
 
 <script>
     import Chapter from './components/Chapter.vue';
     import Toc from './components/Toc.vue';
+    import Button from '../layouts/components/Button.vue';
 
     export default {
         components: {
             Chapter,
             Toc,
+            Button,
         },
     };
 </script>

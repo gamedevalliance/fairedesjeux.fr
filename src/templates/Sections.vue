@@ -1,36 +1,35 @@
 <template>
     <Layout>
-        <article class="container mx-auto">
-            <div class="grid grid-cols-cont gap-col">
-                <!-- left nav -->
-                <aside class="mt-12">
-                    <div class="area text-font mb-6">
-                        <g-link :to="$page.section.chapter.course.path"
-                                class="text-font-2 border-transparent hover:border-font hover:text-font"
-                        >
-                            « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
-                        </g-link>
-                    </div>
-                    <div v-for="chapter in $page.section.chapter.course.chapters"
-                         :key="chapter.id"
-                         class="area text-font mb-6"
-                    >
-                        <Chapter :chapter="chapter"
-                                 :isopen="chapter.id == $page.section.chapter.id ? true : false"
-                        />
-                    </div>
-                </aside>
-                <!-- content -->
-                <main>
-                    <div>
-                        <h2 v-html="$page.section.title"></h2>
-                    </div>
-                    <div class="content" v-html="$page.section.content"></div>
-                </main>
-                <!-- right nav -->
-                <Toc />
-            </div>
-        </article>
+        <div class="grid grid-cols-cont gap-col">
+            <!-- left nav -->
+            <aside class="mt-12">
+                <div class="area mb-6">
+                    <g-link :to="$page.section.chapter.course.path" class="smola">
+                        « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
+                    </g-link>
+                </div>
+
+                <div v-for="chapter in $page.section.chapter.course.chapters" :key="chapter.id" class="area mb-6">
+                    <Chapter :chapter="chapter" :isopen="chapter.id === $page.section.chapter.id" />
+                </div>
+            </aside>
+
+            <!-- content -->
+            <main>
+                <article>
+                    <header>
+                        <h2>
+                            {{ $page.section.title }}
+                        </h2>
+                    </header>
+
+                    <section v-html="$page.section.content"></section>
+                </article>
+            </main>
+
+            <!-- right nav -->
+            <Toc />
+        </div>
     </Layout>
 </template>
 
