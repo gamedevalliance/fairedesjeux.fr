@@ -10,6 +10,9 @@
 /* eslint-disable consistent-return */
 
 const fs = require('fs');
+const unified = require('unified');
+const markdown = require('remark-parse');
+const html = require('remark-html');
 
 // eslint-disable-next-line func-names
 module.exports = function (api) {
@@ -126,6 +129,17 @@ module.exports = function (api) {
             });
 
             options.chapters = tempList;
+
+            if (options.medal_message) {
+                unified()
+                    .use(markdown)
+                    .use(html)
+                    .process(options.medal_message, (err, result) => {
+                        if (err) throw err;
+
+                        options.medal_message = String(result);
+                    });
+            }
 
             return {
                 ...options,
