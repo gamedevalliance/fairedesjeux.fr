@@ -4,6 +4,8 @@ title: "Mémoriser un choix"
 
 Vous savez déjà faire des choix en créant un `menu`. Cela dit, il seraient plus utiles si les personnages du jeu pouvaient se souvenir de vos réponses et vous en reparler plus tard. C'est exactement ce que nous allons faire ici !
 
+<video src="/videos/renpy/02-decouvrir-les-variables/demo.mp4" muted loop controls alt="Le résultat final de cette étape."></video>
+
 ### Préparation
 
 Voici les nouvelles images que je vais utiliser, si vous souhaitez avoir les mêmes que moi :

@@ -33,7 +33,7 @@ Toutes ces petites démos sont sympathiques, mais vous avez peut-être envie d'e
 
 La commande `splore` démarre un navigateur plus confortable pour essayer les jeux installés ainsi que ceux étant publiés sur le site de PICO-8.
 
-Vidéo splore-demos.mp4
+<video src="/videos/pico-8/splore-demos.mp4" muted loop controls></video>
 
 Cerise sur le gâteau : en appuyant sur Echap pendant un jeu, vous pouvez examiner comment ont été faits le code, les graphismes et la musique.
 

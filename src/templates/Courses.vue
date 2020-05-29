@@ -19,58 +19,7 @@
                         />
                     </header>
 
-                    <!-- medal start -->
-                    <div v-if="$page.section.medal === 'BRONZE'" class="bg-red-900 rounded-md mt-4">
-                        <div class="px-4 py-2 text-sm text-font">
-                            <div class="font-bold">
-                                <g-image src="~/assets/medals/medal-bronze.png" class="h-5 w-5 inline-block object-cover" />
-                                Cette formation ne correspond pas à
-                                <g-link to="/contribuer/avant-propos/charte-de-qualite/">
-                                    nos critères de qualité
-                                </g-link> :
-                            </div>
-                            <div v-html="$page.section.medal_message"></div>
-                        </div>
-                    </div>
-                    <div v-if="$page.section.medal === 'SILVER'" class="bg-area text-base rounded-md mt-4">
-                        <div class="px-4 py-2 text-sm text-font">
-                            <g-image
-                                src="~/assets/medals/medal-argent.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
-                                Cette formation ne correspond plus à
-                                <g-link to="/contribuer/avant-propos/charte-de-qualite/">
-                                    nos critères de qualité
-                                </g-link> :
-                            </span>
-                            <br />
-                            <span v-html="$page.section.medal_message"></span>
-                        </div>
-                    </div>
-                    <div v-if="$page.section.medal === 'GOLD'" class="text-base mt-4">
-                        <div class="px-4 py-2 text-sm text-font">
-                            <g-image
-                                src="~/assets/medals/medal-or.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
-                                Vous lisez une formation de qualité.
-                            </span>
-                        </div>
-                    </div>
-                    <div v-if="$page.section.medal === 'PLATINUM'" class="text-base mt-4">
-                        <div class="px-4 py-2 text-sm text-font">
-                            <g-image
-                                src="~/assets/medals/medal-platine.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
-                                Vous lisez notre meilleure formation !
-                            </span>
-                        </div>
-                    </div>
-                    <!-- medal end -->
+                    <Medal :rank="$page.section.medal" />
 
                     <section v-html="$page.section.content"></section>
 
@@ -100,12 +49,14 @@
     import Chapter from './components/Chapter.vue';
     import Toc from './components/Toc.vue';
     import Button from '../layouts/components/Button.vue';
+    import Medal from './components/Medal.vue';
 
     export default {
         components: {
             Chapter,
             Toc,
             Button,
+            Medal,
         },
     };
 </script>

@@ -3,9 +3,9 @@ title: "Créer un pont amélioré"
 description: "Découvrez un système pour passer au dessus et en-dessous d'un même pont avec des évènements simples et pour toutes les versions de RPG Maker."
 ---
 
-Ce guide explique comment faire des ponts avec deux modes : on pourra passer en-dessous ainsi que les traverser. Cette astuce fonctionne sur tous les RPG Maker.
+Cette section explique comment faire des ponts avec deux modes : on pourra passer en-dessous ainsi que les traverser. Cette astuce fonctionne sur tous les RPG Maker.
 
-pont.webm muted loop controls
+<video src="/videos/rpg-maker/pont.webm" muted loop controls></video>
 
 ### Hauteur du personnage
 

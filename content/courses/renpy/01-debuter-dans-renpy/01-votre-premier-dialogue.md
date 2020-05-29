@@ -3,6 +3,10 @@ title: "Votre premier dialogue"
 description: "Téléchargez Ren'Py gratuitement et apprenez les bases du moteur pour créer votre premier projet."
 ---
 
+Dans ce premier chapitre, nous allons créer en quelques minutes un dialogue complet entre plusieurs personnages.
+
+<video src="/videos/renpy/01-debuter-dans-renpy/demo.mp4" muted loop controls poster="/videos/renpy/01-debuter-dans-renpy/poster.png" alt="Le résultat final de ce chapitre."></video>
+
 ### Télécharger le logiciel
 
 Pour commencer, rendez vous sur la [page de téléchargement](https://renpy.org/latest.html) de Ren'Py.
