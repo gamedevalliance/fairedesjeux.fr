@@ -8,7 +8,7 @@
         <span v-if="rank === 'GOLD' || rank === 'PLATINUM'" class="font-bold text-sm">
             {{ medalData[rank].message }}
             <g-link to="/contribuer/avant-propos/charte/" title="Critères de qualité" class="border-none align-top text-xs">
-                [qu'est-ce que ça veut dire?]
+                [en savoir plus]
             </g-link>
         </span>
         <span v-else class="font-bold text-sm">Cette formation ne correspond plus à
