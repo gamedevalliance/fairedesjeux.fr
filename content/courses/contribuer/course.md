@@ -1,9 +1,9 @@
 ---
 type: SKILL
-title: "Comment contribuer"
+title: "Comment contribuer au site"
 short_title: "Contribuer"
 date: "2020-04-18"
-author: "Aurélien"
+author: "L'équipe de Game Dev Alliance"
 medal: GOLD
 featured: 2
 ---

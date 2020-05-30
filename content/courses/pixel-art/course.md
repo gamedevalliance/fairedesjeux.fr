@@ -1,7 +1,7 @@
 ---
 type: SKILL
 title: "Alors comme ça, vous voulez devenir pixel artiste ?"
-short_title: "Pixel Art"
+short_title: "Pixel art"
 date: "2020-04-18"
 author: "Nolwenn"
 medal: GOLD

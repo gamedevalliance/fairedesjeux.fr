@@ -1,15 +1,14 @@
 ---
-title: "Syntaxe des articles"
+title: "Syntaxe des cours"
 ---
 
-Les articles de FaireDesJeux.fr sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voici un tour d'horizon des fonctionnalités disponibles !
+Les cours de FaireDesJeux.fr sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voici un tour d'horizon des fonctionnalités disponibles !
 
 ### Titres
 
 Pour créer un titre, ajoutez des `#` avant le texte.
 
 ```md
-## Titre d'article
 ### Titre de section
 #### Titre de sous-section
 ```
@@ -42,15 +41,31 @@ Pour ordonner une liste, précédez les éléments d'un nombre.
 3. Thomas Jefferson
 ```
 
-### Notes
+### Citation
 
-Une note ou astuce complémentaire commence par `>`.
+Une citation commence par `>`.
 
 ```md
-Ceci est un paragraphe.
+William Shakespeare disait :
 
-> Et ceci est une petite astuce.
+> Être ou ne pas être...
 ```
+
+> Être ou ne pas être...
+
+### Bulles de personnage
+
+Pour faire parler les trois mascottes du site, entourez le dialogue de `:::` en précisant le nom du personnage : `marvin`, `astride` ou `remi`.
+
+```md
+:::marvin
+Salut la compagnie !
+:::
+```
+
+:::marvin
+Salut la compagnie !
+:::
 
 ### Morceaux de code
 
@@ -110,19 +125,38 @@ Ajoutez une légende sous l'image en écrivant un texte en italique en dessous 
 
 ### Vidéos
 
-Dans le cas de vidéos de quelques secondes pour illustrer un article, vous pouvez les déposer dans le dossier adéquat. Préférez le format MP4, ou éventuellement WebM.
+#### Vidéos YouTube
 
-Par défaut, une vidéo est en lecture automatique et boucle sans le son (attributs `autoplay muted loop`). Cela permet d'imiter le comportement d'un gif animé tout en profitant des avantages d'une vidéo : une meilleure qualité et un fichier plus léger. Vous pouvez consulter des exemples sur la page du script [Scroll Pictures]({{< ref "scrollpictures.md" >}}).
-
-Pour une vidéo plus longue, il sera plus confortable de l'héberger sur YouTube. Vous pouvez ajouter une vidéo YouTube à un article ainsi :
+Si votre vidéo est longue, il est plus confortable de l'héberger sur YouTube. Vous pouvez afficher une vidéo YouTube dans un article ainsi :
 
 ```md
 `youtube:https://www.youtube.com/watch?v=XprVZAtPqDI`
 ```
 
+#### Vidéos hébergées sur le site
+
+Dans le cas de vidéos de quelques secondes pour illustrer un article, vous pouvez les déposer dans le dossier `static/videos`. Préférez le format MP4, ou éventuellement WebM. Vous pouvez ensuite choisir plusieurs options :
+
+- `autoplay` démarre la vidéo automatiquement. La plupart des navigateurs n'autorisent l'autoplay que si `muted` est aussi activé.
+- `muted` joue la vidéo sans le son.
+- `loop` joue la vidéo en boucle.
+- `controls` affiche les boutons play/pause, volume, plein-écran, ainsi qu'une barre de progression.
+- `poster = "static/videos/.../poster.png"` affiche une image quand la vidéo n'est pas encore lancée. Par défaut, la première image de la vidéo est affichée.
+
+Par exemple, pour imiter le comportement d'un gif animé, vous pouvez lancer la vidéo automatiquement et la faire boucler sans le son : `autoplay muted loop`. Cela permet de profiter des avantages d'une vidéo par rapport au gif : une meilleure qualité et un fichier plus léger. Voici deux exemples :
+
+```html
+<video src="/videos/pico-8/jelpi.mp4" autoplay muted loop></video>
+
+<video src="/videos/renpy/01-debuter-dans-renpy/demo.mp4"
+ muted loop controls
+ poster="/videos/renpy/01-debuter-dans-renpy/poster.png">
+</video>
+```
+
 ### Organisation des formations
 
-Dans le dossier `content/courses`, chaque formation possède son dossier. Dans une formation, le fichier `course.md` contient le contenu de la page d'accueil, que l'on peut rédiger comme n'importe quel autre article, ainsi que quelques paramètres :
+Dans le dossier `content/courses`, chaque formation possède son dossier. Dans une formation, le fichier `course.md` contient le contenu de la page d'accueil, que l'on peut rédiger comme n'importe quelle autre page, ainsi que quelques paramètres :
 
 ```yaml
 ---
@@ -130,8 +164,10 @@ type: ENGINE          # Catégorie de la formation : ENGINE ou SKILL
 title: "Créer des jeux avec PICO-8" # Titre complet
 short_title: "PICO-8" # Titre court (pour la page d'accueil)
 date: "2020-06-18"    # Date de publication
-author: "Aurélien"    # Auteurs principaux
-medal: GOLD           # Médaille (voir la charte de qualité)
+author: "Aurélien Dos Santos" # Auteurs principaux
+medal: SILVER         # Médaille BRONZE, SILVER ou GOLD
+medal_message: "Le dernier chapitre est en cours d'écriture."
+# Message d'explication nécessaire si la médaille est BRONZE ou SILVER
 ---
 ```
 
@@ -143,7 +179,7 @@ Une formation doit forcément comporter un ou plusieurs chapitres, dans un dossi
 }
 ```
 
-Dans un chapitre, chaque section est un fichier `01-nom-de-la-section.md`. Ici aussi, c'est la numérotation dans le nom du fichier qui indique l'ordre. Des paramètres sont à renseigner au début du fichier :
+Dans un chapitre, chaque page est un fichier `01-nom-de-la-section.md`. Ici aussi, c'est la numérotation dans le nom du fichier qui indique l'ordre. Des paramètres sont à renseigner au début du fichier :
 
 ```yaml
 ---
