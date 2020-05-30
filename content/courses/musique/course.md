@@ -22,7 +22,13 @@ Elle peut créer une tension invisible dans un jeu d'horreur, évoquer des thèm
 
 Tant de possibilités ! De plus, la musique fait aussi vivre le jeu une fois la console éteinte : on garde les mélodies en tête et on réécoute parfois les OST, chargées par les émotions de nos souvenirs de jeu. Beaucoup de thèmes musicaux sont d'ailleurs devenus cultes, comme les thèmes de combat de *Final Fantasy* ou la techno brutale de *Hotline Miami*.
 
-### Est-ce vraiment accessible ?
+:::marvin
+Apprendre la musique, ça fait un peu peur, quand même...
+:::
+
+:::astride
+C'est compréhensible ! Après tout, à l'école, les étudiants doivent souvent passer beaucoup de temps sur la théorie avant qu'on puisse leur donner plus de liberté créative.
+:::
 
 Si vous pensez qu'apprendre la musique est intimidant, je vous comprends totalement ! Après tout, à l'école, les étudiants doivent souvent passer beaucoup de temps sur la théorie avant qu'on puisse leur donner plus de liberté créative. Pour que cette formation soit accessible au plus grand nombre, et que vous n'attendiez pas des années avant de composer, nous allons voir la théorie d'une façon plus condensée et détendue, avec des exemples en musique.
 

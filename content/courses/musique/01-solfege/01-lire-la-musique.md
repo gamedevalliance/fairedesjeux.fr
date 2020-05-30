@@ -9,8 +9,9 @@ Dans ce cours, nous utiliserons un clavier de piano pour les illustrations. C'es
 
 Vous connaissez peut-être déjà les 7 noms de note : do, ré, mi, fa, sol, la, si !
 
-![](./piano.png)
-*Vidéo des 7 notes sans label affiché*
+<video src="/videos/musique/7-notes.mp4" loop controls></video>
+
+Le logiciel filmé pour ces illustrations est Synthesia. Vous pouvez l'utiliser pour vous entraîner en lisant ce cours : on comprend mieux en pratiquant !
 
 ### Les intervalles
 
@@ -20,8 +21,7 @@ Les principaux intervalles sont la seconde, la tierce, la quarte, la quinte, la 
 
 Pour bien comprendre, choisissez deux notes sur le clavier. Numérotez la première par le chiffre 1, et augmentez la valeur à chaque fois que vous avancez d'un nom de note. Si l'autre note a pour numéro 2, c'est une seconde, si c'est 3, c'est une tierce...
 
-![Tierce au piano](./tierce.png)
-*Une tierce.*
+<video src="/videos/musique/intervalles.mp4" loop controls></video>
 
 ...Et à 8, c'est une octave ! Si on dépasse l'octave, on peut parler de tierce octaviée par exemple.
 
@@ -29,8 +29,7 @@ Pour bien comprendre, choisissez deux notes sur le clavier. Numérotez la premi�
 
 Les demi-tons sont les intervalles les plus petits qui existent entre deux notes. On utilise les touches noires du piano pour les jouer. Si le demi-ton est situé entre do et ré, on peut dire que c'est un do♯ (do dièse) ou un ré♭ (ré bémol).
 
-![Demi-tons](./demi-tons.png)
-*Vidéo de toutes les notes avec label affiché*
+<video src="/videos/musique/demi-tons.mp4" loop controls></video>
 
 Vous aurez sans doute remarqué qu'il n'y a pas de touche noire partout. C'est parce qu'il n'y a qu'un demi-ton entre mi et fa, et entre si et do. Au total, une octave est constituée de 12 demi-tons.
 
@@ -42,14 +41,18 @@ Les tons sont des intervalles de deux demi-tons. Par exemple, il y a un ton entr
 
 De nos jours, on utilise communément deux tonalités : la tonalité majeure et la tonalité mineure. C'est ce qui donne la couleur de la musique à l'écoute. Une tonalité majeure peut paraître plus lumineuse et joyeuse :
 
-*Vidéo d'exemple de la gamme de do majeur*
+<video src="/videos/musique/do-majeur.mp4" controls></video>
 
 Tandis qu'une tonalité mineure peut être perçue comme plus sombre et triste :
 
-*Vidéo d'exemple de la gamme de do mineur*
+<video src="/videos/musique/do-mineur-harmonique.mp4" controls></video>
 
 :::remi
 Cette comparaison joie contre tristesse est une simplification pour vous aider à comprendre, mais ne vous y attachez pas trop, car les sentiments évoqués peuvent varier selon les personnes.
+:::
+
+:::astride
+C'est vrai. Par exemple, certains trouvent la tonalité mineure plutôt mystérieuse et étrange.
 :::
 
 Vous aurez peut-être remarqué que les deux tonalités se différencient par les tons et demi-tons utilisés. Le réservoir de notes d'une tonalité, c'est ce qu'on appelle une **gamme**. Ces deux tonalités ont chacune une gamme de 7 notes. Bien sûr, vous pouvez vous permettre d'utiliser d'autres notes de temps en temps pour ajouter des couleurs particulières.
@@ -71,23 +74,27 @@ tonalité |
 **mi majeur** | mi | fa♯ | sol♯ | la  | si  | do♯ | ré♯
 **fa majeur** | fa | sol | la   | si♭ | do  | ré  | mi
 
+Et ainsi de suite !
+
+<video src="/videos/musique/les-7-majeures.mp4" loop controls></video>
+
 :::remi
 Dans les gammes, on écrit parfois des bémols plutôt que des dièses afin de conserver l'ordre habituel des 7 notes principales.
 :::
 
-*Vidéo avec les quatre fondamentales à la suite*
-
-Et ainsi de suite !
+:::astride
+On aurait pu écrire que des dièses, mais en pratiquant sur un clavier, vous verrez que conserver cet ordre des notes rend l'enchaînement plus facile à lire !
+:::
 
 #### Tonalité mineure
 
 Il existe trois types de tonalités mineures, chacune ayant sa propre couleur musicale que l'on peut utiliser selon nos envies.
 
+- **Mineure harmonique :** ton, demi-ton, ton, ton, demi-ton, *un ton et demi*, demi-ton
 - **Mineure ascendante :** ton, demi-ton, ton, ton, ton, ton, demi-ton
 - **Mineure descendante :** ton, demi-ton, ton, ton, demi-ton, ton, ton
-- **Mineure harmonique :** ton, demi-ton, ton, ton, demi-ton, *un ton et demi*, demi-ton
 
-*Vidéo des trois mineures*
+<video src="/videos/musique/les-3-mineures.mp4" loop controls></video>
 
 Il est courant d'utiliser l'ascendante lorsque la mélodie monte et la descendante quand elle descend. La gamme mineure harmonique peut quant à elle servir à toutes les situations !
 
@@ -103,11 +110,15 @@ Prenons un exemple : le **mode de ré** est composé de toutes les touches blan
 
 ton, demi-ton, ton, ton, ton, demi-ton, ton.
 
+<video src="/videos/musique/mode-de-re.mp4" controls></video>
+
 On peut alors reporter cette disposition avec n'importe quelle note fondamentale. De la même façon, vous pourriez utiliser le mode de mi, et ainsi de suite.
 
 Un autre exemple est la **gamme par tons**. C'est un mode uniquement composé de tons, ce qui veut dire qu'il ne contient que 6 notes :
 
 do–ré, ré–mi, mi–fa♯, fa♯–sol♯, sol♯–la♯, la♯–do.
+
+<video src="/videos/musique/gamme-par-tons.mp4" controls></video>
 
 ### Lire une partition
 
