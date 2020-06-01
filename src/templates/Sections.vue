@@ -51,7 +51,7 @@
                 NOTE: This style is used for captions of images and videos. Very practical for the authors
                 as they only have to do a line return and write in italics. - nev, 2020-04-24
             */
-        & img + noscript + em {
+        & img + noscript + em, & video + p > em {
             @apply text-center text-sm text-font-2 mt-6 mb-0 block;
         }
 

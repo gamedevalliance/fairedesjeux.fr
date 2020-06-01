@@ -106,6 +106,13 @@ module.exports = {
                     marginRight: 'auto',
                 },
 
+                video: {
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    marginTop: '1rem',
+                    marginBottom: '1rem',
+                },
+
                 h2: {
                     color: theme('textColor.astride'),
                     fontFamily: theme('fontFamily.title'),
