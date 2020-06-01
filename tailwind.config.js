@@ -187,11 +187,12 @@ module.exports = {
                 },
                 */
 
-                ul: {
+                'ul, ol': {
                     color: theme('textColor.font'),
                     lineHeight: theme('lineHeight.normal'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    fontSize: theme('fontSize.lg'),
                 },
 
                 table: {
@@ -209,15 +210,7 @@ module.exports = {
                     tableLayout: 'fixed',
                 },
 
-                td: {
-                    borderBottomWidth: '1px',
-                    borderStyle: 'solid',
-                    borderColor: theme('textColor.font-2'),
-                    margin: '1rem',
-                    textAlign: 'top',
-                },
-
-                th: {
+                'td, th': {
                     borderBottomWidth: '1px',
                     borderStyle: 'solid',
                     borderColor: theme('textColor.font-2'),
