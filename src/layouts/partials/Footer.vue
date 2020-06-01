@@ -6,11 +6,9 @@
                     <h4 class="text-font text-lg font-bold">
                         À propos
                     </h4>
-                    <ul class="mt-3">
+                    <ul class="mt-3 text-base">
                         <li class="my-2 text-font-3">
-                            <g-link to="/contribuer/"
-                                    class="smola"
-                            >
+                            <g-link to="/contribuer/" class="smola">
                                 Contribuer
                             </g-link>
                         </li>
@@ -21,9 +19,7 @@
                             Information légales
                         </li>
                         <li class="my-2 text-font-3">
-                            <a href="https://github.com/gamedevalliance/fairedesjeux.fr"
-                               class="smola"
-                            >
+                            <a href="https://github.com/gamedevalliance/fairedesjeux.fr" class="smola">
                                 Code source
                             </a>
                         </li>
@@ -34,7 +30,7 @@
                     <h4 class="text-font text-lg font-bold">
                         Moteurs de jeux
                     </h4>
-                    <ul class="mt-3">
+                    <ul class="mt-3 text-base">
                         <li
                             v-for="course in $static.gameEngineCourses.edges"
                             :key="course.id"
@@ -57,7 +53,7 @@
                     <h4 class="text-font text-lg font-bold">
                         Autres compétences
                     </h4>
-                    <ul class="mt-3">
+                    <ul class="mt-3 text-base">
                         <li
                             v-for="course in $static.otherCourses.edges"
                             :key="course.id"
