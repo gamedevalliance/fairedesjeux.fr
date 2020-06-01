@@ -70,6 +70,8 @@ module.exports = {
             plugins: [
                 '@gridsome/remark-prismjs',
                 'gridsome-plugin-remark-youtube',
+                'remark-shortcodes',
+                'gridsome-remark-video-shortcode',
                 ['gridsome-plugin-remark-container', {
                     customTypes: {
                         astride: {
