@@ -5,7 +5,7 @@ description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier
 
 Cette section s'adresse aux personnes qui ont découvert les variables depuis peu et qui cherchent un moyen utile de les exploiter. Nous allons réaliser un système qui permet de se téléporter entre les cartes au bon endroit et sans placer des évènements de téléportation sur tous les bords. Le système présenté ici fonctionne uniquement dans le cas où toutes les cartes font la même taille. Grâce aux variables, nous allons utiliser un seul évènement pour tout le jeu.
 
-<video src="/videos/rpg-maker/teleportation.webm" muted loop controls></video>
+[[Video src="/videos/rpg-maker/teleportation.webm" muted loop controls]]
 
 ### Préparation
 

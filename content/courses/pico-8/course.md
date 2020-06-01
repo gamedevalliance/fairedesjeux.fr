@@ -10,6 +10,6 @@ header: 2
 
 Apprenez à programmer pour la première fois en créant des supers petits jeux simplement.
 
-<video src="/videos/pico-8/jelpi.mp4" autoplay muted loop controls></video>
+[[Video src="/videos/pico-8/jelpi.mp4" autoplay muted loop controls]]
 
-<video src="/videos/pico-8/splore-online.mp4" autoplay muted loop controls></video>
+[[Video src="/videos/pico-8/splore-online.mp4" autoplay muted loop controls]]

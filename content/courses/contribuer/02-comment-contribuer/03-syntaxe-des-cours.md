@@ -143,15 +143,14 @@ Dans le cas de vidéos de quelques secondes pour illustrer un article, vous pouv
 - `controls` affiche les boutons play/pause, volume, plein-écran, ainsi qu'une barre de progression.
 - `poster = "static/videos/.../poster.png"` affiche une image quand la vidéo n'est pas encore lancée. Par défaut, la première image de la vidéo est affichée.
 
-Par exemple, pour imiter le comportement d'un gif animé, vous pouvez lancer la vidéo automatiquement et la faire boucler sans le son : `autoplay muted loop`. Cela permet de profiter des avantages d'une vidéo par rapport au gif : une meilleure qualité et un fichier plus léger. Voici deux exemples :
+Pour imiter le comportement d'un gif animé, vous pouvez lancer la vidéo automatiquement et la faire boucler sans le son : `autoplay muted loop`. Cela permet de profiter des avantages d'une vidéo par rapport au gif : une meilleure qualité et un fichier plus léger. Voici deux exemples :
 
-```html
-<video src="/videos/pico-8/jelpi.mp4" autoplay muted loop></video>
+```
+[[Video src="/videos/pico-8/jelpi.mp4" autoplay muted loop]]
+```
 
-<video src="/videos/renpy/01-debuter-dans-renpy/demo.mp4"
- muted loop controls
- poster="/videos/renpy/01-debuter-dans-renpy/poster.png">
-</video>
+```
+[[Video src="/videos/renpy/demo.mp4" poster="/videos/renpy/poster.png" muted loop controls]]
 ```
 
 ### Organisation des formations
