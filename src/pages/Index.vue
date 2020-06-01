@@ -38,7 +38,10 @@
                         </div>
                     </g-link>
                 </div>
-                <contribute-c-t-a v-if="$page.gameEngineCourses.edges.length < 5" />
+                <contribute-c-t-a
+                    v-if="$page.gameEngineCourses.edges.length < 6"
+                    :class="[$page.gameEngineCourses.edges.length % 5 === 0 ? 'game-engine-class' : 'w-3/12']"
+                />
             </div>
 
             <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container">
@@ -61,7 +64,10 @@
                         </div>
                     </g-link>
                 </div>
-                <contribute-c-t-a v-if="$page.skillCourses.edges.length < 5" />
+                <contribute-c-t-a
+                    v-if="$page.skillCourses.edges.length < 6"
+                    :class="[$page.skillCourses.edges.length % 5 === 0 ? 'game-engine-class' : 'w-3/12']"
+                />
             </div>
         </main>
     </Layout>
@@ -147,7 +153,7 @@
     }
 
     .game-engine-class {
-        flex-basis: 16%;
+        flex-basis: calc(16.666667% - 1rem);
     }
 </style>
 
