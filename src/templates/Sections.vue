@@ -52,7 +52,7 @@
                 as they only have to do a line return and write in italics. - nev, 2020-04-24
             */
         & img + noscript + em, & video + p > em {
-            @apply text-center text-sm text-font-2 mt-6 mb-0 block;
+            @apply text-center text-sm text-font-2 mt-4 mb-0 block;
         }
 
         & ul {
