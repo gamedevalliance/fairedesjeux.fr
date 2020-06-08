@@ -1,14 +1,17 @@
 <template>
     <Layout>
-        <main>
-            <div class="pt-4 flex flex-wrap">
+        <main class="px-4 lg:px-0">
+            <div class="pt-4 flex flex-wrap flex-col lg:flex-row">
                 <div v-for="featuredCourse in $page.featuredCourses.edges"
                      :key="featuredCourse.node.id"
-                     class="featured-class h-featuredClass relative mx-2"
+                     class="featured-class h-featuredClass relative lg:mx-2 mb-4 lg:mb-0"
                      :title="featuredCourse.node.title"
                 >
                     <g-link :to="featuredCourse.node.path" class="featured-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.name}/cover-wide.png`)" class="rounded-md h-full object-cover" />
+                        <g-image
+                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.name}/cover-wide.png`)"
+                            class="rounded-md h-full object-cover"
+                        />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ featuredCourse.node.title }}
@@ -18,7 +21,7 @@
                 </div>
             </div>
 
-            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container">
+            <h3 class="text-2xl text-white m-3 mt-4 ml-0 block container md:mt-5">
                 Faire des jeux avec...
             </h3>
 
@@ -26,11 +29,14 @@
                 <div
                     v-for="gameEngineCourse in $page.gameEngineCourses.edges"
                     :key="gameEngineCourse.node.id"
-                    class="game-engine-class h-gameEngineClass relative mx-2"
+                    class="game-engine-class h-gameEngineClass relative mx-2 mb-4 md:mb-0"
                     :title="gameEngineCourse.node.title"
                 >
                     <g-link :to="gameEngineCourse.node.path" class="game-engine-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
+                        <g-image
+                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.name}/cover-tall.png`)"
+                            class="rounded-md h-full object-cover"
+                        />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ gameEngineCourse.node.short_title || gameEngineCourse.node.title }}
@@ -39,8 +45,7 @@
                     </g-link>
                 </div>
                 <contribute-c-t-a
-                    v-if="$page.gameEngineCourses.edges.length < 6"
-                    :class="[$page.gameEngineCourses.edges.length % 5 === 0 ? 'game-engine-class' : 'w-3/12']"
+                    class="cta"
                 />
             </div>
 
@@ -52,11 +57,14 @@
                 <div
                     v-for="skillCourse in $page.skillCourses.edges"
                     :key="skillCourse.node.id"
-                    class="game-engine-class h-gameEngineClass relative mx-2"
+                    class="game-engine-class h-gameEngineClass relative mx-2 mb-4 md:mb-0"
                     :title="skillCourse.node.title"
                 >
                     <g-link :to="skillCourse.node.path" class="game-engine-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${skillCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
+                        <g-image
+                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${skillCourse.node.name}/cover-tall.png`)"
+                            class="rounded-md h-full object-cover"
+                        />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ skillCourse.node.short_title || skillCourse.node.title }}
@@ -65,8 +73,7 @@
                     </g-link>
                 </div>
                 <contribute-c-t-a
-                    v-if="$page.skillCourses.edges.length < 6"
-                    :class="[$page.skillCourses.edges.length % 5 === 0 ? 'game-engine-class' : 'w-3/12']"
+                    class="cta"
                 />
             </div>
         </main>
@@ -121,7 +128,7 @@
         }
 
         &:last-of-type {
-            @apply mr-0;
+            @apply mr-0 mb-0;
         }
 
         &:nth-of-type(2) {
@@ -152,8 +159,32 @@
             );
     }
 
-    .game-engine-class {
-        flex-basis: calc(16.666667% - 1rem);
+    .game-engine-class, .cta {
+        width: calc(50% - 1rem);
+        max-height: 275px;
+    }
+
+    .cta:nth-child(3n) {
+        width: 100%;
+    }
+
+    .cta:nth-child(6n) {
+        width: calc(50% - 1rem);
+    }
+
+    @screen md {
+        .game-engine-class {
+            width: calc(16.666667% - 1rem);
+            max-height: auto;
+        }
+
+        .cta, .cta:nth-child(3n) {
+            width: calc(25% - 1rem);
+        }
+
+        .cta:nth-child(6n) {
+            width: calc(16.666667% - 1rem);
+        }
     }
 </style>
 
