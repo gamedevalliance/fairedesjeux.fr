@@ -24,6 +24,14 @@
                     </header>
 
                     <section v-html="$page.section.content"></section>
+                    <div class="flex justify-center mt-4">
+                        <Button v-if="$page.section.previous" :src="$page.section.previous.path" class="w-1/2">
+                           Revenir à "{{ $page.section.previous.title }}"
+                        </Button>
+                        <Button v-if="$page.section.next" :src="$page.section.next.path" class="w-1/2">
+                            J'ai compris !
+                        </Button>
+                    </div>
                 </article>
             </main>
 
@@ -36,11 +44,13 @@
 <script>
     import Chapter from './components/Chapter.vue';
     import Toc from './components/Toc.vue';
+    import Button from '../layouts/components/Button.vue';
 
     export default {
         components: {
             Chapter,
             Toc,
+            Button,
         },
     };
 </script>
@@ -173,6 +183,14 @@
         section(id: $id) {
             title
             content
+            next {
+                title
+                path
+            }
+            previous {
+                title
+                path
+            }
             fileInfo {
                 path
             }
