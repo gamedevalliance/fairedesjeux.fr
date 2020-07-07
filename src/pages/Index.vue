@@ -49,7 +49,7 @@
                 />
             </div>
 
-            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container">
+            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container md:mt-5">
                 Autres compétences :
             </h3>
 
