@@ -8,11 +8,19 @@
         <span v-if="rank === 'GOLD' || rank === 'PLATINUM'" class="font-bold text-sm">
             {{ medalData[rank].message }}
             <g-link to="/contribuer/avant-propos/charte/" title="Critères de qualité" class="border-none align-top text-xs">
-                [en savoir plus]
+                [?]
             </g-link>
         </span>
-        <span v-else class="font-bold text-sm">Cette formation ne correspond plus à
-            <g-link to="/contribuer/avant-propos/charte/">nos critères de qualité</g-link> :
+        <span v-else class="font-bold text-sm">
+            {{ medalData[rank].message }}
+            <g-link v-if="rank === 'SILVER'"
+                    to="/contribuer/avant-propos/charte/"
+                    title="Critères de qualité"
+                    class="border-none align-top text-xs"
+            >
+                [?]
+            </g-link>
+            <g-link v-else to="/contribuer/avant-propos/charte/">nos critères de qualité</g-link> :
         </span>
 
         <div v-if="rank === 'BRONZE' || rank === 'SILVER'" class="text-sm" v-html="$page.section.medal_message"></div>
@@ -31,11 +39,11 @@
             medalData: {
                 BRONZE: {
                     image: 'medal-bronze.png',
-                    message: null,
+                    message: 'Cette formation ne correspond plus à',
                 },
                 SILVER: {
                     image: 'medal-argent.png',
-                    message: null,
+                    message: 'Cette formation est incomplète',
                 },
                 GOLD: {
                     image: 'medal-or.png',

@@ -4,7 +4,8 @@ title: "Krita"
 short_title: "Krita"
 date: "2020-05-26"
 author: "Nev"
-medal: GOLD
+medal: SILVER
+medal_message: "Actuellement en cours d'écriture, seul la partie Pixel Art est avancée. [Consultez l'issue](https://github.com/gamedevalliance/fairedesjeux.fr/issues/5) pour plus d'informations."
 ---
 
 Vous cherchez un logiciel complet et puissant pour le dessin numérique, le pixel art et l'animation ?  Mais vous ne souhaitez pas dépenser de l'argent dans un abonnement Photoshop ? Ne cherchez plus ! Dans cette formation, nous allons découvrir ensemble le logiciel libre et gratuit Krita, disponible sur Windows, Linux, MacOS et BSD.

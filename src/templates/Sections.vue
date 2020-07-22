@@ -25,11 +25,11 @@
 
                     <section v-html="$page.section.content"></section>
                     <div class="flex justify-center mt-4">
-                        <Button v-if="$page.section.previous" :src="$page.section.previous.path" class="w-1/2">
-                           Revenir à "{{ $page.section.previous.title }}"
-                        </Button>
-                        <Button v-if="$page.section.next" :src="$page.section.next.path" class="w-1/2">
+                        <Button v-if="$page.section.next" :src="$page.section.next.path" class="w-64">
                             J'ai compris !
+                        </Button>
+                        <Button v-else class="w-64">
+                            Chapitre suivant
                         </Button>
                     </div>
                 </article>
@@ -184,10 +184,6 @@
             title
             content
             next {
-                title
-                path
-            }
-            previous {
                 title
                 path
             }
