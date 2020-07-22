@@ -6,6 +6,7 @@ description: "Téléchargez Ren'Py gratuitement et apprenez les bases du moteur 
 Dans ce premier chapitre, nous allons créer en quelques minutes un dialogue complet entre plusieurs personnages.
 
 [[Video src="/videos/renpy/01-debuter-dans-renpy/demo.mp4" muted loop controls poster="/videos/renpy/01-debuter-dans-renpy/poster.png"]]
+*Le résultat final de ce chapitre.*
 
 ### Télécharger le logiciel
 

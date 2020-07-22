@@ -5,13 +5,13 @@ short_title: "Krita"
 date: "2020-05-26"
 author: "Nev"
 medal: SILVER
-medal_message: "Actuellement en cours d'écriture, seul la partie Pixel Art est avancée. [Consultez l'issue](https://github.com/gamedevalliance/fairedesjeux.fr/issues/5) pour plus d'informations."
+medal_message: "La chapitre sur le pixel art est avancé tandis que les autres sont en cours d'écriture. [Voir l'avancement](https://github.com/gamedevalliance/fairedesjeux.fr/issues/5)"
 ---
 
-Vous cherchez un logiciel complet et puissant pour le dessin numérique, le pixel art et l'animation ?  Mais vous ne souhaitez pas dépenser de l'argent dans un abonnement Photoshop ? Ne cherchez plus ! Dans cette formation, nous allons découvrir ensemble le logiciel libre et gratuit Krita, disponible sur Windows, Linux, MacOS et BSD.
+Vous cherchez un logiciel complet et puissant pour le dessin numérique, le pixel art et l'animation, mais le prix de l'abonnement Photoshop vous a refroidi ? Ne cherchez plus ! Dans cette formation, nous allons découvrir ensemble Krita, un logiciel libre et gratuit disponible sur Windows, Linux, MacOS et BSD.
 
-Vous pouvez dès à present télécharger la dernière version de Krita sur le site officiel, et suivre les instructions. Le logiciel étant entièrement gratuit, n'hesitez à faire un don si vous pouvez vous le permettre.
+Vous pouvez dès à présent télécharger la dernière version de Krita sur le [site officiel](https://krita.org/) et suivre ce guide. Le logiciel étant entièrement gratuit, n'hésitez à faire un don si vous le pouvez !
 
-Notez également que que malgré une nette amélioration au fil des mises à jours, les outils de dessins vectoriels restent encore en déça d'autres logiciels. Egalement, Krita ne dispose pas d'outils pour la retouche photo.
+Notez que Krita étant spécialisé dans le dessin numérique, il ne dispose pas d'outil pour la retouche photo. Egalement, les outils de dessin vectoriel restent encore en deça d'autres logiciels malgré une nette amélioration au fil des mises à jour.
 
-Danc cette formation, nous apprendons à configurer notre espace de travail et à utiliser des outils simples pour faire du pixel art. Ensuite nous découvrirons les outils de Krita pour faire des animations simples, avant de faire un tour d'horizon des puissants outils que proposent ce logiciel pour le digital painting !
+Danc cette formation, vous apprendrez à configurer votre espace de travail et à utiliser des outils simples pour faire du pixel art. Ensuite, vous découvrirez comment créer des petites animations avant de faire un tour d'horizon des puissants outils de Krita pour le digital painting !
