@@ -3,7 +3,7 @@ title: "L'outil du diable : le dégradé"
 description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
 ---
 
-Désolé, mais l'outil dégradé est une création de Satan. « Quoi ? Mais comment vais-je donc faire mes ombres sans lui ? L'outil dégradé est le meilleur outil de tout les temps ! » Ok, je vais préciser ma pensée. L'outil dégradé *peut* être bien utilisé... Cependant la plupart des gens ne comprennent pas à quoi il sert et l'utilisent en permanence.
+Désolé, mais l'outil dégradé est une création de Satan. « Quoi ? Mais comment vais-je donc faire mes ombres sans lui ? L'outil dégradé est le meilleur outil de tout les temps ! » Ok, je vais préciser ma pensée. L'outil dégradé *peut* être bien utilisé quand on comprend à quoi il sert.
 
 ![](./montagne-contour.png)
 

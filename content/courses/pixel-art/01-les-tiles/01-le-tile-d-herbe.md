@@ -17,7 +17,7 @@ Hé oui, le fameux tile d'herbe... Il est souvent le premier tile réalisé car,
 ![](./herbe4.png)
 *Accumulation de brins avec les trois teintes pour obtenir un effet de direction.*
 
-Il existe d'autres méthodes mais celles-ci sont les plus populaires. Je n'ai volontairement pas mis la méthode consistant à ne faire qu'un simple carré vert : si beaucoup de développeurs s'en contentent, un carré vert ne ressemble pas à de l'herbe. Bien sûr, un joueur ou une joueuse se baladant au milieu d'arbres et de fleurs comprendra intuitivement que ce vert représente de l'herbe. Mais est-ce que cela ressemble à de l'herbe ? Objectivement non, cela ressemble à du carrelage vert, une bâche verte, de la peinture verte ou à un développeur qui a la flemme...
+Il existe d'autres méthodes mais celles-ci sont les plus populaires. Je n'ai volontairement pas mis la méthode consistant à ne faire qu'un simple carré vert : si beaucoup de développeurs s'en contentent, un carré vert ne ressemble pas à de l'herbe. Bien sûr, un joueur ou une joueuse se baladant au milieu d'arbres et de fleurs comprendra intuitivement que ce vert représente de l'herbe. Mais est-ce que cela ressemble à de l'herbe ? Objectivement non, ça pourrait être du carrelage, une bâche ou de la peinture verte...
 
 On retrouve le même problème sur les deux premières méthodes représentées : il s'agit objectivement d'herbe avec quelques tâches dessus. Ces méthodes ont en commun de produire des tiles ennuyeusement *plats*, contrairement à la quatrième méthode par exemple. Or l'herbe est composée de milliers de petites tiges vertes poussant aléatoirement vers le ciel... L'herbe c'est tout sauf plat, alors pourquoi les tiles le seraient ?
 

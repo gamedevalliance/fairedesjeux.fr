@@ -11,7 +11,7 @@ Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.
 Ce cours était censé m'apprendre à faire du bon pixel art... Alors pourquoi étudier des jeux datant de la NES ? En plus ils n'utilisent que 16 couleurs, non ?
 :::
 
-Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consoles n'avaient pas de palettes dépassant les 256 couleurs, on ne pouvait donc pas faire les fameux dégradés que l'on a vu plus haut... Et c'est en cela que les vieux jeux sont intéressants à étudier : ils regorgent d'astuces que d'ingénieux et d'ingénieuses graphistes ont inventées pour rendre leurs tiles lisibles malgré cette contrainte.
+Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consoles n'avaient pas de palettes dépassant les 256 couleurs, on ne pouvait donc pas faire les fameux dégradés que l'on a vu dans la section précédente... Et c'est en cela que les vieux jeux sont intéressants à étudier : ils regorgent d'astuces que d'ingénieux et d'ingénieuses graphistes ont inventées pour rendre leurs tiles lisibles malgré cette contrainte.
 
 Regardons d'un peu plus près ce Final Fantasy 1.
 
