@@ -2,7 +2,7 @@
 title: "Contribuer au code"
 ---
 
-Cette dernière section explique comment contribuer à l'aspect technique du site. Si votre objectif est uniquement d'écrire du contenu, vous pouvez passer votre chemin sans crainte !
+Cette dernière section explique comment contribuer à l'aspect technique du site. Si votre objectif est uniquement d'écrire du contenu, vous pouvez passer votre chemin, car vous savez déjà tout ce qu'il vous faut !
 
 ### Structure du repo
 
@@ -33,4 +33,4 @@ Il vous faut également installer l'extension [EditorConfig](https://editorconfi
 
 ### Créer une pull request
 
-Pour que votre pull request soit acceptée, nous vous demandons bien sûr de suivre les conventions de style, mais aussi de ne pas inclure de fichier inutile au repo : ajoutez des règles à `.gitignore` si nécessaire. Si vous ajoutez une dépendance, précisez pourquoi elle est nécessaire à moins que ce ne soit évident. Merci beaucoup pour votre intérêt au projet !
+Pour que votre pull request soit acceptée, nous vous demandons bien sûr de suivre les conventions de style, mais aussi de ne pas inclure de fichier inutile au repo : ajoutez des règles à `.gitignore` si nécessaire. Si vous ajoutez une dépendance, précisez pourquoi elle est nécessaire à moins que ce ne soit évident. Merci beaucoup pour l'intérêt que vous portez au projet !

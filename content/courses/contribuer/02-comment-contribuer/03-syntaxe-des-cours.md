@@ -13,8 +13,6 @@ Pour créer un titre, ajoutez des `#` avant le texte.
 #### Titre de sous-section
 ```
 
-Le premier niveau de titre s'affiche comme le titre d'une page en violet. Pour éditer le contenu d'un article, on utilise donc des titres de deuxième ou troisième niveau.
-
 ### Emphases
 
 Style                  | Syntaxe
@@ -143,7 +141,9 @@ Dans le cas de vidéos de quelques secondes pour illustrer un article, vous pouv
 - `controls` affiche les boutons play/pause, volume, plein-écran, ainsi qu'une barre de progression.
 - `poster = "static/videos/.../poster.png"` affiche une image quand la vidéo n'est pas encore lancée. Par défaut, la première image de la vidéo est affichée.
 
-Pour imiter le comportement d'un gif animé, vous pouvez lancer la vidéo automatiquement et la faire boucler sans le son : `autoplay muted loop`. Cela permet de profiter des avantages d'une vidéo par rapport au gif : une meilleure qualité et un fichier plus léger. Voici deux exemples :
+Avec des paramètres bien équilibrés, une vidéo MP4 est bien plus légère et de meilleure qualité qu'un gif animé, ce qui est bien pratique pour les petites connexions ! Pour imiter le comportement d'un gif animé, vous pouvez lancer la vidéo automatiquement et la faire boucler sans le son : `autoplay muted loop`.
+
+Voici deux exemples :
 
 ```
 [[Video src="/videos/pico-8/jelpi.mp4" autoplay muted loop]]

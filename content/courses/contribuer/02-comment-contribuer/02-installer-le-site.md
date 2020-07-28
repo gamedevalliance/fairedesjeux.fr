@@ -2,7 +2,7 @@
 title: "Installer le site chez soi"
 ---
 
-Nous avons vu comment créer un fork et écrire des petites modifications depuis votre navigateur. Si vous souhaitez proposer des contributions plus importantes, comme par exemple ajouter des nouvelles pages et formations, cela ne serait pas très pratique, car vous ne pouvez pas voir le résultat de ce que vous écrivez.
+Nous avons vu comment créer un fork et écrire des petites modifications depuis votre navigateur. Si vous souhaitez proposer des contributions plus importantes, comme par exemple ajouter de nouvelles pages et formations, cela ne serait pas très pratique, car vous ne pouvez pas voir le résultat de ce que vous écrivez.
 
 Pour cela, vous pouvez télécharger le site sur votre ordinateur et lancer un serveur local. Ainsi, vous pourrez écrire plus confortablement dans votre éditeur préféré, et visualiser le résultat en direct dans votre navigateur !
 
@@ -45,7 +45,7 @@ cd Documents\Github\fairedesjeux.fr
 npm install
 ```
 
-> npm ne fonctionnera pas si vous ouvrez l'invite de commandes depuis Github Desktop. Il est conseillé d'ouvrir cmd séparément, mais lancer Github Desktop en tant qu'administrateur fonctionne aussi.
+> npm ne fonctionnera pas correctement si vous ouvrez l'invite de commandes depuis Github Desktop. Il est conseillé d'ouvrir cmd séparément, mais lancer Github Desktop en tant qu'administrateur fonctionne aussi.
 
 ![](./npm-install.png)
 *Là aussi, cela peut prendre un moment. C'est l'occasion de boire votre café.*

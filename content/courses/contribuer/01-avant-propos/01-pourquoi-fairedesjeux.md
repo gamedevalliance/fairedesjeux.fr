@@ -7,8 +7,6 @@ Après deux ans à faire vivre le wiki de Game Dev Alliance, nous avons constat�
 
 FaireDesJeux.fr a donc pour ambition de proposer des formations gratuites accompagnant les débutants dans les premiers pas de la création de jeux vidéo, tout en leur permettant, une fois les bases acquises, de mieux s'en sortir entre les documentations officielles et les diverses ressources sur le web. Nous avons la volonté de lier le format écrit de FaireDesJeux.fr avec le format vidéo sur la chaîne Youtube de Game Dev Alliance. Quand cela sera possible, vous pourrez retrouver chaque chapitre des formations au format vidéo, toujours présenté par Aurélien !
 
-Enfin, FaireDesJeux.fr est aussi et surtout un site participatif, que ce soit pour corriger une faute ou créer du contenu. Nous avons mis en place une charte de qualité pour s'assurer que tout le monde avance dans la même direction. A la suite de ce chapitre, une formation rapide mais complète vous explique tous les outils à utiliser pour travailler confortablement : GitHub, Markdown, etc.
-
-Lecteurs et lectrices, contributeurs et contributrices, nous espérons que vous trouverez sur ce site tout ce qu'il vous faut pour titiller votre créativité !
+Enfin, FaireDesJeux.fr est aussi et surtout un site participatif, que ce soit pour corriger une faute ou créer du contenu. Nous avons mis en place une charte de qualité pour s'assurer que tout le monde avance dans la même direction. Lecteurs et lectrices, contributeurs et contributrices, nous espérons que vous trouverez sur ce site tout ce qu'il vous faut pour titiller votre créativité !
 
 L'équipe de Game Dev Alliance.
