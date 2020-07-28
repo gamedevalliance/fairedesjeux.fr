@@ -104,6 +104,18 @@
             @apply text-center text-sm text-font-2 mt-4 mb-0 block;
         }
 
+        & ul {
+            @apply list-disc list-inside;
+        }
+
+        & ol {
+            @apply list-decimal list-inside;
+        }
+
+        & li {
+            @apply my-2;
+        }
+
         & pre, & code {
             @apply border-0 bg-area text-sm mb-6 mt-3 rounded-md font-display;
 
@@ -122,6 +134,85 @@
                 @apply m-5 italic;
             }
         }
-    }
 
+        & .bubble {
+            & .bubble-content {
+                @apply inline-block text-left bg-area py-2 px-8 my-4 rounded-full;
+
+                margin-left: -20px;
+                margin-right: -20px;
+                max-width: 89%;
+            }
+
+            & h5 {
+                @apply inline-block text-right m-0 py-1 px-5 relative text-lg bg-area-2 rounded-lg;
+
+                top: 2rem;
+                margin-top: -2rem;
+            }
+        }
+
+        & .bubble-marvin {
+            @apply text-right;
+
+            & h5 {
+                @apply text-marvin;
+
+                right: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/marvin.png");
+                content: "";
+                float: right;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        & .bubble-astride {
+            @apply text-left;
+
+            & h5 {
+                @apply text-astride;
+
+                left: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/astride.png");
+                content: "";
+                float: left;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        & .bubble-remi {
+            @apply text-left;
+
+            & h5 {
+                @apply text-remi;
+
+                left: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/remi.png");
+                content: "";
+                float: left;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+    }
 </style>
