@@ -4,7 +4,7 @@ title: "Faire défiler les étoiles"
 
 Continuons de nous entraîner avec les boucles for en affichant des étoiles qui défilent.
 
-Vidéo
+[[Video src="/videos/pico-8/etoiles-defilantes.mp4" autoplay muted loop controls]]
 
 Chaque étoile aura une position X et Y, une couleur et une vitesse. Comme vous le voyez, en faisant varier la couleur et la vitesse des étoiles, on peut créer un effet de profondeur sympathique !
 
@@ -38,7 +38,7 @@ Créons une fonction `update_stars()` pour faire défiler les étoiles au cours 
 
 ![Fonction Update stars](./update-stars.png)
 
-Si vous essayez, vous allez vous apercevoir d'un petit problème... Quand une étoile atteint le bas de l'écran, nous allons la replacer en haut, et lui redonner un X aléatoire (sinon, le même motif défilerait en boucle).
+Pensez à appeler `update_stars()` dans `_update60()`. Si vous essayez le jeu, vous allez vous apercevoir d'un petit problème... Les étoiles s'en vont et ne reviennent jamais. Donc quand une étoile atteindra le bas de l'écran, nous allons la replacer en haut, et lui redonner un X aléatoire (sinon, le même motif défilerait en boucle).
 
 ![Déplacement de l'étoile](./move-star.png)
 

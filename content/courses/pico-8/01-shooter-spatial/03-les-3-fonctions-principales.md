@@ -10,11 +10,19 @@ Il existe trois fonctions pré-définies dans PICO-8 qui vous seront très utile
 
 ![Les trois fonctions dans l'éditeur de code](./les-3-fonctions.png)
 
-Vous vous demandez peut-être : « Mais pourquoi séparer update et draw alors que les deux sont lus à la suite ? »
+:::marvin
+Pourquoi je dois séparer update et draw alors que les deux se jouent à la suite ?
+:::
 
-Quand tout se passe normalement, ça ne fait pas de différence de tout écrire dans la même fonction, en effet. Par contre, c'est utile si le jeu devient trop gourmand pour la petite machine virtuelle et se met à ralentir ! Si PICO-8 n'arrive pas à dessiner les frames à temps, `_draw()` sera appelé à 15 FPS, et `update()` sera appelé deux fois par frame pour compenser. Ainsi le gameplay continue de fonctionner à la vitesse normale même quand l'affichage est ralenti !
+:::astride
+Quand tout se passe bien, c'est vrai qu'on ne verrait pas la différence en écrivant tout dans la même fonction. Par contre, c'est utile si le jeu se met à ralentir !
+:::
 
-> Si vous préférez que votre jeu tourne à 60 FPS, remplacez `_update()` par `_update60()`. Chaque frame aura donc moitié moins de puissance processeur pour être calculée, mais cela suffit largement pour les jeux les plus simples.
+Lorsque le jeu devient trop gourmand pour la petite machine virtuelle et que PICO-8 n'arrive pas à dessiner les frames à temps, `_draw()` sera appelé à 15 FPS, et `update()` sera appelé deux fois par frame pour compenser. Ainsi le gameplay continue de fonctionner à la vitesse normale même quand l'affichage est ralenti !
+
+:::remi
+Si vous préférez que votre jeu tourne à 60 FPS, remplacez `_update()` par `_update60()`. Cela veut dire que PICO-8 doit calculer deux fois plus de frames par seconde, mais cela ne pose pas de problème pour les jeux les plus simples.
+:::
 
 ### Déplacer le vaisseau
 
