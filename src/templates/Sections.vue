@@ -77,15 +77,15 @@
             @apply my-2;
         }
 
+        & li > code, & p > code {
+            @apply px-2 py-1;
+        }
+
         & pre, & code {
             @apply border-0 bg-area text-sm mb-6 mt-3 rounded-md font-display;
 
             text-shadow: none;
             box-shadow: none;
-        }
-
-        & code {
-            @apply px-2 py-1;
         }
 
         & blockquote {

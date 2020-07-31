@@ -97,9 +97,9 @@
 <style lang="postcss" scoped>
     article >>> {
         /*
-            NOTE: This style is used for captions of images and videos. Very practical for the authors
-            as they only have to do a line return and write in italics. - nev, 2020-04-24
-        */
+                NOTE: This style is used for captions of images and videos. Very practical for the authors
+                as they only have to do a line return and write in italics. - nev, 2020-04-24
+            */
         & img + noscript + em, & video + p > em {
             @apply text-center text-sm text-font-2 mt-4 mb-0 block;
         }
@@ -116,15 +116,15 @@
             @apply my-2;
         }
 
+        & li > code, & p > code {
+            @apply px-2 py-1;
+        }
+
         & pre, & code {
             @apply border-0 bg-area text-sm mb-6 mt-3 rounded-md font-display;
 
             text-shadow: none;
             box-shadow: none;
-        }
-
-        & p > code {
-            @apply px-2 py-1;
         }
 
         & blockquote {
