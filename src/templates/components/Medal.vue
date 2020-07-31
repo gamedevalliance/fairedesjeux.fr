@@ -20,7 +20,7 @@
             >
                 [?]
             </g-link>
-            <g-link v-else to="/contribuer/avant-propos/charte/">nos critères de qualité</g-link> :
+            <g-link v-else to="/contribuer/avant-propos/charte/">nos critères de qualité</g-link>
         </span>
 
         <div v-if="rank === 'BRONZE' || rank === 'SILVER'" class="text-sm" v-html="$page.section.medal_message"></div>

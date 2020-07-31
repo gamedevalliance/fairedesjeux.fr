@@ -164,12 +164,12 @@
         max-height: 275px;
     }
 
-    .cta:nth-child(3n) {
-        width: 100%;
+    .cta {
+        min-height: 205px;
     }
 
-    .cta:nth-child(6n) {
-        width: calc(50% - 1rem);
+    .cta:nth-child(2n+1) {
+        width: 100%;
     }
 
     @screen md {
@@ -178,7 +178,10 @@
             max-height: auto;
         }
 
-        .cta, .cta:nth-child(3n) {
+        /* We're forced to also use the odd selector here because otherwise the mobile rule also affect the desktop
+           version. Normally, just putting the media query stuff after the normal rule would be enough but this doesn't
+           work in this case because of Tailwind I believe - erika, 2020-07-31 */
+        .cta, .cta:nth-child(2n+1) {
             width: calc(25% - 1rem);
         }
 

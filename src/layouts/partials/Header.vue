@@ -1,14 +1,14 @@
 <template>
     <header class="bg-body text-font font-semibold clearfix">
-        <div class="container mx-auto">
-            <MobileMenuSwitcher />
+        <div class="container mx-auto flex justify-between md:block px-3 md:px-0">
             <Logo />
-            <Links />
-            <Socials class="float-right py-3" />
+            <Links class="hidden md:inline-block " />
+            <Socials class="float-right py-3 hidden md:inline-block" />
             <!--
             <Search />
             <ThemesSwitcher />
             -->
+            <MobileMenuSwitcher />
         </div>
     </header>
 </template>
