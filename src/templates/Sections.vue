@@ -84,7 +84,7 @@
             box-shadow: none;
         }
 
-        & p > code {
+        & code {
             @apply px-2 py-1;
         }
 
