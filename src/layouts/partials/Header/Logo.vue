@@ -1,5 +1,5 @@
 <template>
-    <a class="inline-block border-none" href="/">
+    <a class="inline-block border-none relative" href="/">
         <g-image src="~/assets/logo.png"
                  width="60px"
                  class="float-left"
@@ -12,11 +12,20 @@
             Faire des<br />
             <span class="tracking-logo">jeux .fr</span>
         </h1>
+        <span class="beta absolute bg-astride rounded-md text-font font-bold">Bêta</span>
     </a>
 </template>
 
 <style lang="postcss" scoped>
     .logo__text {
         height: 55px;
+    }
+
+    .beta {
+        top: 38px;
+        left: 123px;
+        padding: 0.15rem;
+        font-size: 0.6rem;
+        transform: rotate(-10deg);
     }
 </style>
