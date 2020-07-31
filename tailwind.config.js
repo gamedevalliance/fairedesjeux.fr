@@ -100,7 +100,7 @@ module.exports = {
                     },
                 },
 
-                img: {
+                'img, iframe': {
                     maxWidth: '100%',
                     marginLeft: 'auto',
                     marginRight: 'auto',
