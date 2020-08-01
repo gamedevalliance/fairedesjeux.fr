@@ -138,4 +138,4 @@ Souvenez-vous : en créant l'ennemi dans `spawn_enemies()`, on lui avait donné
 
 Comme un nouvel ennemi apparaît immédiatement après, c'est un peu étrange. Vous pouvez éloigner la position Y de départ des ennemis à −24 par exemple.
 
-On a bien avancé, mais il a fallu se triturer les méningesVous savez, cet alien a eu ce qu'il méritait mais on devrait le faire exploser dans les règles de l'art.
+On a bien avancé ! N'hésitez pas à prendre une petite pause pour vous aérer l'esprit. Dans l'étape suivante, nous continuerons à nous acharner sur ce pauvre ennemi en réalisant une animation d'explosion en quelques lignes !
