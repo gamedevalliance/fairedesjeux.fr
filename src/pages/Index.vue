@@ -4,7 +4,7 @@
             <div class="pt-4 flex flex-wrap flex-col lg:flex-row">
                 <div v-for="featuredCourse in $page.featuredCourses.edges"
                      :key="featuredCourse.node.id"
-                     class="featured-class h-featuredClass relative lg:mx-2 mb-4 lg:mb-0"
+                     class="featured-class h-featuredClass relative overflow-hidden lg:mx-2 mb-4 lg:mb-0"
                      :title="featuredCourse.node.title"
                 >
                     <g-link :to="featuredCourse.node.path" class="featured-class__link">
@@ -117,6 +117,8 @@
     }
 
     .featured-class {
+        max-height: 250px;
+
         &:first-of-type {
             @apply ml-0;
 
@@ -161,7 +163,7 @@
 
     .game-engine-class, .cta {
         width: calc(50% - 1rem);
-        max-height: 275px;
+        max-height: 255px;
     }
 
     .cta {
@@ -172,10 +174,18 @@
         width: 100%;
     }
 
-    @screen md {
+    @screen lg {
+        .featured-class {
+            max-height: 325px;
+        }
+
         .game-engine-class {
             width: calc(16.666667% - 1rem);
-            max-height: auto;
+            max-height: 280px;
+        }
+
+        .cta {
+            max-height: 280px;
         }
 
         /* We're forced to also use the odd selector here because otherwise the mobile rule also affect the desktop
