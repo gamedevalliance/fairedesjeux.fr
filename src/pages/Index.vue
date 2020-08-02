@@ -4,7 +4,7 @@
             <div class="pt-4 flex flex-wrap flex-col lg:flex-row">
                 <div v-for="featuredCourse in $page.featuredCourses.edges"
                      :key="featuredCourse.node.id"
-                     class="featured-class h-featuredClass relative overflow-hidden lg:mx-2 mb-4 lg:mb-0"
+                     class="featured-class h-featuredCourse relative overflow-hidden lg:mx-2 mb-4 lg:mb-0"
                      :title="featuredCourse.node.title"
                 >
                     <g-link :to="featuredCourse.node.path" class="featured-class__link">
@@ -25,67 +25,33 @@
                 Faire des jeux avec...
             </h3>
 
-            <div class="flex flex-wrap">
-                <div
-                    v-for="gameEngineCourse in $page.gameEngineCourses.edges"
-                    :key="gameEngineCourse.node.id"
-                    class="game-engine-class h-gameEngineClass relative mx-2 mb-4 md:mb-0"
-                    :title="gameEngineCourse.node.title"
-                >
-                    <g-link :to="gameEngineCourse.node.path" class="game-engine-class__link">
-                        <g-image
-                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.name}/cover-tall.png`)"
-                            class="rounded-md h-full object-cover"
-                        />
-                        <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                            <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
-                                {{ gameEngineCourse.node.short_title || gameEngineCourse.node.title }}
-                            </h2>
-                        </div>
-                    </g-link>
-                </div>
+            <course-list :list="$page.gameEngineCourses.edges" class="flex flex-wrap">
                 <contribute-c-t-a
                     class="cta"
                 />
-            </div>
+            </course-list>
 
-            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container md:mt-5">
+            <h3 class="text-2xl text-white m-3 mt-1 ml-0 block container lg:mt-5">
                 Autres compétences :
             </h3>
 
-            <div class="flex flex-wrap">
-                <div
-                    v-for="skillCourse in $page.skillCourses.edges"
-                    :key="skillCourse.node.id"
-                    class="game-engine-class h-gameEngineClass relative mx-2 mb-4 md:mb-0"
-                    :title="skillCourse.node.title"
-                >
-                    <g-link :to="skillCourse.node.path" class="game-engine-class__link">
-                        <g-image
-                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${skillCourse.node.name}/cover-tall.png`)"
-                            class="rounded-md h-full object-cover"
-                        />
-                        <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                            <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
-                                {{ skillCourse.node.short_title || skillCourse.node.title }}
-                            </h2>
-                        </div>
-                    </g-link>
-                </div>
+            <course-list :list="$page.skillCourses.edges" class="flex flex-wrap">
                 <contribute-c-t-a
                     class="cta"
                 />
-            </div>
+            </course-list>
         </main>
     </Layout>
 </template>
 
 <script>
     import ContributeCTA from './components/Index/ContributeCTA.vue';
+    import CourseList from './components/Index/CourseList.vue';
 
     export default {
         components: {
             ContributeCTA,
+            CourseList,
         },
         metaInfo: {
             /* NOTE: On the index page we don't have a subtitle for the page, it's only the site title
@@ -101,21 +67,6 @@
     /*  NOTE: Tailwind doesn't by default allow us to target ::before and ::after pseudo-elements. Weird.
         We'll make a custom plugin for this or add a package later on in the developpement I guess - erika, 2020-01-19
     */
-    .featured-class__link::after {
-        @apply rounded-md absolute top-0 bottom-0 right-0 left-0;
-
-        content: "";
-        background:
-            linear-gradient(
-                to bottom,
-                transparent 0,
-                rgba(0, 0, 0, 0) 30%,
-                rgba(0, 0, 0, 0.1) 50%,
-                rgba(0, 0, 0, 0.4) 75%,
-                rgba(0, 0, 0, 0.55) 100%
-            );
-    }
-
     .featured-class {
         max-height: 250px;
 
@@ -146,7 +97,7 @@
         }
     }
 
-    .game-engine-class__link::after {
+    .featured-class__link::after {
         @apply rounded-md absolute top-0 bottom-0 right-0 left-0;
 
         content: "";
@@ -155,18 +106,15 @@
                 to bottom,
                 transparent 0,
                 rgba(0, 0, 0, 0) 30%,
-                rgba(0, 0, 0, 0.3) 70%,
-                rgba(0, 0, 0, 0.4) 80%,
-                rgba(0, 0, 0, 0.6) 100%
+                rgba(0, 0, 0, 0.1) 50%,
+                rgba(0, 0, 0, 0.4) 75%,
+                rgba(0, 0, 0, 0.55) 100%
             );
     }
 
-    .game-engine-class, .cta {
+    .cta {
         width: calc(50% - 1rem);
         max-height: 255px;
-    }
-
-    .cta {
         min-height: 205px;
     }
 
@@ -177,11 +125,6 @@
     @screen lg {
         .featured-class {
             max-height: 325px;
-        }
-
-        .game-engine-class {
-            width: calc(16.666667% - 1rem);
-            max-height: 280px;
         }
 
         .cta {

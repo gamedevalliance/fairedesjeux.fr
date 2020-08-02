@@ -38,8 +38,8 @@ module.exports = {
             },
 
             height: {
-                featuredClass: '19rem',
-                gameEngineClass: '18.5rem',
+                featuredCourse: '19rem',
+                normalCourse: '18.5rem',
             },
 
             width: {
