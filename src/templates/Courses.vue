@@ -23,7 +23,7 @@
 
                     <section v-html="$page.section.content"></section>
 
-                    <h3>Commencer la formation en mode..</h3>
+                    <h3>Commencer la formation en mode...</h3>
                     <div class="flex justify-center mt-4">
                         <Button :src="$page.section.chapters[0].sections[0].path" class="w-64">
                             Texte

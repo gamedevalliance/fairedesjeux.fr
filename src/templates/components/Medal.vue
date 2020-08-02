@@ -43,7 +43,7 @@
                 },
                 SILVER: {
                     image: 'medal-argent.png',
-                    message: 'Cette formation est incomplète',
+                    message: 'Cette formation est incomplète.',
                 },
                 GOLD: {
                     image: 'medal-or.png',
