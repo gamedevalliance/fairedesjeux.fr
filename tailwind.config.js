@@ -40,6 +40,7 @@ module.exports = {
             height: {
                 featuredCourse: '19rem',
                 normalCourse: '18.5rem',
+                courseCover: '19rem',
             },
 
             width: {

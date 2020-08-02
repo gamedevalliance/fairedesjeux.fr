@@ -15,7 +15,7 @@
 
                         <g-image
                             :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.section.name}/cover-wide.png`)"
-                            class="rounded-md h-featuredClass w-full object-cover"
+                            class="rounded-md h-courseCover w-full object-cover"
                         />
                     </header>
 
