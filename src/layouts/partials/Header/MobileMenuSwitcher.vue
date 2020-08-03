@@ -1,16 +1,16 @@
 <template>
     <section class="md:hidden">
-        <div>
+        <button @click="$emit('toggle-mobile-menu')">
             <g-image src="~/assets/menu.png"
                      immediate="true"
                      quality="100"
             />
-        </div>
+        </button>
     </section>
 </template>
 
 <style lang="postcss" scoped>
-    div {
+    button {
         @apply relative p-3;
 
         height: 50px;

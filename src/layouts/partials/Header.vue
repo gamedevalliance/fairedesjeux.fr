@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-body text-font font-semibold clearfix">
+    <header class="bg-area md:bg-body text-font font-semibold clearfix">
         <div class="container mx-auto flex justify-between md:block px-3 md:px-0">
             <Logo />
             <Links class="hidden md:inline-block " />
@@ -8,7 +8,7 @@
             <Search />
             <ThemesSwitcher />
             -->
-            <MobileMenuSwitcher />
+            <MobileMenuSwitcher v-on="$listeners" />
         </div>
     </header>
 </template>
