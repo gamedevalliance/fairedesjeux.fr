@@ -12,7 +12,7 @@
             Faire des<br />
             <span class="tracking-logo">jeux .fr</span>
         </h1>
-        <span class="beta absolute bg-astride rounded-md text-font font-bold">Bêta</span>
+        <span class="beta absolute bg-astride rounded-md text-font font-bold z-20">Bêta</span>
     </a>
 </template>
 

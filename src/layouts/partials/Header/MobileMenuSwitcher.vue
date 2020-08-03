@@ -1,12 +1,10 @@
 <template>
-    <section class="md:hidden">
-        <button @click="$emit('toggle-mobile-menu')">
-            <g-image src="~/assets/menu.png"
-                     immediate="true"
-                     quality="100"
-            />
-        </button>
-    </section>
+    <button class="md:hidden">
+        <g-image src="~/assets/menu.png"
+                 immediate="true"
+                 quality="100"
+        />
+    </button>
 </template>
 
 <style lang="postcss" scoped>
@@ -15,8 +13,11 @@
 
         height: 50px;
         width: 50px;
+        margin-top: 2px;
         top: 50%;
-        transform: translateY(-50%);
+
+        /* NOTE: This remove the imposed 300ms latency on touch events on mobile - erika, 2020-08-02  */
+        touch-action: manipulation;
 
         &:hover {
             @apply bg-area-2 cursor-pointer;

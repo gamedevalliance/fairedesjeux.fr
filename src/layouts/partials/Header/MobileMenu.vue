@@ -1,5 +1,7 @@
 <template>
-    <nav :class="{'hidden': !state}">
+    <nav
+        :class="[state ? 'mobile--menu-open' : '', 'mobile--menu fixed w-0 overflow-hidden whitespace-no-wrap bg-area']"
+    >
         <g-link v-for="menuCourse in $static.menuCourses.edges"
                 :key="menuCourse.node.header"
                 :to="menuCourse.node.path"
@@ -21,6 +23,19 @@
         },
     };
 </script>
+
+<style lang="postcss" scoped>
+    .mobile--menu {
+        transition: width 0.1s linear;
+        height: calc(100% - 55px);
+        z-index: 15;
+    }
+
+    .mobile--menu-open {
+        width: 100%;
+        overflow-y: scroll;
+    }
+</style>
 
 <static-query>
     query {
