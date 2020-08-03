@@ -3,8 +3,9 @@ type: SKILL
 title: "Alors comme ça, vous voulez devenir pixel artiste ?"
 short_title: "Pixel art"
 date: "2020-04-18"
-author: "Nolwenn"
-medal: GOLD
+author: "Tsugumo, Nev, Nolwenn Deumié"
+medal: SILVER
+medal_message: "La partie du cours sur les tiles est entièrement réécrite. La deuxième moitié, sur les sprites et l'animation, doit encore être traduite et de l'aide serait appréciée ! [Participer](https://github.com/gamedevalliance/fairedesjeux.fr/issues/6)"
 header: 3
 ---
 

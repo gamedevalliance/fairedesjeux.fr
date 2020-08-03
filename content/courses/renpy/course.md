@@ -2,8 +2,8 @@
 type: ENGINE
 title: "Créer des visual novels avec Ren'Py !"
 short_title: "Ren'Py"
-date: "2020-04-18"
-author: "Aurélien"
+date: "2020-07-28"
+author: "Nev, Aurélien Dos Santos"
 medal: PLATINUM
 featured: 1
 header: 1

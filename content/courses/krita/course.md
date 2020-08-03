@@ -2,7 +2,7 @@
 type: SKILL
 title: "Krita"
 short_title: "Krita"
-date: "2020-05-26"
+date: "2020-08-03"
 author: "Nev"
 medal: SILVER
 medal_message: "Le chapitre sur le pixel art est terminé ! De l'aide pour écrire les deux suivants serait appréciée. [Participer](https://github.com/gamedevalliance/fairedesjeux.fr/issues/5)"

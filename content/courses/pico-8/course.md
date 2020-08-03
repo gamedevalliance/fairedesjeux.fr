@@ -3,8 +3,8 @@ type: ENGINE
 title: "Programmer des mini jeux avec PICO-8"
 short_title: "PICO-8"
 description: "Apprenez à programmer pour la première fois en créant de supers petits jeux simplement."
-date: "2020-04-18"
-author: "Aurélien"
+date: "2020-08-03"
+author: "Aurélien Dos Santos"
 medal: SILVER
 medal_message: "Le chapitre sur les jeux d'aventure, qui expliquera comment se déplacer sur une carte, est en cours d'écriture. [Voir l'avancement](https://github.com/gamedevalliance/fairedesjeux.fr/issues/7)"
 header: 2

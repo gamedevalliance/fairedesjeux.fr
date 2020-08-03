@@ -12,9 +12,9 @@ FaireDesJeux.fr est un site collaboratif proposant des formations gratuites pour
 
 - Nous signaler les erreurs d'une page et vos suggestions d'amélioration.
 - Améliorer la page vous-même avec le bouton "Modifier cette page".
-- Ecrire une formation sur Word ou autre puis nous l'envoyer pour que nous l'adaptions au site.
+- Ecrire une formation sur Word ou un autre logiciel puis nous l'envoyer pour que nous l'adaptions au site.
 - Installer le site sur votre ordinateur et écrire votre formation directement sur le site.
-- Faire un don pour nous aider à héberger le site et payer des artistes et contributeurs qualifiés.
+- Faire un don pour nous aider à financer Game Dev Alliance (hébergement du site, matériel, paiement des artistes...).
 
 Vous pouvez discuter avec l'équipe de FaireDesJeux sur notre [serveur Discord](https://discord.gg/RrBppaj) (nous sommes toujours dans le coin !) ou bien par email à contact@gamedevalliance.fr.
 

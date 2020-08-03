@@ -3,7 +3,7 @@ type: SKILL
 title: "Publier sur itch.io"
 short_title: "Publier sur itch.io"
 date: "2020-05-25"
-author: "Aurélien"
+author: "Aurélien Dos Santos"
 medal: GOLD
 ---
 
