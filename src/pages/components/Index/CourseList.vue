@@ -54,6 +54,14 @@
         max-height: 255px;
     }
 
+    @screen md {
+        .course {
+            & img {
+                object-position: 50% 25%;
+            }
+        }
+    }
+
     @screen lg {
         .course {
             width: calc(16.666667% - 1rem);

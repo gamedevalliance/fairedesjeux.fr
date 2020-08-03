@@ -122,9 +122,21 @@
         width: 100%;
     }
 
+    @screen md {
+        .featured-class {
+            & img {
+                object-position: 50% 32%;
+            }
+        }
+    }
+
     @screen lg {
         .featured-class {
             max-height: 325px;
+
+            & img {
+                object-position: 50% 45%;
+            }
         }
 
         .cta {

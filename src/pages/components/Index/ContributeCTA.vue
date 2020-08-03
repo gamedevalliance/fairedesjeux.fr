@@ -18,6 +18,18 @@
 
 <style lang="postcss" scoped>
     .book {
-        width: 140px;
+        width: 125px;
+    }
+
+    @screen md {
+        .book {
+            width: 150px;
+        }
+    }
+
+    @screen lg {
+        .book {
+            width: 160px;
+        }
     }
 </style>
