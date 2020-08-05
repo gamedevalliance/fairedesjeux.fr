@@ -137,13 +137,3 @@ Cela peut sembler étrange au premier abord, mais c'est très pratique. En fait,
 :::marvin
 Sinon, on serait obligés de dessiner nous-mêmes plein de traits sous de la clé de sol. J'ai compris !
 :::
-
-### Le rythme
-
-Le rythme indique la durée des notes et l'espace entre elles. Il suit un **tempo**, ou BPM pour battements par minute. On peut suivre le tempo plus facilement avec un métronome : s'il bipe toutes les secondes, le tempo est à 60.
-
-:::astride
-Le rythme est aussi important que la mélodie en musique. On peut tout à fait faire de la musique avec une seule note mais un rythme qui varie !
-:::
-
-*Percussion sympa*
