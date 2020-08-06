@@ -51,7 +51,7 @@ Et voilà, votre vague est toute belle, sans bavure ! Rendons maintenant le nom
 
 ![](./x-gap.png)
 
-Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/pico-8.php?page=manual) explique que `rnd(n)` retourne un nombre décimal où 0 ≤ résultat < n. On doit arrondir le résultat en un nombre entier, et pour cela deux méthodes s'offrent à vous :
+Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=rnd%20x) explique que `rnd(n)` retourne un nombre décimal où 0 ≤ résultat < n. On doit arrondir le résultat en un nombre entier, et pour cela deux méthodes s'offrent à vous :
 
 - `flr(rnd(n))` donne un nombre entier entre 0 et ***n* − 1**.
 - `ceil(rnd(n))` donne un nombre entier entre 1 et ***n***.

@@ -53,7 +53,7 @@ On va appeler la fonction `shoot()` lorsque le joueur appuie sur X. Retournez à
 
 Tout simplement ! Vous savez maintenant écrire une fonction et l'appeler ailleurs, ce qui est très pratique pour découper son code d'une façon plus lisible.
 
-Notez que l'on utilise `btnp()` au lieu de `btn()`. C'est le diminutif de "button pressed" : au lieu d'être tout le temps vraie tant que le bouton est appuyé, cette fonction renvoie `true` par intervalles quand le bouton est maintenu. On l'utilise généralement pour se déplacer dans un menu, mais dans notre cas, ça permet d'obtenir très simplement un tir qui fonctionne. Vous pouvez modifier la durée de l'intervalle en consultant l'explication de "btnp" dans le manuel.
+Notez que l'on utilise `btnp()` au lieu de `btn()`. C'est le diminutif de "button pressed" : au lieu d'être tout le temps vraie tant que le bouton est appuyé, cette fonction renvoie `true` par intervalles quand le bouton est maintenu. On l'utilise généralement pour se déplacer dans un menu, mais dans notre cas, ça permet d'obtenir très simplement un tir qui fonctionne. Vous pouvez modifier la durée de l'intervalle en consultant l'explication de "btnp" dans le [manuel](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=btnp%20%5Bi%20%5Bp%5D%5D).
 
 ### Afficher les tirs
 

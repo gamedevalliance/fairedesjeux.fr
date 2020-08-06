@@ -1,0 +1,126 @@
+---
+title: "Score et game over"
+---
+
+### Afficher un score
+
+Au début du jeu, on doit déclarer la variable `score` et la mettre à 0 :
+
+![](./score-0.png)
+
+Ensuite, quand on tue un ennemi, montez le score de 100 points par exemple. C'est toujours plus gratifiant quand il y a plein de zéros !
+
+![](./score-100.png)
+
+Enfin, et c'est là la nouveauté, nous allons afficher du texte dans un coin de l'écran avec la commande `print()`.
+
+```lua
+print("texte", x, y, couleur)
+```
+
+Les guillemets permettent d'indiquer que c'est un texte, ou un *string* en programmation. Sans les guillemets, PICO-8 tentera de l'interpréter comme une instruction. Ainsi, vous pouvez afficher le contenu d'une variable, ou encore appeler une fonction qui renverra un texte.
+
+```lua
+print(score_text(), 0, 0, 7)
+
+function score_text()
+    if score > 1000 then
+        return "mega score !!!"
+    else
+        return "perfectible"
+    end
+end
+```
+
+Comme pour la plupart des fonctions de PICO-8 acceptant une couleur, si on ne la précise pas, la dernière couleur utilisée est choisie. Ainsi, en écrivant ceci :
+
+```lua
+print("score:", 2, 2, 7)
+print(score, 2, 8)
+```
+
+...les deux textes seront affichés en blanc. En sachant tout cela, affichez le score comme il vous plaît à la fin de draw.
+
+![](./print-score.png)
+
+![](./score-en-jeu.png)
+
+Plus qu'à gérer la collision entre notre vaisseau et les ennemis afin d'avoir une première condition de défaite !
+
+![](./collision-ennemi-joueur.png)
+*Au tout début de ce cours, nous n'avions pas encore pris l'habitude de ranger les choses dans des fonctions, donc ce qui concerne notre vaisseau est directement dans update. N'hésitez pas à réorganiser ça !*
+
+Pour le moment, on n'a pas d'écran de game over donc pour tester, on appelle simplement `_init()` : cela remettra toutes les variables à leur état initial, donc c'est comme si on redémarrait le jeu. Plus tard, on appellera notre scène de game over à la place, mais... comment créer différentes scènes ?
+
+### Gérer plusieurs états
+
+Actuellement, dans update et draw se joue tout ce qui concerne la scène du jeu : le décor, le vaisseau, les ennemis... On ne veut pas de tout cela quand on est dans le menu de game over. De la même façon, le texte de game over ne doit pas s'afficher alors qu'on est en train de jouer ! On a donc besoin de deux états bien distincts. Voici la façon la plus simple de gérer plusieurs états dans son jeu :
+
+```lua
+function _init()
+    state = 0
+end
+
+function _update()
+    if (state == 0) update_game()
+    if (state == 1) update_gameover()
+end
+
+function _draw()
+    if (state == 0) draw_game()
+    if (state == 1) draw_gameover()
+end
+
+function update_game()
+    -- quand on meurt, changer d'état :
+    state = 1
+end
+
+function update_gameover()
+    -- quand on relance la partie :
+    state = 0
+end
+
+function draw_game()
+end
+
+function draw_gameover()
+end
+```
+
+En suivant cette logique, vous pourriez réaliser davantage d'états, pour un écran-titre ou un menu de magasin par exemple. Suivez ces quelques étapes pour préparer votre jeu à gérer des états :
+
+1. Créez la variable `state` avec une valeur de base dans `_init()`.
+2. Renommez les `_update60()` et `_draw()` actuelles en `update_game()` et `draw_game()`.
+3. Créez des nouvelles `_update60()` et `_draw()` en suivant l'exemple ci-dessus.
+4. Créez les fonctions `update_gameover()` et `draw_gameover()` dans un nouvel onglet "*Game over*" et laissez-les vides pour le moment.
+5. Au moment où le joueur ou la joueuse meurt, au lieu de redémarrer le jeu, changez la valeur de `state` pour passer en game over.
+
+Maintenant, le jeu devrait se figer lorsqu'on meurt. On dirait pas comme ça, mais c'est bon signe ! Actuellement, `draw_gameover()` ne dessine rien, donc c'est la preuve que l'on est dedans.
+
+### Dessiner l'écran de game over
+
+Commencez par choisir une couleur de fond avec `cls()` puis laissez libre cours à votre imagination. Affichez un petit message avec le score puis faites en sorte que l'on puisse quitter l'écran en appuyant sur une touche.
+
+![](./game-over.png)
+*Mon écran contient une fenêtre et son ombre dessinées avec des rectfill ainsi qu'un texte dont la couleur clignote en utilisant l'astuce du modulo. Les deux points `..` permettent de [concaténer](https://www.lua.org/pil/3.4.html) des éléments.*
+
+Vous pouvez essayer d'écrire `state = 0` pour relancer une partie, mais cela posera un problème car les variables du jeu n'ont pas été réinitialisées. Dans notre cas, autant relancer `_init()` qui remet tout à zéro, incluant la variable `state`.
+
+### Perspectives d'amélioration
+
+A travers ce chapitre, j'ai pu vous montrer plein de concepts de base de PICO-8. Maintenant, c'est à vous de choisir : vous pouvez directement passer à la suite pour réaliser un jeu d'aventure, ou bien continuer à vous entraîner sur ce petit shooter. Voici quelques idées intéressantes qui vous feront vous triturer un peu les méninges :
+
+- Donnez des points de vie au vaisseau et un temps d'invincibilité après s'être fait toucher. Affichez des sprites de cœur ou dessinez une jauge avec [rectfill](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=rectfill%20x0%20y0%20x1%20y1%20%5Bcol%5D).
+
+- Améliorez la fonction de collision pour que chaque élément possède un X et un Y, mais aussi une largeur et une hauteur, comme dans l'exemple initial de [MBoffin](https://mboffin.itch.io/pico8-overlap). Utile si vos sprites de projectile sont petits !
+
+- Faites rester les ennemis en haut de l'écran puis faites-les tirer leurs propres projectiles. Vous pouvez commencer simplement avec des tirs qui descendent en Y. Ensuite, complexifiez le système pour que chaque balle puisse suivre un angle. Vous aurez besoin de cosinus et de sinus !
+
+*Démo*
+
+Prenez le temps de chercher par vous-même, et si vous bloquez, téléchargez cette cartouche et ouvrez-la dans une deuxième fenêtre de PICO-8. Elle contient tout ce que nous avons fait dans le tuto ainsi que ces trois points bonus.
+
+*Cartouche*
+
+Vous pouvez également demander de l'aide dans la section d'entraide de notre serveur Discord !

@@ -2,11 +2,26 @@
 title: "Exporter le jeu"
 ---
 
+Votre jeu doit avoir un titre et une image de couverture ! Au tout début de votre code, écrivez deux lignes qui apparaîtront sur l'image de cartouche.
+
+```lua
+--jeu dans l'espace !!
+--par marvin
+```
+
+Ensuite, appuyez sur F7 pendant le jeu pour capturer une image de couverture.
+
 Pour partager votre jeu à d'autres utilisateurs et utilisatrices de PICO-8, vous pourriez tout simplement envoyer le fichier `.p8`, ou bien créer une image de cartouche avec `save mon-jeu.p8.png`. Vous trouverez des images de la sorte sur le site de Lexaloffle par exemple, et vous pouvez les ouvrir dans PICO-8 comme un fichier normal.
 
-Cela dit, le plus souvent, votre public ne possèdera pas PICO-8, c'est pourquoi vous devrez rendre votre jeu *standalone*, c'est-à-dire faire en sorte qu'il se lance de lui-même sans aucun prérequis.
+:::marvin
+Et si mes amis n'ont pas PICO-8 ?
+:::
 
-Pendant le jeu, appuyez sur F7 pour capturer une image de couverture. Puis appuyez sur Echap et écrivez la commande :
+:::astride
+Tu dois rendre ton jeu *standalone* ! Cela veut dire qu'il n'aura besoin de rien d'autre pour se lancer.
+:::
+
+Appuyez sur Echap et écrivez la commande :
 
 ```
 export mon-jeu.bin
@@ -14,7 +29,7 @@ export mon-jeu.bin
 
 ![Utilisation de la commande export](./export.png)
 
-Cette commande produit une version différente de votre jeu par système d'exploitation : Windows, Linux, Mac et même Raspberry Pi ! Pour avoir l'allure d'un vrai pro, vous pouvez aussi personnaliser l'icône du fichier exécutable. Dessinez-la sur votre spritesheet, et notez son numéro dans le paramètre `-i`.
+`bin` est une abréviation de *binaries*, ou exécutables en français. Cette commande produit donc une version différente de votre jeu par système d'exploitation : Windows, Linux, Mac et même Raspberry Pi ! Pour avoir l'allure d'un·e vrai·e pro, vous pouvez aussi personnaliser l'icône du fichier exécutable. Dessinez-la sur votre spritesheet, et notez son numéro dans le paramètre `-i`.
 
 ```
 export -i 21 mon-jeu.bin
