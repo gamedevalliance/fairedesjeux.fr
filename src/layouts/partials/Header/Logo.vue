@@ -1,8 +1,8 @@
 <template>
     <a class="inline-block border-none relative" href="/">
         <g-image src="~/assets/logo.png"
-                 width="60px"
-                 class="float-left"
+                 width="200px"
+                 class="float-left logo"
                  immediate="true"
                  quality="100"
         />
@@ -17,6 +17,9 @@
 </template>
 
 <style lang="postcss" scoped>
+    .logo {
+        width: 63px;
+    }
     .logo__text {
         height: 55px;
     }
