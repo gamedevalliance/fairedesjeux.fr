@@ -115,12 +115,15 @@ A travers ce chapitre, j'ai pu vous montrer plein de concepts de base de PICO-8.
 
 - Améliorez la fonction de collision pour que chaque élément possède un X et un Y, mais aussi une largeur et une hauteur, comme dans l'exemple initial de [MBoffin](https://mboffin.itch.io/pico8-overlap). Utile si vos sprites de projectile sont petits !
 
-- Faites rester les ennemis en haut de l'écran puis faites-les tirer leurs propres projectiles. Vous pouvez commencer simplement avec des tirs qui descendent en Y. Ensuite, complexifiez le système pour que chaque balle puisse suivre un angle. Vous aurez besoin de cosinus et de sinus !
+- Faites que les ennemis tirent leurs propres projectiles. Vous pouvez commencer simplement avec des tirs qui descendent en Y. Ensuite, complexifiez le système pour que chaque balle puisse suivre un angle, pour suivre notre vaisseau par exemple. Vous aurez besoin de cosinus et de sinus !
 
-*Démo*
+<iframe width="538" height="539"
+  src="/jeux-pico-8/space-shooter/index.html">
+</iframe>
 
 Prenez le temps de chercher par vous-même, et si vous bloquez, téléchargez cette cartouche et ouvrez-la dans une deuxième fenêtre de PICO-8. Elle contient tout ce que nous avons fait dans le tuto ainsi que ces trois points bonus.
 
-*Cartouche*
+![Cartouche PICO-8 à télécharger](./space-shooter.p8.png)
+*Enregistrez l'image dans le dossier de vos cartouches PICO-8.*
 
 Vous pouvez également demander de l'aide dans la section d'entraide de notre serveur Discord !
