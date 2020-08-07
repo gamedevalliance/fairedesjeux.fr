@@ -9,7 +9,7 @@
             <Search />
             <ThemesSwitcher />
             -->
-                <MobileMenuSwitcher @click.native="mobileMenu = !mobileMenu" />
+                <MobileMenuSwitcher @click.native="toggleMobileMenu()" />
             </div>
         </header>
         <mobile-menu :state="mobileMenu" />
@@ -40,6 +40,12 @@
             return {
                 mobileMenu: false,
             };
+        },
+        methods: {
+            toggleMobileMenu() {
+                this.mobileMenu = !this.mobileMenu;
+                document.body.classList.toggle('overflow-hidden');
+            },
         },
     };
 </script>
