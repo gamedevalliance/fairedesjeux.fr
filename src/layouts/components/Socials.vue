@@ -1,5 +1,5 @@
 <template>
-    <div class="inline-block text-xl text-font-2">
+    <div class="inline-block text-3xl sm:text-xl text-font-2">
         <a href="https://twitter.com/gamedevalliance" class="twitter" title="Twitter" aria-label="Twitter">
             <font-awesome :icon="['fab', 'twitter']" />
         </a>
@@ -18,7 +18,7 @@
     }
 
     a {
-        @apply inline-block ml-4 border-none text-font align-middle;
+        @apply inline-block ml-6 border-none text-font align-middle;
 
         &.twitter:hover {
             @apply text-blue-400;
@@ -32,4 +32,11 @@
             @apply text-black;
         }
     }
+
+    @screen sm {
+        a {
+            @apply ml-4;
+        }
+    }
+
 </style>

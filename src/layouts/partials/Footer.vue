@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-area mt-8">
-        <div class="container mx-auto py-6 flex justify-between">
-            <div class="flex">
+        <div class="container mx-auto py-5 sm:py-6 flex justify-center sm:justify-between">
+            <div class="hidden sm:flex">
                 <div class="mr-8">
                     <h4 class="text-font text-lg font-bold">
                         À propos
@@ -72,7 +72,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="float-right text-font">
+            <div class="text-center sm:text-left float-right text-font">
                 <Socials />
                 <h2 class="text-font text-2xl my-0 mt-2 leading-none">
                     Game Dev Alliance
