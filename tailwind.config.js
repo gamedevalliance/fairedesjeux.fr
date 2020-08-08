@@ -70,7 +70,7 @@ module.exports = {
             fontSize: {
                 sm: '15px',
                 lg: '18.5px',
-                404: '6rem',
+                big: '6rem',
             },
         },
     },

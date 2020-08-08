@@ -1,8 +1,8 @@
 <template>
     <layout>
         <section>
-            <div class="w-full sm:w-450 mx-auto my-32 px-2">
-                <h2 class="text-center text-6xl sm:text-404">
+            <div class="w-full sm:w-450 mx-auto sm:my-48 px-2">
+                <h2 class="text-center text-5xl sm:text-big">
                     Erreur 404
                 </h2>
                 <p>

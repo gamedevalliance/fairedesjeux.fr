@@ -18,7 +18,10 @@
                             </g-link>
                         </li>
                         <li class="my-2 text-font-3">
-                            Information légales
+                            <g-link to="/informations" class="smola">
+                                Information légales
+                                <g-link />
+                            </g-link>
                         </li>
                         <li class="my-2 text-font-3">
                             <a href="https://github.com/gamedevalliance/fairedesjeux.fr" class="smola">
