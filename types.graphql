@@ -37,3 +37,9 @@ type Section implements Node @infer {
     next: Section @reference(by: "name")
     previous: Section @reference(by: "name")
 }
+
+type Contributor implements Node @infer {
+    name: String
+    profile: String
+    commits: Int
+}

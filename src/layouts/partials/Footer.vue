@@ -13,7 +13,9 @@
                             </g-link>
                         </li>
                         <li class="my-2 text-font-3">
-                            Liste des contributeurs
+                            <g-link to="/contributeurs" class="smola">
+                                Liste des contributeurs
+                            </g-link>
                         </li>
                         <li class="my-2 text-font-3">
                             Information légales

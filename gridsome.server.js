@@ -13,6 +13,7 @@ const fs = require('fs');
 const unified = require('unified');
 const markdown = require('remark-parse');
 const html = require('remark-html');
+const axios = require('axios');
 
 // eslint-disable-next-line func-names
 module.exports = function (api) {
@@ -26,6 +27,22 @@ module.exports = function (api) {
         */
         const chapterCollection = addCollection('Chapter');
         chapterCollection.addReference('sections', '[Section]');
+
+        /*
+        NOTE: Don't mind me, I'm just getting the Github API for the "contributors" page - Nev, 2020-08-07
+        */
+        const contributorCollection = addCollection('Contributor');
+        /* I am using the Wiki API for this test, but once FDJ is public it will be necessary to change the URL */
+        axios.get('https://api.github.com/repos/gamedevalliance/wiki/contributors').then((resp) => {
+            Object.values(resp.data).forEach((contributor) => {
+                contributorCollection.addNode({
+                    name: contributor.login,
+                    profile: contributor.html_url,
+                    commits: contributor.contributions,
+                    id: contributor.id,
+                });
+            });
+        });
     });
 
     /*
@@ -91,7 +108,6 @@ module.exports = function (api) {
 
                 lastSection = options;
             }
-
 
             return {
                 ...options,
