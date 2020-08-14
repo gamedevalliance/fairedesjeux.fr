@@ -13,11 +13,11 @@ Pour vous aider à vous familiariser avec le repo, voici sa structure ainsi que 
 - `gridsome.server.js` : [API du serveur Gridsome](https://gridsome.org/docs/server-api/)
 - `types.graphql` : Contient les types GraphQL utilisés à travers le site
 - `src/` : [Structure d'un projet Gridsome](https://gridsome.org/docs/directory-structure/)
-   - `assets/`
-   - `layouts/`
-   - `pages/`
-   - `templates/`
-   - `main.js`
+    - `assets/`
+    - `layouts/`
+    - `pages/`
+    - `templates/`
+    - `main.js`
 - `content/` : Le contenu du site
 
 ### Conventions de style

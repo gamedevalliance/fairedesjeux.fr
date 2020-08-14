@@ -196,6 +196,17 @@ module.exports = {
                     fontSize: theme('fontSize.lg'),
                 },
 
+                /*
+                    NOTE : The next two rules are for second level lists - Nev, 14/08/2020
+                */
+                'li > ul > li, li > ol > li': {
+                    marginLeft: '2rem',
+                },
+
+                'li > p': {
+                    display: 'inline',
+                },
+
                 table: {
                     color: theme('textColor.font'),
                     fontFamily: theme('fontFamily.body'),
