@@ -40,7 +40,7 @@ x = gap * i + 8 * (i - 1)
 ```
 
 :::oofmarvin
-J'ai du mal avec les maths... Je ne comprends pas pourquoi on écrit **(*i* − 1)**...
+J'ai du mal avec les maths... Je ne comprends pas pourquoi on écrit **(*i* − 1)**...
 :::
 
 :::astride
