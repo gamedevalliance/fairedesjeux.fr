@@ -72,6 +72,9 @@ module.exports = {
                 'gridsome-plugin-remark-youtube',
                 'remark-shortcodes',
                 'gridsome-remark-video-shortcode',
+                /*
+                    NOTE : Used for speech bubbles with our mascots - Nev, 14/08/2020
+                */
                 ['gridsome-plugin-remark-container', {
                     customTypes: {
                         astride: {
@@ -83,22 +86,22 @@ module.exports = {
                         remi: {
                             defaultTitle: 'Rémi',
                         },
-                        astrideWink: {
+                        winkastride: {
                             defaultTitle: 'Astride',
                         },
-                        astrideTss: {
+                        tssastride: {
                             defaultTitle: 'Astride',
                         },
                         oofmarvin: {
                             defaultTitle: 'Marvin',
                         },
-                        marvinHehe: {
+                        hehemarvin: {
                             defaultTitle: 'Marvin',
                         },
-                        remiHum: {
+                        humremi: {
                             defaultTitle: 'Rémi',
                         },
-                        remiOno: {
+                        onoremi: {
                             defaultTitle: 'Rémi',
                         },
                     },

@@ -43,7 +43,7 @@ x = gap * i + 8 * (i - 1)
 J'ai du mal avec les maths... Je ne comprends pas pourquoi on écrit **(*i* − 1)**...
 :::
 
-:::astride
+:::tssastride
 Essaye de faire le calcul en faisant varier ***i*** ! Pour le premier ennemi de la vague, ***i* = 1**, donc X vaudra seulement ***gap* × 1**. Pour le deuxième ennemi, X vaut ***gap* × 2 + 8** et ainsi de suite... 
 :::
 

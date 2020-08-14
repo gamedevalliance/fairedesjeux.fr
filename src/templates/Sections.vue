@@ -96,6 +96,10 @@
             }
         }
 
+        /*
+            NOTE : Used for speech bubbles with our mascots - Nev, 14/08/2020
+        */
+
         & .bubble {
             & .bubble-content {
                 @apply inline-block text-left bg-area py-2 px-8 my-4 rounded-full;
@@ -134,7 +138,7 @@
             }
         }
 
-        & .bubble-marvin-hehe {
+        & .bubble-hehemarvin {
             @apply text-right;
 
             & h5 {
@@ -197,6 +201,48 @@
             }
         }
 
+        & .bubble-winkastride {
+            @apply text-left;
+
+            & h5 {
+                @apply text-astride;
+
+                left: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/astride-wink.png");
+                content: "";
+                float: left;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        & .bubble-tssastride {
+            @apply text-left;
+
+            & h5 {
+                @apply text-astride;
+
+                left: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/astride-tss.png");
+                content: "";
+                float: left;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
         & .bubble-remi {
             @apply text-left;
 
@@ -208,6 +254,48 @@
 
             &::after {
                 background-image: url("~@avatars/remi.png");
+                content: "";
+                float: left;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        & .bubble-humremi {
+            @apply text-left;
+
+            & h5 {
+                @apply text-remi;
+
+                left: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/remi-hum.png");
+                content: "";
+                float: left;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        & .bubble-onoremi {
+            @apply text-left;
+
+            & h5 {
+                @apply text-remi;
+
+                left: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/remi-ono.png");
                 content: "";
                 float: left;
                 width: 100px;
