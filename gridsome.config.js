@@ -83,6 +83,24 @@ module.exports = {
                         remi: {
                             defaultTitle: 'Rémi',
                         },
+                        astrideWink: {
+                            defaultTitle: 'Astride',
+                        },
+                        astrideTss: {
+                            defaultTitle: 'Astride',
+                        },
+                        oofmarvin: {
+                            defaultTitle: 'Marvin',
+                        },
+                        marvinHehe: {
+                            defaultTitle: 'Marvin',
+                        },
+                        remiHum: {
+                            defaultTitle: 'Rémi',
+                        },
+                        remiOno: {
+                            defaultTitle: 'Rémi',
+                        },
                     },
                     useDefaultTypes: false,
                     icons: 'none',

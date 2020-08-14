@@ -134,6 +134,48 @@
             }
         }
 
+        & .bubble-marvin-hehe {
+            @apply text-right;
+
+            & h5 {
+                @apply text-marvin;
+
+                right: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/marvin-hehe.png");
+                content: "";
+                float: right;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        & .bubble-oofmarvin {
+            @apply text-right;
+
+            & h5 {
+                @apply text-marvin;
+
+                right: 116px;
+            }
+
+            &::after {
+                background-image: url("~@avatars/marvin-oof.png");
+                content: "";
+                float: right;
+                width: 100px;
+                height: 100px;
+                bottom: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
         & .bubble-astride {
             @apply text-left;
 

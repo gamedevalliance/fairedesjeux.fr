@@ -39,7 +39,7 @@ Essayez, et vous verrez que les ennemis se tassent légèrement sur la gauche. A
 x = gap * i + 8 * (i - 1)
 ```
 
-:::marvin
+:::oofmarvin
 J'ai du mal avec les maths... Je ne comprends pas pourquoi on écrit **(*i* − 1)**...
 :::
 
