@@ -12,7 +12,7 @@ FaireDesJeux.fr est un site collaboratif proposant des formations gratuites pour
 
 - Nous signaler les erreurs d'une page et vos suggestions d'amélioration.
 - Améliorer la page vous-même avec le bouton "Modifier cette page".
-- Ecrire une formation sur Word ou un autre logiciel puis nous l'envoyer pour que nous l'adaptions au site.
+- Ecrire une formation sur Word ou un autre logiciel puis nous l'envoyer afin que nous l'adaptions au site.
 - Installer le site sur votre ordinateur et écrire votre formation directement sur le site.
 - Faire un don pour nous aider à financer Game Dev Alliance (hébergement du site, matériel, paiement des artistes...).
 

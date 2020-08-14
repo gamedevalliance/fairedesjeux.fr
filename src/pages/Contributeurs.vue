@@ -6,10 +6,10 @@
                     Merci !
                 </h2>
                 <p class="text-justify">
-                    FaireDesJeux.FR ne serait rien sans l'aide de ces contributeurs et contributrices.
+                    FaireDesJeux.fr ne serait rien sans l'aide de ces contributeurs et contributrices.
                     Si vous voulez participer à cette aventure collective,
                     <g-link to="/contribuer">
-                        n'hesitez pas à contribuer.
+                        n'hésitez pas à contribuer.
                     </g-link>
                 </p>
                 <ul>
