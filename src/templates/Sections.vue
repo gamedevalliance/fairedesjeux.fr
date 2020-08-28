@@ -28,8 +28,8 @@
                         <Button v-if="$page.section.next" :src="$page.section.next.path" class="w-64">
                             J'ai compris !
                         </Button>
-                        <Button v-else class="w-64">
-                            Chapitre suivant
+                        <Button v-else :src="$page.section.chapter.course.path" class="w-64">
+                            Retour à l'accueil
                         </Button>
                     </div>
                 </article>

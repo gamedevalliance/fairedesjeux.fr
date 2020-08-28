@@ -29,7 +29,7 @@
                             Texte
                         </Button>
 
-                        <Button v-if="$page.section.chapters[0].video" :src="$page.section.chapters[0].video.path" class="w-64">
+                        <Button v-if="$page.section.video" :src="$page.section.video" class="w-64">
                             Video
                         </Button>
                         <Button v-else disabled class="w-64" title="Vidéo indisponible pour le moment!">
@@ -70,6 +70,7 @@
             content
             medal
             medal_message
+            video
             fileInfo {
                 path
             }
@@ -80,10 +81,6 @@
             chapters(sort: {by: "name", order:ASC}) {
                 id
                 title
-                video {
-                    path
-                    title
-                }
                 sections(sort: {by: "fileInfo.name", order:ASC}) {
                     id
                     title
