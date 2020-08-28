@@ -25,11 +25,11 @@
         }
 
         &.facebook:hover {
-            @apply text-blue-800;
+            @apply text-blue-500;
         }
 
         &.github:hover {
-            @apply text-black;
+            @apply text-white;
         }
     }
 

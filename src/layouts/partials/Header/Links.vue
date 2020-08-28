@@ -14,10 +14,11 @@
         <a href="https://gamedevalliance.fr" aria-label="Game Dev Alliance" class="font-semibold text-marvin border-none inline-block mr-6">
             <span class="gda" aria-hidden="true">
                 <span>G</span><span>a</span><span>m</span><span>e</span><span>D</span><span>e</span><span>v</span>
-                <span>A</span><span>l</span><span>l</span><span>i</span><span>a</span><span>n</span><span>c</span><span>e</span>
+                <span>A</span><span>l</span><span>l</span><span>i</span><span>a</span><span>n</span><span>c</span>
+                <span>e</span><span>.</span><span>f</span><span>r</span>
             </span>
         </a>
-        <a href="https://discord.gg/RrBppaj" class="font-semibold text-purple-600 border-none inline-block">Rejoindre Discord</a>
+        <a href="https://discord.gg/RrBppaj" class="font-semibold text-purple-600 border-none inline-block">Rejoindre le Discord</a>
     </nav>
 </template>
 
@@ -52,6 +53,9 @@
     .gda span:nth-child(13) { animation-delay: 0.6s; }
     .gda span:nth-child(14) { animation-delay: 0.65s; }
     .gda span:nth-child(15) { animation-delay: 0.7s; }
+    .gda span:nth-child(16) { animation-delay: 0.75s; }
+    .gda span:nth-child(17) { animation-delay: 0.8s; }
+    .gda span:nth-child(18) { animation-delay: 0.85s; }
 </style>
 
 <static-query>
