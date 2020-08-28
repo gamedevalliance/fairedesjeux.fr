@@ -1,7 +1,7 @@
 <template>
     <div>
         <header class="bg-area md:bg-body text-font font-semibold clearfix">
-            <div class="container mx-auto flex justify-between md:block px-3 md:px-0">
+            <div class="container mx-auto flex justify-between md:block pr-3 sm:pr-0">
                 <Logo />
                 <Links class="hidden md:inline-block " />
                 <Socials class="float-right py-3 hidden md:inline-block" />
@@ -44,6 +44,8 @@
         methods: {
             toggleMobileMenu() {
                 this.mobileMenu = !this.mobileMenu;
+
+                // NOTE: We add overflow: hidden; to the body in order to prevent scrolling it while the menu is open
                 document.body.classList.toggle('overflow-hidden');
             },
         },
