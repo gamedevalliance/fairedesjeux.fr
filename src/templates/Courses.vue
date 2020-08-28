@@ -30,7 +30,7 @@
                         </Button>
 
                         <Button v-if="$page.section.video" :src="$page.section.video" class="w-64">
-                            Video
+                            Vidéo
                         </Button>
                         <Button v-else disabled class="w-64" title="Vidéo indisponible pour le moment!">
                             Vidéo
