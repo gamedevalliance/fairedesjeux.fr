@@ -1,8 +1,8 @@
 <template>
     <Layout>
-        <div class="grid grid-cols-cont gap-col">
+        <div class="grid grid-cols-mob lg:grid-cols-tab xl:grid-cols-cont gap-col px-2 lg:px-0">
             <!-- left nav -->
-            <aside class="mt-12">
+            <aside class="mt-12 hidden lg:block">
                 <div class="area mb-6">
                     <g-link :to="$page.section.chapter.course.path" class="smola">
                         « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
@@ -36,7 +36,9 @@
             </main>
 
             <!-- right nav -->
-            <Toc />
+            <div class="hidden xl:block">
+                <Toc />
+            </div>
         </div>
     </Layout>
 </template>

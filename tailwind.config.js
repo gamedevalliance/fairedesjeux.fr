@@ -63,6 +63,8 @@ module.exports = {
             },
             gridTemplateColumns: {
                 cont: '17% 60% 15%',
+                tab: '20% 80%',
+                mob: '100%',
             },
             gap: {
                 col: '3%',
@@ -193,7 +195,6 @@ module.exports = {
                     lineHeight: theme('lineHeight.normal'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
-                    fontSize: theme('fontSize.lg'),
                 },
 
                 /*
