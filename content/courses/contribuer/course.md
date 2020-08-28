@@ -5,7 +5,6 @@ short_title: "Contribuer"
 date: "2020-07-28"
 author: "L'équipe de Game Dev Alliance"
 medal: GOLD
-featured: 2
 ---
 
 FaireDesJeux.fr est un site collaboratif proposant des formations gratuites pour accompagner les débutants et débutantes dans la création de jeux vidéo. Vous pouvez participer au projet de plusieurs façons :
