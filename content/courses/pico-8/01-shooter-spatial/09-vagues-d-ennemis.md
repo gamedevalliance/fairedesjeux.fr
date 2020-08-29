@@ -11,7 +11,7 @@ Pour commencer, si vous l'avez gardé, retirez le `spawn_enemies()` que l'on app
 Pour l'instant, cela ne change rien en jeu : nous devons dire à la fonction quoi faire de ce chiffre. Donnez-lui une appellation (j'ai choisi `amount`) et pour répéter la commande `add()` autant de fois qu'il y a d'ennemis, englobez-la dans une boucle for qui va de 1 à `amount`.
 
 ![](./spawn-enemies-amount.png)
-*Pour un rappel sur les boucles for, retournez à l'étape des projectiles ou des étoiles.*
+*Pour un rappel sur les boucles for, retournez à l'étape des projectiles.*
 
 Vous pouvez essayer avec une position X aléatoire pour bien différencer les ennemis. Le souci avec cette méthode, c'est que le résultat est assez chaotique et la plupart des jeux ont besoin de motifs plus réguliers. Je vous propose donc d'écrire un petit calcul pour obtenir le même écart entre chaque ennemi ! Voici un exemple en images, avec la position de nos futurs ennemis en rouge :
 
@@ -47,14 +47,14 @@ J'ai du mal avec les maths... Je ne comprends pas pourquoi on écrit **(*i* −
 Essaye de faire le calcul en faisant varier ***i*** ! Pour le premier ennemi de la vague, ***i* = 1**, donc X vaudra seulement ***gap* × 1**. Pour le deuxième ennemi, X vaut ***gap* × 2 + 8** et ainsi de suite... 
 :::
 
-Et voilà, votre vague est toute belle, sans bavure ! Rendons maintenant le nombre d'ennemis aléatoire quand on appelle le spawn dans `_update60()`.
-
 ![](./x-gap.png)
+
+Et voilà, votre vague est toute belle, sans bavure ! Rendons maintenant le nombre d'ennemis aléatoire quand on appelle le spawn dans update.
 
 Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=rnd%20x) explique que `rnd(n)` retourne un nombre décimal où 0 ≤ résultat < n. On doit arrondir le résultat en un nombre entier, et pour cela deux méthodes s'offrent à vous :
 
-- `flr(rnd(n))` donne un nombre entier entre 0 et ***n* − 1**.
-- `ceil(rnd(n))` donne un nombre entier entre 1 et ***n***.
+- `flr(rnd(n))` arrondit au nombre inférieur, ce qui donne un nombre entier entre 0 et ***n* − 1**.
+- `ceil(rnd(n))` arrondit au nombre supérieur, ce qui donne un nombre entier entre 1 et ***n***.
 
 A vous de choisir ! Je souhaite obtenir un nombre aléatoire entre 1 et 7, donc je vais écrire `ceil(rnd(7))`.
 
@@ -64,4 +64,4 @@ Pour retenir ces fonctions, sachez que `flr` veut dire *floor*, qu'on peut tradu
 
 ![](./ceil-random-7.png)
 
-Le jeu commence à prendre forme ! Dans la prochaine étape, nous allons rendre les ennemis plus menaçants en leur permettant de tirer. Ce sera la dernière chose à faire avant d'ajouter un score et un écran de fin !
+Le jeu commence à prendre forme ! Nous nous approchons de la fin...

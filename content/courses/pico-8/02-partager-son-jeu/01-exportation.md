@@ -2,7 +2,7 @@
 title: "Exporter le jeu"
 ---
 
-Votre jeu doit avoir un titre et une image de couverture ! Au tout début de votre code, écrivez deux lignes qui apparaîtront sur l'image de cartouche.
+Avant d'être publié, votre jeu doit avoir un titre et une image de couverture ! Au tout début de votre code, écrivez deux lignes qui apparaîtront sur l'image de cartouche.
 
 ```lua
 --jeu dans l'espace !!

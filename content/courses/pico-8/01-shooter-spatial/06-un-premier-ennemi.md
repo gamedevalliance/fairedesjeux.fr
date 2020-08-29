@@ -33,7 +33,7 @@ N'oubliez pas d'appeler `update_enemies()` dans `_update60()` !
 
 Pour l'instant, on fait apparaître l'ennemi juste une fois au début du jeu. On peut améliorer ça et faire en sorte que dès qu'il n'y a plus d'ennemi, que ce soit parce qu'on les a détruits ou parce qu'ils ont atteint le bas de l'écran, on en fait réapparaître.
 
-Retirez la ligne `spawn_enemies()` de `_init()`. Rendez-vous dans `_update60()`, et visez un peu ça :
+Retirez la ligne `spawn_enemies()` de `_init()`. Rendez-vous dans `_update60()`, et écrivez ceci :
 
 ![](./if-enemies-0.png)
 
@@ -45,6 +45,14 @@ text = "bonjour"
 list = {"vache", "mouton"}
 #list  => 2
 ```
+
+:::remi
+Le double égal `==` est une vérification « est-ce que cette variable est égale à 0 ? » par opposition au simple égal `=` que vous avez utilisé jusqu'ici et qui assigne une nouvelle valeur à la variable.
+:::
+
+:::astride
+Retenez cette nuance : pour vérifier une égalité dans une condition, vous aurez toujours besoin du double égal.
+:::
 
 Dans notre cas, `#enemies` renvoie le nombre d'ennemis existant dans le tableau. Donc aussi simplement que ça, on peut savoir quand il n'y a plus personne et relancer le spawn !
 

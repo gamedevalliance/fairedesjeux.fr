@@ -124,11 +124,12 @@ Bien sûr, ce n'est pas toujours une bonne idée de minimiser le code à outranc
 
 ### Utiliser la fonction
 
-![Son de collision](./son-collision.png)
-
-Retrouvez la fonction `update_enemies()` pour y ajouter la vérification de collision. Pour chaque balle existante dans `bullets`, on vérifie si elle touche l'ennemi actuellement examiné. Si oui, on joue le son et on supprime la balle (pour ne pas qu'elle lui passe à travers).
+Retrouvez la fonction `update_enemies()` pour y ajouter la vérification de collision. Pour chaque balle existante dans `bullets`, on vérifie si elle touche l'ennemi actuellement examiné. Si oui, on joue un son et on supprime la balle (pour ne pas qu'elle lui passe à travers).
 
 ![Collision entre l'ennemi et les balles](./collision-ennemi-bullets.png)
+
+![Son de collision](./son-collision.png)
+*Réalisez un effet sonore d'impact dans l'emplacement numéro 1.*
 
 Essayez, ça fonctionne ! Après tous ces efforts, ça fait du bien, pas vrai ?
 
