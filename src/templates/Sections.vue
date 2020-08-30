@@ -140,7 +140,7 @@
             }
         }
 
-        & .bubble-hehemarvin {
+        & .bubble-hypemarvin {
             @apply text-right;
 
             & h5 {
@@ -224,7 +224,7 @@
             }
         }
 
-        & .bubble-tssastride {
+        & .bubble-sighastride {
             @apply text-left;
 
             & h5 {
@@ -266,7 +266,7 @@
             }
         }
 
-        & .bubble-humremi {
+        & .bubble-profremi {
             @apply text-left;
 
             & h5 {
@@ -287,7 +287,7 @@
             }
         }
 
-        & .bubble-onoremi {
+        & .bubble-notlikethisremi {
             @apply text-left;
 
             & h5 {

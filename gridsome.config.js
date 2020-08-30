@@ -89,19 +89,19 @@ module.exports = {
                         winkastride: {
                             defaultTitle: 'Astride',
                         },
-                        tssastride: {
+                        sighastride: {
                             defaultTitle: 'Astride',
                         },
                         oofmarvin: {
                             defaultTitle: 'Marvin',
                         },
-                        hehemarvin: {
+                        hypemarvin: {
                             defaultTitle: 'Marvin',
                         },
-                        humremi: {
+                        profremi: {
                             defaultTitle: 'Rémi',
                         },
-                        onoremi: {
+                        notlikethisremi: {
                             defaultTitle: 'Rémi',
                         },
                     },
