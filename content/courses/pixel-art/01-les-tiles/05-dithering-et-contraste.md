@@ -7,25 +7,25 @@ Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.
 
 ![](./ff1.png)
 
-:::marvin
-Ce cours était censé m'apprendre à faire du bon pixel art... Alors pourquoi étudier des jeux datant de la NES ? En plus ils n'utilisent que 16 couleurs, non ?
+:::hypemarvin
+Ce cours est censé m'apprendre à faire du bon pixel art... Alors pourquoi étudier des jeux datant de la NES ? En plus ils n'utilisent que 16 couleurs, non ?
 :::
 
-Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consoles n'avaient pas de palettes dépassant les 256 couleurs, on ne pouvait donc pas faire les fameux dégradés que l'on a vu dans la section précédente... Et c'est en cela que les vieux jeux sont intéressants à étudier : ils regorgent d'astuces que d'ingénieux et d'ingénieuses graphistes ont inventées pour rendre leurs tiles lisibles malgré cette contrainte.
+Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consoles n'avaient pas de palettes dépassant les 256 couleurs, on ne pouvait donc pas faire les fameux dégradés que l'on a vu dans la section précédente... Et c'est en cela que les vieux jeux sont intéressants à étudier : ils regorgent d'astuces que d'ingénieux et ingénieuses graphistes ont inventées pour rendre leurs tiles lisibles malgré cette contrainte.
 
-Regardons d'un peu plus près ce Final Fantasy 1.
+Regardons d'un peu plus près ce Final Fantasy.
 
 ![](./ff1-tiles.png)
 
-Le premier tile est celui du sol. Comme vous pouvez le voir, il ne parvient pas à effacer la grille, mais il faut dire que ce n'était pas une priorité à l'époque... Les développeurs et développeuses ne cherchaient pas encore à rendre leurs jeux beaux mais compréhensibles. Or en voyant ce tile sur la map, vous savez qu'il s'agit d'un sol et qu'il est fait de pierres ; pourtant il n'utilise que deux couleurs !
+Le premier tile est celui du sol. Comme vous pouvez le voir, il ne parvient pas à effacer la grille, mais il faut dire que ce n'était pas une priorité à l'époque... Les développeurs et développeuses ne cherchaient pas encore à rendre leurs jeux beaux mais compréhensibles. Or, en voyant ce tile sur la map, vous savez qu'il s'agit d'un sol et qu'il est fait de pierres ; pourtant il n'utilise que deux couleurs !
 
-:::marvin
+:::hypemarvin
 Mais si l'on n'a que deux couleurs, on peut uniquement faire les contours de rochers puis l'intérieur. Comment faire des effets d'ombrage ?
 :::
 
-Bienvenue dans le monde merveilleux du dithering ! Le dithering est l'action de réaliser des patterns de pixels de différentes couleurs pour donner une nouvelle teinte... Utilisé principalement aux commencements du jeu vidéo, le dithering reste une technique très utile quand vous êtes limités en nombre de couleurs.
+Bienvenue dans le monde merveilleux du dithering ! Le dithering est l'action de réaliser des patterns de pixels de différentes couleurs pour donner une nouvelle teinte... Utilisé principalement aux commencements du jeu vidéo, le dithering reste une technique très utile quand vous êtes limité·e en nombre de couleurs.
 
-Avant de voir comment réaliser du dithering, regardons le reste des tiles de FF1. Le second tile représente des briques plus claires, et utilise une troisième couleur : le blanc. Il est beaucoup plus clair que le troisième, qui utilise les pixels noirs pour représenter plus d'ombre, et représente la lumière avec des pixels gris plutôt que des pixels blancs.
+Avant de voir comment réaliser du dithering, examinons le reste des tiles de FF1. Le second tile représente des briques plus claires, et utilise une troisième couleur : le blanc. Il est beaucoup plus clair que le troisième, qui utilise les pixels noirs pour représenter plus d'ombre, et représente la lumière avec des pixels gris plutôt que des pixels blancs.
 
 Notez comment ces briques, avec seulement 2 ou 3 couleurs, parviennent à rendre des textures et des effets de lumière plus intéressants que l'outil dégradé ! Les briques ne semblent pas lisses mais usées par le temps et rugueuses.
 
@@ -61,27 +61,25 @@ Tentons d'en apprendre un peu plus sur comment faire des ombres. J'ai réalisé 
 
 Je veux que cette cave semble vieille et sombre, effrayante donc... Pour l'instant ce n'est pas encore ça, c'est encore trop plat. Quelque chose ne va pas, mais quoi ?
 
-La logique veut que si je prends un vert, que je le décline en trois teintes et que j'utilise la teinte foncée comme fond, mon sol aura l'air plus sombre. Pourtant cela ne fonctionne pas parfaitement...
+A l'époque des palettes limitées, on utilisait davantage le noir. C'est une couleur clé, qui permet d'attirer l’œil sur les couleurs qui l'entoure... Si vous n'en abusez pas, c'est un super outil pour créer du volume ou pour faire ressortir des éléments.
 
-A l'époque des palettes limitées, on utilisait davantage le noir. « Oui mais maintenant j'ai 1 milliard de couleurs, alors pourquoi j'utiliserais du noir ? » Eh bien car le noir est une couleur clé. Le noir permet d'attirer l’œil sur les couleurs qu'il entoure... Si vous n'en abusez pas, c'est un super outil pour créer du volume ou pour faire ressortir des éléments.
-
-En supprimant la teinte la plus claire, pour ne garder que les deux plus sombres, tout en utilisant un fond noir, voici ce que j'obtiens :
+En supprimant la teinte la plus claire pour ne garder que les deux plus sombres tout en utilisant un fond noir, voici ce que j'obtiens :
 
 ![](./sol-cave2.png)
 
 Là, nous avons un sol sombre, effrayant et avec de vrais volumes. Le noir permet de séparer les rochers, d'améliorer le contraste général de la texture tout en assombrissant le tout.
 
-Maintenant, regardons pourquoi j'ai choisi de supprimer le vert clair de mon sol :
+Maintenant, regardez pourquoi j'ai choisi de supprimer le vert clair de mon sol :
 
 ![](./sol-cave3.png)
 
 Bienvenue dans le monde merveilleux du contraste, amusez-vous bien !
 
-Dans la première version nous avons le fameux « Je n'ai pas lu ce tutoriel, je suis la logique évidente selon laquelle 3 teintes de vert et un fond noir rendront forcément bien ». Le problème de cette logique, c'est qu'elle ne prend pas en compte que nous parlons d'un sol, autrement dit d'un élément qui ne doit pas attirer l'œil autant qu'un mur ou un personnage. En utilisant des teintes allant du vert clair au noir, le contraste est trop élevé.
+La première version ne prend pas en compte que nous parlons d'un sol, autrement dit d'un élément qui ne doit pas attirer l'œil autant qu'un mur ou un personnage. En utilisant des teintes allant du vert clair au noir, le contraste est trop élevé.
 
 « Argh... Y a du vert partout... Et... Est-ce un personnage au milieu de ces rochers ? » Si votre joueur ou joueuse pense ça, il faut recommencer. Un joueur ne devrait pas penser au sol, et encore moins chercher son personnage au milieu de celui-ci. En utilisant des contrastes forts, le tile pourra être joli et avoir du volume, mais il ne fonctionnera pas en tant que sol dans un jeu vidéo.
 
-Sur la seconde version, le vert médian est à peine plus clair que le noir constituant le fond. Le résultat est bien plus lisible ! Vous pouvez repérer facilement le personnage, et vous pouvez toujours comprendre le volume et la texture du sol.
+Sur la seconde version, le vert médian est à peine plus clair que le noir constituant le fond. Le résultat est bien plus lisible ! Vous pouvez repérer facilement le personnage et vous pouvez toujours comprendre le volume et la texture du sol.
 
 L'idée à garder en tête est que le joueur ou la joueuse ne devrait jamais avoir besoin de plisser les yeux... Sinon, il ne sera plus impliqué dans le jeu et vous aurez détruit l'effet que vous veniez de créer avec une super histoire et des tiles effaçant la grille.
 
