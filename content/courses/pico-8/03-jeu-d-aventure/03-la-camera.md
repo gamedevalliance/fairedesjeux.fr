@@ -2,6 +2,10 @@
 title: "La caméra"
 ---
 
+<iframe width="538" height="539"
+  src="/jeux-pico-8/demo-camera-modes/index.html">
+</iframe>
+
 La première méthode garde le personnage au centre de l'écran, à la manière des vieux jeux Ultima, tandis que la deuxième présente des zones fixes, à la manière du premier Zelda sur NES. Personnellement, je trouve que la deuxième méthode a beaucoup de charme !
 
 Quelque soit la méthode que vous choisissez, je vous conseille de lire cette section dans l'ordre car j'expliquerai les choses progressivement. Dans l'onglet "*Map*", créez une fonction `update_camera()` et appelez-la à la fin d'update.
@@ -25,7 +29,7 @@ Il ne manque plus qu'à restreindre la caméra lorsqu'on est proche des bords de
 Pour imiter le comportement du premier Zelda, il faut imaginer que notre carte est découpée en plusieurs écrans de 16×16 cases. Nous devons déterminer dans lequel de ces écrans se trouve le personnage, puis déplacer la caméra dans le coin-haut gauche du bon écran.
 
 <iframe width="538" height="539"
-  src="/jeux-pico-8/demo-camera/index.html">
+  src="/jeux-pico-8/demo-camera-calcul/index.html">
 </iframe>
 
 Dans cette démo, vous pouvez déplacer le personnage avec les flèches et examiner comment la caméra est ajustée. L'astuce consiste à diviser la position du personnage par 16 et l'arrondir avec `flr` pour obtenir le numéro de l'écran dans lequel il se trouve. Il suffit alors de multiplier ce nombre par 16 pour obtenir la case où doit se trouver la caméra.

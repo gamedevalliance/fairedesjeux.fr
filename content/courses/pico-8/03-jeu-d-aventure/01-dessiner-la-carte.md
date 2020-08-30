@@ -6,13 +6,13 @@ title: "Dessiner la carte"
 
 Rendez-vous dans l'écran des sprites et dessinez les éléments qui composeront votre décor : un arbre, des murs, un sol d'herbe ou de pierre... Choisissez un univers qui vous plaît, tant que vous obtenez des tiles sur lesquels on peut marcher et d'autres qui sont des obstacles.
 
-
+![Sprites de décor](./sprites-decor.png)
 
 #### Les sprite flags
 
 Sur la droite, vous pouvez voir une rangée de boutons qui ne semblent avoir aucun effet au premier abord : ce sont les flags, ou drapeaux en français.
 
-![](./sprite-flags.png)
+![Boutons de sprite flag](./sprite-flags.png)
 *Flag 0 activé.*
 
 Par défaut, ces flags n'ont aucune utilité : vous pourriez les activer et ça ne changerait rien. Cela dit, nous pouvons nous en servir dans notre code, par exemple pour indiquer quels sprites sont des obstacles que l'on ne peut pas traverser. Pour le moment, activez le flag 0 pour tous vos sprites d'obstacles, et nous nous en servirons lorsque nous coderons les déplacements du personnage.
@@ -21,11 +21,12 @@ Par défaut, ces flags n'ont aucune utilité : vous pourriez les activer et ça
 
 Voici l'écran de création de map !
 
-
+![Editeur de carte](./editeur-de-map.png)
 
 L'écran de PICO-8 peut contenir 16 tiles en largeur et en hauteur. Dessinez une zone d'au moins 32×32 tiles pour laisser de la place à l'exploration ! Pour vous aider à compter, les coordonnées du tile que vous survolez sont affichées en bas de l'écran.
 
-
+![Editeur de carte dézoomé](./editeur-de-map-zoom.png)
+*Pour vous déplacer, cliquez sur la molette ou maintenez Espace.*
 
 :::remi
 Attention ! La deuxième moitié de votre spritesheet et de votre carte occupent le même espace sur la cartouche. Cela signifie que si vous dessinez des sprites dans l'onglet 2 et 3, cela affectera la moitié basse de la carte et vice versa.

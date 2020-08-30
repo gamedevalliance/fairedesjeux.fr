@@ -8,7 +8,9 @@ Dans le chapitre sur le shooter, vous avez appris à déplacer un vaisseau pixel
 
 Commencez par dessiner votre héroïne ou héros comme il se doit.
 
-Ensuite, dans un nouvel onglet "Player", créez un tableau pour préciser la position X et Y de départ du personnage et le sprite utilisé.
+![Sprite d'héroïne](./sprite-heroine.png)
+
+Ensuite, dans un nouvel onglet "*Player*", créez un tableau pour préciser la position X et Y de départ du personnage et le sprite utilisé.
 
 ![](./create-player.png)
 
