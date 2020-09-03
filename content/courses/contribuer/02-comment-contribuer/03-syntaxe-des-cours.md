@@ -65,6 +65,8 @@ Salut la compagnie !
 Salut la compagnie !
 :::
 
+Il existe également des émotions supplémentaires : `hypemarvin`, `oofmarvin`, `winkastride`, `sighastride`, `profremi` et `notlikethisremi`.
+
 ### Morceaux de code
 
 Entourez un texte d'accents graves `` ` `` pour qu'il soit affiché comme un morceau de code.

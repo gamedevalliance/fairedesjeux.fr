@@ -1,11 +1,11 @@
 ---
 type: SKILL
-title: "Débuter dans la création de jeux"
+title: "Bien débuter dans la création de jeux"
 short_title: "Bien débuter"
 date: "2020-08-28"
 author: "L'équipe de Game Dev Alliance"
 medal: SILVER
-medal_message: "Ce cours est en cours de rédaction, inspiré par notre ancienne [\"foire aux questions\"](https://wiki.gamedevalliance.fr/faq/)."
+medal_message: "Ce cours est en cours de rédaction, inspiré de notre ancienne [foire aux questions](https://wiki.gamedevalliance.fr/faq/)."
 featured: 2
 ---
 
