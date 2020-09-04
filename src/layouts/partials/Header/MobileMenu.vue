@@ -65,7 +65,7 @@
 
 <style lang="postcss" scoped>
     .link {
-        @apply font-semibold text-2xl border-none bg-body block mb-1 p-1 pl-3 rounded-md;
+        @apply font-semibold text-mobileMenu border-none bg-body block mb-1 p-2 pl-3 rounded-md;
     }
 
     .mobile--menu {
