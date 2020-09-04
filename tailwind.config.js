@@ -72,7 +72,7 @@ module.exports = {
             fontSize: {
                 sm: '15px',
                 lg: '18.5px',
-                mobileMenu: '1.35rem',
+                mobileMenu: '1.2rem',
                 big: '6rem',
             },
         },
