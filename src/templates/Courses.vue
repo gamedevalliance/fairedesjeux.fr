@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div class="grid grid-cols-mob lg:grid-cols-tab xl:grid-cols-cont gap-col px-2 lg:px-0">
+        <div class="grid grid-cols-mob lg:grid-cols-tab xl:grid-cols-cont gap-col px-4 lg:px-0">
             <!-- left nav -->
             <aside class="mt-12 hidden lg:block">
                 <div v-for="chapter in $page.section.chapters" :key="chapter.id" class="area text-font mb-6">

@@ -24,7 +24,7 @@
         @apply inline-block ml-6 border-none text-font align-middle;
 
         &.youtube:hover {
-            @apply text-red-400;
+            @apply text-red-700;
         }
 
         &.twitter:hover {
@@ -32,7 +32,7 @@
         }
 
         &.facebook:hover {
-            @apply text-blue-500;
+            @apply text-blue-700;
         }
 
         &.github:hover {

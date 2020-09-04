@@ -33,7 +33,7 @@ module.exports = function (api) {
         */
         const contributorCollection = addCollection('Contributor');
         /* I am using the Wiki API for this test, but once FDJ is public it will be necessary to change the URL */
-        axios.get('https://api.github.com/repos/gamedevalliance/wiki/contributors').then((resp) => {
+        axios.get('https://api.github.com/repos/gamedevalliance/fairedesjeux.fr/contributors').then((resp) => {
             Object.values(resp.data).forEach((contributor) => {
                 contributorCollection.addNode({
                     name: contributor.login,
