@@ -42,8 +42,8 @@
             };
         },
         methods: {
-            toggleMobileMenu() {
-                this.mobileMenu = !this.mobileMenu;
+            toggleMobileMenu(newState = !this.mobileMenu) {
+                this.mobileMenu = newState;
 
                 // NOTE: We add overflow: hidden; to the body in order to prevent scrolling it while the menu is open
                 document.body.classList.toggle('overflow-hidden');

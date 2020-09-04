@@ -16,7 +16,7 @@
 
             <div v-if="$page.section">
                 <div v-if="$page.section.chapter" class="mb-3">
-                    <g-link :to="$page.section.chapter.course.path" class="link text-font">
+                    <g-link :to="$page.section.chapter.course.path" class="link text-font" @click.native="closeMobileMenu">
                         « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
                     </g-link>
                 </div>
@@ -31,6 +31,7 @@
                             :to="section.path"
                             class="link text-font whitespace-normal"
                             :title="section.title"
+                            @click.native="closeMobileMenu"
                     >
                         {{ section.title }}
                     </g-link>
@@ -39,7 +40,7 @@
 
             <hr class="my-3 border-body border-2 rounded-md border-opacity-75" />
 
-            <g-link to="/contribuer/" class="link text-font mt-2">
+            <g-link to="/contribuer/" class="link text-font mt-2" @click.native="closeMobileMenu">
                 Contribuer
             </g-link>
 
@@ -58,6 +59,11 @@
             state: {
                 type: Boolean,
                 default: false,
+            },
+        },
+        methods: {
+            closeMobileMenu() {
+                this.$parent.toggleMobileMenu(false);
             },
         },
     };
