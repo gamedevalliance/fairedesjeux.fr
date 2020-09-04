@@ -1,6 +1,6 @@
 <template>
     <button class="md:hidden">
-        <g-image src="~/assets/menu.png"
+        <g-image src="~/assets/menu.svg"
                  immediate="true"
                  quality="100"
         />
