@@ -42,6 +42,16 @@ Cela peut prendre un moment. Faites-vous un petit café pour patienter !
 ![](./nodejs-modules-fin.png)
 *L'installation est terminée quand vous êtes invité·e à appuyer sur Entrée.*
 
+#### Installer git
+
+Téléchargez git depuis le [site officiel](https://git-scm.com/downloads). L'interface d'installation est un peu intimidante mais vous pouvez laisser les paramètres par défaut, à part l'éditeur Nano que je vous conseille pour une installation légère.
+
+![](./git-nano-editor.png)
+
+:::remi
+Même si vous aviez installé GitHub Desktop, vous devez installer le *vrai* git séparément pour qu'il puisse être utilisé par d'autres programmes. Ce n'est pas perdu, puisque vous en aurez sûrement besoin dans la création de jeux !
+:::
+
 #### Télécharger les dépendances du site
 
 Ouvrez l'invite de commandes (tapez "cmd" dans la recherche Windows) et naviguez jusqu'au dossier du site avec la commande `cd`. Dans mon cas, le chemin est le suivant :
@@ -87,6 +97,8 @@ Dorénavant, pour lancer le site, il vous suffira d'ouvrir un terminal dans le d
 ### Sur macOS
 
 Téléchargez Node.js sur le [site officiel](https://nodejs.org/en/). Choisir entre la version LTS et Current ne devrait pas faire de différence, mais nous utiliserons ici la version Current. Suivez le processus d'installation.
+
+Installez ensuite git en choisissant la méthode de votre choix depuis le [site officiel](https://git-scm.com/download/mac). Les solutions les plus simples sont le "*Binary installer*" et la commande Homebrew.
 
 Nous allons maintenant télécharger le site. Si vous connaissez git, vous pouvez tout simplement cloner votre fork. Mais si vous débutez, installez [Github Desktop](https://desktop.github.com/) qui vous facilitera la tâche. La première fois, le logiciel propose un petit tutoriel très rapide que je vous conseille de suivre. Vous pouvez maintenant télécharger votre fork de deux manières :
 
