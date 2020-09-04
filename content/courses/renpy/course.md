@@ -2,6 +2,7 @@
 type: ENGINE
 title: "Créer des visual novels avec Ren'Py !"
 short_title: "Ren'Py"
+description: "Ecrivez des histoires à embranchements sans jamais avoir programmé auparavant avec Ren'Py, un logiciel gratuit. Approfondissez vos connaissances en créant des systèmes de gameplay et un point and click."
 date: "2020-07-28"
 author: "Nev, Aurélien Dos Santos"
 medal: PLATINUM

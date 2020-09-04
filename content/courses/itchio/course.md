@@ -2,6 +2,7 @@
 type: SKILL
 title: "Publier sur itch.io"
 short_title: "Publier sur itch.io"
+description: "Publiez vos premiers jeux sur Internet avec itch.io, la plateforme gratuite de référence pour les jeux indépendants."
 date: "2020-05-25"
 author: "Aurélien Dos Santos"
 medal: BRONZE

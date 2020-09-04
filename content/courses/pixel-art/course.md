@@ -2,6 +2,7 @@
 type: SKILL
 title: "Alors comme ça, vous voulez devenir pixel artiste ?"
 short_title: "Pixel art"
+description: "Découvrez les arcanes du pixel art pour dessiner des sprites et des tilesets, en apprenant le dithering, l'utilisation stratégique de la couleur ou encore l'animation."
 date: "2020-08-30"
 author: "Tsugumo, Nev, Nolwenn Deumié"
 medal: SILVER

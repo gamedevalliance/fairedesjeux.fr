@@ -2,6 +2,7 @@
 type: ENGINE
 title: "RPG Maker"
 short_title: "RPG Maker"
+description: "Créez des RPG à l'ancienne ou des jeux narratifs avec RPG Maker, le logiciel incontournable des apprentis créateurs et créatrices de jeux."
 date: "2020-04-30"
 author: "Aurélien Dos Santos"
 medal: BRONZE

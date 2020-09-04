@@ -2,6 +2,7 @@
 type: SKILL
 title: "Krita"
 short_title: "Krita"
+description: "Utilisez Krita pour dessiner en pixel art, réaliser des animations et vous lancer dans le digital painting."
 date: "2020-08-03"
 author: "Nev"
 medal: SILVER

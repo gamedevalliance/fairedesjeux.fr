@@ -2,6 +2,7 @@
 type: SKILL
 title: "Bien débuter dans la création de jeux"
 short_title: "Bien débuter"
+description: "Vous avez envie de créer des jeux vidéo, mais vous débutez complètement et ne savez pas par où commencer ? Cette formation est faite pour vous !"
 date: "2020-08-28"
 author: "L'équipe de Game Dev Alliance"
 medal: SILVER
@@ -9,7 +10,7 @@ medal_message: "Ce cours est en cours de rédaction, inspiré de notre ancienne 
 featured: 2
 ---
 
-Vous avez envie de créer des jeux vidéo, mais vous débutez complétement et ne savez pas par où commencer ? Cette formation est faite pour vous !
+Vous avez envie de créer des jeux vidéo, mais vous débutez complètement et ne savez pas par où commencer ? Cette formation est faite pour vous !
 
 Tous les jours sur notre [serveur Discord](https://discord.gg/RrBppaj), nous voyons de nombreux débutants se confronter aux mêmes problèmes et se poser les mêmes questions, ce qui nous avait poussé à écrire une *foire aux questions* sur notre ancien wiki, et à traiter plusieurs de ces sujets en vidéo.
 
