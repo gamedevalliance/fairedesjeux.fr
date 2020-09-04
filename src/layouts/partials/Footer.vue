@@ -47,7 +47,7 @@
                                 {{ course.node.short_title }}
                             </g-link>
                         </li>
-                        <li class="text-font-3">
+                        <li class="text-font-3 hidden">
                             Voir plus de formations
                         </li>
                     </ul>
@@ -70,7 +70,7 @@
                                 {{ course.node.short_title || course.node.title }}
                             </g-link>
                         </li>
-                        <li class="text-font-3">
+                        <li class="text-font-3 hidden">
                             Voir plus de formations
                         </li>
                     </ul>
