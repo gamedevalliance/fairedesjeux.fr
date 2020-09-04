@@ -5,9 +5,7 @@
                 <h2 class="text-center text-6xl sm:text-6xl">
                     Informations légales
                 </h2>
-                <p class="
-                    text-justify"
-                >
+                <p>
                     FaireDesJeux.fr est un site collaboratif de formation à la création de jeux vidéo amateurs.
                     Il est réalisé et hébergé par <a href="https://gamedevalliance.fr">Game Dev Alliance</a>,
                     une association loi 1901 (parue au journal officiel le
