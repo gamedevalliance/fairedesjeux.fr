@@ -12,6 +12,10 @@ module.exports = {
     siteUrl: 'https://fairedesjeux.fr',
     siteDescription: 'Le site collaboratif pour apprendre à créer des jeux vidéo !',
     titleTemplate: '%s - FaireDesJeux.fr',
+    icon: {
+        favicon: './static/favicon/favicon.png',
+        touchicon: './static/favicon/touchicon.png',
+    },
     plugins: [
         {
             use: '@gridsome/source-filesystem',
