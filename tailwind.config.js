@@ -192,9 +192,15 @@ module.exports = {
 
                 'ul, ol': {
                     color: theme('textColor.font'),
-                    lineHeight: theme('lineHeight.normal'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    lineHeight: '1',
+
+                    '&:li': {
+                        paddingTop: '0.5rem',
+                        paddingBottom: '0.5rem',
+                        display: 'block',
+                    },
                 },
 
                 /*
@@ -282,6 +288,11 @@ module.exports = {
                         color: theme('textColor.font-2'),
                         textDecoration: 'underline',
                     },
+                },
+                '.nested': {
+                    paddingLeft: '15px',
+                    borderLeft: '1px solid',
+                    borderColor: '#505263',
                 },
             });
         },

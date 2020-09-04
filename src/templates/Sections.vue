@@ -325,6 +325,7 @@
             headings {
                 value
                 anchor
+                depth
             }
             chapter {
                 id

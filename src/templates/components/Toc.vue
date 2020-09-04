@@ -10,6 +10,7 @@
         <ul class="mt-0 sticky block top-20">
             <li v-for="heading in $page.section.headings"
                 :key="heading.value"
+                :class="{ nested: heading.depth == 4 }"
             >
                 <a :href="heading.anchor"
                    class="smola"
