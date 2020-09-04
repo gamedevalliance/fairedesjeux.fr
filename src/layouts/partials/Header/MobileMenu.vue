@@ -14,13 +14,13 @@
                 </g-link>
             </div>
 
-            <div v-if="$page.section.chapter" class="mb-3">
-                <g-link :to="$page.section.chapter.course.path" class="link text-font">
-                    « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
-                </g-link>
-            </div>
-
             <div v-if="$page.section">
+                <div v-if="$page.section.chapter" class="mb-3">
+                    <g-link :to="$page.section.chapter.course.path" class="link text-font">
+                        « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
+                    </g-link>
+                </div>
+
                 <div v-for="chapter in $page.section.chapters || $page.section.chapter.course.chapters"
                      :key="chapter.id"
                      class="mb-4"
