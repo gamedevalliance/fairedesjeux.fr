@@ -137,6 +137,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -158,6 +159,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -179,6 +181,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -200,6 +203,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -221,6 +225,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -242,6 +247,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -263,6 +269,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -284,6 +291,7 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
             }
         }
 
@@ -305,6 +313,23 @@
                 bottom: 0;
                 position: relative;
                 display: inline-block;
+                background-size: cover;
+            }
+        }
+
+        @media (max-width: 640px) {
+            & .bubble-marvin::after,
+            & .bubble-hypemarvin::after,
+            & .bubble-oofmarvin::after,
+            & .bubble-astride::after,
+            & .bubble-winkastride::after,
+            & .bubble-sighastride::after,
+            & .bubble-remi::after,
+            & .bubble-profremi::after,
+            & .bubble-notlikethisremi::after {
+                width: 75px;
+                height: 75px;
+                top: 5px;
             }
         }
     }

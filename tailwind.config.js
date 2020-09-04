@@ -89,6 +89,9 @@ module.exports = {
                     lineHeight: '1.5',
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
                 },
 
                 a: {
@@ -126,6 +129,9 @@ module.exports = {
                     letterSpacing: theme('letterSpacing.title'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.4xl'),
+                    },
                 },
 
                 h3: {
@@ -137,6 +143,9 @@ module.exports = {
                     letterSpacing: theme('letterSpacing.title'),
                     marginTop: '2rem',
                     marginBottom: '0.5rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.2xl'),
+                    },
                 },
 
                 h4: {
@@ -146,6 +155,9 @@ module.exports = {
                     fontWeight: '700',
                     lineHeight: '1.5',
                     letterSpacing: theme('letterSpacing.title'),
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.xl'),
+                    },
                 },
 
                 h5: {
@@ -197,6 +209,9 @@ module.exports = {
                     lineHeight: theme('lineHeight.normal'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
                 },
 
                 /*
@@ -223,6 +238,9 @@ module.exports = {
                     marginRight: 'auto',
                     borderSpacing: '0',
                     tableLayout: 'fixed',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
                 },
 
                 'td, th': {
