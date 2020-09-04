@@ -192,15 +192,10 @@ module.exports = {
 
                 'ul, ol': {
                     color: theme('textColor.font'),
+                    fontSize: theme('fontSize.lg'),
+                    lineHeight: theme('lineHeight.normal'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
-                    lineHeight: '1',
-
-                    '&:li': {
-                        paddingTop: '0.5rem',
-                        paddingBottom: '0.5rem',
-                        display: 'block',
-                    },
                 },
 
                 /*
@@ -283,6 +278,7 @@ module.exports = {
                     color: theme('textColor.font-3'),
                     border: 'none',
                     textDecoration: 'none',
+                    fontSize: '15px',
 
                     '&:hover': {
                         color: theme('textColor.font-2'),

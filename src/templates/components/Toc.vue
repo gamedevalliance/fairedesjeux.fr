@@ -7,7 +7,7 @@
         <span v-if="$page.section.headings.length > 0"
               class="leading-normal text-base font-bold text-font no-underline;"
         >Sur cette page :</span>
-        <ul class="mt-0 sticky block top-20">
+        <ul class="toc mt-0 sticky block top-20">
             <li v-for="heading in $page.section.headings"
                 :key="heading.value"
                 :class="{ nested: heading.depth == 4 }"
@@ -38,3 +38,14 @@
         },
     };
 </script>
+
+<style lang="postcss" scoped>
+    .toc {
+        line-height: 1;
+
+        & li {
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+        }
+    }
+</style>

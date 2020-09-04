@@ -20,7 +20,6 @@
                         <li class="my-2 text-font-3">
                             <g-link to="/informations" class="smola">
                                 Information légales
-                                <g-link />
                             </g-link>
                         </li>
                         <li class="my-2 text-font-3">
@@ -66,7 +65,7 @@
                             class="my-2"
                         >
                             <g-link :to="course.node.path"
-                                    class="smola"
+                                    class="text-base smola"
                             >
                                 {{ course.node.short_title || course.node.title }}
                             </g-link>
