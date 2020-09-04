@@ -58,7 +58,7 @@ Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/pico-8.php?page=ma
 
 A vous de choisir ! Je souhaite obtenir un nombre aléatoire entre 1 et 7, donc je vais écrire `ceil(rnd(7))`.
 
-:::remi
+:::profremi
 Pour retenir ces fonctions, sachez que `flr` veut dire *floor*, qu'on peut traduire par sol ou plancher, donc vers le bas, et `ceil` veut dire *ceiling* ou plafond, vers le haut.
 :::
 

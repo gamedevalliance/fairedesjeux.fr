@@ -22,15 +22,15 @@ label livre_recupere:
     a "Félicitations, tu l'as retrouvé !"
 ```
 
-:::marvin
+:::hypemarvin
 Mais c'est quoi un screen, au juste ?
 :::
 
-:::astride
+:::winkastride
 Ce sont tous les éléments d'interface que l'on peut ajouter en plus des personnages et des décors.
 :::
 
-:::remi
+:::profremi
 Par exemple, l'écran-titre est un screen, et le menu de sauvegarde aussi.
 :::
 

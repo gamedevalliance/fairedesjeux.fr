@@ -26,11 +26,11 @@ En sachant tout cela, vous devriez pouvoir agencer vos panneaux pour imiter mon 
 - **Au centre :** Palette, Sélecteur de couleurs avancé.
 - **En bas :** Calques, Préférences d'outils, Grille et Guides.
 
-:::marvin
-Je ne comprends pas grand chose à tous ces outils !
+:::oofmarvin
+Je ne comprends pas grand chose à tous ces outils...
 :::
 
-:::astride
+:::winkastride
 Pas de panique Marvin, tu verras tout cela un peu plus loin dans le cours.
 :::
 

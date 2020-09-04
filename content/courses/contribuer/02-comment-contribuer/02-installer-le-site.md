@@ -12,7 +12,7 @@ Pour cela, vous pouvez télécharger le site sur votre ordinateur et lancer un s
 
 En premier lieu, vous devez télécharger le site depuis votre fork sur GitHub.
 
-:::remi
+:::profremi
 Si vous connaissez déjà git, vous pouvez simplement cloner votre fork.
 :::
 
@@ -48,7 +48,7 @@ Téléchargez git depuis le [site officiel](https://git-scm.com/downloads). L'in
 
 ![](./git-nano-editor.png)
 
-:::remi
+:::profremi
 Même si vous aviez installé GitHub Desktop, vous devez installer le *vrai* git séparément pour qu'il puisse être utilisé par d'autres programmes. Ce n'est pas perdu, puisque vous en aurez sûrement besoin dans la création de jeux !
 :::
 

@@ -46,11 +46,11 @@ list = {"vache", "mouton"}
 #list  => 2
 ```
 
-:::remi
-Le double égal `==` est une vérification « est-ce que cette variable est égale à 0 ? » par opposition au simple égal `=` que vous avez utilisé jusqu'ici et qui assigne une nouvelle valeur à la variable.
+:::profremi
+Le double égal `==` est une vérification : « est-ce que cette variable est égale à 0 ? » par opposition au simple égal `=` que vous avez utilisé jusqu'ici et qui assigne une nouvelle valeur à la variable.
 :::
 
-:::astride
+:::winkastride
 Retenez cette nuance : pour vérifier une égalité dans une condition, vous aurez toujours besoin du double égal.
 :::
 

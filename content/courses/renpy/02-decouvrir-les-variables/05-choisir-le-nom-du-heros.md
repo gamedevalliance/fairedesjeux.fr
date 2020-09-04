@@ -51,7 +51,7 @@ $ nom_du_perso = nom_du_perso.strip()
 
 Ici, on applique cette fonction au texte de `nom_du_perso`, et elle renvoie un nouveau texte sans les espaces au début et à la fin.
 
-:::marvin
+:::hypemarvin
 Et si... on écrit rien du tout ?
 :::
 
