@@ -9,6 +9,9 @@ const postcssPlugins = [
 
 module.exports = {
     siteName: 'FaireDesJeux.fr',
+    siteUrl: 'https://fairedesjeux.fr',
+    siteDescription: 'Le site collaboratif pour apprendre à créer des jeux vidéo !',
+    titleTemplate: '%s - FaireDesJeux.fr',
     plugins: [
         {
             use: '@gridsome/source-filesystem',

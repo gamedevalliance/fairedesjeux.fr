@@ -15,3 +15,25 @@
         </section>
     </layout>
 </template>
+
+<script>
+    export default {
+        metaInfo() {
+            return {
+                title: 'Erreur 404',
+                meta: [
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: 'Frapper sa tête contre son clavier n\'est pas la manière la plus efficace de naviguer...',
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                ],
+            };
+        },
+    };
+</script>

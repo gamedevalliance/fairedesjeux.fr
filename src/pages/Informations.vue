@@ -60,3 +60,25 @@
         </section>
     </layout>
 </template>
+
+<script>
+    export default {
+        metaInfo() {
+            return {
+                title: 'Informations légales',
+                meta: [
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: 'FaireDesJeux.fr est un site collaboratif de formation à la création de jeux vidéo amateurs. Il est réalisé et hébergé par Game Dev Alliance, une association loi 1901',
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                ],
+            };
+        },
+    };
+</script>

@@ -60,6 +60,23 @@
             Button,
             Medal,
         },
+        metaInfo() {
+            return {
+                title: this.$page.section.title,
+                meta: [
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: this.$page.section.description,
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                ],
+            };
+        },
     };
 </script>
 
@@ -70,6 +87,7 @@
             title
             name
             content
+            description
             medal
             medal_message
             video

@@ -43,20 +43,6 @@
     </Layout>
 </template>
 
-<script>
-    import Chapter from './components/Chapter.vue';
-    import Toc from './components/Toc.vue';
-    import Button from '../layouts/components/Button.vue';
-
-    export default {
-        components: {
-            Chapter,
-            Toc,
-            Button,
-        },
-    };
-</script>
-
 <style lang="postcss" scoped>
     article >>> {
         /*
@@ -335,6 +321,37 @@
     }
 </style>
 
+<script>
+    import Chapter from './components/Chapter.vue';
+    import Toc from './components/Toc.vue';
+    import Button from '../layouts/components/Button.vue';
+
+    export default {
+        components: {
+            Chapter,
+            Toc,
+            Button,
+        },
+        metaInfo() {
+            return {
+                title: this.$page.section.title,
+                meta: [
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: this.$page.section.chapter.course.description,
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                ],
+            };
+        },
+    };
+</script>
+
 <page-query>
     query ($id: ID!) {
         section(id: $id) {
@@ -357,6 +374,7 @@
                 course {
                     title
                     short_title
+                    description
                     path
                     chapters(sort: {by: "name", order:ASC}) {
                         title
