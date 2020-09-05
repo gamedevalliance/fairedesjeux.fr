@@ -86,6 +86,12 @@
             overflow-y: scroll;
         }
     }
+
+    @screen md {
+        .mobile--menu.open {
+            width: 50%;
+        }
+    }
 </style>
 
 <static-query>

@@ -1,5 +1,5 @@
 <template>
-    <button class="md:hidden">
+    <button class="lg:hidden">
         <g-image src="~/assets/menu.svg"
                  immediate="true"
                  quality="100"
