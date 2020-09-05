@@ -92,6 +92,12 @@
             width: 50%;
         }
     }
+
+    @screen lg {
+        .mobile--menu.open {
+            display: none;
+        }
+    }
 </style>
 
 <static-query>
