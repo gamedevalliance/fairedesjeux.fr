@@ -65,6 +65,11 @@
                 title: this.$page.section.title,
                 meta: [
                     {
+                        key: 'og:title',
+                        name: 'og:title',
+                        content: this.$page.section.title,
+                    },
+                    {
                         key: 'og:description',
                         name: 'og:description',
                         content: this.$page.section.description,
