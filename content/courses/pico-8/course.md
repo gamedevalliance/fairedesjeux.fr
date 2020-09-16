@@ -7,6 +7,7 @@ date: "2020-08-03"
 author: "Aurélien Dos Santos"
 medal: SILVER
 medal_message: "Le chapitre sur les jeux d'aventure, qui expliquera comment se déplacer sur une carte, est en cours d'écriture. [Voir l'avancement](https://github.com/gamedevalliance/fairedesjeux.fr/issues/7)"
+video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5t3ibCCh412ZAy0slIv3jeE"
 header: 2
 ---
 
