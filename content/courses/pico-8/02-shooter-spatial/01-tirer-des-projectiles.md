@@ -2,6 +2,12 @@
 title: "Tirer des projectiles"
 ---
 
+Bienvenue dans ce chapitre sur la réalisation d'un shoot'em up dans l'espace ! Vous pouvez commencer par le shooter ou par le jeu d'aventure dans l'ordre que vous voulez. Ceci dit, j'expliquerai certaines choses plus en détail ici, donc si vous ne vous sentez pas encore à l'aise, je vous conseille de commencer par ce chapitre.
+
+Précédemment, nous avons vu comment déplacer un personnage, mais si vous venez d'arriver, je vous laisse recopier ce code tout simple qui nous servira de base.
+
+![Code de base](./code-de-base.png)
+
 Un tir aura trois propriétés : une position X, une position Y, et une vitesse. Pour l'instant, on n'a pas encore d'ennemi. On va donc commencer par faire avancer les projectiles à chaque frame, puis les supprimer quand ils atteignent le bord de l'écran, afin de ne pas nous retrouver avec une quantité gigantesque de projectiles au bout de quelques minutes.
 
 Mais d'abord, dessinons notre petit projectile !

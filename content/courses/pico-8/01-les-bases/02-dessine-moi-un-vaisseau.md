@@ -4,9 +4,9 @@ title: "Dessine-moi un vaisseau"
 
 Bien, maintenant que vous avez fait le tour du propriétaire, le moment est idéal pour créer votre première cartouche. Redémarrez PICO-8 avec la commande `reboot` pour oublier le dernier jeu chargé et revenir au dossier racine simplement.
 
-Vous pouvez utiliser la commande `save shooter` pour créer une nouvelle cartouche. Dorénavant, il vous suffira d'écrire `save` ou d'appuyer sur Ctrl+S pour enregistrer votre jeu.
+Vous pouvez utiliser la commande `save nomdujeu` pour créer une nouvelle cartouche. Dorénavant, il vous suffira d'écrire `save` ou d'appuyer sur Ctrl+S pour enregistrer votre jeu.
 
-Allez jusqu'au menu de dessin et faites un vaisseau. Ne copiez pas forcément le mien : c'est plus sympa si vous faites un truc à vous !
+Allez jusqu'au menu de dessin et faites un vaisseau ou un personnage. Ne copiez pas forcément le mien : c'est plus sympa si vous faites un truc à vous !
 
 ![Dessin de vaisseau](./vaisseau.png)
 

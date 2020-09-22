@@ -24,7 +24,7 @@ Lorsque le jeu devient trop gourmand pour la petite machine virtuelle et que PIC
 Si vous préférez que votre jeu tourne à 60 FPS, remplacez `_update()` par `_update60()`. Cela veut dire que PICO-8 doit calculer deux fois plus de frames par seconde, mais cela ne pose pas de problème pour les jeux les plus simples.
 :::
 
-### Déplacer le vaisseau
+### Déplacer un personnage
 
 Pour rappel, notre but est de faire bouger le vaisseau en utilisant les flèches. Dans notre cas, nous allons utiliser `_init()` pour définir la position de départ du vaisseau, puis `_update()` regardera si une touche est appuyée pour changer la valeur X ou Y, et enfin `_draw()` affichera le sprite au bon endroit.
 
