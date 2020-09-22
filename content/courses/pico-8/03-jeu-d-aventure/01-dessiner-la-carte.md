@@ -2,6 +2,8 @@
 title: "Dessiner la carte"
 ---
 
+Dans ce chapitre, nous allons créer un petit jeu d'aventure ! Nous allons dessiner une carte que l'on pourra explorer, programmer un système de dialogue, interagir avec les objets du décor... Tout un programme ! Commençons par le commencement : la carte du jeu.
+
 ### Créer les sprites
 
 Rendez-vous dans l'écran des sprites et dessinez les éléments qui composeront votre décor : un arbre, des murs, un sol d'herbe ou de pierre... Choisissez un univers qui vous plaît, tant que vous obtenez des tiles sur lesquels on peut marcher et d'autres qui sont des obstacles.
@@ -47,7 +49,7 @@ La nouvelle commande dont nous aurons besoin est la suivante :
 map(tile_x, tile_y, ecran_x, ecran_y)
 ```
 
-Cette commande affiche la map en commençant par le tile précisé et à la position d'écran donnée. En bref, pour afficher la map à partir d'en haut à gauche, il suffit d'écrire `map(0, 0, 0, 0)`. Cela dessine toute la map, ce qui déborde donc de l'écran mais cela n'a pas d'importance pour le moment.
+Cette commande affiche la map en commençant par le tile précisé et à la position d'écran donnée. En bref, pour afficher la map à partir d'en haut à gauche, il suffit d'écrire `map(0, 0, 0, 0)` ou bien juste `map()`, pour faire court. Cela dessine toute la map, même si elle est plus grande que l'écran, mais ça n'a pas d'importance.
 
 :::remi
 Plus précisément, cette commande affiche la section réservée uniquement à la map dans la cartouche, qui fait 128×32 cases. Pour dessiner également la deuxième moitié qui est partagée avec la spritesheet, écrivez `map(0, 0, 0, 0, 128, 64)`.

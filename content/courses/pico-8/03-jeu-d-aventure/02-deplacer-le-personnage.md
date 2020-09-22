@@ -2,7 +2,7 @@
 title: "Déplacer le personnage"
 ---
 
-Dans le chapitre sur le shooter, vous avez appris à déplacer un vaisseau pixel par pixel. Nous pourrions refaire la même chose ici, mais je vous propose plutôt de varier les plaisir et de voir comment se déplacer en case par case ! C'est très utile pour les roguelike et les RPG en tout genre, ainsi que pour les jeux de stratégie par exemple.
+Dans le chapitre sur le shooter, vous avez appris à déplacer un vaisseau pixel par pixel. Nous pourrions refaire la même chose ici, mais je vous propose plutôt de varier les plaisirs et de voir comment se déplacer en case par case ! C'est très utile pour les roguelike et les RPG en tout genre, ainsi que pour les jeux de stratégie par exemple.
 
 ### Afficher le personnage
 
@@ -41,15 +41,15 @@ Maintenant, nous devons vérifier si le tile "*New X Y*" est un obstacle, c'est-
 
 #### Vérifier l'état d'un flag
 
-Nous allons créer une fonction qui nous servira souvent, pour vérifier si une case de la carte a un certain flag activé. `check_flag(flag, x, y)` renverra `true` si le flag en question est activé, `false` sinon. Voici le code :
+Nous allons créer une fonction qui nous servira souvent, pour vérifier si une case de la carte a un certain flag activé. Quand on écrira `check_flag(flag, x, y)`, le résultat sera `true` si le flag en question est activé, `false` sinon. Voici le code :
 
 ![](./check-flag.png)
 
-Avant toute chose, dites-vous que techniquement, une case de la carte n'a pas de flag : c'est le sprite qui les a. Ainsi, même s'il existe la commande `fget` pour vérifier l'état d'un flag, nous ne pouvons pas l'utiliser directement sur une case de la carte. Nous devons d'abord récupérer le numéro de sprite qui correspond à cette case, et c'est ce que fait `mget`.
+Avant toute chose, dites-vous que techniquement, une case de la carte n'a pas de flag : c'est le sprite qui les a. Donc la commande `fget` qui vérifie l'état d'un flag ne peut pas être utilisée directement sur une case de la carte. Nous devons d'abord récupérer le numéro de sprite qui correspond à cette case avec `mget`.
 
 > Le fait de créer une variable locale avec `local` est simplement une bonne pratique car nous n'aurons pas besoin de la variable `sprite` en dehors de cette fonction.
 
-Maintenant que nous connaissons le sprite, nous pouvons utiliser `fget(sprite, flag)` qui renvoie `true` ou `false` selon l'état du flag choisi. Et grâce à `return`, cela veut dire que notre fonction renvoie `true` ou `false` elle aussi.
+Maintenant que nous connaissons le sprite, nous pouvons utiliser `fget(sprite, flag)` qui renvoie `true` ou `false` selon l'état du flag choisi. Grâce à `return`, notre fonction renvoie donc `true` ou `false`.
 
 #### Gérer la collision
 

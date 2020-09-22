@@ -36,4 +36,4 @@ Dans cette démo, vous pouvez déplacer le personnage avec les flèches et exami
 
 ![Deuxième méthode de gestion de la caméra](./camera-methode-2.png)
 
-C'est du beau travail. Bien sûr, plus tard, il vous sera possible d'animer votre personnage et la caméra d'une façon plus fluide, et je vous partagerai pour cela quelques techniques dans le prochain chapitre. Une fois que vous avez choisi la méthode qui vous plaît le plus, vous pouvez passer à l'étape suivante !
+C'est du beau travail. Bien sûr, plus tard, il vous sera possible d'animer votre personnage et la caméra d'une façon plus fluide, et je vous partagerai pour cela quelques techniques à la fin du chapitre. Une fois que vous avez choisi la méthode qui vous plaît le plus pour la caméra, vous pouvez passer à l'étape suivante !

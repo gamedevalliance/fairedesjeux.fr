@@ -2,7 +2,15 @@
 title: "Animations avancées"
 ---
 
+Nous commençons à avoir une bonne base pour créer un jeu d'exploration ! Dans cette dernière étape, je vous propose d'animer le personnage et la caméra pour obtenir un *look* plus propre. Voyez par vous-même :
+
+<iframe width="538" height="539"
+  src="/jeux-pico-8/demo-animations-avancees/index.html">
+</iframe>
+
 ### Animer le personnage
+
+Commençons par nous occuper du personnage. Si votre jeu utilise actuellement le mode 1 de caméra, vous risquez d'avoir un peu mal à la tête en testant le jeu au cours de cette étape, mais nous allons le corriger juste après.
 
 #### Créer une position offset
 
@@ -56,6 +64,8 @@ Plus bas, dans la condition qui vérifie la collison avant de déplacer `p.x` et
 Cela dit, cette condition est actuellement vraie en permanence tant qu'il n'y a pas d'obstacle à "New X Y", même si nous sommes immobiles et que "New X Y" se trouve sous nos pieds. Nous devons faire en sorte que la condition se joue uniquement lorsque le joueur ou la joueuse tente de se déplacer, c'est à dire que "New X Y" n'est pas sous nos pieds.
 
 ![](./condition-check-flag2.png)
+
+Au passage, je vous conseille d'enlever le `else` qui joue le son. Avec l'animation améliorée, on n'a plus besoin de ce feedback supplémentaire, et maintenant que nous n'utilisons plus btnp, le son se jouerait en boucle.
 
 Juste en-dessous, donc à la fin de la fonction `player_movement()`, ajoutez ce code qui anime l'offset.
 
@@ -162,10 +172,130 @@ Vous n'avez pas à le faire si vous préférez la forme précédente. Mais c'est
 
 ### Animer la caméra
 
-#### caméra mode 2 suit juste ox oy
+Souvenez-vous : je vous avais proposé deux modes différents pour la caméra. Nous allons voir comment adapter ces deux méthodes pour rendre la caméra aussi agréable que dans la démo de cette section. Vous n'allez peut-être pas écrire les deux modes dans votre jeu, mais je vous invite à au moins lire les deux passages pour une bonne compréhension.
 
-#### caméra mode 1 déplacement smooth
+#### Mode 1 : centrer le personnage
 
-### Bonus : déplacements pixel par pixel
+Pour rappel, on avait écrit ceci pour créer une caméra qui centre le personnage. La commande `mid()` empêchait la caméra de dépasser des bords de la map quand le personnage s'en approchait.
 
-Je vous ai montré comment faire des déplacements en case par case car cela peut être très pratique pour certains genres de jeux, mais aussi parce que c'est relativement simple à réaliser. Si vous souhaitez réaliser le même jeu mais avec des déplacements pixel par pixel, c'est un peu plus complexe à gérer au niveau des collisions.
+```lua
+function update_camera()
+    local camx = mid(0, p.x - 7.5, 31 - 15)
+    local camy = mid(0, p.y - 7.5, 31 - 15)
+    camera(camx * 8,camy * 8)
+end
+```
+
+Le nombre `31` représentait la largeur ou la hauteur de votre map. Avant même de prendre en compte l'offset, je vous propose de remanier un peu ce code :
+
+```lua
+function update_camera()
+    local map_width = 31
+    local map_height = 31
+    local camx = mid(0, (p.x - 7.5) * 8, (map_width - 15) * 8)
+    local camy = mid(0, (p.y - 7.5) * 8, (map_height - 15) * 8)
+    camera(camx, camy)
+end
+```
+
+Le code est plus lisible car on comprend mieux ce que signifient mes `31`. De plus, ce n'est plus dans `camera()` qu'on multiplie par 8, mais directement quand on donne une valeur à `camx` et `camy`. On peut maintenant ajouter l'offset dans le calcul de `camx` et `camy` et ça fonctionnera comme sur des roulettes :
+
+```lua
+function update_camera()
+    local map_width = 31
+    local map_height = 31
+    local camx = mid(0, (p.x - 7.5) * 8 + p.ox, (map_width - 15) * 8)
+    local camy = mid(0, (p.y - 7.5) * 8 + p.oy, (map_height - 15) * 8)
+    camera(camx, camy)
+end
+```
+
+N'hésitez pas à revenir à la ligne souvent pour vous y retrouver dans le petit écran de PICO-8.
+
+#### Mode 2 : transition entre les sections
+
+Contrairement au mode 1, ce mode-ci fonctionne toujours parfaitement même après avoir programmé l'offset dans notre jeu. Mais nous pouvons lui ajouter un effet de transition très sympathique, avec une trajectoire *ease out*, c'est-à-dire que le mouvement freine alors qu'on se rapproche de la destination. Pour rappel, nous avions écrit le mode 2 de la caméra comme ceci :
+
+```lua
+function update_camera()
+    local camx = flr(p.x / 16) * 16
+    local camy = flr(p.y / 16) * 16
+    camera(camx * 8, camy * 8)
+end
+```
+
+Là encore, il va falloir remanier le code et mieux séparer les choses pour la suite :
+
+```lua
+function update_camera()
+    --section sur la map
+    local sectionx = flr(p.x / 16) * 16
+    local sectiony = flr(p.y / 16) * 16
+    --position de la camera
+    local camx = sectionx * 8
+    local camy = sectiony * 8
+    camera(camx, camy)
+end
+```
+
+Ce code a toujours le même effet, mais on y voit plus clair. Maintenant, au lieu de directement donner cette position à la caméra, on va plutôt dire que c'est la destination souhaitée, puis déplacer progressivement la caméra vers cette destination.
+
+Pour rapprocher la caméra en douceur, à chaque frame, nous allons vérifier quelle est la distance entre la caméra et sa destination, puis réduire cette distance par un pourcentage – en multipliant la distance par 0.25 par exemple.
+
+Grâce à cette multiplication, lorsque la caméra est éloignée de sa destination, elle va se rapprocher très vite, et plus elle sera proche, plus le déplacement sera lent.
+
+```lua
+function init_camera()
+    camx, camy = 0, 0
+end
+
+function update_camera()
+    --section sur la map
+    local sectionx = flr(p.x / 16) * 16
+    local sectiony = flr(p.y / 16) * 16
+    --destination de la camera
+    local destx = sectionx * 8
+    local desty = sectiony * 8
+    --difference avec pos. actuelle
+    local diffx = destx - camx
+    local diffy = desty - camy
+    --reduction de la distance
+    diffx *= 0.25
+    diffy *= 0.25
+    --application de la reduction
+    camx += diffx
+    camy += diffy
+    camera(camx, camy)
+end
+```
+
+Remarquez que pour connaître la différence entre la caméra et sa destination, on fait un calcul avec `camx` et `camy` alors qu'elles n'ont pas encore de valeur au début du jeu ; on doit donc les déclarer dans une nouvelle fonction `init_camera()`.
+
+En tout cas, ça marche parfaitement ! N'hésitez pas à changer le facteur pour un déplacement plus ou moins rapide. Au passage, en écrivant ceci, je me suis rendu compte que chaque ligne devait être écrite deux fois pour X et Y alors qu'elles font la même chose... Je me suis donc demandé ce que ça donnerait de synthétiser le tout en une fonction pour écrire chaque ligne une seule fois.
+
+```lua
+function init_camera()
+    camx, camy = 0, 0
+end
+
+function update_camera()
+    camx = camera_process(camx, p.x)
+    camy = camera_process(camy, p.y)
+    camera(camx, camy)
+end
+
+function camera_process(cam, subject)
+    local section = flr(subject / 16) * 16
+    local dest = section * 8
+    local diff = dest - cam
+    diff *= 0.25
+    cam += diff
+    return cam
+end
+```
+
+A votre place, je ne l'utiliserais pas forcément, parce que je trouve que cela rend le code assez illisible. Mais c'est toujours rigolo de réfléchir à ce genre de chose.
+
+### Conclusion
+
+Ce chapitre est terminé ! En combinant ce que nous avons appris avec le shooter (tirs, apparition d'ennemis...) et avec le jeu d'aventure (map, dialogues...), vous devriez pouvoir créer toutes sortes de jeux ! Quand l'inspiration vient à manquer, n'oubliez pas que vous pouvez l'éveiller en faisant un petit tour sur le splore. A l'avenir, un dernier chapitre vous montrera des astuces plus avancées, comme la programmation de déplacements pixel par pixel avec des collisions et des forces influant les mouvements.

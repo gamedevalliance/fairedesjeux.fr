@@ -2,6 +2,8 @@
 title: "Messages et dialogues"
 ---
 
+Maintenant que vous êtes échauffé·e, on peut s'atteler à quelque chose de tout nouveau : la création d'un système de dialogues !
+
 [[Video src="/videos/pico-8/boite-de-dialogue.mp4" autoplay muted loop controls]]
 
 Comme vous pouvez le voir, le système affiche le nom de la personne qui parle ainsi qu'un ou plusieurs messages d'affilée. Cerise sur le gâteau, la boîte de dialogue s'affiche en haut ou en bas en fonction de la position de l'héroïne pour ne pas la recouvrir !
@@ -84,7 +86,7 @@ Le système est fonctionnel, plus qu'à lui donner une belle apparence !
 
 #### Adapter la position
 
-Si vous utilisez la caméra par sections, il vous faut garder à l'esprit le fait que le personnage se trouvera souvent en bas de l'écran, donc derrière la boîte de dialogue. Si vous utilisez la caméra qui centre le personnage, ceci ne vous concerne pas, mais sinon, vous pouvez facilement déterminer si le personnage est en haut ou en bas de l'écran avec ce bon vieux modulo !
+Si vous utilisez la caméra par sections, il vous faut garder à l'esprit le fait que le personnage se trouvera souvent en bas de l'écran, donc derrière la boîte de dialogue. Si vous utilisez la caméra qui centre le personnage, ne recopiez pas cette condition, mais sinon, vous pouvez facilement déterminer si le personnage est en haut ou en bas de l'écran avec ce bon vieux modulo !
 
 ![](./y-message.png)
 
