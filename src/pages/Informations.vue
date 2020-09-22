@@ -1,13 +1,11 @@
 <template>
     <layout>
         <section>
-            <div class="w-full sm:w-450 mx-auto sm:my-20 px-2">
+            <div class="w-full sm:w-450 mx-auto sm:my-20 px-4">
                 <h2 class="text-center text-6xl sm:text-6xl">
                     Informations légales
                 </h2>
-                <p class="
-                    text-justify"
-                >
+                <p>
                     FaireDesJeux.fr est un site collaboratif de formation à la création de jeux vidéo amateurs.
                     Il est réalisé et hébergé par <a href="https://gamedevalliance.fr">Game Dev Alliance</a>,
                     une association loi 1901 (parue au journal officiel le
@@ -62,3 +60,25 @@
         </section>
     </layout>
 </template>
+
+<script>
+    export default {
+        metaInfo() {
+            return {
+                title: 'Informations légales',
+                meta: [
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: 'FaireDesJeux.fr est un site collaboratif de formation à la création de jeux vidéo amateurs. Il est réalisé et hébergé par Game Dev Alliance, une association loi 1901',
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                ],
+            };
+        },
+    };
+</script>

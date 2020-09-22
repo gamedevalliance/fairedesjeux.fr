@@ -1,10 +1,10 @@
 <template>
     <div>
-        <header class="bg-area md:bg-body text-font font-semibold clearfix">
-            <div class="container mx-auto flex justify-between md:block px-3 md:px-0">
+        <header class="bg-area lg:bg-body text-font font-semibold clearfix">
+            <div class="container mx-auto flex justify-between lg:block pr-3 md:pr-0">
                 <Logo />
-                <Links class="hidden md:inline-block " />
-                <Socials class="float-right py-3 hidden md:inline-block" />
+                <Links class="hidden lg:inline-block " />
+                <Socials class="float-right py-3 hidden lg:inline-block" />
                 <!--
             <Search />
             <ThemesSwitcher />
@@ -42,8 +42,10 @@
             };
         },
         methods: {
-            toggleMobileMenu() {
-                this.mobileMenu = !this.mobileMenu;
+            toggleMobileMenu(newState = !this.mobileMenu) {
+                this.mobileMenu = newState;
+
+                // NOTE: We add overflow: hidden; to the body in order to prevent scrolling it while the menu is open
                 document.body.classList.toggle('overflow-hidden');
             },
         },

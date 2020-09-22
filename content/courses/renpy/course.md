@@ -2,11 +2,13 @@
 type: ENGINE
 title: "Créer des visual novels avec Ren'Py !"
 short_title: "Ren'Py"
+description: "Ecrivez des histoires à embranchements sans jamais avoir programmé auparavant avec Ren'Py, un logiciel gratuit. Approfondissez vos connaissances en créant des systèmes de gameplay et un point and click."
 date: "2020-07-28"
 author: "Nev, Aurélien Dos Santos"
 medal: PLATINUM
 featured: 1
 header: 1
+video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5uqhCaspVB4jFDkkHrkFUBV"
 ---
 
 Si vous souhaitez écrire des histoires à embranchements mais que vous n'avez jamais programmé, Ren'Py est fait pour vous ! C'est un moteur de jeu entièrement gratuit et open source permettant de créer des visual novels, un genre de jeu assez populaire au Japon et proche des livres dont vous êtes le héros.

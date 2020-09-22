@@ -8,6 +8,8 @@ Continuons de nous entraîner avec les boucles for en affichant des étoiles qui
 
 Chaque étoile aura une position X et Y, une couleur et une vitesse. Comme vous le voyez, en faisant varier la couleur et la vitesse des étoiles, on peut créer un effet de profondeur sympathique !
 
+### Créer les étoiles
+
 Dans un nouvel onglet nommé stars, créez une fonction `create_stars()`. Définissez un tableau `stars` qu'on va remplir juste après de toutes nos étoiles.
 
 ![Fonction Create stars](./function-create-stars.png)
@@ -19,8 +21,6 @@ Disons que je veux créer 20 étoiles toutes à des endroits aléatoires de l'é
 Pour rappel, `i` est une variable locale qui commence à 1, et monte de 1 à chaque fois que la boucle se joue, jusqu'à 20. En fait, si on voulait, `i` pourrait même monter de 5 en 5. Il faudrait écrire `i=1,20,5`, mais ça n'aurait pas d'intérêt ici.
 
 A 20 reprises, on crée une étoile avec un X et Y aléatoire dans l'écran (qui fait 128px de côté), on lui donne une couleur et une vitesse, puis on l'ajoute au tableau `stars`.
-
-> Dans PICO-8, `rnd(n)` renvoie un nombre décimal où 0 ≤ résultat < n. Si besoin, vous pouvez obtenir un nombre entier en arrondissant au nombre inférieur `flr()` ou au nombre supérieur `ceil()`.
 
 Ok, voilà pour la création de nos étoiles au début du jeu. Vous pouvez appeler cette fonction dans init.
 
@@ -34,6 +34,8 @@ Comme je vous l'avais dit, PICO-8 dessine chaque nouvel élément par-dessus ce 
 
 Vous pouvez déjà ajuster la couleur et le nombres d'étoiles... Mais vous verrez, ça aura beaucoup plus de cachet en mouvement.
 
+### Déplacer les étoiles
+
 Créons une fonction `update_stars()` pour faire défiler les étoiles au cours du jeu. Pour chaque étoile dans le tableau `stars`, on va diminuer son Y... Eh oui, c'est l'heure d'écrire une nouvelle boucle for :
 
 ![Fonction Update stars](./update-stars.png)
@@ -41,6 +43,8 @@ Créons une fonction `update_stars()` pour faire défiler les étoiles au cours 
 Pensez à appeler `update_stars()` dans `_update60()`. Si vous essayez le jeu, vous allez vous apercevoir d'un petit problème... Les étoiles s'en vont et ne reviennent jamais. Donc quand une étoile atteindra le bas de l'écran, nous allons la replacer en haut, et lui redonner un X aléatoire (sinon, le même motif défilerait en boucle).
 
 ![Déplacement de l'étoile](./move-star.png)
+
+### La touche finale
 
 On commence à être pas mal ! Voici quelques idées si vous voulez changer le style des étoiles à votre façon :
 

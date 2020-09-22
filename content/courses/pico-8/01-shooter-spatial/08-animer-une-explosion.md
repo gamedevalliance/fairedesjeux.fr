@@ -14,7 +14,7 @@ Vous pourriez aussi écrire `circfill` pour que l'intérieur du cercle soit remp
   src="/jeux-pico-8/demo-explosions/index.html">
 </iframe>
 
-Notre explosion aura un timer qui avancera à chaque frame et permettra de savoir à quel stade est notre animation. Lorsque le timer dépasse 12, c'est la fin de l'animation et on supprime l'explosion.
+Prenez le temps d'examiner les détails de la démo. Notre explosion aura un timer qui avancera à chaque frame et permettra de savoir à quel stade est notre animation. Lorsque le timer dépasse 12, c'est la fin de l'animation et on supprime l'explosion.
 
 Comme vous pouvez le voir, le rayon augmente simplement au fil du temps avec le calcul ***timer* ÷ 3**. Vous pourriez changer ce chiffre pour obtenir une explosion plus ou moins grande.
 
@@ -45,7 +45,7 @@ Plus qu'à afficher les explosions d'après ce que je vous expliquais au début.
 
 ![Draw explosions](./draw-explosions.png)
 
-Bien ! Pensez à appeler `update_explosions()` dans `_update60()` et `draw_explosions()` à la fin de `_draw()`. Quant à la création de l'explosion... elle devrait arriver lorsque l'ennemi se fait toucher, on vérifiait cela dans `update_enemies()`. Enlevez le son que l'on jouait, puisque désormais votre fonction joue le son, puis créez une explosion au point d'impact, c'est à dire à la position de la balle.
+Bien ! Pensez à appeler `update_explosions()` dans update et `draw_explosions()` à la fin de draw. Quant à la création de l'explosion... elle devrait arriver lorsque l'ennemi se fait toucher, et on vérifiait cela dans `update_enemies()`. Enlevez le son que l'on jouait, puisque désormais votre fonction joue le son, puis créez une explosion au point d'impact, c'est à dire à la position de la balle.
 
 ![Appel explosion](./appel-explosion.png)
 

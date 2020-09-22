@@ -6,11 +6,11 @@ Dans le premier chapitre, vous avez pu réaliser un premier petit jeu qui fontio
 
 Dans Ren'Py, il y a deux langages qui se mélangent. Jusqu'ici, nous avons vu le langage propre à Ren'Py, qui propose des commandes très simples telles que `scene`, `play music`, etc. Lorsque ces commandes ne suffisent plus, on peut utiliser le Python, un langage dont vous avez peut-être entendu parler puisqu'il est utilisé dans le jeu vidéo et dans le monde scientifique par exemple. Grâce à ce langage de script, vous pouvez personnaliser votre jeu en profondeur. 
 
-:::marvin
+:::hypemarvin
 Est-ce que je peux vraiment faire *tout ce que je veux* ?
 :::
 
-:::astride
+:::winkastride
 Bien sûr. Tu peux créer tes propres menus, des mini-jeux, et plein d'autres choses !
 :::
 
@@ -18,7 +18,7 @@ Bien sûr. Tu peux créer tes propres menus, des mini-jeux, et plein d'autres ch
 Mais est-ce que je peux faire un FPS ?!
 :::
 
-:::astride
+:::sighastride
 ...Non, Marvin, tu ne peux pas faire de FPS.
 :::
 
@@ -26,7 +26,7 @@ Mais est-ce que je peux faire un FPS ?!
 Cela dit, on pourrait y écrire des logiciels, par exemple. Savais-tu que le launcher de Ren'Py a été fait avec Ren'Py lui-même ?
 :::
 
-:::marvin
+:::hypemarvin
 Wahou ! C'est dingue !
 :::
 

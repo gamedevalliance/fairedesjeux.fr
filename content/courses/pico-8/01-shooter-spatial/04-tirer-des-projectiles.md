@@ -61,27 +61,47 @@ Si vous testez le jeu maintenant, il ne devrait rien se passer de spécial. C'es
 
 Afficher le sprite du vaisseau était tout simple, parce qu'il n'y en a qu'un. Mais cette fois, nous devons afficher autant de sprites qu'il y a de balles dans le tableau `bullets` ! Il peut très bien y en avoir deux, vingt, ou zéro... Nous devons donc automatiser ça.
 
-Une boucle for permet de répéter une instruction un nombre de fois donné. Par exemple, la boucle suivante affiche le sprite 1, puis le sprite 2... jusqu'au sprite 10.
+#### Petite leçon sur les boucles for
+
+Une boucle for permet de répéter une instruction un nombre de fois donné.
 
 ```lua
-for i=1,10 do
-    spr(i, 60, 60)
+for i=1,10 do -- Pour i allant de 1 à 10, répéter :
+    spr(1, i*10, 60)
 end
 ```
 
-`i` est une variable locale qui vaudra 1, 2... jusqu'à 10 à l'intérieur de la boucle. Vous pouvez nommer `i` comme vous voulez.
+`i` est une variable locale qui vaudra 1, 2... jusqu'à 10 à l'intérieur de la boucle. Donc ce code affichera 10 fois le sprite 1, d'abord à la position 10 en X, puis 20... jusqu'à 100. Vous pouvez nommer `i` comme vous voulez : c'est votre compteur.
 
 Une boucle for peut également parcourir un tableau. Cela veut dire qu'elle se jouera une fois par élément du tableau. Chaque élément de `bullets` étant une balle, la boucle va se jouer une fois par balle !
 
 ```lua
-for b in all(bullets) do
+for b in all(bullets) do -- Pour b parcourant le tableau bullets, répéter :
     spr(2, b.x, b.y)
 end
 ```
 
+Etant donné que votre tableau `bullets` ressemble à ceci en cours de jeu, avec plus ou moins de balles :
+
+```lua
+bullets = {
+    {x = 20, y = 30, speed = 4},
+    {x = 26, y = 43, speed = 4},
+    {x = 22, y = 61, speed = 4}
+}
+```
+
+La variable `b` qui parcourt le tableau vaut quelque chose comme ceci à chaque passage dans la boucle :
+
+```lua
+b = {x = 20, y = 30, speed = 4}
+```
+
+C'est pour cela qu'on peut manipuler chaque balle en écrivant `b.x`, `b.y`... Puis lorsque la boucle a été répétée avec chaque élément de `bullets`, c'est fini et on sort de la boucle.
+
 ![](./boucle-for-sprite-2.png)
 
-Chaque balle que nous avions créée possède une valeur X et Y. C'est pour ça que l'on peut les afficher au bon endroit. N'oubliez pas que `b` est simplement le nom de la variable locale qui parcourt le tableau. Elle peut être nommée comme vous le souhaitez.
+N'oubliez pas que `b` est simplement le nom de la variable locale qui parcourt le tableau. Elle peut être nommée comme vous le souhaitez.
 
 Testez le jeu, et... les balles s'affichent, mais restent immobiles à l'endroit où elles ont été tirées. Nous avons fait le plus gros du travail ! Il faut maintenant les faire avancer.
 

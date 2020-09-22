@@ -33,7 +33,7 @@ module.exports = function (api) {
         */
         const contributorCollection = addCollection('Contributor');
         /* I am using the Wiki API for this test, but once FDJ is public it will be necessary to change the URL */
-        axios.get('https://api.github.com/repos/gamedevalliance/wiki/contributors').then((resp) => {
+        axios.get('https://api.github.com/repos/gamedevalliance/fairedesjeux.fr/contributors').then((resp) => {
             Object.values(resp.data).forEach((contributor) => {
                 contributorCollection.addNode({
                     name: contributor.login,
@@ -72,47 +72,35 @@ module.exports = function (api) {
                 const chapterCount = fs.readdirSync(chapterPath).filter((dir) => dir.charAt(2) === '-').length;
 
                 tempMap[options.chapter] = {
-                    sections: [], video: '', sectionCount, chapterCount,
+                    sections: [], sectionCount, chapterCount,
                 };
             }
 
-            if (options.fileInfo.name === '00-video') {
-                tempMap[options.chapter].video = options.id;
+            tempMap[options.chapter].sections.push(options.id);
 
-                /*
-                    For videos we assume that if a previous chapter exist, the video for it exists as well.
-                    There shouldn't be any cases where that isn't the case, erika - 2020-05-24
-                */
-                if (lastSection) {
-                    if (lastSection.course === options.course) {
-                        options.previous = `${lastSection.chapter}/00`;
-                    }
+            if (lastSection) {
+                if (lastSection.course === options.course) {
+                    options.previous = lastSection.name;
                 }
-            } else {
-                tempMap[options.chapter].sections.push(options.id);
-
-                if (lastSection) {
-                    if (lastSection.course === options.course) {
-                        options.previous = lastSection.name;
-                    }
-                }
-
-                // Weird stuff
-                const currentId = parseInt(options.name.slice(-2), 10);
-                const currentChapterId = parseInt(options.chapter.slice(-2), 10);
-                if (tempMap[options.chapter].sectionCount > currentId) {
-                    options.next = `${options.chapter}/${String(currentId + 1).padStart(2, '0')}`;
-                } else if (tempMap[options.chapter].chapterCount > currentChapterId) {
-                    options.next = `${options.course}/${String(currentChapterId + 1).padStart(2, '0')}/01`;
-                }
-
-                lastSection = options;
             }
+
+            // Weird stuff
+            const currentId = parseInt(options.name.slice(-2), 10);
+            const currentChapterId = parseInt(options.chapter.slice(-2), 10);
+            if (tempMap[options.chapter].sectionCount > currentId) {
+                options.next = `${options.chapter}/${String(currentId + 1).padStart(2, '0')}`;
+            } else if (tempMap[options.chapter].chapterCount > currentChapterId) {
+                options.next = `${options.course}/${String(currentChapterId + 1).padStart(2, '0')}/01`;
+            }
+
+            lastSection = options;
 
             return {
                 ...options,
             };
         }
+
+        //
 
         if (options.internal.typeName === 'Chapter') {
             options.name = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3);
@@ -122,8 +110,6 @@ module.exports = function (api) {
             if (tempMap[options.name] !== undefined) {
                 tempMap[options.name].sections.forEach((section) => tempList.push(section));
                 options.sections = tempList;
-
-                options.video = tempMap[options.name].video;
             }
 
             tempMap2[options.name] = options.course;

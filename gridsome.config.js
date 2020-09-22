@@ -9,6 +9,13 @@ const postcssPlugins = [
 
 module.exports = {
     siteName: 'FaireDesJeux.fr',
+    siteUrl: 'https://fairedesjeux.fr',
+    siteDescription: 'Le site collaboratif pour apprendre à créer des jeux vidéo !',
+    titleTemplate: '%s - FaireDesJeux.fr',
+    icon: {
+        favicon: './static/favicon/favicon.png',
+        touchicon: './static/favicon/touchicon.png',
+    },
     plugins: [
         {
             use: '@gridsome/source-filesystem',
@@ -89,19 +96,19 @@ module.exports = {
                         winkastride: {
                             defaultTitle: 'Astride',
                         },
-                        tssastride: {
+                        sighastride: {
                             defaultTitle: 'Astride',
                         },
                         oofmarvin: {
                             defaultTitle: 'Marvin',
                         },
-                        hehemarvin: {
+                        hypemarvin: {
                             defaultTitle: 'Marvin',
                         },
-                        humremi: {
+                        profremi: {
                             defaultTitle: 'Rémi',
                         },
-                        onoremi: {
+                        notlikethisremi: {
                             defaultTitle: 'Rémi',
                         },
                     },

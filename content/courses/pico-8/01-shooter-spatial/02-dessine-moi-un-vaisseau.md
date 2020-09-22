@@ -25,7 +25,7 @@ Lancez le jeu avec Ctrl+R, et voilà votre vaisseau qui s'affiche ! Laissez-moi
 ![Schéma de l'écran de jeu](./schema-positions.png)
 *Les positions X et Y sur l'écran de PICO-8.*
 
-Comme un sprite fait 8×8 pixels et que la position représente le coin haut-gauche, écrire `spr(1,60,60)` l'affiche pile au milieu de l'écran.
+Comme un sprite fait 8×8 pixels et que la position représente son coin haut-gauche, écrire `spr(1,60,60)` l'affiche pile au milieu de l'écran.
 
 `spr()` possède également d'autres fonctionnalités bien pratiques qui sont détaillées dans le [manuel](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=spr%20n%20x%20y%20%5Bw%20h%5D%20%5Bflip_x%5D%20%5Bflip_y%5D). Au cours de cette formation, si vous ne comprenez pas bien une commande ou souhaitez en savoir plus, n'hésitez pas à le consulter. Vous le trouverez aussi dans le dossier du logiciel. Votre curiosité sera récompensée et vous apprendrez beaucoup de choses !
 

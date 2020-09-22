@@ -16,7 +16,7 @@ import 'prismjs/themes/prism-okaidia.css';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import {
-    faFacebookF, faGithub, faTwitter, faInstagram, faLinkedinIn,
+    faFacebookF, faGithub, faTwitter, faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { faGlobeEurope, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,10 +25,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 // Import default layout, this layout will be imported as a global component
 import Layout from './layouts/Default.vue';
 
-
 // Import only the icons we need from Font-Awesome
 config.autoAddCss = false;
-library.add(faFacebookF, faGithub, faTwitter, faInstagram, faLinkedinIn, faGlobeEurope, faExternalLinkAlt);
+library.add(faFacebookF, faGithub, faTwitter, faYoutube, faGlobeEurope, faExternalLinkAlt);
 
 export default function (Vue, { head }) {
     // Set default layout as a global component

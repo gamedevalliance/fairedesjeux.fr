@@ -2,7 +2,7 @@
 title: "Exporter le jeu"
 ---
 
-Votre jeu doit avoir un titre et une image de couverture ! Au tout début de votre code, écrivez deux lignes qui apparaîtront sur l'image de cartouche.
+Avant d'être publié, votre jeu doit avoir un titre et une image de couverture ! Au tout début de votre code, écrivez deux lignes qui apparaîtront sur l'image de cartouche.
 
 ```lua
 --jeu dans l'espace !!
@@ -13,11 +13,11 @@ Ensuite, appuyez sur F7 pendant le jeu pour capturer une image de couverture.
 
 Pour partager votre jeu à d'autres utilisateurs et utilisatrices de PICO-8, vous pourriez tout simplement envoyer le fichier `.p8`, ou bien créer une image de cartouche avec `save mon-jeu.p8.png`. Vous trouverez des images de la sorte sur le site de Lexaloffle par exemple, et vous pouvez les ouvrir dans PICO-8 comme un fichier normal.
 
-:::marvin
+:::hypemarvin
 Et si mes amis n'ont pas PICO-8 ?
 :::
 
-:::astride
+:::winkastride
 Tu dois rendre ton jeu *standalone* ! Cela veut dire qu'il n'aura besoin de rien d'autre pour se lancer.
 :::
 

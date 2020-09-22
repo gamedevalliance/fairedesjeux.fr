@@ -63,6 +63,8 @@ module.exports = {
             },
             gridTemplateColumns: {
                 cont: '17% 60% 15%',
+                tab: '20% 80%',
+                mob: '100%',
             },
             gap: {
                 col: '3%',
@@ -70,8 +72,24 @@ module.exports = {
             fontSize: {
                 sm: '15px',
                 lg: '18.5px',
+                mobileMenu: '1.2rem',
                 big: '6rem',
             },
+
+            // Speech bubbles
+            backgroundImage: () => ({
+                marvinNeutral: "url('~@avatars/marvin.png')",
+                marvinHype: "url('~@avatars/marvin-hehe.png')",
+                marvinOof: "url('~@avatars/marvin-oof.png')",
+
+                astrideNeutral: "url('~@avatars/astride.png')",
+                astrideWink: "url('~@avatars/astride-wink.png')",
+                astrideSigh: "url('~@avatars/astride-tss.png')",
+
+                remiNeutral: "url('~@avatars/remi.png')",
+                remiProf: "url('~@avatars/remi-hum.png')",
+                remiNotLikeThis: "url('~@avatars/remi-ono.png')",
+            }),
         },
     },
     variants: {},
@@ -86,6 +104,9 @@ module.exports = {
                     lineHeight: '1.5',
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
                 },
 
                 a: {
@@ -123,6 +144,9 @@ module.exports = {
                     letterSpacing: theme('letterSpacing.title'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.4xl'),
+                    },
                 },
 
                 h3: {
@@ -134,6 +158,9 @@ module.exports = {
                     letterSpacing: theme('letterSpacing.title'),
                     marginTop: '2rem',
                     marginBottom: '0.5rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.2xl'),
+                    },
                 },
 
                 h4: {
@@ -143,6 +170,9 @@ module.exports = {
                     fontWeight: '700',
                     lineHeight: '1.5',
                     letterSpacing: theme('letterSpacing.title'),
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.xl'),
+                    },
                 },
 
                 h5: {
@@ -190,10 +220,13 @@ module.exports = {
 
                 'ul, ol': {
                     color: theme('textColor.font'),
+                    fontSize: theme('fontSize.lg'),
                     lineHeight: theme('lineHeight.normal'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
-                    fontSize: theme('fontSize.lg'),
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
                 },
 
                 /*
@@ -220,6 +253,9 @@ module.exports = {
                     marginRight: 'auto',
                     borderSpacing: '0',
                     tableLayout: 'fixed',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
                 },
 
                 'td, th': {
@@ -276,12 +312,149 @@ module.exports = {
                     color: theme('textColor.font-3'),
                     border: 'none',
                     textDecoration: 'none',
+                    fontSize: '15px',
 
                     '&:hover': {
                         color: theme('textColor.font-2'),
                         textDecoration: 'underline',
                     },
                 },
+                '.nested': {
+                    paddingLeft: '15px',
+                    borderLeft: '1px solid',
+                    borderColor: '#505263',
+                },
+
+                // Speech bubbles
+                '.bubble': {
+                    '& .bubble-content': {
+                        display: 'inline-block',
+                        textAlign: 'left',
+                        backgroundColor: theme('backgroundColor.area'),
+                        padding: '0.5rem 2rem',
+                        margin: '1rem -20px',
+                        borderRadius: theme('borderRadius.full'),
+                        maxWidth: '89%',
+                    },
+                    '& h5': {
+                        display: 'inline-block',
+                        margin: '0',
+                        padding: '0.25rem 1.25rem',
+                        position: 'relative',
+                        fontSize: theme('fontSize.lg'),
+                        backgroundColor: theme('backgroundColor.area-2'),
+                        borderRadius: theme('borderRadius.lg'),
+                        top: '2rem',
+                        marginTop: '-2rem',
+                    },
+
+                    '&::after': {
+                        content: '""',
+                        width: '100px',
+                        height: '100px',
+                        bottom: '0',
+                        position: 'relative',
+                        display: 'inline-block',
+                        backgroundSize: 'cover',
+                    },
+                },
+
+                // Speech Bubbles - Marvin
+                '.bubble-marvin, .bubble-hypemarvin, .bubble-oofmarvin': {
+                    textAlign: 'right',
+
+                    '& h5': {
+                        color: theme('colors.marvin'),
+                        right: '116px',
+                    },
+
+                    '&::after': {
+                        float: 'right',
+                    },
+                },
+
+                '.bubble-marvin': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.marvinNeutral'),
+                    },
+                },
+
+                '.bubble-hypemarvin': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.marvinHype'),
+                    },
+                },
+
+                '.bubble-oofmarvin': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.marvinOof'),
+                    },
+                },
+
+                // Speech Bubbles - Astride
+                '.bubble-astride, .bubble-winkastride, .bubble-sighastride': {
+                    textAlign: 'left',
+
+                    '& h5': {
+                        color: theme('colors.astride'),
+                        left: '116px',
+                    },
+
+                    '&::after': {
+                        float: 'left',
+                    },
+                },
+
+                '.bubble-astride': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.astrideNeutral'),
+                    },
+                },
+
+                '.bubble-winkastride': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.astrideWink'),
+                    },
+                },
+
+                '.bubble-sighastride': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.astrideSigh'),
+                    },
+                },
+
+                // Speech Bubbles - Rémi
+                '.bubble-remi, .bubble-profremi, .bubble-notlikethisremi': {
+                    textAlign: 'left',
+
+                    '& h5': {
+                        color: theme('colors.remi'),
+                        left: '116px',
+                    },
+
+                    '&::after': {
+                        float: 'left',
+                    },
+                },
+
+                '.bubble-remi': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.remiNeutral'),
+                    },
+                },
+
+                '.bubble-profremi': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.remiProf'),
+                    },
+                },
+
+                '.bubble-notlikethisremi': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.remiNotLikeThis'),
+                    },
+                },
+
             });
         },
     ],

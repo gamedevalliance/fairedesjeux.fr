@@ -1,7 +1,7 @@
 <template>
     <layout>
         <section>
-            <div class="w-full sm:w-450 mx-auto sm:my-20 px-2">
+            <div class="w-full sm:w-450 mx-auto sm:my-20 px-4">
                 <h2 class="text-center text-5xl sm:text-big">
                     Merci !
                 </h2>
@@ -29,6 +29,28 @@
         </section>
     </layout>
 </template>
+
+<script>
+    export default {
+        metaInfo() {
+            return {
+                title: 'Nos contributeurs',
+                meta: [
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: 'FaireDesJeux.fr ne serait rien sans l\'aide de ces contributeurs et contributrices.',
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                ],
+            };
+        },
+    };
+</script>
 
 <page-query>
     query {

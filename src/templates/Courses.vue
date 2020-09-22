@@ -1,8 +1,8 @@
 <template>
     <Layout>
-        <div class="grid grid-cols-cont gap-col">
+        <div class="grid grid-cols-mob lg:grid-cols-tab xl:grid-cols-cont gap-col px-4 lg:px-0">
             <!-- left nav -->
-            <aside class="mt-12">
+            <aside class="mt-12 hidden lg:block">
                 <div v-for="chapter in $page.section.chapters" :key="chapter.id" class="area text-font mb-6">
                     <Chapter :chapter="chapter" :isopen="true" />
                 </div>
@@ -29,8 +29,8 @@
                             Texte
                         </Button>
 
-                        <Button v-if="$page.section.chapters[0].video" :src="$page.section.chapters[0].video.path" class="w-64">
-                            Video
+                        <Button v-if="$page.section.video" :src="$page.section.video" class="w-64">
+                            Vidéo
                         </Button>
                         <Button v-else disabled class="w-64" title="Vidéo indisponible pour le moment!">
                             Vidéo
@@ -40,7 +40,9 @@
             </main>
 
             <!-- right nav -->
-            <Toc />
+            <div class="hidden xl:block">
+                <Toc />
+            </div>
         </div>
     </Layout>
 </template>
@@ -58,6 +60,28 @@
             Button,
             Medal,
         },
+        metaInfo() {
+            return {
+                title: this.$page.section.title,
+                meta: [
+                    {
+                        key: 'og:title',
+                        name: 'og:title',
+                        content: this.$page.section.title,
+                    },
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: this.$page.section.description,
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                ],
+            };
+        },
     };
 </script>
 
@@ -68,8 +92,10 @@
             title
             name
             content
+            description
             medal
             medal_message
+            video
             fileInfo {
                 path
             }
@@ -80,10 +106,6 @@
             chapters(sort: {by: "name", order:ASC}) {
                 id
                 title
-                video {
-                    path
-                    title
-                }
                 sections(sort: {by: "fileInfo.name", order:ASC}) {
                     id
                     title
@@ -135,83 +157,20 @@
             }
         }
 
-        & .bubble {
-            & .bubble-content {
-                @apply inline-block text-left bg-area py-2 px-8 my-4 rounded-full;
-
-                margin-left: -20px;
-                margin-right: -20px;
-                max-width: 89%;
-            }
-
-            & h5 {
-                @apply inline-block text-right m-0 py-1 px-5 relative text-lg bg-area-2 rounded-lg;
-
-                top: 2rem;
-                margin-top: -2rem;
-            }
-        }
-
-        & .bubble-marvin {
-            @apply text-right;
-
-            & h5 {
-                @apply text-marvin;
-
-                right: 116px;
-            }
-
-            &::after {
-                background-image: url("~@avatars/marvin.png");
-                content: "";
-                float: right;
-                width: 100px;
-                height: 100px;
-                bottom: 0;
-                position: relative;
-                display: inline-block;
-            }
-        }
-
-        & .bubble-astride {
-            @apply text-left;
-
-            & h5 {
-                @apply text-astride;
-
-                left: 116px;
-            }
-
-            &::after {
-                background-image: url("~@avatars/astride.png");
-                content: "";
-                float: left;
-                width: 100px;
-                height: 100px;
-                bottom: 0;
-                position: relative;
-                display: inline-block;
-            }
-        }
-
-        & .bubble-remi {
-            @apply text-left;
-
-            & h5 {
-                @apply text-remi;
-
-                left: 116px;
-            }
-
-            &::after {
-                background-image: url("~@avatars/remi.png");
-                content: "";
-                float: left;
-                width: 100px;
-                height: 100px;
-                bottom: 0;
-                position: relative;
-                display: inline-block;
+        /* TODO: Move this to tailwind.config.js - erika, 2020-09-04 */
+        @media (max-width: 640px) {
+            & .bubble-marvin::after,
+            & .bubble-hypemarvin::after,
+            & .bubble-oofmarvin::after,
+            & .bubble-astride::after,
+            & .bubble-winkastride::after,
+            & .bubble-sighastride::after,
+            & .bubble-remi::after,
+            & .bubble-profremi::after,
+            & .bubble-notlikethisremi::after {
+                width: 75px;
+                height: 75px;
+                top: 5px;
             }
         }
     }
