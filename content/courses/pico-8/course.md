@@ -8,6 +8,7 @@ author: "Aurélien Dos Santos"
 medal: SILVER
 medal_message: "Le dernier chapitre sur les astuces avancées est en cours d'écriture. [Voir l'avancement](https://github.com/gamedevalliance/fairedesjeux.fr/issues/7)"
 header: 2
+video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5uqhCaspVB4jFDkkHrkFUBV"
 ---
 
 PICO-8 est une console imaginaire dans laquelle vous pouvez aussi bien développer votre jeu que jouer à ceux des autres. Il est très facile d'apprendre à créer un jeu avec PICO-8 car on peut tout faire à l'intérieur : la programmation, le dessin et même la musique !
