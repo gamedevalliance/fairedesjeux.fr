@@ -1,5 +1,5 @@
 <template>
-    <nav class="local-sidebar mt-12">
+    <nav class="h-full mt-12">
         <a class="smola"
            :href="'https://github.com/gamedevalliance/fairedesjeux.fr/edit/master/content/courses/'+$page.section.fileInfo.path"
         >
