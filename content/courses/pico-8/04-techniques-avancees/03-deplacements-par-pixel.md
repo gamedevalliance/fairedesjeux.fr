@@ -2,13 +2,15 @@
 title: "Déplacements au pixel près sur la carte"
 ---
 
-Dans le chapitre du shooter, nous avons vu comment se déplacer en pixel par pixel sans collision sur la carte, ce qui est très simple à faire, puis dans le chapitre du jeu d'aventure, comment se déplacer en case par case avec des collisions sur la carte, ce qui est plutôt simple aussi. Mais comment mêler le meilleur des deux mondes, autrement dit déplacer son personnage en pixel par pixel tout en respectant les collisions sur la grille de la carte ? C'est ce que nous allons voir dans cette étape !
+Dans le chapitre sur le shooter, nous avons vu comment nous déplacer pixel par pixel, mais sans collision sur la carte. Dans le chapitre du jeu d'aventure, nous avons vu comment avoir des collisions sur la carte avec un déplacement case par case. Mais comment mêler le meilleur des deux mondes, autrement dit déplacer son personnage pixel par pixel tout en respectant les collisions sur la grille de la carte ? C'est ce que nous allons voir dans cette étape !
 
 Dans cette démo, mon personnage est moins large qu'une case ; vous pouvez donc vous déplacer de gauche à droite dans le petit couloir !
 
 <iframe width="538" height="539"
   src="/jeux-pico-8/demo-deplacement-pixel-simple/index.html">
 </iframe>
+
+Vous pouvez lire le contenu complet de cette cartouche [à cette adresse](https://github.com/aureliendossantos/pico-8-sample-games/blob/master/basic-pixel-movement-on-map.p8). Notez que pour plus de clarté, le code a été écrit dans un éditeur externe et les lignes sont trop longues pour être agréables à lire dans la fenêtre de PICO-8. Cela n'empêche pas le jeu de fonctionner parfaitement !
 
 Pour commencer, préparez un nouveau projet en réalisant quelques sprites, dont un obstacle avec le flag 0, puis dessinez-les sur la carte. Notre game loop sera toute simple :
 
