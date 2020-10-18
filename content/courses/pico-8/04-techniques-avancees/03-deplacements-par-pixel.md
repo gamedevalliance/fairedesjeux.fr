@@ -35,11 +35,11 @@ Le personnage aura de nouvelles propriétés. La largeur de mon sprite est de 7 
 ```lua
 function create_player()
 	p = {
-		x = 24, y = 24, --position au pixel près
-		dx = 0, dy = 0, --vitesse actuelle du perso
+		x = 24, y = 24, -- position au pixel près
+		dx = 0, dy = 0, -- vitesse actuelle du perso
 		sprite = 6,
 		speed = 1,
-		w = 7, h = 8 --largeur et hauteur
+		w = 7, h = 8 -- largeur et hauteur
 	}
 end
 ```
@@ -67,7 +67,7 @@ Ensuite, on vérifie si on peut bouger à l'endroit souhaité en donnant à une 
 		p.y += p.dy
 	end
 
-	p.dx, p.dy = 0, 0 --Ceci est une affectation multiple en une ligne !
+	p.dx, p.dy = 0, 0 -- Ceci est une affectation multiple en une ligne !
 end
 ```
 
@@ -77,10 +77,10 @@ Revenons à `can_move()`. Cette fonction prend le rectangle qu'on lui donne en a
 
 ```lua
 function can_move(x, y, w, h)
-	if (check_obstacle(x, y)) return false         --coin haut-gauche
-	if (check_obstacle(x+w-1, y)) return false     --coin haut-droite
-	if (check_obstacle(x, y+h-1)) return false     --coin bas-gauche
-	if (check_obstacle(x+w-1, y+h-1)) return false --coin bas-droite
+	if (check_obstacle(x, y)) return false         -- coin haut-gauche
+	if (check_obstacle(x+w-1, y)) return false     -- coin haut-droite
+	if (check_obstacle(x, y+h-1)) return false     -- coin bas-gauche
+	if (check_obstacle(x+w-1, y+h-1)) return false -- coin bas-droite
 	return true
 end
 ```

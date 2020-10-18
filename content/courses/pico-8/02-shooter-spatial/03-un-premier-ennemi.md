@@ -37,7 +37,7 @@ Retirez la ligne `spawn_enemies()` de `_init()`. Rendez-vous dans `_update60()`,
 
 ![](./if-enemies-0.png)
 
-On ne le voit pas très bien, mais ce signe est un croisillon (eh oui, ce ne s'appelle pas vraiment un dièse ni un hashtag !). En Lua, `#` permet de connaître la longueur d'un texte ou le nombre d'éléments dans un tableau :
+On ne le voit pas très bien, mais ce signe est un croisillon, ou carré au Québec (eh oui, ce ne s'appelle pas vraiment un dièse ni un hashtag !). En Lua, `#` permet de connaître la longueur d'un texte ou le nombre d'éléments dans un tableau :
 
 ```lua
 text = "bonjour"

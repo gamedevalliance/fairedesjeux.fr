@@ -40,8 +40,8 @@ function create_player()
 		max_speed = 3,
 		acceleration = 1,
 		friction = 0.85
-		--friction = 1 : pas de ralentissement
-		--friction = 0 : arrêt instantané
+		-- friction = 1 : pas de ralentissement
+		-- friction = 0 : arrêt instantané
 	}
 end
 ```
@@ -105,29 +105,29 @@ Par contre, cette fois, s'il y a un obstacle, on va en rapprocher le personnage 
 		p.x += p.dx
 		p.y += p.dy
 	else
-		--On stocke la distance que le perso devait parcourir
+		-- On sauvegarde la distance que le perso devait parcourir
 		local target_x = p.dx
 		local target_y = p.dy
 
-		--Tant qu'on ne peut pas se déplacer jusqu'à 'target x y'…
+		-- Tant qu'on ne peut pas se déplacer jusqu'à 'target x y'…
 		while not can_move(p, target_x, target_y) do
 
-			--Si 'target x' a été réduite au point d'être presque 0…
+			-- Si 'target x' a été réduite au point d'être presque 0…
 			if abs(target_x) <= 0.1 then
-				target_x = 0 --on la met simplement à 0.
+				target_x = 0 -- on la met simplement à 0.
 			else
-				--Sinon, sa nouvelle valeur est 90% de l'ancienne
+				-- Sinon, sa nouvelle valeur est 90% de l'ancienne
 				target_x *= 0.9
 			end
 
-			--Pareil pour y
+			-- Pareil pour y
 			if abs(target_y) <= 0.1 then
 				target_y = 0
 			else
 				target_y *= 0.9
 			end
 		end
-		--On se déplace jusqu'à la distance obtenue
+		-- On se déplace jusqu'à la distance obtenue
 		p.x += target_x
 		p.y += target_y
 	end
@@ -153,16 +153,16 @@ Passons aux fonctions que nous avons appelées. Comme à l'étape précédente, 
 ```lua
 function can_move(a, dx, dy)
 
-	--Quelques variables pour plus de clarté
+	-- Quelques variables pour plus de clarté
 	local x_left = a.x + dx
 	local x_right = a.x + dx + a.w-1
 	local y_top = a.y + dy
 	local y_bottom = a.y + dy + a.h-1
 
-	if (check_obstacle(x_left, y_top)) return false     --coin haut-gauche
-	if (check_obstacle(x_left, y_bottom)) return false  --coin haut-droite
-	if (check_obstacle(x_right, y_top)) return false    --coin bas-gauche
-	if (check_obstacle(x_right, y_bottom)) return false --coin bas-droite
+	if (check_obstacle(x_left, y_top)) return false     -- coin haut-gauche
+	if (check_obstacle(x_left, y_bottom)) return false  -- coin haut-droite
+	if (check_obstacle(x_right, y_top)) return false    -- coin bas-gauche
+	if (check_obstacle(x_right, y_bottom)) return false -- coin bas-droite
 
 	return true
 end
@@ -184,17 +184,17 @@ Enfin, la fonction `check_walls` est une nouveauté. Elle vérifie si un objet a
 ```lua
 function check_walls(a)
 
-	--Si on va vers la gauche
+	-- Si on va vers la gauche
 	if a.dx < 0 then
 		local wall_top_left = check_obstacle(a.x-1, a.y)
 		local wall_bottom_left = check_obstacle(a.x-1, a.y+a.h-1)
-		--S'il y a un mur dans cette direction,
-		--on réduit la vitesse x à 0
+		-- S'il y a un mur dans cette direction,
+		-- on réduit la vitesse x à 0
 		if wall_top_left or wall_bottom_left then
 			a.dx = 0
 		end
 
-	--vers la droite
+	-- vers la droite
 	elseif a.dx > 0 then
 		local wall_top_right = check_obstacle(a.x+a.w, a.y)
 		local wall_bottom_right = check_obstacle(a.x+a.w, a.y+a.h-1)
@@ -203,7 +203,7 @@ function check_walls(a)
 		end
 	end
 
-	--vers le haut
+	-- vers le haut
 	if a.dy < 0 then
 		local wall_top_left = check_obstacle(a.x, a.y-1)
 		local wall_top_right = check_obstacle(a.x+a.w-1, a.y-1)
@@ -211,7 +211,7 @@ function check_walls(a)
 			a.dy = 0
 		end
 
-	--vers le bas
+	-- vers le bas
 	elseif a.dy > 0 then
 		local wall_bottom_left = check_obstacle(a.x, a.y+a.h)
 		local wall_bottom_right = check_obstacle(a.x+a.w-1, a.y+a.h)

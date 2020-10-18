@@ -18,7 +18,7 @@ Afficher vos propres variables est très pratique, mais cela ne suffira pas touj
 
 `stat(0)` renvoie la quantité de mémoire RAM utilisée. Votre programme compilé et vos variables en jeu peuvent prendre jusqu'à 2 Mo, ou 2048 octets. Le résultat affiché peut donc aller de 0 à 2048.
 
-`stat(1)` donne le pourcentage de processeur (CPU) utilisé **depuis le début de la frame**. Cette précision est importante : si vous demandez le CPU utilisé au tout début d'update, le nombre sera très faible, alors que si vous le demandez tout à la fin de votre code, il sera plus élevé. Un résultat de `1.0` équivaut à 100% d'utilisation. N'oubliez pas qu'à 60 FPS, chaque frame ne peut utiliser que de la moitié du CPU avant que le jeu ne descende à 30 FPS.
+`stat(1)` donne le pourcentage de processeur (CPU) utilisé **depuis le début de la frame**. Cette précision est importante : si vous demandez le CPU utilisé au tout début d'update, le nombre sera très faible, alors que si vous le demandez tout à la fin de votre code, il sera plus élevé. Un résultat de `1.0` équivaut à 100% d'utilisation. N'oubliez pas qu'à 60 FPS, chaque frame ne peut utiliser que la moitié du CPU avant que le jeu ne descende à 30 FPS.
 
 `stat(7)` renvoie le framerate actuel, qui devrait donc être à 30 ou 60 si tout fonctionne bien. Simple comme bonjour !
 
