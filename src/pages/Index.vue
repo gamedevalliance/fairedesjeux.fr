@@ -63,7 +63,7 @@
                 {
                     key: 'og:title',
                     name: 'og:title',
-                    content: 'FaireDesJeux.fr: Cours gratuit en ligne',
+                    content: 'FaireDesJeux.fr: Cours gratuits en ligne',
                 },
                 {
                     key: 'og:description',
