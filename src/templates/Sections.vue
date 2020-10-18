@@ -114,14 +114,25 @@
             Toc,
             Button,
         },
+        computed: {
+            cover() {
+                // eslint-disable-next-line global-require, import/no-dynamic-require
+                return require(`!!assets-loader?quality=100!@coursesCovers/${this.$page.section.chapter.course.name}/cover-wide.png`);
+            },
+        },
         metaInfo() {
             return {
-                title: this.$page.section.title,
+                title: `${this.$page.section.title} · ${this.$page.section.chapter.course.short_title} · ${this.$page.section.chapter.title}`,
                 meta: [
+                    {
+                        key: 'description',
+                        name: 'description',
+                        content: this.$page.section.chapter.course.description,
+                    },
                     {
                         key: 'og:title',
                         name: 'og:title',
-                        content: this.$page.section.title,
+                        content: `${this.$page.section.title} · ${this.$page.section.chapter.course.short_title} · ${this.$page.section.chapter.title}`,
                     },
                     {
                         key: 'og:description',
@@ -131,7 +142,7 @@
                     {
                         key: 'og:image',
                         name: 'og:image',
-                        content: 'http://fairedesjeux.fr/cover.png',
+                        content: this.cover.src,
                     },
                 ],
             };
@@ -158,7 +169,9 @@
             }
             chapter {
                 id
+                title
                 course {
+                    name
                     title
                     short_title
                     description

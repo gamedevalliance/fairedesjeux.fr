@@ -14,7 +14,7 @@
                         <h2>{{ $page.section.title }}</h2>
 
                         <g-image
-                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.section.name}/cover-wide.png`)"
+                            :src="this.cover"
                             class="rounded-md h-courseCover w-full object-cover"
                         />
                     </header>
@@ -60,10 +60,21 @@
             Button,
             Medal,
         },
+        computed: {
+            cover() {
+                // eslint-disable-next-line global-require, import/no-dynamic-require
+                return require(`!!assets-loader?quality=100!@coursesCovers/${this.$page.section.name}/cover-wide.png`);
+            },
+        },
         metaInfo() {
             return {
                 title: this.$page.section.title,
                 meta: [
+                    {
+                        key: 'description',
+                        name: 'description',
+                        content: this.$page.section.description,
+                    },
                     {
                         key: 'og:title',
                         name: 'og:title',
@@ -77,7 +88,7 @@
                     {
                         key: 'og:image',
                         name: 'og:image',
-                        content: 'http://fairedesjeux.fr/cover.png',
+                        content: this.cover.src,
                     },
                 ],
             };

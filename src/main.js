@@ -36,4 +36,9 @@ export default function (Vue, { head }) {
 
     // eslint-disable-next-line no-param-reassign
     head.bodyAttrs = { class: 'bg-area smooth' };
+
+    head.meta.push({
+        name: 'og:site_name',
+        content: 'FaireDesJeux.fr',
+    });
 }

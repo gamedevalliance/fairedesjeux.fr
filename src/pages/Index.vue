@@ -58,7 +58,24 @@
                If we were to change title (instead of titleTemplate) we'd have the following structure: title - title
                which is not what we want - so we overide the titleTemplate for this page.
             */
-            titleTemplate: '%s',
+            titleTemplate: '%s: Cours gratuit en ligne',
+            meta: [
+                {
+                    key: 'og:title',
+                    name: 'og:title',
+                    content: 'FaireDesJeux.fr: Cours gratuit en ligne',
+                },
+                {
+                    key: 'og:description',
+                    name: 'og:description',
+                    content: 'Le site collaboratif pour apprendre à créer des jeux vidéo !',
+                },
+                {
+                    key: 'og:image',
+                    name: 'og:image',
+                    content: 'https://fairedesjeux.fr/cover.png',
+                },
+            ],
         },
     };
 </script>

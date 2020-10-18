@@ -10,8 +10,8 @@ const postcssPlugins = [
 module.exports = {
     siteName: 'FaireDesJeux.fr',
     siteUrl: 'https://fairedesjeux.fr',
-    siteDescription: 'Le site collaboratif pour apprendre à créer des jeux vidéo !',
-    titleTemplate: '%s - FaireDesJeux.fr',
+    siteDescription: 'FaireDesJeux.fr est un site d\'apprentissage qui vous donne accès à des tutoriels gratuits pour créer vos jeux vidéo. Suivez les cours à l\'écrit ou en vidéo !',
+    titleTemplate: '%s · FaireDesJeux.fr',
     icon: {
         favicon: './static/favicon/favicon.png',
         touchicon: './static/favicon/touchicon.png',
