@@ -71,6 +71,16 @@
                     content: 'Le site collaboratif pour apprendre à créer des jeux vidéo !',
                 },
                 {
+                    key: 'twitter:card',
+                    name: 'twitter:card',
+                    content: 'summary_large_image',
+                },
+                {
+                    key: 'twitter:image',
+                    name: 'twitter:image',
+                    content: 'https://fairedesjeux.fr/cover.png',
+                },
+                {
                     key: 'og:image',
                     name: 'og:image',
                     content: 'https://fairedesjeux.fr/cover.png',

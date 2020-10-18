@@ -41,4 +41,9 @@ export default function (Vue, { head }) {
         name: 'og:site_name',
         content: 'FaireDesJeux.fr',
     });
+
+    head.meta.push({
+        name: 'theme-color',
+        content: '#9e96d0',
+    });
 }

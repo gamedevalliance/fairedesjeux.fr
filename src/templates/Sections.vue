@@ -140,6 +140,16 @@
                         content: this.$page.section.chapter.course.description,
                     },
                     {
+                        key: 'twitter:card',
+                        name: 'twitter:card',
+                        content: 'summary_large_image',
+                    },
+                    {
+                        key: 'twitter:image',
+                        name: 'twitter:image',
+                        content: this.cover.src,
+                    },
+                    {
                         key: 'og:image',
                         name: 'og:image',
                         content: this.cover.src,
