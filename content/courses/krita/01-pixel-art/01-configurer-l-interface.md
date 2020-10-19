@@ -1,5 +1,6 @@
 ---
 title: "Configurer l'interface"
+description: "Utilisez les espaces de travail de Krita pour faire du pixel art efficacement."
 ---
 
 En lançant Krita pour la première fois, voici l'interface que vous devriez avoir sous les yeux :

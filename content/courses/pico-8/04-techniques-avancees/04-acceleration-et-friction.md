@@ -1,5 +1,6 @@
 ---
 title: "Accélération et friction"
+description: "Rendez les contrôles du personnage plus funs grâce à des effets de physique dans les déplacements. Appliquez des forces sur vos ennemis pour les repousser contre les murs."
 ---
 
 Cette étape et la suite directe de celle sur les déplacements au pixel près. Ici, je vais vous donner quelques pistes pour aller plus loin et ajouter des effets de physique. Cela peut rendre vos contrôles plus amusants, mais aussi être une base pour un système plus vaste ! Vous pourriez par exemple appliquer une force sur le personnage ou les ennemis pour les repousser, et ils se stopperont correctement contre les murs.

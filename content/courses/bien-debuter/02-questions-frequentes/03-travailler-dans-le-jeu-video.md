@@ -1,5 +1,6 @@
 ---
 title: Travailler dans le jeu vidéo
+description: "Il existe deux grandes façons de gagner sa vie avec le jeu vidéo."
 ---
 
 Il existe deux grandes façons de gagner sa vie avec le jeu vidéo. Vous pouvez vous lancer en tant qu'indépendant·e, et dans ce cas vous devrez affronter les mêmes difficultés que si vous deviez vivre de n'importe quel autre art. Le salaire n'est pas garanti, les tâches administratives sont plus complexes, vous n'aurez pas d'horaires fixes... En bref, c'est possible mais il y a très peu d'élus !

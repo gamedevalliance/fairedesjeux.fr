@@ -1,6 +1,6 @@
 ---
 title: "Donjons et énigmes"
-description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
+description: "Créons une grotte pour y ajouter des groupes monstres et des énigmes avec les interrupteurs."
 ---
 
 Dans cette étape, nous allons créer une grotte et y ajouter des groupes monstres et des énigmes utilisant les interrupteurs.

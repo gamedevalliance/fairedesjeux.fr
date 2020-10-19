@@ -1,5 +1,6 @@
 ---
 title: "Une première contribution"
+description: "Modifiez rapidement une page du site en quelques clics grâce à votre compte GitHub."
 ---
 
 Si le projet de FaireDesJeux.fr vous emballe et que souhaitez contribuer, que ce soit en écrivant une simple correction ou une toute nouvelle formation, vous êtes au bon endroit !

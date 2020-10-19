@@ -1,6 +1,6 @@
 ---
 title: "Quel RPG Maker choisir ?"
-description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
+description: "La réponse n'est pas simple, puisqu'aucun RPG Maker n'est absolument meilleur qu'un autre. Comment choisir le plus avantageux pour votre projet ?"
 ---
 
 Souvent chez les débutants et débutantes revient la question du meilleur RPG Maker à utiliser. La réponse n'est pas simple, puisqu'aucun RPG Maker n'est absolument meilleur qu'un autre : chaque version possède des avantages et des inconvénients, qui pèseront différemment dans la balance en fonction du projet que vous souhaitez réaliser.

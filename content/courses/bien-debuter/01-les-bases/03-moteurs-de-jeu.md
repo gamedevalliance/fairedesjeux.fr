@@ -1,5 +1,6 @@
 ---
 title: Choisir un moteur de jeu
+description: "Unity, Unreal Engine, GameMaker... Quel est le moteur de jeu qui vous convient le mieux ?"
 ---
 
 Pour réaliser votre premier jeu, vous vous attendez peut-être à ce qu'il y ait un logiciel idéal, mais ce n'est pas toujours le cas. Chaque moteur a des avantages, des inconvénients, une interface et un style qui vous parleront plus ou moins. Ainsi, même s'il existe des logiciels plus populaires que d'autres pour chaque type de jeu, le choix du moteur est très subjectif. Il ne suffit pas de peser les pour et les contre : c'est aussi une question de *feeling*.

@@ -1,5 +1,6 @@
 ---
 title: "Syntaxe des cours"
+description: "Les cours de FaireDesJeux.fr sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voici un tour d'horizon des fonctionnalités disponibles !"
 ---
 
 Les cours de FaireDesJeux.fr sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voici un tour d'horizon des fonctionnalités disponibles !

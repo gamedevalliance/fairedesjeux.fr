@@ -1,5 +1,6 @@
 ---
 title: Trouver des musiques et des graphismes
+description: "On appelle asset une ressource de jeu vidéo. Cela peut être une musique, un sprite... Vous trouverez des assets gratuits et payants sur des sites spécialisés."
 ---
 
 On appelle asset une ressource de jeu vidéo. Cela peut être une musique, un sprite... Vous trouverez des assets gratuits et payants sur des sites spécialisés :

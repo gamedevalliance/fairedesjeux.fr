@@ -1,5 +1,6 @@
 ---
 title: "Cliquer sur un objet"
+description: "Ajoutez des mécaniques de point and click à l'aide des screens de Ren'Py. Dans cette première étape, nous allons afficher un objet sur lequel on pourra cliquer."
 ---
 
 Dans ce troisième chapitre, vous verrez comment ajouter des mécaniques de point and click à vos jeux, à l'aide des screens de Ren'Py et d'une utilisation plus poussée des variables.

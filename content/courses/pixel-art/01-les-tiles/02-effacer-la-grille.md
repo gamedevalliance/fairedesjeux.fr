@@ -1,6 +1,6 @@
 ---
 title: "Effacer la grille"
-description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
+description: "Même si votre map est dessinée sur une grille, nous souhaitons donner l'illusion qu'elle n'existe pas... Effacer visuellement la grille est en fait un des plus grands accomplissements que vous pouvez réaliser en tant que pixel artist."
 ---
 
 J'aimerais souligner autre chose au sujet de cette map : la grille est bien trop évidente !

@@ -1,6 +1,6 @@
 ---
 title: "Votre premier dialogue"
-description: "Téléchargez Ren'Py gratuitement et apprenez les bases du moteur pour créer votre premier projet."
+description: "Dans le premier chapitre de ce cours sur Ren'Py, nous allons créer en quelques minutes un dialogue complet entre plusieurs personnages."
 ---
 
 Dans ce premier chapitre, nous allons créer en quelques minutes un dialogue complet entre plusieurs personnages.

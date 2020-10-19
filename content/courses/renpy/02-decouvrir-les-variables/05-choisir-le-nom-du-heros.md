@@ -1,5 +1,6 @@
 ---
 title: "Choisir le nom du héros"
+description: "Laissez le choix du nom aux joueurs et joueuses pour qu'elles s'approprient encore plus leur personnage !"
 ---
 
 Les visual novels sont souvent basés sur des choix et des fins multiples. Vous vous êtes donc peut-être déjà demandé comment laisser le choix du nom aux joueurs et joueuses pour qu'elles s'approprient encore plus leur personnage !

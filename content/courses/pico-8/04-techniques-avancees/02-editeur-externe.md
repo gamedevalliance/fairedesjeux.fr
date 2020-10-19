@@ -1,5 +1,6 @@
 ---
 title: "Utiliser un éditeur externe"
+description: "Saviez-vous que votre jeu ne contient en réalité que du texte ? Découvrez comment coder votre jeu dans un vrai éditeur de code comme un·e pro."
 ---
 
 Saviez-vous que le fichier de votre cartouche ne contient en réalité que du texte ? Vous pouvez l'ouvrir avec le bloc-notes par exemple, et vous y verrez non seulement votre code, mais aussi vos sprites, votre map et vos sons.

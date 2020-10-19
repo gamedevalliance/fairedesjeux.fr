@@ -1,5 +1,6 @@
 ---
 title: Recruter pour ses premiers projets
+description: "Vous débutez dans la création de jeux et vous souhaitez recruter des gens pour votre projet ? Attention aux pièges communs !"
 ---
 
 Il arrive parfois que des débutants dans la création publient des annonces de recrutement pour leur projet. Ce genre d'annonce finit très souvent mal : un développeur expérimenté y verra plein de signes que le recruteur est un débutant, et ne sera pas intéressé. Je vous assure, vous ne pouvez pas paraître plus expérimenté que ce que vous êtes réellement !

@@ -1,5 +1,6 @@
 ---
 title: "Paramétrer les outils"
+description: "Changez les options des outils pour pouvoir travailler avec des gros pixels."
 ---
 
 Comme dans la plupart des logiciels de graphisme généralistes, les outils de Krita disponibles à gauche sont pensés pour les images en haute résolution, et manquent de précision pour le pixel art. Heureusement, il est possible de changer ces paramètres pour obtenir une véritable interface pour pixel artiste !

@@ -1,6 +1,6 @@
 ---
 title: "Le placement stratégique du pixel"
-description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
+description: "Décomposons les grandes icônes du pixel art pour mieux comprendre ce qui les rend si légendaires ! Commençons par le jeu le plus beau que j'ai jamais vu : Secret of Mana 3."
 ---
 
 Si vous aimez les RPG, vous avez sûrement déjà joué aux icônes du genre. Ce qu'on va faire dans ce chapitre, c'est les décomposer pour voir ce qui les rend aussi légendaires ! Parlons de Secret of Mana 3, qui est probablement le jeu le plus beau que j'ai jamais vu :

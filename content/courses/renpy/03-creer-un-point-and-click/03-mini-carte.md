@@ -1,5 +1,6 @@
 ---
 title: "La mini-carte"
+description: "Utilisez les imagemaps pour créer des images avec des zones cliquables, comme pour une mini-carte qui contiendrait plusieurs destinations."
 ---
 
 La dernière astuce de ce chapitre sur les point and click, c'est l'utilisation des imagemaps qui permet de rendre différentes zones d'une même image cliquables. Le moyen le plus simple de le montrer, c'est sans doute de créer une mini-carte contenant plusieurs destinations.

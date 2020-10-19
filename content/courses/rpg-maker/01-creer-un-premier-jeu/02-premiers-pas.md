@@ -1,6 +1,6 @@
 ---
 title: "Une première aventure"
-description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
+description: "Créez votre premier jeu grâce à cette vidéo qui vous permettra de vous familiariser avec RPG Maker."
 ---
 
 Après avoir installé RPG Maker, familiarisez-vous grâce à cette vidéo qui vous apprendra rapidement à faire un premier jeu.

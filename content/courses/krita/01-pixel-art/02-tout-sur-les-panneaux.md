@@ -1,5 +1,6 @@
 ---
 title: "Tout sur les panneaux"
+description: "Découvrez tous les outils utiles de Krita pour faire du pixel art."
 ---
 
 Maintenant que vous avez configuré Krita, nous pouvons découvrir les outils que je vous ai fait ajouter à votre panneau de droite.

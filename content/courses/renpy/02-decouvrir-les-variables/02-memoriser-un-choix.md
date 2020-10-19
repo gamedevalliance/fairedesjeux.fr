@@ -1,5 +1,6 @@
 ---
 title: "Mémoriser un choix"
+description: "Faites retenir au jeu les décisions que vous avez prises pour les réutiliser plus tard dans l'histoire."
 ---
 
 Vous savez déjà faire des choix en créant un `menu`. Cela dit, il seraient plus utiles si les personnages du jeu pouvaient se souvenir de vos réponses et vous en reparler plus tard. C'est exactement ce que nous allons faire ici !

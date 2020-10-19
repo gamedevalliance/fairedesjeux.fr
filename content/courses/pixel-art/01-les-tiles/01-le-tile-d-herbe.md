@@ -1,6 +1,6 @@
 ---
 title: "Le tout-puissant tile d'herbe"
-description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
+description: "Hé oui, le fameux tile d'herbe... Il est souvent le premier tile réalisé car, sauf exception, tout le monde a besoin d'herbe dans un univers de RPG !"
 ---
 
 Hé oui, le fameux tile d'herbe... Il est souvent le premier tile réalisé car, sauf exception, tout le monde a besoin d'herbe dans un univers de RPG ! De plus, il s'agit d'une bonne entrée en matière et d'un bon moyen de s’échauffer, alors allons-y. Voyons différentes manières de dessiner de l'herbe :

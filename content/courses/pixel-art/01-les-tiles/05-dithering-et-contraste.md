@@ -1,6 +1,6 @@
 ---
 title: "Dithering et contraste"
-description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
+description: "Le dithering vous permet de mélanger deux teintes pour en créer une troisième. C'est une technique très utile pour donner du caractère à vos sprites."
 ---
 
 Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.

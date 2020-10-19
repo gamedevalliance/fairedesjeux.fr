@@ -1,5 +1,6 @@
 ---
 title: "Déplacements au pixel près sur la carte"
+description: "Comment déplacer son personnage pixel par pixel tout en respectant les collisions de la carte ? C'est ce que nous allons voir dans cette étape !"
 ---
 
 Dans le chapitre sur le shooter, nous avons vu comment nous déplacer pixel par pixel, mais sans collision sur la carte. Dans le chapitre du jeu d'aventure, nous avons vu comment avoir des collisions sur la carte avec un déplacement case par case. Mais comment mêler le meilleur des deux mondes, autrement dit déplacer son personnage pixel par pixel tout en respectant les collisions sur la grille de la carte ? C'est ce que nous allons voir dans cette étape !

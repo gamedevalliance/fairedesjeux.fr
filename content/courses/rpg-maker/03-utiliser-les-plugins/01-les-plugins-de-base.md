@@ -1,6 +1,6 @@
 ---
 title: "Les plugins de base"
-description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
+description: "Sur RPG Maker, il est possible de scripter dans un langage de programmation, le JavaScript, pour réaliser des systèmes impossibles à faire en évènements."
 ---
 
 Sur RPG Maker, il est possible de scripter dans un langage de programmation pour réaliser des systèmes qui seraient impossibles en évènements, ou tout simplement pour automatiser certaines tâches et travailler plus efficacement.

@@ -1,6 +1,6 @@
 ---
 title: "Casser la monotonie"
-description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
+description: "Apportez du soin à vos graphismes en ajoutant des détails intéressants à regarder."
 ---
 
 Interro surprise ! Lequel de ces deux murs est le plus intéressant visuellement ?

@@ -1,6 +1,6 @@
 ---
 title: Charte de qualité
-description: "Afin de permettre à tout les contributeurs d'avancer dans la même direction, de connaître les exigences en terme de qualité du site et de les faire progresser collectivement : nous avons rédigé une charte de qualité ainsi qu'un système de notation visible par les lecteurs."
+description: "Afin d'aider les contributeurs et contributrices à avancer dans la même direction, voici la charte de qualité et le système de notation des formations."
 ---
 
 Afin de permettre à tous les contributeurs et contributrices d'avancer dans la même direction, nous avons rédigé une charte de qualité ainsi qu'un système de notation visible sur la page d'accueil des formations.

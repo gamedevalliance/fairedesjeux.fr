@@ -1,5 +1,6 @@
 ---
 title: "Installer le site chez soi"
+description: "Téléchargez le site sur votre ordinateur pour écrire vos cours et voir les changements en temps réel dans votre navigateur."
 ---
 
 Nous avons vu comment créer un fork et écrire des petites modifications depuis votre navigateur. Si vous souhaitez proposer des contributions plus importantes, comme par exemple ajouter de nouvelles pages et formations, cela ne serait pas très pratique, car vous ne pouvez pas voir le résultat de ce que vous écrivez.

@@ -1,6 +1,6 @@
 ---
 title: "Caractéristiques et formules"
-description: "Personnalisez les compétences de votre jeu RPG Maker et écrivez des formules personnalisées."
+description: "Attaque, défense, agilité, chance... Découvrez les caractéristiques de personnage et personnalisez leur effet avec les formules."
 ---
 
 Les caractéristiques des personnages ont chacune une utilité par défaut que l'on va examiner, mais il est aussi possible de les utiliser différemment à l'aide des formules.

@@ -1,6 +1,6 @@
 ---
 title: "L'outil du diable : le dégradé"
-description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
+description: "Désolé, mais l'outil dégradé est une création de Satan."
 ---
 
 Désolé, mais l'outil dégradé est une création de Satan.

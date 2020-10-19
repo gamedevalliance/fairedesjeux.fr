@@ -1,6 +1,6 @@
 ---
 title: "Exporter votre jeu"
-description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
+description: "Votre premier jeu RPG Maker est terminé. Il est temps de l'exporter pour le partager à vos amis !"
 ---
 
 Votre premier jeu est terminé. Il est temps de l'exporter pour le partager à vos amis !

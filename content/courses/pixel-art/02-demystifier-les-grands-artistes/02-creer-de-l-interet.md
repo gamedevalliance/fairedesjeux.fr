@@ -1,6 +1,6 @@
 ---
 title: "Créer de l'intérêt"
-description: "Dessinez les décors de votre jeu vidéo, en commençant par un premier tile d'herbe, jusqu'à vous familiariser avec les textures, l'ombrage et le dithering."
+description: "Décomposons les grandes icônes du pixel art pour mieux comprendre ce qui les rend si légendaires ! Final Fantasy III est considéré comme le plus beau des FF originaux, et pour une bonne raison."
 ---
 
 Final Fantasy III est considéré comme le plus beau des FF originaux, et pour une bonne raison comme vous pouvez le voir :

@@ -1,5 +1,6 @@
 ---
 title: "Créer un outil de debug"
+description: "Parfois, notre code ne fait pas ce que l'on veut. Pour trouver le problème, vous pouvez créer un outil de debug qui affiche le contenu de vos variables."
 ---
 
 Parfois, notre code ne fait pas ce que l'on veut sans pour autant faire planter le jeu. Il peut alors être difficile de déterminer d'où vient le problème ! Pour vous aider, vous pouvez mettre en place un petit outil pour afficher le contenu de vos variables ou le résultat d'une fonction.

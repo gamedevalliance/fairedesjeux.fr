@@ -1,5 +1,6 @@
 ---
 title: "La division par la couleur"
+description: "Comment mettre en valeur les différentes parties de mon sprite sans dessiner un gros contour noir ? Il s'agit d'utiliser les couleurs intelligemment."
 ---
 
 Une des premières choses que les gens voient de votre jeu, que ce soit via les screenshots ou les trailers, ce sont les sprites. Ils vont permettre aux potentiels futurs joueurs de se faire une première opinion sur votre jeu, il est donc essentiel d'y faire attention. Plus précisément, le sprite le plus important est celui du personnage principal. 

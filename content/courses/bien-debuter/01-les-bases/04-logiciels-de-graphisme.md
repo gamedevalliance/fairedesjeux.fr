@@ -1,5 +1,6 @@
 ---
 title: Choisir un logiciel de graphisme
+description: "Photoshop, Aseprite, Krita... Quels sont les meilleurs logiciels de graphisme pour créer de la 2D ?"
 ---
 
 En 2D, on peut séparer les logiciels de graphisme en deux grands groupes : les logiciels spécialisés dans une technique précise, et les logiciels généralistes.
