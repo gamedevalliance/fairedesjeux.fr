@@ -32,7 +32,6 @@ module.exports = function (api) {
         NOTE: Don't mind me, I'm just getting the Github API for the "contributors" page - Nev, 2020-08-07
         */
         const contributorCollection = addCollection('Contributor');
-        /* I am using the Wiki API for this test, but once FDJ is public it will be necessary to change the URL */
         axios.get('https://api.github.com/repos/gamedevalliance/fairedesjeux.fr/contributors').then((resp) => {
             Object.values(resp.data).forEach((contributor) => {
                 contributorCollection.addNode({
