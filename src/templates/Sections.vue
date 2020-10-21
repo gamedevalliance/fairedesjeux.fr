@@ -67,7 +67,9 @@
                     {
                         key: 'description',
                         name: 'description',
-                        content: this.$page.section.chapter.course.description,
+                        content: this.$page.section.description
+                            || this.$page.section.chapter.description
+                            || this.$page.section.chapter.course.description,
                     },
                     {
                         key: 'og:title',
@@ -77,7 +79,9 @@
                     {
                         key: 'og:description',
                         name: 'og:description',
-                        content: this.$page.section.chapter.course.description,
+                        content: this.$page.section.description
+                            || this.$page.section.chapter.description
+                            || this.$page.section.chapter.course.description,
                     },
                     {
                         key: 'twitter:card',
@@ -165,6 +169,7 @@
         section(id: $id) {
             title
             content
+            description
             next {
                 title
                 path
@@ -180,6 +185,7 @@
             chapter {
                 id
                 title
+                description
                 course {
                     name
                     title

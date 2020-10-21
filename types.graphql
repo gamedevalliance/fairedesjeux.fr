@@ -14,6 +14,7 @@ type Course implements Node @infer {
     type: CourseType!
     title: String!
     short_title: String!
+    description: String
     name: String
     featured: Int
     header: Int
@@ -25,6 +26,7 @@ type Course implements Node @infer {
 type Chapter implements Node @infer {
     title: String!
     name: String
+    description: String
     sections: [Section]
     course: Course! @reference(by: "name")
     video: Section
@@ -33,6 +35,7 @@ type Chapter implements Node @infer {
 type Section implements Node @infer {
     slug: String
     name: String
+    description: String
     chapter: Chapter @reference(by: "name")
     next: Section @reference(by: "name")
     previous: Section @reference(by: "name")
