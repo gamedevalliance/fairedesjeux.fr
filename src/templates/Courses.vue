@@ -14,7 +14,7 @@
                         <h2>{{ $page.section.title }}</h2>
 
                         <g-image
-                            :src="this.cover"
+                            :src="cover"
                             class="rounded-md h-courseCover w-full object-cover"
                         />
                     </header>
