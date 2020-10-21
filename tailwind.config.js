@@ -319,11 +319,6 @@ module.exports = {
                         textDecoration: 'underline',
                     },
                 },
-                '.nested': {
-                    paddingLeft: '15px',
-                    borderLeft: '1px solid',
-                    borderColor: '#505263',
-                },
 
                 // Speech bubbles
                 '.bubble': {

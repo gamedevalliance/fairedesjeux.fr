@@ -1,9 +1,9 @@
 const tailwind = require('tailwindcss');
-const postcssPresetEnv = require('postcss-preset-env');
+const postcssNested = require('postcss-nested');
 const slugify = require('@sindresorhus/slugify');
 
 const postcssPlugins = [
-    postcssPresetEnv({ stage: 0, autoprefixer: false }),
+    postcssNested,
     tailwind('./tailwind.config.js'),
 ];
 

@@ -10,7 +10,7 @@
         <ul class="toc mt-0 sticky block top-20">
             <li v-for="heading in $page.section.headings"
                 :key="heading.value"
-                :class="{ nested: heading.depth == 4 }"
+                :class="{ ['nested nested_' + heading.depth]: heading.depth >= 4}"
             >
                 <a :href="heading.anchor"
                    class="smola"
@@ -46,6 +46,19 @@
         & li {
             padding-top: 0.2rem;
             padding-bottom: 0.2rem;
+        }
+
+        & .nested {
+            border-left: 1px solid #505263;
+            padding-left: 15px;
+
+            &_5 {
+                margin-left: 15px;
+            }
+
+            &_6 {
+                margin-left: 30px;
+            }
         }
     }
 </style>
