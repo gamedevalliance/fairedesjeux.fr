@@ -1,15 +1,15 @@
 ---
 title: "Créer de l'intérêt"
-description: "Décomposons les grandes icônes du pixel art pour mieux comprendre ce qui les rend si légendaires ! Final Fantasy III est considéré comme le plus beau des FF originaux, et pour une bonne raison."
+description: "Décomposons les grandes icônes du pixel art pour mieux comprendre ce qui les rend si légendaires ! Final Fantasy VI est considéré comme le plus beau des FF originaux, et pour une bonne raison."
 ---
 
-Final Fantasy III est considéré comme le plus beau des FF originaux, et pour une bonne raison comme vous pouvez le voir :
+Final Fantasy VI est considéré comme le plus beau des FF originaux, et pour une bonne raison comme vous pouvez le voir :
 
-![Screens de Final Fantasy 3](./ff3-quatre-screens.png)
+![Screens de Final Fantasy 3](./ff6-quatre-screens.png)
 
 Bon, c'est moins extravaguant que ce qu'on a vu tout à l'heure, je vous le concède. FF3 a été fait avant Secret of Mana 3, donc c'est normal qu'il soit moins impressionnant, mais si vous pouvez faire des graphismes comme ça, prenez ma place et écrivez ce cours. Commençons par examiner le screen en haut à gauche : 
 
-![Sol de Final Fantasy 3](./ff3-sol.png)
+![Sol de Final Fantasy 3](./ff6-sol.png)
 
 C'est le tile de sol des sections importantes de la ville. En voici une version répétée, une version légèrement agrandie et une autre à 900%. En ignorant les pierres marrons pour le moment, les pierres grises consitent en... devinez combien de teintes... Quatre ! Surprise, surprise.
 
@@ -19,7 +19,7 @@ Pour contrer cette pierre marron qui révèle la grille, ils auraient dû créer
 
 Ecoutez-moi, en train de critiquer Squaresoft... Passons à la suite, parlons un moment de ce qui rend la map intéressante à regarder :
 
-![Rue de Final Fantasy 3](./ff3-rue.png)
+![Rue de Final Fantasy 3](./ff6-rue.png)
 
 L'image de gauche est intéressante... Mais pourquoi ? C'est grâce à l'attention donnée aux détails. De ce que j'ai vu, les débutants qui essaient de faire un bout de ville dans ce genre, avec de l'eau, vont faire quelque chose comme sur le screen de droite.
 
@@ -27,7 +27,7 @@ Après tout, ça montre la même chose, que la ville est au bord de l'eau... Mai
 
 Notez la partie du mur qui descend dans l'eau. A droite, c'est juste le même tile, puis l'eau. Alors qu'à gauche, la partie supérieure des briques est normale, la suivante est plus foncée, et ensuite l'eau chevauche les briques pour créer un effet translucide. L'eau ressemble donc plus à de l'eau qu'à du pétrole. Passons au deuxième screen : 
 
-![Mur de roches de Final Fantasy 3](./ff3-rochers.png)
+![Mur de roches de Final Fantasy 3](./ff6-rochers.png)
 
 :::oofmarvin
 Comment diable ont-ils faits ces rochers ?!
@@ -39,7 +39,7 @@ Cependant, on peut toujours compter les couleurs ! Il y en a sept en tout, du v
 
 C'est tout ce que je vais dire sur ces roches... Je me demande combien de temps ils ont dû enfermer les artistes dans une cave avant qu'ils n'acceptent de travailler sur ce set. Le reste est fait de la même manière que les autres parties : à peu près quatre couleurs par type de tile. Vous pouvez ouvrir l'image, zoomer et faire quelques analyses. Attaquons-nous maintenant au troisième screen :
 
-![Château de Final Fantasy 3](./ff3-chateau.png)
+![Château de Final Fantasy 3](./ff6-chateau.png)
 
 Là aussi, on peut dire beaucoup de choses quant à l'attention donnée au détail et à l'intérêt de l'image. Regardez où est la porte. Ce n'est pas juste un mur solide avec une porte et ensuite l'étage supérieur. La porte est entourée de larges tuyaux, avec un ventilateur au-dessus, des escaliers qui mènent à la porte, et puis ces... choses qui servent à... soutenir... au-dessus des tuyaux (je n'ai aucune idée de ce que c'est mais ça rend super bien), puis des briques carrées plus larges, et ensuite l'étage supérieur qui est aussi entouré d'une bordure de briques.
 
@@ -51,7 +51,7 @@ Bien sûr, ils ruinent tout en utilisant ce tile de désert encore et encore et 
 
 Faisons donc un petit zoom sur les colonnes : 
 
-![Zoom sur une colonne du château de Final Fantasy 3](./ff3-briques.png)
+![Zoom sur une colonne du château de Final Fantasy 3](./ff6-briques.png)
 
 Ces tiles utilisent neuf couleurs, mais ce sont toutes des nuances de gris et elles sont utilisées partout, donc ce n'est pas du gâchis. Si vous utilisiez neuf teintes différentes par tile, vous seriez vite à court avec une palette de 256 couleurs.
 
@@ -59,17 +59,17 @@ Au niveau des bords gauche et droit, les briques ne sont faites que de deux ou t
 
 Passons maintenant au dernier screen, l'intérieur. Laissez-moi vous montrer quelque chose d'amusant que je n'avais pas réalisé avant d'examiner les tiles :
 
-![Intérieurs de Final Fantasy 3](./ff3-interieurs.png)
+![Intérieurs de Final Fantasy 3](./ff6-interieurs.png)
 
 Ces deux pièces sont très similaires, n'est-ce pas ? Pourtant, elles viennent de villes différentes et ont toutes deux une atmosphère différente : celle de gauche est froide et triste, et celle de droite est chaleureuse et accueillante. Tout cela alors qu'elles utilisent exactement les mêmes tiles, avec des couleurs différentes. Et ça marche, parce qu'elles sont utilisées dans deux villes totalement différentes. Quand vous arrivez à la deuxième ville, les tiles de la première ne sont plus frais dans votre esprit, et vous ne réalisez même pas que ce sont les mêmes. Ça a sûrement évité un paquet d'heures de dessin...
 
 Bon eh bien, prenons une section du mur et observons-le tile par tile : 
 
-![Zoom sur une colonne du mur de la maison de Final Fantasy 3](./ff3-piliers.png)
+![Zoom sur une colonne du mur de la maison de Final Fantasy 3](./ff6-piliers.png)
 
 Au premier coup d'oeil, on dirait que les piliers sont simplement composés d'une colonne de tiles. Mais il y en a en fait deux, ce qui rend le tout plus efficace. Si vous utilisiez une colonne de tiles pour les briques du milieu, alors il faudrait une colonne supplémentaire de chaque côté pour les murs en diagonale. L'avantage de cette méthode moins large est qu'elle rentre plus facilement dans la map.
 
-![Intérieur de Final Fantasy 3](./ff3-interieur-jaune.png)
+![Intérieur de Final Fantasy 3](./ff6-interieur-jaune.png)
 
 Ici, pour faire ces coins en diagonale, ils utilisent une moitié du pilier ! L'autre moitié est la version du pilier qui est collée au mur. C'est une astuce très intelligente.
 

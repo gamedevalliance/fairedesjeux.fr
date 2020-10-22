@@ -129,4 +129,4 @@ Et pourtant on distingue plusieurs zones : les dunes, le sable humide et foncé
 
 La zone séparant le sable clair et la zone humide est une longue ligne de pixels d'une teinte intermédiaire. Le sable clair est fait la teinte la plus claire. Pour obtenir des creux et des courbes, la seconde teinte la plus claire est utilisée pour les plus petites zones... Pour les grandes ombres, toutes les teintes sont utilisées, la plus foncée étant là où la dune est la plus haute et projette donc le plus d'ombre.
 
-C'est très subtil, mais la teinte la plus foncée n'est pas un simple jaune foncé. Il y a un peu de bleu dedans... Je souhaitais juste le souligner. Au programme ensuite : le génial et très connu Final Fantasy III.
+C'est très subtil, mais la teinte la plus foncée n'est pas un simple jaune foncé. Il y a un peu de bleu dedans... Je souhaitais juste le souligner. Au programme ensuite : le génial et renommé Final Fantasy VI.

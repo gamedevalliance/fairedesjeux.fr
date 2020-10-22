@@ -97,19 +97,19 @@ Maintenant Kain. Puisqu'il porte aussi une armure, les techniques utilisées son
 
 Sur le casque de Kain, le bleu et le jaune à l'arrière ne sont pas séparés. A vrai dire, les couleurs sont déjà très contrastées, alors rajouter du noir rendrait cette partie illisible. Le sprite de Kain paraît davantage segmenté, notamment au niveau de l'avant-bras, et toutes ces lignes noires donnent à l'armure un côté très solide.
 
-Voilà qui devrait vous inspirer pour vous mettre à utiliser le noir « comme les pros ». Allons voir ce qui se passe du côté de Final Fantasy III maintenant : 
+Voilà qui devrait vous inspirer pour vous mettre à utiliser le noir « comme les pros ». Allons voir ce qui se passe du côté de Final Fantasy VI maintenant : 
 
 ![Sprite d'Edgar](./edgar.png)
 
 Ce bon vieux Edgar... N'est-il pas charmant avec ses vêtements distingués ?
 
-Pour un peu d'information inutile, les sprites sur la map dans Final Fantasy III sont en 16×24, la même taille que les sprites de combat de FF2. La différence étant que là où FF2 jonglait entre du 16×16 et du 16×24, FF3 utilise le 16×24 tout le temps. 
+Pour un peu d'information inutile, les sprites sur la map dans Final Fantasy VI sont en 16×24, la même taille que les sprites de combat de FF4. La différence étant que là où FF4 jonglait entre du 16×16 et du 16×24, FF6 utilise le 16×24 tout le temps. 
 
 Ces sprites utilisent énormément la division par la couleur. En fait, assez étrangement, les grands sprites en comportent davantage par rapport aux petits. Chez Edgar, ce qui est particulièrement intéressant à regarder, ce sont ses cheveux, plus précisément les deux mèches qui lui tombent sur les yeux. Juste deux traits sombres, pas de noir. Aussi, au sommet de son crâne, vous verrez qu'un pixel noir est manquant. Une façon très subtile de suggérer la forme des cheveux, sans pour autant trop l'appuyer en rajoutant du noir sur la ligne d'en dessous !
 
 Observez également la doublure verte de sa tenue, qui ressort sans pour autant apparaître comme un élément à part entière, grâce à l'absence de contour noir.
 
-D'ailleurs, vous avez probablement remarqué qu'il n'y a techniquement pas de ligne noire ici ! Pour Final Fantasy III, ils ont décidé d'utiliser des lignes colorées. Grâce à ce vert foncé, le sprite semble plus réaliste que ceux de Final Fantasy II, qui font davantage penser à des dessins à cause du contraste très fort du noir. Ces nouvelles couleurs donnent un aspect plus doux et cinématographique.
+D'ailleurs, vous avez probablement remarqué qu'il n'y a techniquement pas de ligne noire ici ! Pour Final Fantasy VI, ils ont décidé d'utiliser des lignes colorées. Grâce à ce vert foncé, le sprite semble plus réaliste que ceux de Final Fantasy IV, qui font davantage penser à des dessins à cause du contraste très fort du noir. Ces nouvelles couleurs donnent un aspect plus doux et cinématographique.
 
 Une dernière chose pour Edgar : il n'y a pas de séparation entre ses jambes dans la vue de face. C'est, malheureusement, un inconvénient quand on utilise des nombres pairs pour la taille des sprites (ici 16 en largeur). Avec un nombre pair, on n'a pas de colonne de pixel au milieu, et donc pas de point central sur le sprite. Si le sprite en avait une (donc un nombre impair pour la largeur), vous pourriez très bien avoir une ligne pour séparer les jambes, voire ajouter un nez entre les yeux, qui sait ! 
 Ce problème de double colonne centrale touche aussi les visages, et ça explique pourquoi Edgar a un sourcil plus long que l'autre. Si les deux étaient longs, ce serait devenu un monosourcil... Si les deux étaient courts, Edgar aurait eu un air d'au petit bonheur la chance, alors que c'est un homme avec beaucoup de choses à gérer. Donc ce pixel lui donne un air pensif, comme s'il cherchait à comprendre quelque chose. 

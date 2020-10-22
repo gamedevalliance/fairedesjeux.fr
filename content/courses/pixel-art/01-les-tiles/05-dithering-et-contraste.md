@@ -1,6 +1,6 @@
 ---
 title: "Dithering et contraste"
-description: "Le dithering vous permet de mélanger deux teintes pour en créer une troisième. C'est une technique très utile pour donner du caractère à vos sprites."
+description: "Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1."
 ---
 
 Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.
