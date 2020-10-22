@@ -1,5 +1,6 @@
 ---
 title: "Premier démarrage"
+description: "Avant d'entrer dans le vif du sujet, laissez-moi vous guider à travers l'interface de la console. Lorsque vous démarrez PICO-8, se tient face à vous un écran noir où vous pouvez entrer des commandes."
 ---
 
 Avant d'entrer dans le vif du sujet, laissez-moi vous guider à travers l'interface de la console. Lorsque vous démarrez PICO-8, se tient face à vous un écran noir où vous pouvez entrer des commandes.

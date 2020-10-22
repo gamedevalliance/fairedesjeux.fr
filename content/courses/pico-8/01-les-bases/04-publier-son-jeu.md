@@ -1,5 +1,6 @@
 ---
 title: "Publier son jeu"
+description: "Jouez à votre jeu sur navigateur ou mettez-le en téléchargement pour Windows, Mac et Linux."
 ---
 
 Cette page est la dernière section sur les bases de PICO-8. Dans les chapitres suivants, nous allons réaliser des jeux concrets ! A tout moment, lorsque vous souhaiterez partager votre avancement à vos ami·e·s, vous pourrez revenir à cette page qui détaille comment exporter un jeu et le publier sur Internet.

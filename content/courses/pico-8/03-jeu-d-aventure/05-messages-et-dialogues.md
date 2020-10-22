@@ -1,5 +1,6 @@
 ---
 title: "Messages et dialogues"
+description: "Programmez une boîte de dialogue qui affiche le nom de la personne ainsi qu'un ou plusieurs messages d'affilée."
 ---
 
 Maintenant que vous êtes échauffé·e, on peut s'atteler à quelque chose de tout nouveau : la création d'un système de dialogues !

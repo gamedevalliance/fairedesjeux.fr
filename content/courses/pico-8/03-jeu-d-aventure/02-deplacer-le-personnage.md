@@ -1,5 +1,6 @@
 ---
 title: "Déplacer le personnage"
+description: "Programmez des déplacements en case par case sur la carte, comme dans les RPG à l'ancienne et les jeux de stratégie."
 ---
 
 Dans le chapitre sur le shooter, vous avez appris à déplacer un vaisseau pixel par pixel. Nous pourrions refaire la même chose ici, mais je vous propose plutôt de varier les plaisirs et de voir comment se déplacer en case par case ! C'est très utile pour les roguelike et les RPG en tout genre, ainsi que pour les jeux de stratégie par exemple.

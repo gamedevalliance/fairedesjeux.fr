@@ -1,5 +1,6 @@
 ---
 title: "Les collisions"
+description: "Pour détruire l'ennemi, on doit détecter que notre tir entre en contact avec lui. Mais comment programmer un système de collisions ?"
 ---
 
 Pour détruire l'ennemi, il faudrait que l'on puisse détecter lorsque notre tir entre en contact avec lui. La grande question étant : comment programme-t-on un système de collisions ?

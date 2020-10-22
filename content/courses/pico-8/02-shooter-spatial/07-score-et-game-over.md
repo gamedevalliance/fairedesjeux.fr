@@ -1,5 +1,6 @@
 ---
 title: "Score et game over"
+description: "Tout jeu d'arcade qui se respecte affiche un score quand on meurt avec un bouton pour recommencer une partie."
 ---
 
 Vous êtes arrivé·e à la dernière étape de la réalisation de votre premier jeu sur PICO-8. Félicitations ! Nous allons coder ce qui nous manque pour obtenir un vrai jeu que vous pouvez partager, c'est-à-dire un score qui s'affiche quand on meurt et la possibilité de recommencer une partie.

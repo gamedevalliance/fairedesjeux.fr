@@ -1,5 +1,6 @@
 ---
 title: "Animer une explosion"
+description: "En dessinant des cercles dont on fait varier la taille et la couleur, on peut réaliser un effet d'explosion !"
 ---
 
 Il existe une fonction pour dessiner un cercle dans PICO-8, qui prend les arguments suivants :
