@@ -1,6 +1,7 @@
 ---
 title: "L'outil du diable : le dégradé"
 description: "Désolé, mais l'outil dégradé est une création de Satan."
+opengraph_image: ./opengraph-degrade.png
 ---
 
 Désolé, mais l'outil dégradé est une création de Satan.

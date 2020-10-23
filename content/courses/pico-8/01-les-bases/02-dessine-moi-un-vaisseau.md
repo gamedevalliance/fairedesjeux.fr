@@ -1,6 +1,7 @@
 ---
 title: "Dessine-moi un vaisseau"
 description: "Créez une cartouche de jeu et affichez votre premier sprite dans PICO-8."
+opengraph_image: ../opengraph-shooter.png
 ---
 
 Bien, maintenant que vous avez fait le tour du propriétaire, le moment est idéal pour créer votre première cartouche. Redémarrez PICO-8 avec la commande `reboot` pour oublier le dernier jeu chargé et revenir au dossier racine simplement.

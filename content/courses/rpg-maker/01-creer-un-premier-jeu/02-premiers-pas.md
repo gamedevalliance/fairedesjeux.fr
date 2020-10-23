@@ -1,6 +1,7 @@
 ---
 title: "Une première aventure"
 description: "Créez votre premier jeu grâce à cette vidéo qui vous permettra de vous familiariser avec RPG Maker."
+opengraph_image: ./opengraph-episode1.jpg
 ---
 
 Après avoir installé RPG Maker, familiarisez-vous grâce à cette vidéo qui vous apprendra rapidement à faire un premier jeu.

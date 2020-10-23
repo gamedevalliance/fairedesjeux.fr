@@ -3,11 +3,11 @@ type: ENGINE
 title: "Programmer des mini jeux avec PICO-8"
 short_title: "PICO-8"
 description: "Apprenez à programmer pour la première fois en créant de supers petits jeux simplement."
-date: "2020-08-03"
+date: "2020-10-22"
 author: "Aurélien Dos Santos"
-medal: SILVER
-medal_message: "Le dernier chapitre sur les astuces avancées est en cours d'écriture. [Voir l'avancement](https://github.com/gamedevalliance/fairedesjeux.fr/issues/7)"
-header: 2
+medal: PLATINUM
+featured: 1
+header: 1
 video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5t3ibCCh412ZAy0slIv3jeE"
 cover_wide: ./cover-wide.png
 cover_tall: ./cover-tall.png
@@ -18,7 +18,7 @@ PICO-8 est une console imaginaire dans laquelle vous pouvez aussi bien développ
 
 [[Video src="/videos/pico-8/jelpi.mp4" autoplay muted loop controls]]
 
-Le programme fonctionne sur Windows, Mac, Linux, Rasperry Pi et les jeux peuvent aussi être exportés pour le web.
+Le programme fonctionne sur Windows, Mac, Linux, Raspberry Pi et les jeux peuvent aussi être exportés pour le web.
 
 ### Mais c'est quoi exactement, une console imaginaire ?
 

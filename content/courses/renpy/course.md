@@ -5,9 +5,9 @@ short_title: "Ren'Py"
 description: "Ecrivez des histoires à embranchements sans jamais avoir programmé auparavant avec Ren'Py, un logiciel gratuit. Approfondissez vos connaissances en créant des systèmes de gameplay et un point and click."
 date: "2020-07-28"
 author: "Nev, Aurélien Dos Santos"
-medal: PLATINUM
-featured: 1
-header: 1
+medal: GOLD
+featured: 2
+header: 2
 video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5uqhCaspVB4jFDkkHrkFUBV"
 cover_wide: ./cover-wide.png
 cover_tall: ./cover-tall.png

@@ -1,6 +1,7 @@
 ---
 title: "Créer de l'intérêt"
 description: "Décomposons les grandes icônes du pixel art pour mieux comprendre ce qui les rend si légendaires ! Final Fantasy VI est considéré comme le plus beau des FF originaux, et pour une bonne raison."
+opengraph_image: ../opengraph-interieur-ff6.png
 ---
 
 Final Fantasy VI est considéré comme le plus beau des FF originaux, et pour une bonne raison comme vous pouvez le voir :

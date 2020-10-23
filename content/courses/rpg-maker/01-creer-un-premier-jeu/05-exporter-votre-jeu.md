@@ -1,6 +1,7 @@
 ---
 title: "Exporter votre jeu"
 description: "Votre premier jeu RPG Maker est terminé. Il est temps de l'exporter pour le partager à vos amis !"
+opengraph_image: ./opengraph-exporter.jpg
 ---
 
 Votre premier jeu est terminé. Il est temps de l'exporter pour le partager à vos amis !

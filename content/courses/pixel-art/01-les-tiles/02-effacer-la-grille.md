@@ -1,6 +1,7 @@
 ---
 title: "Effacer la grille"
 description: "Même si votre map est dessinée sur une grille, nous souhaitons donner l'illusion qu'elle n'existe pas... Effacer visuellement la grille est en fait un des plus grands accomplissements que vous pouvez réaliser en tant que pixel artist."
+opengraph_image: ../opengraph-interieur-ff6.png
 ---
 
 J'aimerais souligner autre chose au sujet de cette map : la grille est bien trop évidente !

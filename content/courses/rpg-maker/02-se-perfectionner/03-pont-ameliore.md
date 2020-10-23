@@ -1,6 +1,7 @@
 ---
 title: "Créer un pont amélioré"
 description: "Créez un pont que l'on peut traverser à la fois par-dessus et par dessous."
+opengraph_image: ./opengraph-pont.png
 ---
 
 Cette section explique comment faire des ponts avec deux modes : on pourra passer en-dessous ainsi que les traverser. Cette astuce fonctionne sur tous les RPG Maker.

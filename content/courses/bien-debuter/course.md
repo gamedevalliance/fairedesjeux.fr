@@ -7,7 +7,6 @@ date: "2020-08-28"
 author: "L'équipe de Game Dev Alliance"
 medal: SILVER
 medal_message: "Ce cours est en cours de rédaction, inspiré de notre ancienne [foire aux questions](https://wiki.gamedevalliance.fr/faq/)."
-featured: 2
 cover_wide: ./cover-wide.png
 cover_tall: ./cover-tall.png
 opengraph_image: cover_wide

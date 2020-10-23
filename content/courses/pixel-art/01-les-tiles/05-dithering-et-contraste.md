@@ -1,6 +1,7 @@
 ---
 title: "Dithering et contraste"
 description: "Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1."
+opengraph_image: ./opengraph-ff1.png
 ---
 
 Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.

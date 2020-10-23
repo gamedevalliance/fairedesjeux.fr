@@ -5,7 +5,7 @@ description: "Ajoutez de l'interaction et des mécaniques de gameplay à votre j
 
 Dans le premier chapitre, vous avez pu réaliser un premier petit jeu qui fontionne entièrement. C'était plutôt simple, pas vrai ? Je vous propose de continuer sur cette lancée : on va voir comment ajouter de l'interaction et des mécaniques de gameplay à votre jeu, en utilisant les variables. Qu'est-ce que c'est, me dites-vous ? Vous le saurez dans un instant.
 
-Dans Ren'Py, il y a deux langages qui se mélangent. Jusqu'ici, nous avons vu le langage propre à Ren'Py, qui propose des commandes très simples telles que `scene`, `play music`, etc. Lorsque ces commandes ne suffisent plus, on peut utiliser le Python, un langage dont vous avez peut-être entendu parler puisqu'il est utilisé dans le jeu vidéo et dans le monde scientifique par exemple. Grâce à ce langage de script, vous pouvez personnaliser votre jeu en profondeur. 
+Dans Ren'Py, il y a deux langages qui se mélangent. Jusqu'ici, nous avons vu le langage propre à Ren'Py, qui propose des commandes très simples telles que `scene`, `play music`, etc. Lorsque ces commandes ne suffisent plus, on peut utiliser le Python, un langage dont vous avez peut-être entendu parler à l'école ou dans le monde scientifique par exemple. Grâce à ce langage de script, vous pouvez personnaliser votre jeu en profondeur. 
 
 :::hypemarvin
 Est-ce que je peux vraiment faire *tout ce que je veux* ?

@@ -1,6 +1,7 @@
 ---
 title: "Donjons et énigmes"
 description: "Créons une grotte pour y ajouter des groupes monstres et des énigmes avec les interrupteurs."
+opengraph_image: ./opengraph-episode2.jpg
 ---
 
 Dans cette étape, nous allons créer une grotte et y ajouter des groupes monstres et des énigmes utilisant les interrupteurs.

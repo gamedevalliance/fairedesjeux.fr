@@ -1,6 +1,7 @@
 ---
 title: "Les trois fonctions principales"
 description: "Il existe trois fonctions pré-définies dans PICO-8 qui vous seront très utiles : init, update et draw."
+opengraph_image: ../opengraph-shooter.png
 ---
 
 Il existe trois fonctions pré-définies dans PICO-8 qui vous seront très utiles :
