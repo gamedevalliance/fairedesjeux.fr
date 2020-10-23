@@ -9,7 +9,7 @@
                 >
                     <g-link :to="featuredCourse.node.path" class="featured-class__link">
                         <g-image
-                            :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.name}/cover-wide.png`)"
+                            :src="featuredCourse.node.cover_wide"
                             class="rounded-md h-full object-cover"
                         />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
@@ -193,6 +193,7 @@
                     featured
                     title
                     path
+                    cover_wide
                 }
             }
         }
@@ -206,6 +207,7 @@
                     title
                     short_title
                     path
+                    cover_tall
                 }
             }
         }
@@ -218,6 +220,7 @@
                     title
                     short_title
                     path
+                    cover_tall
                 }
             }
         }

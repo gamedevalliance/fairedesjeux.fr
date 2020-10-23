@@ -8,7 +8,7 @@
         >
             <g-link :to="course.node.path" class="course__link">
                 <g-image
-                    :src="require(`!!assets-loader?quality=100!@coursesCovers/${course.node.name}/cover-tall.png`)"
+                    :src="course.node.cover_tall"
                     class="rounded-md h-full object-cover"
                 />
                 <div class="absolute inset-x-0 bottom-0 z-10 p-4">

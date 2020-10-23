@@ -6,6 +6,9 @@ description: "FaireDesJeux.fr est un site collaboratif proposant des formations 
 date: "2020-07-28"
 author: "L'équipe de Game Dev Alliance"
 medal: GOLD
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
 FaireDesJeux.fr est un site collaboratif proposant des formations gratuites pour accompagner les débutants et débutantes dans la création de jeux vidéo. Vous pouvez participer au projet de plusieurs façons :

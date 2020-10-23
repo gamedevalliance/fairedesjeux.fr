@@ -7,6 +7,9 @@ date: "2020-08-03"
 author: "Nev"
 medal: SILVER
 medal_message: "Le chapitre sur le pixel art est terminé ! De l'aide pour écrire les deux suivants serait appréciée. [Participer](https://github.com/gamedevalliance/fairedesjeux.fr/issues/5)"
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
 Vous cherchez un logiciel complet et puissant pour le dessin numérique, le pixel art et l'animation, mais le prix de l'abonnement Photoshop vous a refroidi ? Ne cherchez plus ! Dans cette formation, nous allons découvrir ensemble Krita, un logiciel libre et gratuit disponible sur Windows, Linux, MacOS et BSD.

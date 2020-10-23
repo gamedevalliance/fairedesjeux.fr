@@ -131,6 +131,12 @@ module.exports = function (api) {
 
             options.chapters = tempList;
 
+            if (options.opengraph_image === 'cover_wide' || options.opengraph_image === null) {
+                options.opengraph_image = options.cover_wide;
+            } else if (options.opengraph_image === 'cover_tall') {
+                options.opengraph_image = options.cover_tall;
+            }
+
             if (options.medal_message) {
                 unified()
                     .use(markdown)

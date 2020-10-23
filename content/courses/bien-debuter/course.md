@@ -8,6 +8,9 @@ author: "L'équipe de Game Dev Alliance"
 medal: SILVER
 medal_message: "Ce cours est en cours de rédaction, inspiré de notre ancienne [foire aux questions](https://wiki.gamedevalliance.fr/faq/)."
 featured: 2
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
 Vous avez envie de créer des jeux vidéo, mais vous débutez complètement et ne savez pas par où commencer ? Cette formation est faite pour vous !

@@ -14,7 +14,7 @@
                         <h2>{{ $page.section.title }}</h2>
 
                         <g-image
-                            :src="cover"
+                            :src="$page.section.opengraph_image"
                             class="rounded-md h-courseCover w-full object-cover"
                         />
                     </header>
@@ -60,12 +60,6 @@
             Button,
             Medal,
         },
-        computed: {
-            cover() {
-                // eslint-disable-next-line global-require, import/no-dynamic-require
-                return require(`!!assets-loader?quality=100!@coursesCovers/${this.$page.section.name}/cover-wide.png`);
-            },
-        },
         metaInfo() {
             return {
                 title: this.$page.section.title,
@@ -93,12 +87,12 @@
                     {
                         key: 'twitter:image',
                         name: 'twitter:image',
-                        content: this.cover.src,
+                        content: this.$page.section.opengraph_image.src,
                     },
                     {
                         key: 'og:image',
                         name: 'og:image',
-                        content: this.cover.src,
+                        content: this.$page.section.opengraph_image.src,
                     },
                 ],
             };
@@ -124,6 +118,8 @@
                 anchor
                 value
             }
+            cover_wide
+            opengraph_image
             chapters(sort: {by: "name", order:ASC}) {
                 id
                 title
@@ -180,15 +176,7 @@
 
         /* TODO: Move this to tailwind.config.js - erika, 2020-09-04 */
         @media (max-width: 640px) {
-            & .bubble-marvin::after,
-            & .bubble-hypemarvin::after,
-            & .bubble-oofmarvin::after,
-            & .bubble-astride::after,
-            & .bubble-winkastride::after,
-            & .bubble-sighastride::after,
-            & .bubble-remi::after,
-            & .bubble-profremi::after,
-            & .bubble-notlikethisremi::after {
+            & .bubble::after {
                 width: 75px;
                 height: 75px;
                 top: 5px;

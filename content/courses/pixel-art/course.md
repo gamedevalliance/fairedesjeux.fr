@@ -8,6 +8,9 @@ author: "Tsugumo, Nev, Nolwenn Deumié"
 medal: SILVER
 medal_message: "La partie du cours sur les tiles est entièrement réécrite. La deuxième moitié, sur les sprites et l'animation, doit encore être traduite et de l'aide serait appréciée ! [Participer](https://github.com/gamedevalliance/fairedesjeux.fr/issues/6)"
 header: 3
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
 Cet article est une traduction française modernisée de ["So you want to be a pixel artist ?"](http://www.yarrninja.com/pixeltutorial/index.html), un célèbre tutoriel anglais écrit par Tsugumo en 2001.

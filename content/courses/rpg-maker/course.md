@@ -8,6 +8,9 @@ author: "Aurélien Dos Santos"
 medal: BRONZE
 medal_message: "Ce cours est une archive mélangeant nos anciennes vidéos et des extraits du wiki pour former un ensemble complet. Étant un contenu unique en français, nous le conservons dans cet état imparfait, bien qu'une réécriture de certaines sections serait préférable. [Participer](https://github.com/gamedevalliance/fairedesjeux.fr/issues/28)"
 video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5ttOdEh5tNuEi96Vv--TVLE"
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
 RPG Maker est un logiciel permettant de créer des JRPG en 2D, mais pas que ! On reconnaît le style de ce logiciel entre mille : il s'est forgé une réputation autour de ses musiques et graphismes inclus, qui simplifient beaucoup la création. Il propose également un système de combat au tour par tour qui imite les RPG old school.

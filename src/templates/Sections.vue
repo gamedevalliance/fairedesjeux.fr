@@ -55,9 +55,15 @@
             Button,
         },
         computed: {
-            cover() {
-                // eslint-disable-next-line global-require, import/no-dynamic-require
-                return require(`!!assets-loader?quality=100!@coursesCovers/${this.$page.section.chapter.course.name}/cover-wide.png`);
+            opengraph_image() {
+                return this.$page.section.opengraph_image
+                    || this.$page.section.chapter.opengraph_image
+                    || this.$page.section.chapter.course.opengraph_image;
+            },
+            description() {
+                return this.$page.section.description
+                    || this.$page.section.chapter.description
+                    || this.$page.section.chapter.course.description;
             },
         },
         metaInfo() {
@@ -67,9 +73,7 @@
                     {
                         key: 'description',
                         name: 'description',
-                        content: this.$page.section.description
-                            || this.$page.section.chapter.description
-                            || this.$page.section.chapter.course.description,
+                        content: this.description,
                     },
                     {
                         key: 'og:title',
@@ -79,9 +83,7 @@
                     {
                         key: 'og:description',
                         name: 'og:description',
-                        content: this.$page.section.description
-                            || this.$page.section.chapter.description
-                            || this.$page.section.chapter.course.description,
+                        content: this.description,
                     },
                     {
                         key: 'twitter:card',
@@ -91,12 +93,12 @@
                     {
                         key: 'twitter:image',
                         name: 'twitter:image',
-                        content: this.cover.src,
+                        content: this.opengraph_image.src,
                     },
                     {
                         key: 'og:image',
                         name: 'og:image',
-                        content: this.cover.src,
+                        content: this.opengraph_image.src,
                     },
                 ],
             };
@@ -147,15 +149,7 @@
 
         /* TODO: Move this to tailwind.config.js - erika, 2020-09-04 */
         @media (max-width: 640px) {
-            & .bubble-marvin::after,
-            & .bubble-hypemarvin::after,
-            & .bubble-oofmarvin::after,
-            & .bubble-astride::after,
-            & .bubble-winkastride::after,
-            & .bubble-sighastride::after,
-            & .bubble-remi::after,
-            & .bubble-profremi::after,
-            & .bubble-notlikethisremi::after {
+            & .bubble::after {
                 width: 75px;
                 height: 75px;
                 top: 5px;
@@ -182,16 +176,19 @@
                 anchor
                 depth
             }
+            opengraph_image
             chapter {
                 id
                 title
                 description
+                opengraph_image
                 course {
                     name
                     title
                     short_title
                     description
                     path
+                    opengraph_image
                     chapters(sort: {by: "name", order:ASC}) {
                         title
                         id

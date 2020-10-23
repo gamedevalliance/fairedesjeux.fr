@@ -22,7 +22,7 @@ module.exports = {
             options: {
                 typeName: 'Section',
                 baseDir: './content/courses/',
-                path: ['**/*.md', '!**/course.md'],
+                path: ['**/*.md', '!**/course.md', '!**/chapter.md'],
             },
         },
         {
@@ -30,7 +30,7 @@ module.exports = {
             options: {
                 typeName: 'Chapter',
                 baseDir: './content/courses',
-                path: '**/chapter.json',
+                path: '**/chapter.md',
             },
         },
         {
@@ -120,7 +120,6 @@ module.exports = {
         },
     },
     chainWebpack: (config) => {
-        config.resolve.alias.set('@coursesCovers', '@/assets/courses');
         config.resolve.alias.set('@avatars', '@/assets/avatar');
         config.resolve.alias.set('@medals', '@/assets/medals');
     },
