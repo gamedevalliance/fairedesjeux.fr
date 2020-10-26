@@ -65,6 +65,7 @@
     export default {
         metaInfo() {
             return {
+                title: 'Informations légales',
                 meta: [
                     {
                         key: 'og:title',

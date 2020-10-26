@@ -20,6 +20,7 @@
     export default {
         metaInfo() {
             return {
+                title: 'Erreur 404',
                 meta: [
                     {
                         key: 'og:title',

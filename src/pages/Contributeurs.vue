@@ -34,6 +34,7 @@
     export default {
         metaInfo() {
             return {
+                title: 'Les contributeurs',
                 meta: [
                     {
                         key: 'og:title',
