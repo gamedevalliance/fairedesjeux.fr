@@ -20,8 +20,12 @@
     export default {
         metaInfo() {
             return {
-                title: 'Erreur 404',
                 meta: [
+                    {
+                        key: 'og:title',
+                        name: 'og:title',
+                        content: 'Erreur 404',
+                    },
                     {
                         key: 'og:description',
                         name: 'og:description',
@@ -31,6 +35,11 @@
                         key: 'og:image',
                         name: 'og:image',
                         content: 'http://fairedesjeux.fr/cover.png',
+                    },
+                    {
+                        key: 'twitter:image',
+                        name: 'twitter:image',
+                        content: 'https://fairedesjeux.fr/cover.png',
                     },
                 ],
             };
