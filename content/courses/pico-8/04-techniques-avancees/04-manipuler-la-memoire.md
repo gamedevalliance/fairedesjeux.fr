@@ -49,8 +49,6 @@ Décimal │  Octet
 
 Si l'on veut stocker des nombres plus grands, il faudra utiliser plusieurs octets. Par exemple, les nombres dans les variables de PICO-8 sont codés sur 4 octets (32 bits), ce qui pourrait permettre d'aller de 0 à 2 147 483 647. Cela dit, pour que PICO-8 puisse stocker des nombres négatifs et à virgule, l'intervalle utilisable va en réalité de -32768 à 32767,9999.
 
-FAUT UN EXEMPLE DE CHIFFRE HEXA AVANT D'EN PARLER
-
 Le système binaire n'est pas la seule façon étrange de compter à laquelle vous serez confronté·e au cours de votre vie de programmeur ou programmeuse. Lorsque vous choisissez une couleur dans un logiciel de graphisme, vous avez probablement déjà eu affaire au système hexadécimal, qui est en base 16. Par exemple, ce code de violet [`#4c1b7a`](https://www.google.com/search?q=%234c1b7a) est une suite de trois nombres en hexadécimal :
 
 ```

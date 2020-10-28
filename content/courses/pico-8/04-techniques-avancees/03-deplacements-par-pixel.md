@@ -333,11 +333,30 @@ Pour bien comprendre l'intérêt de cette fonction, vous pouvez tout simplement 
 
 ### Réutiliser le code pour les ennemis
 
+En réorganisant notre code, on peut le généraliser à toutes les entités de notre jeu : les ennemis, les PNJ... Dans cette démo, j'ai créé un ennemi simple pour l'exemple, qui se rapproche de notre personnage jusqu'à atteindre une certaine distance. On pourra ensuite lui appliquer une force supplémentaire pour le repousser quand on l'attaque.
+
 <iframe width="538" height="539"
   src="/jeux-pico-8/demo-deplacement-et-attaque/index.html">
 </iframe>
 
 Vous pouvez lire le code complet de la démo [à cette adresse](https://github.com/aureliendossantos/pico-8-sample-games/blob/master/advanced-pixel-movement-with-attack.p8).
+
+Nous devons déplacer le code qui s'appliquera à toutes les entités dans une fonction séparée et ne garder que ce qui est exclusif au personnage dans `player_movement()`.
+
+```lua
+function player_movement()
+	if (btn(⬅️)) p.dx -= p.acceleration
+	if (btn(➡️)) p.dx += p.acceleration
+	if (btn(⬆️)) p.dy -= p.acceleration
+	if (btn(⬇️)) p.dy += p.acceleration
+
+	entity_movement(p)
+end
+```
+
+Alors que contient la fonction `entity_movement()` ? Tout simplement ce que contenait la fonction `player_movement()` auparavant, excepté la gestion des touches du clavier bien sûr.
+
+Créons l'ennemi maintenant. Il aura les mêmes propriétés que notre personnage :
 
 ```lua
 function create_enemy()
@@ -353,20 +372,7 @@ function create_enemy()
 end
 ```
 
-```lua
-function player_movement()
-	if (btn(⬅️)) p.dx -= p.acceleration
-	if (btn(➡️)) p.dx += p.acceleration
-	if (btn(⬆️)) p.dy -= p.acceleration
-	if (btn(⬇️)) p.dy += p.acceleration
-
-	entity_movement(p)
-end
-```
-
-Alors que contient la fonction `entity_movement()` ? Tout simplement ce que contenait la fonction `player_movement()` auparavant, excepté la gestion des touches du clavier bien sûr.
-
-Voici un comportement simple pour l'exemple : l'ennemi se rapproche du personnage jusqu'à une certaine distance.
+La fonction `player_movement()` ne contient plus que les règles changeant les valeurs de `dx` et `dy`. Dans la même veine, on mettra juste les règles correspondant à l'ennemi dans `enemy_movement()`.
 
 ```lua
 function enemy_movement()
@@ -382,13 +388,19 @@ function enemy_movement()
 end
 ```
 
+Ici, on additionne la distance en X et la distance en Y entre l'ennemi et le personnage, puis on se rapproche si le total est supérieur à 30.
+
+Plus qu'à afficher un sprite pour l'ennemi et le tour est joué !
+
 ```lua
 spr(e.sprite, e.x, e.y)
 ```
 
 #### Donner un coup d'épée dans toutes les directions
 
-On ajoute la propriété `p.angle` qui indiquera la direction dans laquelle le personnage regarde. Ce sera utile pour la direction de l'épée mais aussi pour afficher des sprites différents pour chaque direction si vous le souhaitez.
+Avant de pouvoir repousser l'ennemi comme dans la démo, nous devons mettre au point la hitbox du coup d'épée, qui changera en fonction de la direction du joueur ou de la joueuse.
+
+On ajoute donc la propriété `p.angle` qui indiquera la direction du personnage. Ce sera utile pour la direction de l'épée mais aussi pour afficher des sprites différents dans chaque direction si vous le souhaitez.
 
 ```lua
 function create_player()
@@ -403,13 +415,13 @@ function create_player()
 		angle = 6
 	}
 	sword_timer = 0
-	sword_x1, sword_x2, sword_y1, sword_y2 = 1, 1, 1, 1
+	sword_x1, sword_y1, sword_x2, sword_y2 = 1, 1, 1, 1
 end
 ```
 
-Le timer sera utilisé pour la durée du hit de l'épée, et ensuite c'est la hitbox de sword
+La variable `sword_timer` permettra la durée du coup d'épée, tandis que les quatre variables suivantes stockeront les coordonnées du rectangle de la hibox.
 
-Les chiffres que j'ai choisis correspondent à ceux du pavé numérique, où le personnage serait au milieu du pavé, à 5.
+Nous allons écrire une petite fonction pour mettre à jour `p.angle`. Pour rendre la valeur plus lisible, j'ai choisi des chiffres qui correspondent à ceux du pavé numérique de votre clavier ou d'un téléphone. Imaginez que le personnage est au milieu du pavé, à 5, et que les chiffres tout autour indiquent sa direction.
 
 ```lua
 function update_player_angle()
@@ -433,12 +445,14 @@ function update_player_angle()
 end
 ```
 
+En utilisant cet angle fraîchement acquis, nous pouvons maintenant déterminer le rectangle de la hitbox.
+
 ```lua
 function update_sword()
-	--point d'origine : centre du perso
-	local ox, oy = p.x+3, p.y+3
-
 	update_player_angle()
+
+	-- Point d'origine : centre du perso
+	local ox, oy = p.x+3, p.y+3
 
 	if p.angle == 9 then
 		sword_x1, sword_y1, sword_x2, sword_y2 = ox, oy-10, ox+10, oy
@@ -458,7 +472,7 @@ function update_sword()
 		sword_x1, sword_y1, sword_x2, sword_y2 = ox-5, oy, ox+5, oy+13
 	end
 
-	-- On réduit le timer de hit jusqu'à 0 s'il est lancé
+	-- On réduit le timer du coup au fil du temps
 	sword_timer = max(0, sword_timer-1)
 
 	if (sword_timer == 0) sword_hitting = false
@@ -470,7 +484,7 @@ function update_sword()
 end
 ```
 
-Dans draw, vous pouvez afficher la hitbox de l'épée sous le personnage pour la régler plus facilement :
+Pour vérifier que tout est correct, vous pouvez afficher la hitbox de l'épée sous le personnage dans draw :
 
 ```lua
 rectfill(sword_x1, sword_y1, sword_x2, sword_y2, sword_hitting and 9 or 8)
@@ -479,6 +493,10 @@ rectfill(sword_x1, sword_y1, sword_x2, sword_y2, sword_hitting and 9 or 8)
 La couleur sera de 9 si vous êtes en train de donner un coup, 8 sinon.
 
 #### Repousser l'ennemi
+
+Nous allons vérifier si l'ennemi est en collision avec la hitbox de l'épée, en utilisant la méthode de collision vue dans le chapitre sur le shooter.
+
+La propriété `e.hit` ne sert à rien en terme de gameplay pour le moment, mais nous permettra de faire clignoter le sprite quand il est touché.
 
 ```lua
 function enemy_movement()
@@ -513,16 +531,22 @@ end
 
 On repousse l'ennemi en lui appliquant une force en X et/ou en Y en fonction de sa position par rapport au joueur ou à la joueuse. Si l'ennemi est à peu près en face du personnage, il sera repoussé en ligne droite afin qu'on puisse plus facilement l'enchaîner en continuant d'avancer vers lui.
 
+On a juste un souci : `e.max_speed` vaut 1. Cela me convient pour les déplacements normaux, mais cela m'empêche de repousser l'ennemi de 3 pixels comme je souhaitais le faire ci-dessus. Une solution serait de modifier le code qui contraint `dx` et `dy` à `max_speed` dans `entity_movement()`.
+
 ```lua
 	local max = e.hit and 3 or e.max_speed
 	e.dx = mid(-max, e.dx, max)
 	e.dy = mid(-max, e.dy, max)
 ```
 
-Dans draw, vous pouvez transformer toutes les couleurs de la palette en blanc afin de faire clignoter l'ennemi facilement lorsqu'il est touché.
+Désormais, la variable locale `max` vaut 3 si l'entité est touchée, ou `max_speed` en temps normal.
+
+Pour finir, vous pouvez faire clignoter l'ennemi facilement lorsqu'il est touché en changeant toutes les couleurs de la palette en blanc :
 
 ```lua
 if (e.hit) pal({7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7})
 spr(e.sprite, e.x, e.y)
 pal()
 ```
+
+Le tour est joué ! J'espère que ces exemples vous inspireront pour réaliser des déplacements plus intéressants dans vos jeux !
