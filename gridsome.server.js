@@ -64,8 +64,13 @@ module.exports = function (api) {
             options.course = options.chapter.substring(0, options.chapter.indexOf('/'));
 
             if (tempMap[options.chapter] === undefined) {
+                /*
+                    LORE: We used to filter files ending with ".md", but now that there are "chapter.md"
+                    (and for safety in the future) we use a much more precise filter "charAt(2) === '-'"
+                     - Nev, 2020-10-31
+                */
                 const sectionPath = `./content/courses/${options.fileInfo.directory}/`;
-                const sectionCount = fs.readdirSync(sectionPath).filter((file) => file.endsWith('.md')).length;
+                const sectionCount = fs.readdirSync(sectionPath).filter((file) => file.charAt(2) === '-').length;
 
                 const chapterPath = `./content/courses/${options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/', 2))}/`;
                 const chapterCount = fs.readdirSync(chapterPath).filter((dir) => dir.charAt(2) === '-').length;
