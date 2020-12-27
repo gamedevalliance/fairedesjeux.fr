@@ -2,18 +2,17 @@
 title: "Manipuler la mémoire"
 ---
 
-la mémoire est composé d'octet (bytes).
+La mémoire vive (ou RAM) de PICO-8
 
-Chaque octet a une adresse. Le premier octet est 0x0000
+Dans la plupart des cas, vous pouvez vous contenter d'utiliser les fonctions de base qui se chargent de communiquer avec la mémoire pour vous. Par exemple, appuyer sur une touche active un bit dans la mémoire, et `btn()` se charge de lire l'adresse mémoire où se trouvent ces bits. Et lorsque vous utilisez une fonction de dessin comme `spr()`, elle écrit dans la région de la mémoire qui correspond à l'écran.
 
-### Peek et poke
+Mais tout n'est pas possible en utilisant ces fonctions ! Accéder à la mémoire directement peut vous permettre de réaliser toutes sortes de choses uniques : générer des sons avec des algorithmes, étirer l'écran, communiquer avec des circuits électroniques... ou encore activer le clavier et la souris !
 
-peek,poke
-reload( destaddr, sourceaddr, len, [filename] )
+La mémoire est composée d'octets, et chaque octet a une adresse que l'on écrit généralement en hexadécimal, par exemple 0x5f2c. Vous ne comprenez rien à ce que je viens de dire ? Pas de problème ! Prenons un instant pour comprendre ce que contient un octet, et quelles sont les différentes façons de compter en informatique.
 
 ### Compter avec des bits
 
-En informatique, le plus petit élément d'information que l'on peut manipuler est le bit. Il ne peut avoir que deux valeurs : le signal est soit éteint, soit allumé, ce que l'on désigne par les chiffres 0 et 1.
+Dans un ordinateur, le plus petit élément d'information que l'on peut manipuler est le bit. Il ne peut avoir que deux valeurs : le signal est soit éteint, soit allumé, ce que l'on désigne par les chiffres 0 et 1.
 
 Dans le système décimal, nous avons 10 chiffres pour représenter tous les nombres qui existent, c'est pourquoi on parle aussi de base 10. Lorsqu'on arrive au bout des 10 chiffres à notre disposition, on ajoute une dizaine et on repart du premier chiffre.
 
@@ -41,15 +40,19 @@ Décimal │  Octet
     0   │ 00000000
     1   │ 00000001
     2   │ 00000010
+    3   │ 00000011
+    4   │ 00000100
 ────────────────
+  251   │ 11111011
+  252   │ 11111100
   253   │ 11111101
   254   │ 11111110
   255   │ 11111111
 ```
 
-Si l'on veut stocker des nombres plus grands, il faudra utiliser plusieurs octets. Par exemple, les nombres dans les variables de PICO-8 sont codés sur 4 octets (32 bits), ce qui pourrait permettre d'aller de 0 à 2 147 483 647. Cela dit, pour que PICO-8 puisse stocker des nombres négatifs et à virgule, l'intervalle utilisable va en réalité de -32768 à 32767,9999.
+Si l'on veut stocker des nombres plus grands, il faudra utiliser plusieurs octets. Par exemple, les nombres dans les variables de PICO-8 sont codés sur 4 octets (32 bits), ce qui pourrait permettre d'aller de 0 à 2 147 483 647. Cela dit, pour que PICO-8 puisse stocker des nombres négatifs et à virgule, l'intervalle utilisable va en réalité de -32768 à 32767,9999. Lorsque vous essayez de dépasser cette limite, le nombre va boucler sur lui-même, et c'est d'ailleurs un problème épineux lorsque l'on souhaite créer des scores gigantesques par exemple.
 
-Le système binaire n'est pas la seule façon étrange de compter à laquelle vous serez confronté·e au cours de votre vie de programmeur ou programmeuse. Lorsque vous choisissez une couleur dans un logiciel de graphisme, vous avez probablement déjà eu affaire au système hexadécimal, qui est en base 16. Par exemple, ce code de violet [`#4c1b7a`](https://www.google.com/search?q=%234c1b7a) est une suite de trois nombres en hexadécimal :
+Le système binaire n'est pas la seule façon originale de compter à laquelle vous serez confronté·e au cours de votre vie de programmeur ou programmeuse. Lorsque vous choisissez une couleur dans un logiciel de graphisme, vous avez probablement déjà eu affaire au système hexadécimal, qui est en base 16. Par exemple, ce code de violet [`#4c1b7a`](https://www.google.com/search?q=%234c1b7a) est une suite de trois nombres en hexadécimal :
 
 ```
             │  Rouge   │   Vert   │   Bleu
@@ -59,101 +62,106 @@ Décimal     │       76 │       27 │      122
 Octet       │ 01001100 │ 00011011 │ 01111010
 ```
 
-Le format hexadécimal est populaire en informatique car chaque chiffre correspond à 4 bits, étant donné que 4 bits permettent de compter de 0 à 15. Cela permet une écriture plus compacte : vous pouvez représenter le contenu d'un octet en seulement deux chiffres. Mais comme les chiffres arabes s'arrêtent à 9, on représente la base 16 avec les lettres de l'alphabet !
+Pour représenter la base 16, on utilise les lettres de l'alphabet : les 16 chiffres sont 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E et F. Par exemple, le nombre 31 s'écrit 1F, et le nombre 32 s'écrit... 20. Oui, c'est un peu l'embrouille.
 
-En hexadécimal, les 16 chiffres sont 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E et F. Par exemple, le nombre 31 s'écrit 1F, et le nombre 32 s'écrit... 20. Oui, c'est un peu l'embrouille.
+Malgré tout, ce format est populaire en informatique car chaque chiffre correspond à 4 bits, étant donné que 4 bits permettent de compter de 0 à 15. Cela permet une écriture plus compacte : vous pouvez représenter le contenu d'un octet en seulement deux chiffres. C'est pourquoi les codes couleur, qui contiennent 3 octets pour les 3 couleurs, tiennent en 6 caractères.
 
-Ainsi, pour bien savoir dans quelle base le nombre est écrit, on utilise un préfixe qui dépend du langage de programmation. Dans PICO-8, `0x` désigne un nombre hexadécimal et `0b` désigne un nombre binaire.
+Pour bien savoir dans quelle base le nombre est écrit, on utilise un préfixe qui dépend du langage de programmation. Dans PICO-8, `0x` désigne un nombre hexadécimal et `0b` désigne un nombre binaire.
+
+Bien, nous avons les grandes bases. N'ayez crainte : vous n'avez pas besoin de tout retenir, mais il est utile d'avoir une petite idée de comment cela fonctionne. Nous pouvons maintenant accéder à la mémoire !
+
+### Peek et poke
+
+`peek(adresse)` permet de lire l'octet situé à cette adresse de la mémoire. Cela dit, il vaut mieux utiliser l'opérateur `@` car il économise un token et s'exécute plus rapidement.
+
+```lua
+peek(0x5f4c)
+@0x5f4c
+```
+
+Prenons l'adresse `0x5f4c` pour l'exemple : c'est l'octet qui contient les boutons appuyés par le joueur 1. Si vous l'affichez en jeu avec `print()`, il apparaîtra en version décimale, mais en réalité, il représente bien les 8 bits qui valent 0 ou 1 en fonction des touches appuyées.
+
+Pour écrire à une adresse, on utilise `poke(adresse, valeur)`. Par exemple, l'adresse 0x5f2c concerne le mode d'affichage, et si l'on y change des bits, on peut appliquer différents types de distorsions !
+
+```lua
+poke(0x5f2c, 0b10000010) -- inversement vertical de l'écran
+poke(0x5f2c, 130)        -- le même nombre en décimal
+```
+
+Mais avant de voir plus de pokes utiles, je vous propose de prendre un peu de recul et d'examiner comment toutes ces adresses mémoire sont organisées.
 
 ### Anatomie de la mémoire
 
+Il existe 3 types de mémoire dans PICO-8 : la ROM ou cartouche de jeu, la RAM que l'on peut modifier, et la RAM de Lua.
+
+#### La ROM du jeu
+
+Vous avez probablement déjà lu le terme ROM dans le domaine de l'émulation de jeux par exemple. Il signifie Read Only Memory, ou mémoire morte en français. On l'utilise souvent pour désigner les cartouches de jeu, et comme son nom l'indique, le contenu d'une ROM est fixé et ne peut pas être modifié par l'utilisateur, contrairement à la RAM.
+
+Pour plus de rapidité, dans la plupart des consoles de jeu et des ordinateurs, les données stockées dans une ROM sont copiées dans la RAM avant d'être traitées, et c'est aussi le cas dans PICO-8. La ROM (votre cartouche) est chargée au lancement du jeu, mais vous pouvez aussi recharger une partie précise de la cartouche (et même d'une autre cartouche) en plein jeu avec la fonction `reload()`. Cela peut-être utile lorsque vous avez modifié les sprites ou la map dans la RAM et souhaitez réinitialiser leur état. Cependant, le code ne peut être rechargé de la même façon, car il est protégé et stocké dans un espace de RAM différent.
+
 #### La RAM de base
 
-32 Kio
-
-mémoire adressable
+C'est dans cet espace de 32 Kio que l'on pourra peek et poke pour modifier le comportement de PICO-8 pendant le jeu. La RAM est compartimentée en différentes sections, chaque adresse ayant une utilité précise :
 
 ![](./memoire.png)
 *Un carré équivaut à 128 octets.*
 
-##### Sprites et map
+Comme vous pouvez le voir, le début de la RAM, de "sprites" jusqu'à "sons", n'est autre que votre ROM chargée au lancement. On trouve ensuite :
 
-La spritesheet est stockée dans la mémoire comme une grande image de 128×128 pixels. Comme les pixels peuvent avoir 16 couleurs différentes, ils ont chacun besoin de 4 bits pour être représentés ; chaque octet contient donc 2 pixels. Pour rappel, la moitié basse de la spritesheet partage le même espace dans la mémoire que la moitié basse de la map.
+- Un espace libre dans lequel vous pouvez stocker ce que vous souhaitez. Par exemple, vous pouvez y recopier une partie de l'écran pour sauvegarder une photo.
+- Un fichier de sauvegarde pouvant contenir 64 chiffres et qui s'enregistre sur l'ordinateur du joueur ou de la joueuse.
+- Le draw state et le hardware state, qui contiennent des adresses que l'on pourra poker pour obtenir des effets amusants.
+- Les informations GPIO, qui permettent à votre jeu de communiquer avec des circuits électroniques ou une page web.
+- Le contenu de l'écran, qui est modifié par les fonctions de dessin comme `spr()`.
 
-La map fait au total 128×64 cases, chacune étant codée dans un octet puisqu'elles doivent stocker l'ID du sprite, qui peut aller de 0 à 255. La map utilise donc autant d'espace que la spritesheet, c'est-à-dire 8192 octets, mais la deuxième moitié se trouve dans l'espace partagé.
-
-Chaque sprite a 8 flags qui peuvent être activés ou désactivés. Eh oui, cela fait un bit par flag et donc un octet par sprite ! Les sprites flags occupent donc 256 octets de la mémoire.
-
-##### Musique et sons
-
-Un jeu peut contenir 64 partitions utilisant chacune 4 octets, tandis que les 64 sons utilisent 68 octets chacun.
-
-Chaque note d'un son est codée sur 16 bits :
-
-- 1 bit active ou désactive les instruments personnalisés
-- 3 bits pour l'effet (0 – 7)
-- 3 bits pour le volume (0 – 7)
-- 3 bits pour l'instrument (0 – 7)
-- 6 bits pour la fréquence (0 – 63)
-
-Dites-vous que chacune de ces valeurs peut être changée en temps réel en pokant la bonne adresse ! Dans le cas d'un jeu de voiture, vous pourriez obtenir un bruit de moteur dynamique en changeant la fréquence du son.
-
-##### Espace libre
-
-Les octets allant de l'adresse 0x4300 à 0x5dff n'ont aucune utilité particulière. Cela fait 6911 octets de mémoire que vous pouvez utiliser comme bon vous semble en cours de jeu.
-
-Vous pourriez y copier une partie de l'écran pour créer une photo à réutiliser plus tard dans le jeu, ou encore utiliser `reload()` pour copier les données d'une autre cartouche dans cette région, et ainsi garder en mémoire une map ou des sprites supplémentaires.
-
-##### Données persistantes
-
-Cette région de 256 octets concerne le fichier de sauvegarde de votre jeu. En utilisant `cartdata("mon_super_jeu")`, vous créez un fichier de sauvegarde contenant 64 chiffres sur l'ordinateur du joueur ou de la joueuse. Vous pouvez ensuite utiliser les commandes simplifiées `dget()` et `dset()` pour accéder à la sauvegarde, ou bien peek et poke la mémoire directement pour davantage de contrôle. Quelque soit la méthode choisie, le fichier de sauvegarde sera automatiquement enregistré.
-
-##### Draw state et hardware
-
-##### Ports GPIO
-
-Un connecteur GPIO permet à une machine de communiquer avec d'autres circuits électroniques. Ils sont notamment présents sur les Raspberry Pi et les PocketCHIP. Vous pouvez envoyer un signal pour allumer une LED, ou bien lire le signal entrant pour connaître l'état d'un interrupteur, par exemple.
-
-`youtube:https://www.youtube.com/watch?v=aAdSbrCt5Mg`
-
-Envoyer ou recevoir un signal d'un port GPIO se fait en accédant directement à sa valeur dans la mémoire. Les adresses précises sont listées dans la section GPIO du manuel de PICO-8. Chaque octet représentant un port, vous pouvez envoyer une information sur 8 bits, autrement dit un chiffre jusqu'à 255 ! De plus, vous pouvez y accéder en JavaScript dans le cas d'un jeu navigateur avec le tableau global `pico8_gpio`. Je vous laisse imaginer ce que vous pourriez réaliser avec des communications entre votre jeu et la page web !
-
-##### L'écran
-
-Enfin, c'est dans ce dernier espace de la mémoire qu'écrivent les fonctions de dessin telles que `spr()`, et comme ce serait le cas avec une vraie machine, l'écran est "branché" à la mémoire et en récupère le contenu pour l'afficher.
-
-De la même façon, les boutons de la manette sont chacun branchés à un emplacement précis de la mémoire et allument un bit. C'est donc en lisant la mémoire que l'on sait si un bouton est appuyé ou non !
-
-#### La ROM
-
-Vous avez probablement déjà lu le terme ROM dans le domaine de l'émulation de jeux, par exemple. Il signifie Read Only Memory, ou mémoire morte en français. On l'utilise souvent pour désigner les cartouches de jeu, et comme son nom l'indique, le contenu d'une ROM est fixé et ne peut pas être modifié par l'utilisateur, contrairement à la RAM.
-
-Les cartouches de PICO-8 sont agencées de la même façon que la RAM de l'adresse 0x0 à 0x4300. Ce sont donc les mêmes adresses entre la ROM et la RAM pour les sprites, la map, les flags, les musiques et les sons.
-
-Pour plus de rapidité, dans la plupart des consoles de jeu et des ordinateurs, les données stockées dans une ROM sont copiées dans la RAM avant d'être traitées, et c'est aussi le cas dans PICO-8. La ROM est chargée au lancement du jeu, mais vous pouvez aussi recharger une partie précise de la cartouche (et même d'une autre cartouche) en plein jeu avec la fonction `reload()`. Cela peut-être utile lorsque vous avez modifié les sprites ou la map dans la RAM et souhaitez réinitialiser leur état. Cependant, le code ne peut être rechargé de la même façon, car il est protégé et stocké dans un espace de RAM différent.
+Pour les plus curieuses et curieux d'entre vous, le fonctionnement de chacune de ces sections est détaillé sur [notre wiki](https://wiki.gamedevalliance.fr/fantasy-consoles/pico-8/memoire/) !
 
 #### La RAM de Lua
 
-Cet espace limité à 2 Mio contient le code de votre programme compilé ainsi que vos variables en cours de jeu. Elle est entièrement séparée de la RAM de base et vous ne pouvez pas y accéder avec `peek()`, `poke()` et compagnie. Cependant, comme je vous l'avais dit précédemment, vous pouvez connaître la quantité de mémoire actuellement occupée avec `stat(0)` qui vous donne le nombre d'octets utilisés.
+Cet espace limité à 2 Mio contient le code de votre programme compilé ainsi que vos variables en cours de jeu. Elle est entièrement séparée de la RAM de base et vous ne pouvez pas y accéder avec peek, poke et compagnie. Cependant, comme je vous l'avais dit précédemment, vous pouvez connaître la quantité de mémoire actuellement occupée avec `stat(0)` qui vous donne le nombre d'octets utilisés.
 
-Les 2 Mio disponibles peuvent sembler énormes en comparaison des 32 Kio de la RAM de base, et il est vrai que ça vous laisse une très grande marge de manœuvre ! Vous n'aurez sans doute pas à vous soucier du nombre de variables dans votre jeu.
+Les 2 Mio disponibles peuvent sembler énormes en comparaison des 32 Kio de la RAM de base, et il est vrai que cela vous laisse une très grande marge de manœuvre ! Vous n'aurez sans doute pas à vous soucier du nombre de variables dans votre jeu.
 
 ### Pokes utiles
 
-changer la palette
-désactiver le menu pause
-importer des images hi res
-poke(0x5f2c,3) reduire la resolution
-delai de btnp
+#### Désactiver le menu de pause
 
-0x5f2c concerne draw mode : retourner l'écran, effet miroir 34:10
+Les boutons `btn(x)` pour `x` allant de 0 à 5 sont les boutons documentés : les quatre flèches, X et O. En réalité, il existe aussi `btn(6)`, correspondant au bouton Pause et déclenché avec Entrée ou Echap, mais il est impossible de l'utiliser normalement étant donné qu'il retourne `true` pendant la frame juste avant que le menu de Pause ne s'ouvre.
+
+C'était sans compter l'adresse 0x5f30, qui n'est pas documentée officiellement mais peut désactiver la prochaine ouverture du menu de pause avec la valeur 1. Il faut remettre cette valeur à 1 après chaque tentative bloquée ; je vous suggère donc l'écriture suivante :
+
+```lua
+if (btn(6)) poke(0x5f30, 1)
+```
+
+Vous disposez maintenant d'un bouton supplémentaire, qui pourrait vous servir à créer votre propre menu de pause.
 
 #### Options graphiques
 
+L'adresse 0x5f2c concerne le mode d'affichage. En changeant quelques bits, vous pouvez étirer l'écran, le retourner ou créer un effet miroir ! Voici un petit résumé des possibilités juste pour vous :
+
+Valeur | Effet
+--- | ---
+0 | Normal
+1 | Etirement horizontal
+2 | Etirement vertical
+3 | 1+2 : Etirement horizontal et vertical
+5 | Miroir vertical : moitié gauche recopié à droite
+6 | Miroir horizontal : moitié haute recopié en bas
+7 | 5+6 : quart haut-gauche recopié trois fois
+129 | Retournement horizontal
+130 | Retournement vertical
+131 | 129+130
+133 | Rotation 90 degrés
+134 | Rotation 180 degrés (même résultat que 131)
+135 | Rotation -90 degrés
+
+Tous ces effets sont amusants mais ne pourraient pas forcément servir dans un jeu conventionnel. Cela dit, je trouve la valeur 3 intéressante : c'est comme si on faisait un jeu en 64×64 pixels !
+
 #### Utiliser le clavier et la souris
 
-
-Vous pouvez poker une adresse pour activer le mode devkit, qui active le clavier et la souris en jeu.
+Les boutons de la manette sont chacun branchés à un emplacement précis de la mémoire et allument un bit. En fait, la fonction `btn()` lit la mémoire pour savoir si un bouton est appuyé ou non ! Mais ce n'est pas tout : une adresse de la mémoire peut aussi contenir l'état du clavier et de la souris. Par défaut, cette fonctionnalité est désactivée, mais on peut poker une adresse pour activer le mode devkit :
 
 ```lua
 poke(0x5f2d, 1)
@@ -224,5 +232,3 @@ Pour finir, `stat(36)` vous donne ce qu'a parcouru la molette depuis la dernièr
 Méfiez-vous cependant : zep, le développeur de PICO-8, indique que la souris ne fonctionne pas encore idéalement sur navigateur, mais cela semble tout de même satisfaisant pour la plupart des jeux.
 
 Gardez également à l'esprit que toutes les machines exécutant PICO-8 ne disposent pas forcément d'une souris et d'un clavier complet ; il est donc recommandé de rendre le mode devkit optionnel lorsque vous publiez votre jeu sur le site officiel. La première fois qu'une de ces `stat()` est lue par le jeu dans un contexte où la présence d'un clavier et d'une souris n'est pas garantie, PICO-8 affiche un court avertissement en bas de l'écran.
-
-*Suite du chapitre disponible très bientôt !*
