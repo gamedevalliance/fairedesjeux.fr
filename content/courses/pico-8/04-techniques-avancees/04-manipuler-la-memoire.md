@@ -1,10 +1,12 @@
 ---
 title: "Manipuler la mémoire"
+description: "Découvrez comment manipuler la mémoire de PICO-8 avec peek et poke, afin d'activer le clavier et la souris, débloquer des options graphiques et plus encore."
+opengraph_image: ./opengraph-memoire.png
 ---
 
-La mémoire vive (ou RAM) de PICO-8
+La mémoire vive (ou RAM) de PICO-8 contient les graphismes et les sons de votre jeu, mais aussi le contenu actuel de l'écran et quelques autres données. Il est possible de la manipuler directement avec les fonctions `peek()` et `poke()` que nous verrons plus bas, mais dans la plupart des cas, vous pouvez vous contenter d'utiliser les fonctions de base, qui se chargent de communiquer avec la mémoire pour vous.
 
-Dans la plupart des cas, vous pouvez vous contenter d'utiliser les fonctions de base qui se chargent de communiquer avec la mémoire pour vous. Par exemple, appuyer sur une touche active un bit dans la mémoire, et `btn()` se charge de lire l'adresse mémoire où se trouvent ces bits. Et lorsque vous utilisez une fonction de dessin comme `spr()`, elle écrit dans la région de la mémoire qui correspond à l'écran.
+Par exemple, appuyer sur une touche active un bit dans la mémoire, et `btn()` se charge de lire les adresses mémoire où se trouvent ces bits. Et lorsque vous utilisez une fonction de dessin comme `spr()`, elle écrit dans la région de la mémoire qui correspond à l'écran.
 
 Mais tout n'est pas possible en utilisant ces fonctions ! Accéder à la mémoire directement peut vous permettre de réaliser toutes sortes de choses uniques : générer des sons avec des algorithmes, étirer l'écran, communiquer avec des circuits électroniques... ou encore activer le clavier et la souris !
 
@@ -52,14 +54,14 @@ Décimal │  Octet
 
 Si l'on veut stocker des nombres plus grands, il faudra utiliser plusieurs octets. Par exemple, les nombres dans les variables de PICO-8 sont codés sur 4 octets (32 bits), ce qui pourrait permettre d'aller de 0 à 2 147 483 647. Cela dit, pour que PICO-8 puisse stocker des nombres négatifs et à virgule, l'intervalle utilisable va en réalité de -32768 à 32767,9999. Lorsque vous essayez de dépasser cette limite, le nombre va boucler sur lui-même, et c'est d'ailleurs un problème épineux lorsque l'on souhaite créer des scores gigantesques par exemple.
 
-Le système binaire n'est pas la seule façon originale de compter à laquelle vous serez confronté·e au cours de votre vie de programmeur ou programmeuse. Lorsque vous choisissez une couleur dans un logiciel de graphisme, vous avez probablement déjà eu affaire au système hexadécimal, qui est en base 16. Par exemple, ce code de violet [`#4c1b7a`](https://www.google.com/search?q=%234c1b7a) est une suite de trois nombres en hexadécimal :
+Le système binaire n'est pas la seule façon originale de compter à laquelle vous serez confronté·e au cours de votre vie de programmeur ou programmeuse. Lorsque vous choisissez une couleur dans un logiciel de graphisme, vous avez probablement déjà eu affaire au système hexadécimal, qui est en base 16. Par exemple, ce code de violet [`#9e96d0`](https://www.google.com/search?q=%239e96d0) est une suite de trois nombres en hexadécimal :
 
 ```
             │  Rouge   │   Vert   │   Bleu
 ──────────────────────────────────────
-Hexadécimal │       4c │       1b │       7a
-Décimal     │       76 │       27 │      122
-Octet       │ 01001100 │ 00011011 │ 01111010
+Hexadécimal │       9e │       96 │       d0
+Décimal     │      158 │      150 │      208
+Octet       │ 10011110 │ 10010110 │ 11010000
 ```
 
 Pour représenter la base 16, on utilise les lettres de l'alphabet : les 16 chiffres sont 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E et F. Par exemple, le nombre 31 s'écrit 1F, et le nombre 32 s'écrit... 20. Oui, c'est un peu l'embrouille.
@@ -179,11 +181,7 @@ Retour arrière | "\b"
 Tab | "\t"
 Entrée | "\r"
 
-Habituellement, P et Entrée ouvrent le menu de pause, mais vous pouvez désactiver temporairement son ouverture en faisant `poke(0x5f30, 1)` avant la fin de la frame. Pour plus de simplicité, sachez que `btn(6)` représente la touche Pause, bien que cela ne soit pas documenté dans le manuel. Avec cette astuce, à vous les menus de pause personnalisés !
-
-```lua
-if (btn(6)) poke(0x5f30, 1)
-```
+N'oubliez pas que P et Entrée ouvrent le menu de pause, mais qu'on peut le désactiver avec `if (btn(6)) poke(0x5f30, 1)`.
 
 La touche Shift ne peut être reconnue par elle-même mais permet de produire des symboles plutôt que des lettres, de la même façon que dans l'éditeur de code. Les autres touches, telles que Control et Alt, ne produisent pas de caractère et ne sont donc pas reconnues.
 
@@ -232,3 +230,5 @@ Pour finir, `stat(36)` vous donne ce qu'a parcouru la molette depuis la dernièr
 Méfiez-vous cependant : zep, le développeur de PICO-8, indique que la souris ne fonctionne pas encore idéalement sur navigateur, mais cela semble tout de même satisfaisant pour la plupart des jeux.
 
 Gardez également à l'esprit que toutes les machines exécutant PICO-8 ne disposent pas forcément d'une souris et d'un clavier complet ; il est donc recommandé de rendre le mode devkit optionnel lorsque vous publiez votre jeu sur le site officiel. La première fois qu'une de ces `stat()` est lue par le jeu dans un contexte où la présence d'un clavier et d'une souris n'est pas garantie, PICO-8 affiche un court avertissement en bas de l'écran.
+
+![](./devkit-mouse.png)

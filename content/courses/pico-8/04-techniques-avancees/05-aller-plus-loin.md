@@ -1,5 +1,6 @@
 ---
 title: "Pour aller plus loin"
+description: "Vous commencez à vous sentir à l'aise sur PICO-8 ? Découvrez notre sélection de bonnes adresses pour en apprendre plus sur le logiciel et sur la programmation en Lua."
 ---
 
 Bravo, vous êtes arrivé·e à la fin de cette formation ! Nous avons vu tout un tas de concepts qui, je l'espère, vous permettront désormais d'être assez autonome pour créer vos propres jeux. Mon travail ici est terminé, mais ne vous inquiétez pas, je ne vais pas vous laisser partir sans une liste de bonnes adresses qui vous permettront de continuer de vous améliorer à votre rythme !
