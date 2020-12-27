@@ -58,7 +58,7 @@
                If we were to change title (instead of titleTemplate) we'd have the following structure: title - title
                which is not what we want - so we overide the titleTemplate for this page.
             */
-            titleTemplate: '%s: Cours gratuit en ligne',
+            titleTemplate: '%s: Cours gratuits en ligne',
             meta: [
                 {
                     key: 'og:title',
