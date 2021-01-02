@@ -54,6 +54,15 @@ with dissolve
 
 > **Note :** Pour des exemples plus avancés, vous pouvez consulter la [documentation de `with`](https://www.renpy.org/doc/html/displaying_images.html#with-statement).
 
+Enfin, si un personnage quitte la scène, vous pouvez le faire disparaître avec `hide` et bien sûr, ajouter une transition :
+
+```renpy
+hide astride
+with dissolve
+```
+
+En réalité, vous n'aurez pas souvent besoin d'utiliser `hide` car lorsque vous affichez une nouvelle scène, tous les personnages disparaissent !
+
 ### Jouer une musique
 
 Pour jouer une musique de fond, il suffit d'écrire cette commande :
