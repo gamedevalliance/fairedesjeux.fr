@@ -4,7 +4,7 @@
             <span class="caption">{{ chapter.title }}</span>
         </div>
         <transition name="fade">
-            <div v-if="isOpen" class="chapter">
+            <div class="chapter">
                 <ul>
                     <li v-if="chapter.video">
                         <g-link :to="chapter.video.path"
