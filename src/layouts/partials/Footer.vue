@@ -19,7 +19,7 @@
                         </li>
                         <li class="my-2 text-font-3">
                             <g-link to="/informations" class="smola">
-                                Information légales
+                                Informations légales
                             </g-link>
                         </li>
                         <li class="my-2 text-font-3">

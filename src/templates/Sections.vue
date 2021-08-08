@@ -5,7 +5,7 @@
             <aside class="mt-12 hidden lg:block">
                 <div class="area mb-6">
                     <g-link :to="$page.section.chapter.course.path" class="smola">
-                        « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
+                        « Accueil de {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
                     </g-link>
                 </div>
 

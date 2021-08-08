@@ -18,7 +18,7 @@
                 <div v-if="$page.section">
                     <div v-if="$page.section.chapter" class="mb-3">
                         <g-link :to="$page.section.chapter.course.path" class="link text-font" @click.native="closeMobileMenu">
-                            « Retour vers {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
+                            « Accueil de {{ $page.section.chapter.course.short_title || $page.section.chapter.course.title }}
                         </g-link>
                     </div>
 
@@ -59,7 +59,7 @@
             </g-link>
 
             <g-link to="/informations" class="link text-font">
-                Information légales
+                Informations légales
             </g-link>
 
             <a href="https://github.com/gamedevalliance/fairedesjeux.fr" class="link text-font">
