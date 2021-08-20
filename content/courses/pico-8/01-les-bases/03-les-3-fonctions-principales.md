@@ -83,7 +83,7 @@ Essayez d'écrire les conditions correspondant aux 4 directions. Pour écrire le
 ![](./tous-les-boutons.png)
 
 :::winkastride
-Les boutons peuvent aussi être désignés par des chiffres et vous pouvez avoir jusqu'à 8 joueurs différents en branchant des manettes ! Tout est dans la [documentation de `btn`](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=btn%20%5Bi%5D%20%5Bp%5D).
+Les boutons peuvent aussi être désignés par des chiffres et vous pouvez avoir jusqu'à 8 joueurs différents en branchant des manettes ! Tout est dans la [documentation de `btn`](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#BTN).
 :::
 
 Ça fait plaisir de voir son petit vaisseau bouger à l'écran, n'est-ce pas ? Ajoutons une touche finale : actuellement, votre fonction déplace le joueur de 1 pixel par frame. Vous vous souvenez que nous avions défini une propriété `speed` pour le joueur ? Essayez de l'utiliser dans votre code de déplacement.

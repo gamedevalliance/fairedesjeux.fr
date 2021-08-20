@@ -110,7 +110,7 @@ Pensez aussi à changer les btnp en btn, pour que le jeu puisse réagir dès que
 
 Pour changer la direction dans laquelle regarde le personnage quand il va vers la gauche, inutile de dessiner deux sprites différents : nous pouvons le retourner avec du code !
 
-Comme le précise la [documentation](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=spr%20n%20x%20y%20%5Bw%20h%5D%20%5Bflip_x%5D%20%5Bflip_y%5D), spr prend des paramètres optionnels, indiqués ici d'une `*`.
+Comme le précise la [documentation](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#SPR), spr prend des paramètres optionnels, indiqués ici d'une `*`.
 
 ```lua
 spr(numero, x, y, largeur*, hauteur*, miroir_x*, miroir_y*)

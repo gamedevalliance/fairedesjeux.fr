@@ -29,4 +29,4 @@ Pour afficher ces valeurs sous la forme de pourcentages plus faciles à lire, vo
 
 ![](./debug-en-jeu.png)
 
-D'autres valeurs de `x` vous donneront des statistiques moins souvent utiles, comme la date et l'heure. Je vous laisse consulter la liste complète dans le [manuel](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=stat%20x) !
+D'autres valeurs de `x` vous donneront des statistiques moins souvent utiles, comme la date et l'heure. Je vous laisse consulter la liste complète dans le [manuel](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#STAT) !

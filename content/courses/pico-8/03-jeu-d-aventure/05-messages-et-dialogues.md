@@ -75,7 +75,7 @@ Un aspect pratique des tableaux, c'est que lorsqu'on supprime un des éléments,
 
 ![Fonction Update message](./update-msg.png)
 
-Vous connaissiez déjà `del(tableau, element)` qui supprime un élément donné du tableau ; voici maintenant [`deli(tableau, index)`](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=deli%20t%20%5Bi%5D) qui vous l'aurez compris, supprime un index donné. En appuyant sur X en jeu, vous devriez maintenant voir le message suivant, ou bien rien du tout s'il n'en restait plus.
+Vous connaissiez déjà `del(tableau, element)` qui supprime un élément donné du tableau ; voici maintenant [`deli(tableau, index)`](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#DELI) qui vous l'aurez compris, supprime un index donné. En appuyant sur X en jeu, vous devriez maintenant voir le message suivant, ou bien rien du tout s'il n'en restait plus.
 
 Plus qu'un détail à régler pour que le système soit fonctionnel : le personnage ne devrait pas pouvoir bouger lorsqu'un dialogue est en cours. Pour cela, c'est tout simple : il suffit de vérifier si le tableau `messages` est bien vide avant d'autoriser le mouvement. Pour rappel, on peut récupérer le nombre d'éléments dans un tableau avec `#`.
 

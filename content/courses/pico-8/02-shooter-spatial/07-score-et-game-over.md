@@ -134,7 +134,7 @@ Vous pouvez essayer d'écrire `state = 0` pour relancer une partie, mais cela po
 
 A travers ce chapitre, j'ai pu vous montrer plein de concepts de base de PICO-8 ! Il nous reste encore plein de choses à voir, comme l'affichage d'une map, le déplacement case par case... Mais je garde ça pour le prochain chapitre. Maintenant, c'est à vous de choisir : vous pouvez directement passer à la suite pour réaliser un jeu d'aventure, ou bien continuer à vous entraîner sur ce petit shooter. Voici quelques idées intéressantes qui vous feront vous triturer un peu les méninges :
 
-- Donnez des points de vie au vaisseau et un temps d'invincibilité après s'être fait toucher. Affichez des sprites de cœur ou dessinez une jauge avec [rectfill](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=rectfill%20x0%20y0%20x1%20y1%20%5Bcol%5D).
+- Donnez des points de vie au vaisseau et un temps d'invincibilité après s'être fait toucher. Affichez des sprites de cœur ou dessinez une jauge avec [rectfill](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#RECT).
 
 - Améliorez la fonction de collision pour que chaque élément possède un X et un Y, mais aussi une largeur et une hauteur, comme dans la version originale de [MBoffin](https://mboffin.itch.io/pico8-overlap). Utile si vos sprites de projectile sont petits !
 

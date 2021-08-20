@@ -51,7 +51,7 @@ Essaye de faire le calcul en faisant varier ***i*** ! Pour le premier ennemi d
 
 Et voilà, votre vague est toute belle, sans bavure ! Rendons maintenant le nombre d'ennemis aléatoire quand on appelle le spawn dans update.
 
-Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=rnd%20x) explique que `rnd(n)` retourne un nombre décimal où 0 ≤ résultat < n. On doit arrondir le résultat en un nombre entier, et pour cela deux méthodes s'offrent à vous :
+Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#RND) explique que `rnd(n)` retourne un nombre décimal où 0 ≤ résultat < n. On doit arrondir le résultat en un nombre entier, et pour cela deux méthodes s'offrent à vous :
 
 - `flr(rnd(n))` arrondit au nombre inférieur, ce qui donne un nombre entier entre 0 et ***n* − 1**.
 - `ceil(rnd(n))` arrondit au nombre supérieur, ce qui donne un nombre entier entre 1 et ***n***.

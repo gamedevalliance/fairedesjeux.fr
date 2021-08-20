@@ -55,7 +55,7 @@ Cette commande affiche la map en commençant par le tile précisé et à la posi
 Plus précisément, cette commande affiche la section réservée uniquement à la map dans la cartouche, qui fait 128×32 cases. Pour dessiner également la deuxième moitié qui est partagée avec la spritesheet, écrivez `map(0, 0, 0, 0, 128, 64)`.
 :::
 
-Vous trouverez d'autres façons d'utiliser cette commande dans le [manuel](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=map%20cell_x%20cell_y%20sx%20sy%20cell_w%20cell_h%20%5Blayers%5D). Nous allons mettre tout ce qui concerne la carte dans un nouvel onglet.
+Vous trouverez d'autres façons d'utiliser cette commande dans le [manuel](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#MAP). Nous allons mettre tout ce qui concerne la carte dans un nouvel onglet.
 
 ![](./draw-map.png)
 

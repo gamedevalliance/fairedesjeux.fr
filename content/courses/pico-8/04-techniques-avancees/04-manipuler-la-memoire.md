@@ -223,7 +223,7 @@ Pour résumer, `band(stat(34), 0b001)` renverra le résultat 0b001 si les deux n
 ![](./band.png)
 *Pour plus de concision, j'ai écrit 1, 2 et 4, qui sont les écritures décimales de 0b001, 0b010 et 0b1000. Les deux écritures sont toujours interchangeables !*
 
-Si les opérations bit à bit vous intéressent, je vous laisse consulter la section [Bitwise Operations](https://www.lexaloffle.com/pico-8.php?page=manual#main_div:~:text=Operations-,Bitwise%20Operations) du manuel de PICO-8 ainsi que les exemples de [Wikipédia](https://fr.wikipedia.org/wiki/Opération_bit_à_bit).
+Si les opérations bit à bit vous intéressent, je vous laisse consulter la section [Bitwise Operations](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Bitwise_Operations) du manuel de PICO-8 ainsi que les exemples de [Wikipédia](https://fr.wikipedia.org/wiki/Opération_bit_à_bit).
 
 Pour finir, `stat(36)` vous donne ce qu'a parcouru la molette depuis la dernière frame. Cela donnera -1 si vous l'avez faite défiler d'un cran vers le haut, 0 si elle n'a pas bougé et 1 pour un cran vers le bas.
 
