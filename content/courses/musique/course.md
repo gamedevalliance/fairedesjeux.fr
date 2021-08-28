@@ -2,9 +2,13 @@
 type: SKILL
 title: "Composer la musique de vos jeux"
 short_title: "Composition musicale"
+description: "Utilisez Krita pour dessiner en pixel art, réaliser des animations et vous lancer dans le digital painting."
 date: "2020-05-27"
 author: "Aurélien Dos Santos & Thomas Peyrounette"
 medal: GOLD
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
 Bienvenue dans ce cours d'initiation à la composition musicale ! Que vous soyez totalement novice ou que vous ayez déjà bidouillé sur un logiciel de musique sans trop savoir quoi composer, cette formation est faite pour vous !
@@ -21,14 +25,6 @@ Elle peut créer une tension invisible dans un jeu d'horreur, évoquer des thèm
 *L'apparition du thème de Dark Vador suffit à teinter une scène de crainte et de désespoir.*
 
 Tant de possibilités ! De plus, la musique fait aussi vivre le jeu une fois la console éteinte : on garde les mélodies en tête et on réécoute parfois les OST, chargées par les émotions de nos souvenirs de jeu. Beaucoup de thèmes musicaux sont d'ailleurs devenus cultes, comme les thèmes de combat de *Final Fantasy* ou la techno brutale de *Hotline Miami*.
-
-:::marvin
-Apprendre la musique, ça fait un peu peur, quand même...
-:::
-
-:::astride
-C'est compréhensible ! Après tout, à l'école, les étudiants doivent souvent passer beaucoup de temps sur la théorie avant qu'on puisse leur donner plus de liberté créative.
-:::
 
 Si vous pensez qu'apprendre la musique est intimidant, je vous comprends totalement ! Après tout, à l'école, les étudiants doivent souvent passer beaucoup de temps sur la théorie avant qu'on puisse leur donner plus de liberté créative. Pour que cette formation soit accessible au plus grand nombre, et que vous n'attendiez pas des années avant de composer, nous allons voir la théorie d'une façon plus condensée et détendue, avec des exemples en musique.
 
