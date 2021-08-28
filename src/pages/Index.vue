@@ -1,14 +1,17 @@
 <template>
     <Layout>
-        <div class="container mx-auto">
-            <div class="pt-4 flex flex-wrap">
+        <main class="px-4 lg:px-0">
+            <div class="pt-4 flex flex-wrap flex-col lg:flex-row">
                 <div v-for="featuredCourse in $page.featuredCourses.edges"
                      :key="featuredCourse.node.id"
-                     class="featured-class h-featuredClass relative mx-2"
+                     class="featured-class h-featuredCourse relative overflow-hidden lg:mx-2 mb-4 lg:mb-0"
                      :title="featuredCourse.node.title"
                 >
                     <g-link :to="featuredCourse.node.path" class="featured-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${featuredCourse.node.name}/cover-wide.png`)" class="rounded-md h-full object-cover" />
+                        <g-image
+                            :src="featuredCourse.node.cover_wide"
+                            class="rounded-md h-full object-cover"
+                        />
                         <div class="absolute inset-x-0 bottom-0 z-10 p-4">
                             <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
                                 {{ featuredCourse.node.title }}
@@ -18,68 +21,71 @@
                 </div>
             </div>
 
-            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container">
+            <h3 class="text-2xl text-white m-3 mt-4 ml-0 block container md:mt-5">
                 Faire des jeux avec...
             </h3>
 
-            <div class="flex flex-wrap">
-                <div
-                    v-for="gameEngineCourse in $page.gameEngineCourses.edges"
-                    :key="gameEngineCourse.node.id"
-                    class="game-engine-class h-gameEngineClass relative mx-2"
-                    :title="gameEngineCourse.node.title"
-                >
-                    <g-link :to="gameEngineCourse.node.path" class="game-engine-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${gameEngineCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
-                        <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                            <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
-                                {{ gameEngineCourse.node.short_title || gameEngineCourse.node.title }}
-                            </h2>
-                        </div>
-                    </g-link>
-                </div>
-                <contribute-c-t-a v-if="$page.gameEngineCourses.edges.length < 5" />
-            </div>
+            <course-list :list="$page.gameEngineCourses.edges" class="flex flex-wrap">
+                <contribute-c-t-a
+                    class="cta"
+                />
+            </course-list>
 
-            <h3 class="text-2xl text-white m-3 mt-5 ml-0 block container">
+            <h3 class="text-2xl text-white m-3 mt-1 ml-0 block container lg:mt-5">
                 Autres compétences :
             </h3>
 
-            <div class="flex flex-wrap">
-                <div
-                    v-for="skillCourse in $page.skillCourses.edges"
-                    :key="skillCourse.node.id"
-                    class="game-engine-class h-gameEngineClass relative mx-2"
-                    :title="skillCourse.node.title"
-                >
-                    <g-link :to="skillCourse.node.path" class="game-engine-class__link">
-                        <g-image :src="require(`!!assets-loader?quality=100!@coursesCovers/${skillCourse.node.name}/cover-tall.png`)" class="rounded-md h-full object-cover" />
-                        <div class="absolute inset-x-0 bottom-0 z-10 p-4">
-                            <h2 class="text-white font-semibold leading-articleTitle mt-2 mb-0 text-2xl">
-                                {{ skillCourse.node.short_title || skillCourse.node.title }}
-                            </h2>
-                        </div>
-                    </g-link>
-                </div>
-                <contribute-c-t-a v-if="$page.skillCourses.edges.length < 5" />
-            </div>
-        </div>
+            <course-list :list="$page.skillCourses.edges" class="flex flex-wrap">
+                <contribute-c-t-a
+                    class="cta"
+                />
+            </course-list>
+        </main>
     </Layout>
 </template>
 
 <script>
     import ContributeCTA from './components/Index/ContributeCTA.vue';
+    import CourseList from './components/Index/CourseList.vue';
 
     export default {
         components: {
             ContributeCTA,
+            CourseList,
         },
         metaInfo: {
             /* NOTE: On the index page we don't have a subtitle for the page, it's only the site title
                If we were to change title (instead of titleTemplate) we'd have the following structure: title - title
                which is not what we want - so we overide the titleTemplate for this page.
             */
-            titleTemplate: '%s',
+            titleTemplate: '%s: Cours gratuits en ligne',
+            meta: [
+                {
+                    key: 'og:title',
+                    name: 'og:title',
+                    content: 'FaireDesJeux.fr: Cours gratuits en ligne',
+                },
+                {
+                    key: 'og:description',
+                    name: 'og:description',
+                    content: 'Le site collaboratif pour apprendre à créer des jeux vidéo !',
+                },
+                {
+                    key: 'twitter:card',
+                    name: 'twitter:card',
+                    content: 'summary_large_image',
+                },
+                {
+                    key: 'twitter:image',
+                    name: 'twitter:image',
+                    content: 'https://fairedesjeux.fr/cover.png',
+                },
+                {
+                    key: 'og:image',
+                    name: 'og:image',
+                    content: 'https://fairedesjeux.fr/cover.png',
+                },
+            ],
         },
     };
 </script>
@@ -88,22 +94,9 @@
     /*  NOTE: Tailwind doesn't by default allow us to target ::before and ::after pseudo-elements. Weird.
         We'll make a custom plugin for this or add a package later on in the developpement I guess - erika, 2020-01-19
     */
-    .featured-class__link::after {
-        @apply rounded-md absolute top-0 bottom-0 right-0 left-0;
-
-        content: "";
-        background:
-            linear-gradient(
-                to bottom,
-                transparent 0,
-                rgba(0, 0, 0, 0) 30%,
-                rgba(0, 0, 0, 0.1) 50%,
-                rgba(0, 0, 0, 0.4) 75%,
-                rgba(0, 0, 0, 0.55) 100%
-            );
-    }
-
     .featured-class {
+        max-height: 250px;
+
         &:first-of-type {
             @apply ml-0;
 
@@ -115,7 +108,7 @@
         }
 
         &:last-of-type {
-            @apply mr-0;
+            @apply mr-0 mb-0;
         }
 
         &:nth-of-type(2) {
@@ -131,7 +124,7 @@
         }
     }
 
-    .game-engine-class__link::after {
+    .featured-class__link::after {
         @apply rounded-md absolute top-0 bottom-0 right-0 left-0;
 
         content: "";
@@ -140,14 +133,53 @@
                 to bottom,
                 transparent 0,
                 rgba(0, 0, 0, 0) 30%,
-                rgba(0, 0, 0, 0.3) 70%,
-                rgba(0, 0, 0, 0.4) 80%,
-                rgba(0, 0, 0, 0.6) 100%
+                rgba(0, 0, 0, 0.1) 50%,
+                rgba(0, 0, 0, 0.4) 75%,
+                rgba(0, 0, 0, 0.55) 100%
             );
     }
 
-    .game-engine-class {
-        flex-basis: 16%;
+    .cta {
+        width: calc(50% - 1rem);
+        max-height: 255px;
+        min-height: 205px;
+    }
+
+    .cta:nth-child(2n+1) {
+        width: 100%;
+    }
+
+    @screen md {
+        .featured-class {
+            & img {
+                object-position: 50% 32%;
+            }
+        }
+    }
+
+    @screen lg {
+        .featured-class {
+            max-height: 325px;
+
+            & img {
+                object-position: 50% 45%;
+            }
+        }
+
+        .cta {
+            max-height: 280px;
+        }
+
+        /* We're forced to also use the odd selector here because otherwise the mobile rule also affect the desktop
+           version. Normally, just putting the media query stuff after the normal rule would be enough but this doesn't
+           work in this case because of Tailwind I believe - erika, 2020-07-31 */
+        .cta, .cta:nth-child(2n+1) {
+            width: calc(25% - 1rem);
+        }
+
+        .cta:nth-child(6n) {
+            width: calc(16.666667% - 1rem);
+        }
     }
 </style>
 
@@ -161,6 +193,7 @@
                     featured
                     title
                     path
+                    cover_wide
                 }
             }
         }
@@ -174,6 +207,7 @@
                     title
                     short_title
                     path
+                    cover_tall
                 }
             }
         }
@@ -186,6 +220,7 @@
                     title
                     short_title
                     path
+                    cover_tall
                 }
             }
         }

@@ -1,10 +1,11 @@
 ---
 title: "Une première contribution"
+description: "Modifiez rapidement une page du site en quelques clics grâce à votre compte GitHub."
 ---
 
 Si le projet de FaireDesJeux.fr vous emballe et que souhaitez contribuer, que ce soit en écrivant une simple correction ou une toute nouvelle formation, vous êtes au bon endroit !
 
-Dans cette partie, je vais vous montrer comment vous préparer pour travailler efficacement sur le site. Après avoir lu cette page, vous saurez comment modifier rapidement un article et consulter les *issues* de GitHub.
+Dans cette partie, je vais vous montrer comment vous préparer pour travailler efficacement sur le site. Après avoir lu cette page, vous saurez comment modifier rapidement un article et consulter les issues de GitHub.
 
 ### Créer un compte Github
 
@@ -18,14 +19,14 @@ Le code source du site se trouve à cette adresse :
 
 https://github.com/gamedevalliance/fairedesjeux.fr
 
-C'est un *dépôt*, ou *repository* en anglais. Entre nous, on appelle simplement ça le repo. Il contient tout le code qui permet de créer le site. Si vous êtes là pour écrire du contenu, vous pouvez visiter le dossier `content` et vous verrez que tout y est rangé clairement : chaque formation possède son dossier et chaque chapitre a son propre sous-dossier. Vous pouvez ouvrir des pages si vous êtes curieux, mais je vous montrerai comment les modifier dans la partie suivante.
+C'est un dépôt, ou *repository* en anglais. Entre nous, on appelle simplement ça le repo. Il contient tout le code qui permet de créer le site. Si vous êtes là pour écrire du contenu, vous pouvez visiter le dossier `content` et vous verrez que tout y est rangé clairement : chaque formation possède son dossier et chaque chapitre a son propre sous-dossier. Vous pouvez ouvrir des pages si vous êtes curieux, mais je vous montrerai comment les modifier dans la partie suivante.
 
 Afin de tous nous coordonner et voir en un clin d'oeil les tâches à réaliser, il existe un système d'issues :
 
 ![Issue sur GitHub](./issue.png)
 *https://github.com/gamedevalliance/fairedesjeux.fr/issues*
 
-Une issue permet de consulter une tâche à réaliser et d'écrire des commentaires, comme un mini-forum. Vous pouvez voir en un clin d'oeil le domaine concerné par l'issue, les personnes assignées à la tâche... Lorsque la tâche est terminée, on ferme l'issue, et elle est cachée de la liste principale.
+Une issue permet de consulter une tâche à réaliser et d'écrire des commentaires, comme dans un mini-forum. Vous pouvez voir en un clin d'oeil le domaine concerné par l'issue, les personnes assignées à la tâche... Lorsque la tâche est terminée, on ferme l'issue, et elle est cachée de la liste principale.
 
 Si vous souhaitez émettre une suggestion, annoncer que vous travaillez sur une nouvelle formation, ou encore rapporter un bug du site... Vous pouvez créer une nouvelle issue, ou bien en parler sur Discord (nous avons un salon dédié aux projets GitHub).
 
@@ -55,7 +56,7 @@ Ecrivez votre modification, puis donnez un titre descriptif à votre commit (vot
 ![](./propose-file-changes.png)
 *Un commit est un changement. Avec git, on peut consulter l'historique entier des commits et revenir dans le temps si nécessaire.*
 
-L'écran suivant vous permettra de visualiser votre pull request et de la confirmer. Une pull request, c'est une demande pour fusionner les nouveautés de votre fork avec le repo originel. Dès que vous envoyez une pull request, elle est publique et tout le monde pourra la consulter sur GitHub, même si elle n'est pas encore validée. Assurez-vous donc de bien lire la page avant de confirmer.
+L'écran suivant vous permettra de visualiser votre pull request et de la confirmer. Une pull request est une demande pour fusionner les nouveautés de votre fork avec le repo originel. Dès que vous envoyez une pull request, elle est publique et tout le monde pourra la consulter sur GitHub, même si elle n'est pas encore validée. Assurez-vous donc de bien lire la page avant de confirmer.
 
 Désormais, lorsque vous cliquerez sur "Modifier cette page", l'éditeur de texte s'affichera directement. Une nouvelle branche sera créée dans votre fork, pour que vous puissiez éditer le fichier et envoyer une pull request de cette branche. Une branche permet de travailler sur un aspect précis de votre repo sans affecter le reste.
 

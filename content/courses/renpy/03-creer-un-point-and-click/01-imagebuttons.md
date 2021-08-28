@@ -1,5 +1,6 @@
 ---
 title: "Cliquer sur un objet"
+description: "Ajoutez des mécaniques de point and click à l'aide des screens de Ren'Py. Dans cette première étape, nous allons afficher un objet sur lequel on pourra cliquer."
 ---
 
 Dans ce troisième chapitre, vous verrez comment ajouter des mécaniques de point and click à vos jeux, à l'aide des screens de Ren'Py et d'une utilisation plus poussée des variables.
@@ -22,15 +23,15 @@ label livre_recupere:
     a "Félicitations, tu l'as retrouvé !"
 ```
 
-:::marvin
+:::hypemarvin
 Mais c'est quoi un screen, au juste ?
 :::
 
-:::astride
+:::winkastride
 Ce sont tous les éléments d'interface que l'on peut ajouter en plus des personnages et des décors.
 :::
 
-:::remi
+:::profremi
 Par exemple, l'écran-titre est un screen, et le menu de sauvegarde aussi.
 :::
 

@@ -1,6 +1,6 @@
 ---
 title: "Installer un plugin"
-description: "Vous souhaitez découvrir RPG Maker ? Apprenez à faire un premier jeu avec cette série de vidéos et astuces."
+description: "De nombreux programmeurs écrivent des plugins pour les publier en accès libre sur Internet. Ajoutez de nouvelles fonctions à vos jeux simplement en les installant."
 ---
 
 De nombreux programmeurs écrivent des scripts pour les publier en accès libre sur Internet. C'est un moyen simple et rapide d'ajouter des fonctionnalités avancées à vos jeux sans savoir programmer.

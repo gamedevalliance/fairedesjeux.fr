@@ -2,9 +2,14 @@
 type: SKILL
 title: "Publier sur itch.io"
 short_title: "Publier sur itch.io"
+description: "Publiez vos premiers jeux sur Internet avec itch.io, la plateforme gratuite de référence pour les jeux indépendants."
 date: "2020-05-25"
-author: "Aurélien"
-medal: GOLD
+author: "Aurélien Dos Santos"
+medal: BRONZE
+medal_message: "Cette formation devrait être transformée en un seul chapitre au sein d'une plus grande formation \"Distribuer son jeu\". [Participer](https://github.com/gamedevalliance/fairedesjeux.fr/issues/33)"
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
 Bienvenue dans ce cours sur itch.io ! Si vous lisez ce cours, vous avez probablement déjà envoyé vos jeux à des amis en passant par des sites comme WeTransfer ou Google Drive. Aujourd'hui, je vais vous montrer comment passer à l'étape supérieure ! Dans quelques minutes, vous saurez comment publier vos premiers jeux sur une plateforme élégante, et même comment utiliser un outil d'upload avancé.

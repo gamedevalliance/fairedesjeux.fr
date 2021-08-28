@@ -38,12 +38,13 @@ module.exports = {
             },
 
             height: {
-                featuredClass: '19rem',
-                gameEngineClass: '18.5rem',
+                featuredCourse: '19rem',
+                normalCourse: '18.5rem',
+                courseCover: '19rem',
             },
 
             width: {
-                404: '40rem',
+                450: '45rem',
                 900: '90%',
                 1000: '100vw',
             },
@@ -62,6 +63,8 @@ module.exports = {
             },
             gridTemplateColumns: {
                 cont: '17% 60% 15%',
+                tab: '20% 80%',
+                mob: '100%',
             },
             gap: {
                 col: '3%',
@@ -69,80 +72,116 @@ module.exports = {
             fontSize: {
                 sm: '15px',
                 lg: '18.5px',
-                404: '7rem',
+                mobileMenu: '1.2rem',
+                big: '6rem',
             },
+
+            // Speech bubbles
+            backgroundImage: () => ({
+                marvinNeutral: "url('~@avatars/marvin.png')",
+                marvinHype: "url('~@avatars/marvin-hehe.png')",
+                marvinOof: "url('~@avatars/marvin-oof.png')",
+
+                astrideNeutral: "url('~@avatars/astride.png')",
+                astrideWink: "url('~@avatars/astride-wink.png')",
+                astrideSigh: "url('~@avatars/astride-tss.png')",
+
+                remiNeutral: "url('~@avatars/remi.png')",
+                remiProf: "url('~@avatars/remi-hum.png')",
+                remiNotLikeThis: "url('~@avatars/remi-ono.png')",
+            }),
         },
     },
     variants: {},
     plugins: [
-        ({ addBase, addComponents, config }) => {
+        ({
+            addBase, addComponents, theme,
+        }) => {
             addBase({
-                p: {
-                    color: config('theme.textColor.font'),
-                    fontFamily: config('theme.fontFamily.body'),
-                    fontSize: config('theme.fontSize.lg'),
+                'section p': {
+                    color: theme('textColor.font'),
+                    fontSize: theme('fontSize.lg'),
                     lineHeight: '1.5',
                     marginTop: '1rem',
                     marginBottom: '1rem',
-                },
-
-                a: {
-                    color: config('theme.textColor.astride'),
-                    textDecoration: 'none',
-                    borderBottomWidth: '1px',
-                    borderStyle: 'solid',
-                    borderColor: config('theme.textColor.astride'),
-
-                    '&:hover': {
-                        color: config('theme.textColor.marvin'),
-                        borderColor: config('theme.textColor.marvin'),
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
                     },
                 },
 
-                img: {
+                a: {
+                    color: theme('textColor.astride'),
+                    textDecoration: 'none',
+                    borderBottomWidth: '1px',
+                    borderStyle: 'solid',
+                    borderColor: theme('textColor.astride'),
+
+                    '&:hover': {
+                        color: theme('textColor.marvin'),
+                        borderColor: theme('textColor.marvin'),
+                    },
+                },
+
+                'img, iframe': {
                     maxWidth: '100%',
                     marginLeft: 'auto',
                     marginRight: 'auto',
                 },
 
-                h2: {
-                    color: config('theme.textColor.astride'),
-                    fontFamily: config('theme.fontFamily.title'),
-                    fontSize: config('theme.fontSize.5xl'),
-                    fontWeight: '700',
-                    lineHeight: '1.25',
-                    letterSpacing: config('theme.letterSpacing.title'),
+                video: {
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
                     marginTop: '1rem',
                     marginBottom: '1rem',
                 },
 
+                h2: {
+                    color: theme('textColor.astride'),
+                    fontFamily: theme('fontFamily.title'),
+                    fontSize: theme('fontSize.5xl'),
+                    fontWeight: '700',
+                    lineHeight: '1.25',
+                    letterSpacing: theme('letterSpacing.title'),
+                    marginTop: '1rem',
+                    marginBottom: '1rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.4xl'),
+                    },
+                },
+
                 h3: {
-                    color: config('theme.textColor.remi'),
-                    fontFamily: config('theme.fontFamily.title'),
-                    fontSize: config('theme.fontSize.3xl'),
+                    color: theme('textColor.remi'),
+                    fontFamily: theme('fontFamily.title'),
+                    fontSize: theme('fontSize.3xl'),
                     fontWeight: '700',
                     lineHeight: '1.5',
-                    letterSpacing: config('theme.letterSpacing.title'),
+                    letterSpacing: theme('letterSpacing.title'),
                     marginTop: '2rem',
                     marginBottom: '0.5rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.2xl'),
+                    },
                 },
 
                 h4: {
-                    color: config('theme.textColor.font'),
-                    fontFamily: config('theme.fontFamily.title'),
-                    fontSize: config('theme.fontSize.xl'),
+                    color: theme('textColor.font'),
+                    fontFamily: theme('fontFamily.title'),
+                    fontSize: theme('fontSize.xl'),
                     fontWeight: '700',
                     lineHeight: '1.5',
-                    letterSpacing: config('theme.letterSpacing.title'),
+                    letterSpacing: theme('letterSpacing.title'),
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.xl'),
+                    },
                 },
 
                 h5: {
-                    color: config('theme.textColor.font-2'),
-                    fontFamily: config('theme.fontFamily.title'),
-                    fontWeight: '600',
-                    textAlign: 'center',
+                    color: theme('textColor.font-2'),
+                    fontFamily: theme('fontFamily.title'),
+                    fontSize: '1.20rem',
+                    fontWeight: '700',
                     lineHeight: '1.5',
-                    letterSpacing: config('theme.letterSpacing.title'),
+                    letterSpacing: theme('letterSpacing.title'),
                     marginLeft: 'auto',
                     marginRight: 'auto',
                     marginBottom: '1rem',
@@ -154,18 +193,18 @@ module.exports = {
                 - Nev 29/04/2020
 
                 pre: {
-                    backgroundColor: config('theme.backgroundColor.area'),
-                    fontSize: config('theme.fontSize.sm'),
+                    backgroundColor: theme('backgroundColor.area'),
+                    fontSize: theme('fontSize.sm'),
                     marginBottom: '1rem',
                     marginTop: '1rem',
                     border: '0px',
-                    borderRadius: config('theme.borderRadius.md'),
+                    borderRadius: theme('borderRadius.md'),
                     textShadow: 'none',
                     boxShadow: 'none',
                 },
                 code: {
-                    backgroundColor: config('theme.backgroundColor.body'),
-                    fontSize: config('theme.fontSize.sm'),
+                    backgroundColor: theme('backgroundColor.body'),
+                    fontSize: theme('fontSize.sm'),
                     paddingTop: '0.25rem',
                     paddingBottom: '0.25rem',
                     paddingLeft: '0.5rem',
@@ -173,24 +212,39 @@ module.exports = {
                     marginBottom: '1rem',
                     marginTop: '1rem',
                     border: '0px',
-                    borderRadius: config('theme.borderRadius.md'),
+                    borderRadius: theme('borderRadius.md'),
                     textShadow: 'none',
                     boxShadow: 'none',
                 },
                 */
 
-                ul: {
-                    color: config('theme.textColor.font'),
-                    lineHeight: config('theme.lineHeight.normal'),
+                'ul, ol': {
+                    color: theme('textColor.font'),
+                    fontSize: theme('fontSize.lg'),
+                    lineHeight: theme('lineHeight.normal'),
                     marginTop: '1rem',
                     marginBottom: '1rem',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
+                },
+
+                /*
+                    NOTE : The next two rules are for second level lists - Nev, 14/08/2020
+                */
+                'li > ul > li, li > ol > li': {
+                    marginLeft: '2rem',
+                },
+
+                'li > p': {
+                    display: 'inline',
                 },
 
                 table: {
-                    color: config('theme.textColor.font'),
-                    fontFamily: config('theme.fontFamily.body'),
-                    fontSize: config('theme.fontSize.lg'),
-                    lineHeight: config('theme.lineHeight.normal'),
+                    color: theme('textColor.font'),
+                    fontFamily: theme('fontFamily.body'),
+                    fontSize: theme('fontSize.lg'),
+                    lineHeight: theme('lineHeight.normal'),
                     width: 'auto',
                     maxWidth: '100%',
                     marginTop: '1rem',
@@ -199,20 +253,15 @@ module.exports = {
                     marginRight: 'auto',
                     borderSpacing: '0',
                     tableLayout: 'fixed',
+                    '@media (max-width: 640px)': {
+                        fontSize: theme('fontSize.base'),
+                    },
                 },
 
-                td: {
+                'td, th': {
                     borderBottomWidth: '1px',
                     borderStyle: 'solid',
-                    borderColor: config('theme.textColor.font-2'),
-                    margin: '1rem',
-                    textAlign: 'top',
-                },
-
-                th: {
-                    borderBottomWidth: '1px',
-                    borderStyle: 'solid',
-                    borderColor: config('theme.textColor.font-2'),
+                    borderColor: theme('textColor.font-2'),
                     margin: '1rem',
                     textAlign: 'top',
                 },
@@ -222,24 +271,186 @@ module.exports = {
                     scrollBehavior: 'smooth',
                 },
                 '.area': {
-                    backgroundColor: config('theme.backgroundColor.area'),
+                    backgroundColor: theme('backgroundColor.area'),
                     paddingTop: '0.75rem',
                     paddingBottom: '0.75rem',
                     paddingLeft: '1rem',
                     paddingRight: '1rem',
                     border: '0px',
-                    borderRadius: config('theme.borderRadius.md'),
+                    borderRadius: theme('borderRadius.md'),
+                },
+                '.button': {
+                    margin: '0 0.5rem',
+                    textAlign: 'center',
+                    color: theme('textColor.font'),
+                    border: 'none',
+                    fontWeight: 'bold',
+                    '&:hover': {
+                        color: theme('textColor.font'),
+                    },
+                    '&.disabled': {
+                        opacity: '0.75',
+                        '&>div': {
+                            backgroundColor: theme('colors.gray.800'),
+                            color: theme('colors.gray.600'),
+                        },
+                    },
+                    '&>div': {
+                        backgroundColor: theme('textColor.remi'),
+                        borderRadius: theme('borderRadius.md'),
+                        width: '100%',
+                        display: 'inline-block',
+                        textAlign: 'center',
+                        padding: '0.75rem 1rem',
+                        userSelect: 'none',
+                    },
+                    '&:not(.disabled)>div:hover': {
+                        backgroundColor: theme('textColor.marvin'),
+                    },
                 },
                 '.smola': {
-                    color: config('theme.textColor.font-3'),
+                    color: theme('textColor.font-3'),
                     border: 'none',
                     textDecoration: 'none',
+                    fontSize: '15px',
 
                     '&:hover': {
-                        color: config('theme.textColor.font-2'),
+                        color: theme('textColor.font-2'),
                         textDecoration: 'underline',
                     },
                 },
+
+                // Speech bubbles
+                '.bubble': {
+                    '& .bubble-content': {
+                        display: 'inline-block',
+                        textAlign: 'left',
+                        backgroundColor: theme('backgroundColor.area'),
+                        padding: '0.5rem 2.5rem',
+                        margin: '1rem -20px',
+                        borderRadius: theme('borderRadius.full'),
+                        maxWidth: '89%',
+                    },
+                    '& h5': {
+                        display: 'inline-block',
+                        margin: '0',
+                        padding: '0.25rem 1.25rem',
+                        position: 'relative',
+                        fontSize: theme('fontSize.lg'),
+                        textAlign: 'center',
+                        backgroundColor: theme('backgroundColor.area-2'),
+                        borderRadius: theme('borderRadius.lg'),
+                        top: '2rem',
+                        marginTop: '-2rem',
+                    },
+
+                    '&::after': {
+                        content: '""',
+                        width: '100px',
+                        height: '100px',
+                        bottom: '0',
+                        position: 'relative',
+                        display: 'inline-block',
+                        backgroundSize: 'cover',
+                    },
+                },
+
+                // Speech Bubbles - Marvin
+                '.bubble-marvin, .bubble-hypemarvin, .bubble-oofmarvin': {
+                    textAlign: 'right',
+
+                    '& h5': {
+                        color: theme('colors.marvin'),
+                        right: '116px',
+                    },
+
+                    '&::after': {
+                        float: 'right',
+                    },
+                },
+
+                '.bubble-marvin': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.marvinNeutral'),
+                    },
+                },
+
+                '.bubble-hypemarvin': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.marvinHype'),
+                    },
+                },
+
+                '.bubble-oofmarvin': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.marvinOof'),
+                    },
+                },
+
+                // Speech Bubbles - Astride
+                '.bubble-astride, .bubble-winkastride, .bubble-sighastride': {
+                    textAlign: 'left',
+
+                    '& h5': {
+                        color: theme('colors.astride'),
+                        left: '116px',
+                    },
+
+                    '&::after': {
+                        float: 'left',
+                    },
+                },
+
+                '.bubble-astride': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.astrideNeutral'),
+                    },
+                },
+
+                '.bubble-winkastride': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.astrideWink'),
+                    },
+                },
+
+                '.bubble-sighastride': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.astrideSigh'),
+                    },
+                },
+
+                // Speech Bubbles - Rémi
+                '.bubble-remi, .bubble-profremi, .bubble-notlikethisremi': {
+                    textAlign: 'left',
+
+                    '& h5': {
+                        color: theme('colors.remi'),
+                        left: '116px',
+                    },
+
+                    '&::after': {
+                        float: 'left',
+                    },
+                },
+
+                '.bubble-remi': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.remiNeutral'),
+                    },
+                },
+
+                '.bubble-profremi': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.remiProf'),
+                    },
+                },
+
+                '.bubble-notlikethisremi': {
+                    '&::after': {
+                        backgroundImage: theme('backgroundImage.remiNotLikeThis'),
+                    },
+                },
+
             });
         },
     ],

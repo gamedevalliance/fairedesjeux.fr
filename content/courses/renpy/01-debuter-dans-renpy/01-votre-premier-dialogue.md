@@ -1,7 +1,12 @@
 ---
 title: "Votre premier dialogue"
-description: "Téléchargez Ren'Py gratuitement et apprenez les bases du moteur pour créer votre premier projet."
+description: "Dans le premier chapitre de ce cours sur Ren'Py, nous allons créer en quelques minutes un dialogue complet entre plusieurs personnages."
 ---
+
+Dans ce premier chapitre, nous allons créer en quelques minutes un dialogue complet entre plusieurs personnages.
+
+[[Video src="/videos/renpy/01-debuter-dans-renpy/demo.mp4" muted loop controls poster="/videos/renpy/01-debuter-dans-renpy/poster.png"]]
+*Le résultat final de ce chapitre.*
 
 ### Télécharger le logiciel
 
@@ -15,7 +20,7 @@ La fenêtre qui s'ouvre devant vous est le lanceur de Ren'Py (ou *launcher*). Vo
 
 Deux projets sont déja disponibles : le tutoriel donne plein de renseignements assez poussés sur toutes les possibilités de Ren'Py, tandis que "La Question" est une petite histoire d'exemple avec deux personnages et différents décors. N'hésitez pas à l'essayer et à examiner son script !
 
-:::astride
+:::winkastride
 Ces deux projets contiennent aussi des images que vous pouvez récupérer pour vous entraîner.
 :::
 
@@ -29,7 +34,7 @@ Comme une pièce de théatre ou un film, un visual novel suit un script contenan
 
 Pour modifier ce fameux script, cliquez sur `script.rpy` en haut à droite du launcher. Ren'Py va alors vous demander quel éditeur de texte vous souhaitez utiliser.
 
-:::marvin
+:::hypemarvin
 Un éditeur de texte ? Comme Word ?
 :::
 

@@ -2,19 +2,26 @@
 type: ENGINE
 title: "Créer des visual novels avec Ren'Py !"
 short_title: "Ren'Py"
-date: "2020-04-18"
-author: "Aurélien"
-medal: PLATINUM
-featured: 1
-header: 1
+description: "Ecrivez des histoires à embranchements sans jamais avoir programmé auparavant avec Ren'Py, un logiciel gratuit. Approfondissez vos connaissances en créant des systèmes de gameplay et un point and click."
+date: "2020-07-28"
+author: "Nev, Aurélien Dos Santos"
+medal: GOLD
+featured: 2
+header: 2
+video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5uqhCaspVB4jFDkkHrkFUBV"
+cover_wide: ./cover-wide.png
+cover_tall: ./cover-tall.png
+opengraph_image: cover_wide
 ---
 
-Ren'Py est un moteur entièrement gratuit et open source permettant de créer des visual novels, un genre de jeu assez populaire au Japon et proche des livres dont vous êtes le héros.
+Si vous souhaitez écrire des histoires à embranchements mais que vous n'avez jamais programmé, Ren'Py est fait pour vous ! C'est un moteur de jeu entièrement gratuit et open source permettant de créer des visual novels, un genre de jeu assez populaire au Japon et proche des livres dont vous êtes le héros.
+
+Son utilisation est très simple et place l'écriture au centre de l'expérience, tout en proposant d'ajouter de l'interactivité grâce à des notions de programmation que vous découvrirez au fur et à mesure.
 
 ![Screenshot de Butterfly Soup](./butterfly-soup.png)
-*Les visual novels contiennent généralement des dialogues et des choix. (Butterfly Soup)*
+*Les visual novels contiennent des dialogues et des choix. (Butterfly Soup)*
 
-La simplicité du langage de Ren'Py le rend idéal pour un écrivain sans aucune notion de programmation, mais on peut aussi étendre les fonctionnalités du jeu à sa guise en écrivant du Python. Il est par exemple assez simple de programmer des phases de point and click ou de RPG. Les possibilités sont nombreuses et pour le constater, il suffit de regarder les jeux créés avec Ren'Py [sur itch.io](https://itch.io/games/newest/made-with-renpy) par exemple.
+Ren'Py est peut-être simple, mais il est puissant ! Vous pouvez étendre les fonctionnalités du jeu à votre guise en écrivant du Python, pour créer des phases de point and click, de RPG, ou encore des mini-jeux. Les possibilités sont nombreuses et pour le constater, il suffit de regarder les jeux créés avec Ren'Py [sur itch.io](https://itch.io/games/newest/made-with-renpy) par exemple.
 
 ![Screenshot de Doki Doki Literature Club](./doki-doki-literature-club.png)
 *Un système de carnet programmé dans Ren'Py. (Doki Doki Literature Club)*

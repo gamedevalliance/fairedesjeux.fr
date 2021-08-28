@@ -1,5 +1,6 @@
 ---
 title: "Statistiques de personnage"
+description: "Dans cette étape, on va créer un mini-jeu de gestion avec des statistiques qui évolueront d'après les actions que l'on choisira chaque jour."
 ---
 
 Dans cette étape, on va créer un mini-jeu de gestion, dans lequel le personnage aura des points de force, des points de fatigue... Et ces statistiques évolueront d'après les actions que l'on choisira chaque jour.

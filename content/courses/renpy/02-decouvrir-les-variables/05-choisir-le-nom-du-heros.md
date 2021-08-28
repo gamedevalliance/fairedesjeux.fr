@@ -1,5 +1,6 @@
 ---
 title: "Choisir le nom du héros"
+description: "Laissez le choix du nom aux joueurs et joueuses pour qu'elles s'approprient encore plus leur personnage !"
 ---
 
 Les visual novels sont souvent basés sur des choix et des fins multiples. Vous vous êtes donc peut-être déjà demandé comment laisser le choix du nom aux joueurs et joueuses pour qu'elles s'approprient encore plus leur personnage !
@@ -51,7 +52,7 @@ $ nom_du_perso = nom_du_perso.strip()
 
 Ici, on applique cette fonction au texte de `nom_du_perso`, et elle renvoie un nouveau texte sans les espaces au début et à la fin.
 
-:::marvin
+:::hypemarvin
 Et si... on écrit rien du tout ?
 :::
 

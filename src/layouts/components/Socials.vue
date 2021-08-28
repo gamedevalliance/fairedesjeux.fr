@@ -1,5 +1,8 @@
 <template>
-    <div class="inline-block text-xl text-font-2">
+    <div class="inline-block text-3xl sm:text-xl text-font-2">
+        <a href="https://www.youtube.com/channel/UCCjlo6Ihet_T3X6bKLJzPsA" class="youtube" title="Youtube" aria-label="Youtube">
+            <font-awesome :icon="['fab', 'youtube']" />
+        </a>
         <a href="https://twitter.com/gamedevalliance" class="twitter" title="Twitter" aria-label="Twitter">
             <font-awesome :icon="['fab', 'twitter']" />
         </a>
@@ -18,18 +21,29 @@
     }
 
     a {
-        @apply inline-block ml-4 border-none text-font align-middle;
+        @apply inline-block ml-6 border-none text-font align-middle;
+
+        &.youtube:hover {
+            @apply text-red-700;
+        }
 
         &.twitter:hover {
             @apply text-blue-400;
         }
 
         &.facebook:hover {
-            @apply text-blue-800;
+            @apply text-blue-700;
         }
 
         &.github:hover {
-            @apply text-black;
+            @apply text-white;
         }
     }
+
+    @screen sm {
+        a {
+            @apply ml-4;
+        }
+    }
+
 </style>

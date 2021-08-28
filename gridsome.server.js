@@ -10,6 +10,10 @@
 /* eslint-disable consistent-return */
 
 const fs = require('fs');
+const unified = require('unified');
+const markdown = require('remark-parse');
+const html = require('remark-html');
+const axios = require('axios');
 
 // eslint-disable-next-line func-names
 module.exports = function (api) {
@@ -23,6 +27,21 @@ module.exports = function (api) {
         */
         const chapterCollection = addCollection('Chapter');
         chapterCollection.addReference('sections', '[Section]');
+
+        /*
+        NOTE: Don't mind me, I'm just getting the Github API for the "contributors" page - Nev, 2020-08-07
+        */
+        const contributorCollection = addCollection('Contributor');
+        axios.get('https://api.github.com/repos/gamedevalliance/fairedesjeux.fr/contributors').then((resp) => {
+            Object.values(resp.data).forEach((contributor) => {
+                contributorCollection.addNode({
+                    name: contributor.login,
+                    profile: contributor.html_url,
+                    commits: contributor.contributions,
+                    id: contributor.id,
+                });
+            });
+        });
     });
 
     /*
@@ -45,55 +64,47 @@ module.exports = function (api) {
             options.course = options.chapter.substring(0, options.chapter.indexOf('/'));
 
             if (tempMap[options.chapter] === undefined) {
+                /*
+                    LORE: We used to filter files ending with ".md", but now that there are "chapter.md"
+                    (and for safety in the future) we add a much more precise filter "charAt(2) === '-'"
+                     - Nev, 2020-10-31
+                */
                 const sectionPath = `./content/courses/${options.fileInfo.directory}/`;
-                const sectionCount = fs.readdirSync(sectionPath).filter((file) => file.endsWith('.md')).length;
+                const sectionCount = fs.readdirSync(sectionPath).filter((file) => file.charAt(2) === '-' && file.endsWith('.md')).length;
 
                 const chapterPath = `./content/courses/${options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/', 2))}/`;
                 const chapterCount = fs.readdirSync(chapterPath).filter((dir) => dir.charAt(2) === '-').length;
 
                 tempMap[options.chapter] = {
-                    sections: [], video: '', sectionCount, chapterCount,
+                    sections: [], sectionCount, chapterCount,
                 };
             }
 
-            if (options.fileInfo.name === '00-video') {
-                tempMap[options.chapter].video = options.id;
+            tempMap[options.chapter].sections.push(options.id);
 
-                /*
-                    For videos we assume that if a previous chapter exist, the video for it exists as well.
-                    There shouldn't be any cases where that isn't the case, erika - 2020-05-24
-                */
-                if (lastSection) {
-                    if (lastSection.course === options.course) {
-                        options.previous = `${lastSection.chapter}/00`;
-                    }
+            if (lastSection) {
+                if (lastSection.course === options.course) {
+                    options.previous = lastSection.name;
                 }
-            } else {
-                tempMap[options.chapter].sections.push(options.id);
-
-                if (lastSection) {
-                    if (lastSection.course === options.course) {
-                        options.previous = lastSection.name;
-                    }
-                }
-
-                // Weird stuff
-                const currentId = parseInt(options.name.slice(-2), 10);
-                const currentChapterId = parseInt(options.chapter.slice(-2), 10);
-                if (tempMap[options.chapter].sectionCount > currentId) {
-                    options.next = `${options.chapter}/${String(currentId + 1).padStart(2, '0')}`;
-                } else if (tempMap[options.chapter].chapterCount > currentChapterId) {
-                    options.next = `${options.course}/${String(currentChapterId + 1).padStart(2, '0')}/01`;
-                }
-
-                lastSection = options;
             }
 
+            // Weird stuff
+            const currentId = parseInt(options.name.slice(-2), 10);
+            const currentChapterId = parseInt(options.chapter.slice(-2), 10);
+            if (tempMap[options.chapter].sectionCount > currentId) {
+                options.next = `${options.chapter}/${String(currentId + 1).padStart(2, '0')}`;
+            } else if (tempMap[options.chapter].chapterCount > currentChapterId) {
+                options.next = `${options.course}/${String(currentChapterId + 1).padStart(2, '0')}/01`;
+            }
+
+            lastSection = options;
 
             return {
                 ...options,
             };
         }
+
+        //
 
         if (options.internal.typeName === 'Chapter') {
             options.name = options.fileInfo.directory.substring(0, options.fileInfo.directory.indexOf('/') + 3);
@@ -103,8 +114,6 @@ module.exports = function (api) {
             if (tempMap[options.name] !== undefined) {
                 tempMap[options.name].sections.forEach((section) => tempList.push(section));
                 options.sections = tempList;
-
-                options.video = tempMap[options.name].video;
             }
 
             tempMap2[options.name] = options.course;
@@ -126,6 +135,23 @@ module.exports = function (api) {
             });
 
             options.chapters = tempList;
+
+            if (options.opengraph_image === 'cover_wide' || options.opengraph_image === null) {
+                options.opengraph_image = options.cover_wide;
+            } else if (options.opengraph_image === 'cover_tall') {
+                options.opengraph_image = options.cover_tall;
+            }
+
+            if (options.medal_message) {
+                unified()
+                    .use(markdown)
+                    .use(html)
+                    .process(options.medal_message, (err, result) => {
+                        if (err) throw err;
+
+                        options.medal_message = String(result);
+                    });
+            }
 
             return {
                 ...options,

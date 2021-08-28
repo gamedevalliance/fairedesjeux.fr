@@ -1,21 +1,28 @@
 const tailwind = require('tailwindcss');
-const postcssPresetEnv = require('postcss-preset-env');
+const postcssNested = require('postcss-nested');
 const slugify = require('@sindresorhus/slugify');
 
 const postcssPlugins = [
-    postcssPresetEnv({ stage: 0, autoprefixer: false }),
+    postcssNested,
     tailwind('./tailwind.config.js'),
 ];
 
 module.exports = {
     siteName: 'FaireDesJeux.fr',
+    siteUrl: 'https://fairedesjeux.fr',
+    siteDescription: 'FaireDesJeux.fr est un site d\'apprentissage qui vous donne accès à des tutoriels gratuits pour créer vos jeux vidéo. Suivez les cours à l\'écrit ou en vidéo !',
+    titleTemplate: '%s · FaireDesJeux.fr',
+    icon: {
+        favicon: './static/favicon/favicon.png',
+        touchicon: './static/favicon/touchicon.png',
+    },
     plugins: [
         {
             use: '@gridsome/source-filesystem',
             options: {
                 typeName: 'Section',
                 baseDir: './content/courses/',
-                path: ['**/*.md', '!**/course.md'],
+                path: ['**/*.md', '!**/course.md', '!**/chapter.md'],
             },
         },
         {
@@ -23,7 +30,7 @@ module.exports = {
             options: {
                 typeName: 'Chapter',
                 baseDir: './content/courses',
-                path: '**/chapter.json',
+                path: '**/chapter.md',
             },
         },
         {
@@ -70,6 +77,11 @@ module.exports = {
             plugins: [
                 '@gridsome/remark-prismjs',
                 'gridsome-plugin-remark-youtube',
+                'remark-shortcodes',
+                'gridsome-remark-video-shortcode',
+                /*
+                    NOTE : Used for speech bubbles with our mascots - Nev, 14/08/2020
+                */
                 ['gridsome-plugin-remark-container', {
                     customTypes: {
                         astride: {
@@ -81,6 +93,24 @@ module.exports = {
                         remi: {
                             defaultTitle: 'Rémi',
                         },
+                        winkastride: {
+                            defaultTitle: 'Astride',
+                        },
+                        sighastride: {
+                            defaultTitle: 'Astride',
+                        },
+                        oofmarvin: {
+                            defaultTitle: 'Marvin',
+                        },
+                        hypemarvin: {
+                            defaultTitle: 'Marvin',
+                        },
+                        profremi: {
+                            defaultTitle: 'Rémi',
+                        },
+                        notlikethisremi: {
+                            defaultTitle: 'Rémi',
+                        },
                     },
                     useDefaultTypes: false,
                     icons: 'none',
@@ -90,7 +120,7 @@ module.exports = {
         },
     },
     chainWebpack: (config) => {
-        config.resolve.alias.set('@coursesCovers', '@/assets/courses');
-        config.resolve.alias.set('@avatar', '@/assets/avatar');
+        config.resolve.alias.set('@avatars', '@/assets/avatar');
+        config.resolve.alias.set('@medals', '@/assets/medals');
     },
 };

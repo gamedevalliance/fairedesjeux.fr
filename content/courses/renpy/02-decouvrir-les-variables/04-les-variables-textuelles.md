@@ -1,5 +1,6 @@
 ---
 title: "Les variables textuelles"
+description: "Vous commencez à vous habituer aux variables ? Laissez-moi vous présenter un dernier type de variable essentiel : le texte (ou chaîne de caractères)."
 ---
 
 Vous commencez à vous habituer aux variables ? Laissez-moi vous présenter un dernier type de variable essentiel : le texte (ou chaîne de caractères). Dans cet exemple, on pourra parler à un vendeur et lui acheter soit du chocolat, soit du reblochon. La variable contiendra directement le texte `"chocolat"` ou `"reblochon"`.

@@ -2,9 +2,9 @@
     <div class="layout bg-body font-body">
         <Header />
         <transition name="fade" appear>
-            <main>
+            <div class="container mx-auto">
                 <slot></slot>
-            </main>
+            </div>
         </transition>
         <Footer />
     </div>
@@ -18,10 +18,6 @@
         components: {
             Header,
             Footer,
-        },
-        props: {
-            header: Boolean,
-
         },
     };
 </script>

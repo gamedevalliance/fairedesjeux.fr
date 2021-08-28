@@ -1,129 +1,101 @@
 <template>
     <Layout>
-        <article class="container mx-auto">
-            <div class="grid grid-cols-cont gap-col">
-                <!-- left nav -->
-                <aside class="mt-12">
-                    <div v-for="chapter in $page.section.chapters"
-                         :key="chapter.id"
-                         class="area text-font mb-6"
-                    >
-                        <Chapter :chapter="chapter" :isopen="true" />
-                    </div>
-                </aside>
-                <!-- content -->
-                <main>
-                    <div>
-                        <h2 v-html="$page.section.title"></h2>
-                    </div>
+        <div class="grid grid-cols-mob lg:grid-cols-tab xl:grid-cols-cont gap-col px-4 lg:px-0">
+            <!-- left nav -->
+            <aside class="mt-12 hidden lg:block">
+                <div v-for="chapter in $page.section.chapters" :key="chapter.id" class="area text-font mb-6">
+                    <Chapter :chapter="chapter" :isopen="true" />
+                </div>
+            </aside>
 
-                    <!-- medal start -->
-                    <g-image
-                        :src="require(`!!assets-loader?quality=100!@coursesCovers/${$page.section.name}/cover-wide.png`)"
-                        class="rounded-md h-featuredClass w-full object-cover"
-                    />
-                    <div v-if="$page.section.medal === 'BRONZE'" class="bg-red-900 rounded-md mt-4">
-                        <p class="px-4 py-2 text-sm">
-                            <g-image
-                                src="~/assets/medals/medal-bronze.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
-                                Cette formation ne correspond pas à
-                                <g-link to="/contribuer/avant-propos/charte-de-qualite/">
-                                    nos critères de qualité
-                                </g-link> :
-                            </span>
-                            <br />
-                            {{ $page.section.medal_message }}
-                        </p>
-                    </div>
-                    <div v-if="$page.section.medal === 'SILVER'" class="bg-area text-base rounded-md mt-4">
-                        <p class="px-4 py-2 text-sm">
-                            <g-image
-                                src="~/assets/medals/medal-argent.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
-                                Cette formation ne correspond plus à
-                                <g-link to="/contribuer/avant-propos/charte-de-qualite/">
-                                    nos critères de qualité
-                                </g-link> :
-                            </span>
-                            <br />
-                            {{ $page.section.medal_message }}
-                        </p>
-                    </div>
-                    <div v-if="$page.section.medal === 'GOLD'" class="text-base mt-4">
-                        <p class="px-4 py-2 text-sm">
-                            <g-image
-                                src="~/assets/medals/medal-or.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
-                                Vous lisez une formation de qualité.
-                            </span>
-                        </p>
-                    </div>
-                    <div v-if="$page.section.medal === 'PLATINUM'" class="text-base mt-4">
-                        <p class="px-4 py-2 text-sm">
-                            <g-image
-                                src="~/assets/medals/medal-platine.png"
-                                class="h-5 w-5 inline-block object-cover"
-                            />
-                            <span class="font-bold">
-                                Vous lisez notre meilleure formation !
-                            </span>
-                        </p>
-                    </div>
-                    <!-- medal end -->
+            <main>
+                <article>
+                    <header>
+                        <h2>{{ $page.section.title }}</h2>
 
-                    <p v-html="$page.section.content"></p>
+                        <g-image
+                            :src="$page.section.opengraph_image"
+                            class="rounded-md h-courseCover w-full object-cover"
+                        />
+                    </header>
 
-                    <h3>Commencer la formation en mode..</h3>
-                    <div class="flex justify-center">
-                        <g-link :to="$page.section.chapters[0].sections[0].path"
-                                class="mx-2 text-center text-font border-none font-bold hover:text-font"
-                        >
-                            <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
-                                Texte
-                            </div>
-                        </g-link>
+                    <Medal :rank="$page.section.medal" />
 
-                        <g-link v-if="$page.section.chapters[0].video"
-                                :to="$page.section.chapters[0].video.path"
-                                class="mx-2 text-center text-font border-none font-bold hover:text-font"
-                        >
-                            <div class="bg-remi hover:bg-marvin rounded-md w-64 inline-block text-center px-4 py-3 duration-200">
-                                Vidéo
-                            </div>
-                        </g-link>
-                        <div
-                            v-else
-                            class="mx-2 text-center text-font border-none font-bold opacity-75"
-                            title="Vidéo indisponible pour le moment!"
-                        >
-                            <div class="bg-gray-800 rounded-md w-64 inline-block text-center px-4 py-3 text-gray-600">
-                                Vidéo
-                            </div>
-                        </div>
+                    <section v-html="$page.section.content"></section>
+
+                    <h3>Commencer la formation en mode...</h3>
+                    <div class="flex justify-center mt-4">
+                        <Button :src="$page.section.chapters[0].sections[0].path" class="w-64">
+                            Texte
+                        </Button>
+
+                        <Button v-if="$page.section.video" :src="$page.section.video" class="w-64">
+                            Vidéo
+                        </Button>
+                        <Button v-else disabled class="w-64" title="Vidéo indisponible pour le moment!">
+                            Vidéo
+                        </Button>
                     </div>
-                </main>
-                <!-- right nav -->
+                </article>
+            </main>
+
+            <!-- right nav -->
+            <div class="hidden xl:block">
                 <Toc />
             </div>
-        </article>
+        </div>
     </Layout>
 </template>
 
 <script>
     import Chapter from './components/Chapter.vue';
     import Toc from './components/Toc.vue';
+    import Button from '../layouts/components/Button.vue';
+    import Medal from './components/Medal.vue';
 
     export default {
         components: {
             Chapter,
             Toc,
+            Button,
+            Medal,
+        },
+        metaInfo() {
+            return {
+                title: this.$page.section.title,
+                meta: [
+                    {
+                        key: 'description',
+                        name: 'description',
+                        content: this.$page.section.description,
+                    },
+                    {
+                        key: 'og:title',
+                        name: 'og:title',
+                        content: this.$page.section.title,
+                    },
+                    {
+                        key: 'og:description',
+                        name: 'og:description',
+                        content: this.$page.section.description,
+                    },
+                    {
+                        key: 'twitter:card',
+                        name: 'twitter:card',
+                        content: 'summary_large_image',
+                    },
+                    {
+                        key: 'twitter:image',
+                        name: 'twitter:image',
+                        content: this.$page.section.opengraph_image.src,
+                    },
+                    {
+                        key: 'og:image',
+                        name: 'og:image',
+                        content: this.$page.section.opengraph_image.src,
+                    },
+                ],
+            };
         },
     };
 </script>
@@ -135,8 +107,10 @@
             title
             name
             content
+            description
             medal
             medal_message
+            video
             fileInfo {
                 path
             }
@@ -144,13 +118,11 @@
                 anchor
                 value
             }
+            cover_wide
+            opengraph_image
             chapters(sort: {by: "name", order:ASC}) {
                 id
                 title
-                video {
-                    path
-                    title
-                }
                 sections(sort: {by: "fileInfo.name", order:ASC}) {
                     id
                     title
@@ -164,11 +136,27 @@
 <style lang="postcss" scoped>
     article >>> {
         /*
-            NOTE: This style is used for captions of images and videos. Very practical for the authors
-            as they only have to do a line return and write in italics. - nev, 2020-04-24
-        */
-        & img + noscript + em {
-            @apply text-center text-sm text-font-2 mt-6 mb-0 block;
+                NOTE: This style is used for captions of images and videos. Very practical for the authors
+                as they only have to do a line return and write in italics. - nev, 2020-04-24
+            */
+        & img + noscript + em, & video + p > em {
+            @apply text-center text-sm text-font-2 mt-4 mb-0 block;
+        }
+
+        & ul {
+            @apply list-disc list-inside;
+        }
+
+        & ol {
+            @apply list-decimal list-inside;
+        }
+
+        & li {
+            @apply my-2;
+        }
+
+        & li > code, & p > code {
+            @apply px-2 py-1;
         }
 
         & pre, & code {
@@ -178,10 +166,6 @@
             box-shadow: none;
         }
 
-        & code {
-            @apply px-2 py-1;
-        }
-
         & blockquote {
             @apply border-solid border-l-4 border-astride;
 
@@ -189,6 +173,14 @@
                 @apply m-5 italic;
             }
         }
-    }
 
+        /* TODO: Move this to tailwind.config.js - erika, 2020-09-04 */
+        @media (max-width: 640px) {
+            & .bubble::after {
+                width: 75px;
+                height: 75px;
+                top: 5px;
+            }
+        }
+    }
 </style>

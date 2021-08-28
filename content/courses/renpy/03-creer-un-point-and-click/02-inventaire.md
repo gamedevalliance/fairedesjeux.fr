@@ -1,5 +1,6 @@
 ---
 title: "L'inventaire"
+description: "Affichez un inventaire et ajoutez des objets avec les propriétés de votre choix."
 ---
 
 ### Un peu de théorie
