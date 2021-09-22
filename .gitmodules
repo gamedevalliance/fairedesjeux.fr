@@ -1,0 +1,3 @@
+[submodule "static/jeux-pico-8"]
+	path = static/jeux-pico-8
+	url = https://github.com/gamedevalliance/jeux-pico-8
