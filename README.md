@@ -23,7 +23,7 @@ Depuis n’importe quelle page du site, cliquez sur *Modifier cette page* dans l
 
 ### 2. Préparer le dépôt
 
-1. `git clone https://github.com/gamedevalliance/fairedesjeux.fr`
+1. `git clone --recursive https://github.com/gamedevalliance/fairedesjeux.fr`
 2. `cd fairedesjeux.fr`
 3. (`sudo`) `npm install` pour télécharger les dépendances dans le dossier.
 4. (`sudo`) `npm install --global @gridsome/cli` pour installer Gridsome CLI.
