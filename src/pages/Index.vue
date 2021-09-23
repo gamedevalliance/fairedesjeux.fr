@@ -25,7 +25,7 @@
                 Faire des jeux avec...
             </h3>
 
-            <course-list :list="$page.gameEngineCourses.edges" class="flex flex-wrap">
+            <course-list :list="$page.gameEngineCourses.edges" class="flex flex-wrap gap-4">
                 <contribute-c-t-a
                     class="cta"
                 />
@@ -35,7 +35,7 @@
                 Autres compétences :
             </h3>
 
-            <course-list :list="$page.skillCourses.edges" class="flex flex-wrap">
+            <course-list :list="$page.skillCourses.edges" class="flex flex-wrap gap-4">
                 <contribute-c-t-a
                     class="cta"
                 />
@@ -140,7 +140,7 @@
     }
 
     .cta {
-        width: calc(50% - 1rem);
+        width: calc(50% - 0.5rem);
         max-height: 255px;
         min-height: 205px;
     }
