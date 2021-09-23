@@ -1,9 +1,5 @@
-*.log
-.cache
-.DS_Store
-src/.temp
 node_modules
+.DS_Store
 dist
-.env
-.env.*
-.vscode
+dist-ssr
+*.local
