@@ -8,10 +8,12 @@
       <img alt="Vue logo" class="h-40 mx-auto" src="../assets/logo.png" />
       <HelloWorld />
     </main>
+    <Footer />
   </div>
 </template>
 
 <script lang="ts" setup>
   import HelloWorld from "../components/HelloWorld.vue";
   import Header from "../components/Header.vue";
+  import Footer from "../components/Footer.vue";
 </script>
