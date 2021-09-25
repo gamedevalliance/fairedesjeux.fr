@@ -9,6 +9,16 @@
     "lint": "eslint . --ext .ts,.vue.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^3.0.0-4",
+    "postcss-calc": "^8.0.0",
+    "postcss-for": "^2.1.1",
+    "postcss-nested": "^5.0.6",
+    "typeface-muli": "^1.1.13",
+    "typeface-source-code-pro": "^1.1.13",
+    "typeface-source-sans-pro": "^1.1.13",
     "vue": "^3.2.13",
     "vue-router": "4"
   },
