@@ -8,14 +8,15 @@
         <section>
           <h4>À propos</h4>
           <ul class="text-base text-font-3 flex flex-col gap-2 py-2">
+            <!-- RIP Smolla 🥲 -->
             <li>
-              <a href="/contribuer/"> Contribuer </a>
+              <router-link to="/contribuer/"> Contribuer </router-link>
             </li>
             <li>
-              <a href="/contributeurs"> Liste des contributeurs </a>
+              <router-link to="/contributeurs"> Liste des contributeurs </router-link>
             </li>
             <li>
-              <a href="/informations"> Informations légales </a>
+              <router-link to="/informations"> Informations légales </router-link>
             </li>
             <li>
               <a href="https://github.com/gamedevalliance/fairedesjeux.fr">Code source </a>
@@ -39,7 +40,9 @@
       </div>
       <section class="text-center sm:text-left float-right text-font">
         <Socials />
-        <h2 class="text-font text-2xl my-0 mt-2 leading-none">Game Dev Alliance</h2>
+        <h2 class="text-font font-title font-bold text-2xl my-0 mt-2 leading-none tracking-title">
+          Game Dev Alliance
+        </h2>
         Association loi 1901.
       </section>
     </div>
@@ -55,6 +58,6 @@
     @apply hover:text-font hover:underline cursor-pointer;
   }
   h4 {
-    @apply text-font text-lg font-bold;
+    @apply text-font text-xl font-title font-bold tracking-title;
   }
 </style>

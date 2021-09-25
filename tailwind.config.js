@@ -32,6 +32,9 @@ module.exports = {
         astride: "#9e96d0",
         remi: "#00978c",
       },
+      width: {
+        180: "45rem",
+      },
     },
   },
   variants: {

@@ -6,10 +6,15 @@ import "typeface-muli";
 import "tailwindcss/tailwind.css";
 // Vue & Vue Router
 import { createApp } from "vue";
+import App from "./App.vue";
 import Index from "./pages/Index.vue";
-import { createRouter, createWebHashHistory } from "vue-router";
+import NotFound from "./pages/NotFound.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
-const routes = [{ path: "/", component: Index }];
+const routes = [
+  { path: "/", component: Index },
+  { path: "/:catchAll(.*)", component: NotFound },
+];
 
 // Font-Awesome
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -24,8 +29,8 @@ config.autoAddCss = false;
 library.add(faFacebookF, faGithub, faTwitter, faYoutube, faGlobeEurope, faExternalLinkAlt);
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
-createApp(Index).use(router).component("FontAwesome", FontAwesomeIcon).mount("#app");
+createApp(App).use(router).component("FontAwesome", FontAwesomeIcon).mount("#app");
