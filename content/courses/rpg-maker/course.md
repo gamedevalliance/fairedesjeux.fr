@@ -17,12 +17,12 @@ RPG Maker est un logiciel permettant de créer des JRPG en 2D, mais pas que ! O
 
 Si l'on met le système de combat de côté, le logiciel permet aussi de réaliser des jeux narratifs centrés sur l'exploration des cartes. Certains jeux de ce type ont connu un fort engouement dans la sphère indé, notamment les célèbres *To the Moon* et *Yume Nikki*.
 
-![Screenshot de To the Moon](./to-the-moon.png)
+![Screenshot de To the Moon](/rpg-maker/to-the-moon.png)
 *To the Moon (RPG Maker XP)*
 
 Une autre grande particularité de RPG Maker est qu'il n'est pas nécessaire de coder pour réaliser son aventure : la logique du jeu est conçue en cliquant sur des boutons. Cela dit, en utilisant un langage de script, les programmeurs et programmeuses peuvent dépasser les limites du logiciel. RPG Maker MV utilise le langage JavaScript tandis que les versions précédentes utilisent Ruby. Et même si vous ne savez pas coder, la communauté a produit beaucoup de scripts (ou plug-ins) que vous pouvez copier dans votre jeu pour ajouter de nouvelles fonctionnalités facilement. Je vous expliquerai comment faire !
 
-![Combat en vue de face](./combat-vx-ace.png)
+![Combat en vue de face](/rpg-maker/combat-vx-ace.png)
 *La vue des combats change selon la version de RPG Maker.*
 
 ### Pourquoi l'utiliser ?

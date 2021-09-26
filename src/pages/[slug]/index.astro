@@ -1,0 +1,13 @@
+---
+    import CourseLayout from '$layouts/CourseLayout.astro'
+    import { getCourse, getStaticListCourses } from '$data/courses.ts'
+
+    export async function getStaticPaths() {
+        return getStaticListCourses()
+    }
+
+    const { slug } = Astro.request.params
+    const course = getCourse(slug)
+---
+
+<CourseLayout course={course}></CourseLayout>

@@ -16,7 +16,7 @@ Bienvenue dans ce cours sur itch.io ! Si vous lisez ce cours, vous avez probabl
 
 [itch.io](https://itch.io/) est un magasin ouvert à tous les créateurs, et particulièrement axé sur les jeux indépendants, gratuits comme payants. Le site encourage l'exploration et le partage de créations expérimentales.
 
-![Page d'accueil de itch.io](./itchio.png)
+![Page d'accueil de itch.io](/itchio/itchio.png)
 
 Tout le monde peut devenir vendeur, concevoir ses pages et publier son contenu. Vos œuvres sont disponibles dès que vous les mettez en ligne, sans devoir attendre l'approbation de l'équipe ou du public.
 
@@ -28,7 +28,7 @@ itch.io est un site idéal pour débuter dans la publication de jeux sans devoir
 
 Contrairement à d'autres plateformes gratuites de partage de jeux, l'interface est simple et claire. Vous avez la garantie qu'aucune pub ou autre élément intrusif n'entachera la page de votre création.
 
-![](./orchids-to-dusk.png)
+![](/itchio/orchids-to-dusk.png)
 *itch.io est un nid à expériences intriguantes. (Orchids to Dusk)*
 
 Il est possible de mettre un prix minimum au jeu et d'accepter les donations, mais d'autres options de monétisation sont aussi possibles, comme le pré-achat, des *tiers* avec récompense, ou encore du contenu *early access*.

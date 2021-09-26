@@ -1,3 +1,0 @@
----
-    title: "Découvrir les variables"
----

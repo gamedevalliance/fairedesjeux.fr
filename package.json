@@ -1,47 +1,19 @@
 {
-  "name": "fairedesjeux",
-  "version": "0.1.0",
+  "name": "@example/framework-vue",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview",
-    "lint": "eslint . --ext .ts,.vue.js"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/vue-fontawesome": "^3.0.0-4",
-    "postcss-calc": "^8.0.0",
-    "postcss-for": "^2.1.1",
-    "postcss-nested": "^5.0.6",
-    "typeface-muli": "^1.1.13",
-    "typeface-source-code-pro": "^1.1.13",
-    "typeface-source-sans-pro": "^1.1.13",
-    "vue": "^3.2.13",
-    "vue-router": "4"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "NODE_ENV=production astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
-    "@vitejs/plugin-vue": "^1.9.0",
-    "autoprefixer": "^10.3.5",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^7.18.0",
-    "postcss": "^8.3.7",
-    "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.15",
-    "typescript": "^4.4.3",
-    "vite": "^2.5.10",
-    "vite-plugin-eslint": "^1.3.0",
-    "vue-eslint-parser": "^7.11.0",
-    "vue-tsc": "^0.3.0"
+    "astro": "^0.20.7"
   },
-  "main": "index.js",
-  "repository": "https://github.com/gamedevalliance/fairedesjeux.fr.git",
-  "author": "Goulven Nev <nevilain@gmail.com>",
-  "license": "MIT"
+  "dependencies": {
+    "fdir": "^5.1.0",
+    "gray-matter": "^4.0.3",
+    "tailwindcss": "^2.2.15"
+  }
 }

@@ -18,12 +18,12 @@ Si vous souhaitez écrire des histoires à embranchements mais que vous n'avez j
 
 Son utilisation est très simple et place l'écriture au centre de l'expérience, tout en proposant d'ajouter de l'interactivité grâce à des notions de programmation que vous découvrirez au fur et à mesure.
 
-![Screenshot de Butterfly Soup](./butterfly-soup.png)
+![Screenshot de Butterfly Soup](/renpy/butterfly-soup.png)
 *Les visual novels contiennent des dialogues et des choix. (Butterfly Soup)*
 
 Ren'Py est peut-être simple, mais il est puissant ! Vous pouvez étendre les fonctionnalités du jeu à votre guise en écrivant du Python, pour créer des phases de point and click, de RPG, ou encore des mini-jeux. Les possibilités sont nombreuses et pour le constater, il suffit de regarder les jeux créés avec Ren'Py [sur itch.io](https://itch.io/games/newest/made-with-renpy) par exemple.
 
-![Screenshot de Doki Doki Literature Club](./doki-doki-literature-club.png)
+![Screenshot de Doki Doki Literature Club](/renpy/doki-doki-literature-club.png)
 *Un système de carnet programmé dans Ren'Py. (Doki Doki Literature Club)*
 
 Les jeux peuvent fonctionner sur Windows, Linux, macOS, Android, iOS ou en tant qu'application Chrome.
