@@ -8,11 +8,13 @@ import "tailwindcss/tailwind.css";
 import { createApp } from "vue";
 import App from "./App.vue";
 import Index from "./pages/Index.vue";
+import Informations from "./pages/Informations.vue";
 import NotFound from "./pages/NotFound.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   { path: "/", component: Index },
+  { path: "/informations", component: Informations },
   { path: "/:catchAll(.*)", component: NotFound },
 ];
 
