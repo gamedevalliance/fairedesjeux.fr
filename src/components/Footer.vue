@@ -4,7 +4,7 @@
 <template>
   <footer class="bg-area">
     <div class="container mx-auto py-5 sm:py-6 flex justify-center sm:justify-between">
-      <div class="hidden sm:flex gap-14">
+      <div class="hidden sm:flex gap-12">
         <section>
           <h4>À propos</h4>
           <ul class="text-base text-font-3 flex flex-col gap-2 py-2">
@@ -27,14 +27,14 @@
         <section>
           <h4>Moteurs de jeux</h4>
           <ul class="text-base text-font-3 flex flex-col gap-2 py-2">
-            <li>Voir plus de formations</li>
+            <li>Plus de formations</li>
           </ul>
         </section>
 
         <section>
           <h4>Autres compétences</h4>
           <ul class="text-base text-font-3 flex flex-col gap-2 py-2">
-            <li>Voir plus de formations</li>
+            <li>Plus de formations</li>
           </ul>
         </section>
       </div>
@@ -55,7 +55,7 @@
 
 <style scoped>
   a {
-    @apply hover:text-font hover:underline cursor-pointer;
+    @apply hover:text-font hover:underline cursor-pointer text-sm;
   }
   h4 {
     @apply text-font text-xl font-title font-bold tracking-title;

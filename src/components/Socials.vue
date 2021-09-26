@@ -2,7 +2,7 @@
   Display links to our socials. Appears in the header & footer.
 -->
 <template>
-  <div class="inline-flex gap-4 items-center ml-auto text-xl text-font-2">
+  <div class="inline-flex gap-4 items-center text-xl text-font-2">
     <a
       href="https://www.youtube.com/channel/UCCjlo6Ihet_T3X6bKLJzPsA"
       class="youtube"
