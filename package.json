@@ -1,19 +1,38 @@
 {
-  "name": "@example/framework-vue",
-  "version": "0.0.1",
-  "private": true,
+  "name": "vite-project",
+  "version": "0.0.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "NODE_ENV=production astro build",
-    "preview": "astro preview"
-  },
-  "devDependencies": {
-    "astro": "^0.20.7"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
-    "fdir": "^5.1.0",
-    "gray-matter": "^4.0.3",
-    "tailwindcss": "^2.2.15"
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^3.0.0-4",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "autoprefixer": "^10.3.6",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^7.18.0",
+    "postcss": "^8.3.8",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.16",
+    "vite-plugin-md": "^0.11.1",
+    "vite-plugin-pages": "^0.18.1",
+    "vite-plugin-vue-layouts": "^0.5.0",
+    "vue": "^3.2.13",
+    "vue-eslint-parser": "^7.11.0",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.0",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.10",
+    "vite-plugin-eslint": "^1.3.0",
+    "vue-tsc": "^0.3.0"
   }
 }

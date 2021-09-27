@@ -1,9 +1,9 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const plugin = require('tailwindcss/plugin');
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   mode: "jit",
-  purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue,svg}'],
+  purge: ["./*.html", "./src/**/*.{ts,vue}"],
   darkMode: false,
   corePlugins: {
     // We disable those because they add stuff to the CSS file even when unused
@@ -48,23 +48,23 @@ module.exports = {
         180: "45rem",
       },
       animation: {
-        'bounce': 'bounce 0.45s'
+        bounce: "bounce 0.45s",
       },
       gridTemplateColumns: {
-        cont: '17% 60% 15%',
-        tab: '20% 80%',
-        mob: '100%',
+        cont: "17% 60% 15%",
+        tab: "20% 80%",
+        mob: "100%",
       },
       gap: {
-        col: '3%',
+        col: "3%",
       },
       keyframes: {
         bounce: {
-          '0%, 100%': { transform: 'translate(0)'},
-          '20%': { transform: 'rotateX(20deg) translateY(1px) rotate(-3deg)'},
-          '40%': { transform: 'translateY(-5px) rotate(3deg) scale(1.1)' }
-        }
-      }
+          "0%, 100%": { transform: "translate(0)" },
+          "20%": { transform: "rotateX(20deg) translateY(1px) rotate(-3deg)" },
+          "40%": { transform: "translateY(-5px) rotate(3deg) scale(1.1)" },
+        },
+      },
     },
   },
   variants: {
@@ -73,117 +73,89 @@ module.exports = {
   plugins: [
     plugin(({ addBase, theme }) => {
       addBase({
-        '.prose': {
-          color: theme('textColor.font'),
-          fontSize: theme('fontSize.lg'),
-          lineHeight: theme('lineHeight.normal'),
-          '@media (max-width: 640px)': {
-            fontSize: theme('fontSize.base'),
+        ".prose": {
+          color: theme("textColor.font"),
+          fontSize: theme("fontSize.lg"),
+          lineHeight: theme("lineHeight.normal"),
+          "@media (max-width: 640px)": {
+            fontSize: theme("fontSize.base"),
           },
           h2: {
-            color: theme('textColor.astride'),
-            fontFamily: theme('fontFamily.title'),
-            fontSize: theme('fontSize.5xl'),
-            fontWeight: '700',
-            lineHeight: '1.25',
-            letterSpacing: theme('letterSpacing.title'),
-            marginTop: '1rem',
-            marginBottom: '1rem',
-            '@media (max-width: 640px)': {
-              fontSize: theme('fontSize.4xl'),
+            color: theme("textColor.astride"),
+            fontFamily: theme("fontFamily.title"),
+            fontSize: theme("fontSize.5xl"),
+            fontWeight: "700",
+            lineHeight: "1.25",
+            letterSpacing: theme("letterSpacing.title"),
+            marginTop: "1rem",
+            marginBottom: "1rem",
+            "@media (max-width: 640px)": {
+              fontSize: theme("fontSize.4xl"),
             },
           },
 
           h3: {
-            color: theme('textColor.remi'),
-            fontFamily: theme('fontFamily.title'),
-            fontSize: theme('fontSize.3xl'),
-            fontWeight: '700',
-            lineHeight: '1.5',
-            letterSpacing: theme('letterSpacing.title'),
-            marginTop: '2rem',
-            marginBottom: '0.5rem',
-            '@media (max-width: 640px)': {
-              fontSize: theme('fontSize.2xl'),
+            color: theme("textColor.remi"),
+            fontFamily: theme("fontFamily.title"),
+            fontSize: theme("fontSize.3xl"),
+            fontWeight: "700",
+            lineHeight: "1.5",
+            letterSpacing: theme("letterSpacing.title"),
+            marginTop: "2rem",
+            marginBottom: "0.5rem",
+            "@media (max-width: 640px)": {
+              fontSize: theme("fontSize.2xl"),
             },
           },
 
           h4: {
-            color: theme('textColor.font'),
-            fontFamily: theme('fontFamily.title'),
-            fontSize: theme('fontSize.xl'),
-            fontWeight: '700',
-            lineHeight: '1.5',
-            letterSpacing: theme('letterSpacing.title'),
-            '@media (max-width: 640px)': {
-              fontSize: theme('fontSize.xl'),
+            color: theme("textColor.font"),
+            fontFamily: theme("fontFamily.title"),
+            fontSize: theme("fontSize.xl"),
+            fontWeight: "700",
+            lineHeight: "1.5",
+            letterSpacing: theme("letterSpacing.title"),
+            "@media (max-width: 640px)": {
+              fontSize: theme("fontSize.xl"),
             },
           },
 
           h5: {
-            color: theme('textColor.font-2'),
-            fontFamily: theme('fontFamily.title'),
-            fontSize: '1.20rem',
-            fontWeight: '700',
-            lineHeight: '1.5',
-            letterSpacing: theme('letterSpacing.title'),
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginBottom: '1rem',
-            marginTop: '1rem',
+            color: theme("textColor.font-2"),
+            fontFamily: theme("fontFamily.title"),
+            fontSize: "1.20rem",
+            fontWeight: "700",
+            lineHeight: "1.5",
+            letterSpacing: theme("letterSpacing.title"),
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: "1rem",
+            marginTop: "1rem",
           },
 
-          'ul, ol, p': {
-            marginTop: '1rem',
-            marginBottom: '1rem',
+          "ul, ol, p": {
+            marginTop: "1rem",
+            marginBottom: "1rem",
           },
 
-          'li > ul > li, li > ol > li': {
-            marginLeft: '2rem',
-          },
-        },
-
-        'main a': {
-          color: theme('textColor.astride'),
-          textDecoration: 'none',
-          borderBottomWidth: '1px',
-          borderStyle: 'solid',
-          borderColor: theme('textColor.astride'),
-
-          '&:hover': {
-            color: theme('textColor.marvin'),
-            borderColor: theme('textColor.marvin'),
+          "li > ul > li, li > ol > li": {
+            marginLeft: "2rem",
           },
         },
 
-        'header nav > a:hover': {
-          color: theme('colors.marvin'),
-          cursor: 'pointer'
-        },
+        "main a": {
+          color: theme("textColor.astride"),
+          textDecoration: "none",
+          borderBottomWidth: "1px",
+          borderStyle: "solid",
+          borderColor: theme("textColor.astride"),
 
-        'footer': {
-          'a:hover': {
-            color: theme('colors.font'),
-            textDecoration: 'underline'
+          "&:hover": {
+            color: theme("textColor.marvin"),
+            borderColor: theme("textColor.marvin"),
           },
-
-          'h4': {
-            color: theme('colors.font'),
-            fontSize: theme('fontSize.xl'),
-            fontFamily: theme('fontFamily.title'),
-            fontWeight: 'bold',
-            letterSpacing: theme('letterSpacing.title')
-          }
         },
-
-        '.svg-icon': {
-          display: 'inline-block',
-          fontSize: 'inherit',
-          height: '1em',
-          verticalAlign: '-.125em'
-        }
-      })
-    },
-    ),
+      });
+    }),
   ],
 };

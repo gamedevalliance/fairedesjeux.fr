@@ -15,19 +15,19 @@ opengraph_image: cover_wide
 
 RPG Maker est un logiciel permettant de créer des JRPG en 2D, mais pas que ! On reconnaît le style de ce logiciel entre mille : il s'est forgé une réputation autour de ses musiques et graphismes inclus, qui simplifient beaucoup la création. Il propose également un système de combat au tour par tour qui imite les RPG old school.
 
-Si l'on met le système de combat de côté, le logiciel permet aussi de réaliser des jeux narratifs centrés sur l'exploration des cartes. Certains jeux de ce type ont connu un fort engouement dans la sphère indé, notamment les célèbres *To the Moon* et *Yume Nikki*.
+Si l'on met le système de combat de côté, le logiciel permet aussi de réaliser des jeux narratifs centrés sur l'exploration des cartes. Certains jeux de ce type ont connu un fort engouement dans la sphère indé, notamment les célèbres _To the Moon_ et _Yume Nikki_.
 
-![Screenshot de To the Moon](/rpg-maker/to-the-moon.png)
-*To the Moon (RPG Maker XP)*
+![Screenshot de To the Moon](./to-the-moon.png)
+_To the Moon (RPG Maker XP)_
 
 Une autre grande particularité de RPG Maker est qu'il n'est pas nécessaire de coder pour réaliser son aventure : la logique du jeu est conçue en cliquant sur des boutons. Cela dit, en utilisant un langage de script, les programmeurs et programmeuses peuvent dépasser les limites du logiciel. RPG Maker MV utilise le langage JavaScript tandis que les versions précédentes utilisent Ruby. Et même si vous ne savez pas coder, la communauté a produit beaucoup de scripts (ou plug-ins) que vous pouvez copier dans votre jeu pour ajouter de nouvelles fonctionnalités facilement. Je vous expliquerai comment faire !
 
-![Combat en vue de face](/rpg-maker/combat-vx-ace.png)
-*La vue des combats change selon la version de RPG Maker.*
+![Combat en vue de face](./combat-vx-ace.png)
+_La vue des combats change selon la version de RPG Maker._
 
 ### Pourquoi l'utiliser ?
 
-Le point fort de ce logiciel, c'est que dès que vous le lancez, vous pouvez instantanément dessiner une carte et commencer votre jeu : il n'y a aucune barrière d'entrée. RPG Maker est intéressant si vous souhaitez raconter une aventure *fantasy* sans créer de graphisme ou de musique, car les ressources de base vous permettent d'établir un univers crédible.
+Le point fort de ce logiciel, c'est que dès que vous le lancez, vous pouvez instantanément dessiner une carte et commencer votre jeu : il n'y a aucune barrière d'entrée. RPG Maker est intéressant si vous souhaitez raconter une aventure _fantasy_ sans créer de graphisme ou de musique, car les ressources de base vous permettent d'établir un univers crédible.
 
 Le logiciel est cependant de moins en moins pertinent pour partager votre jeu à un large public ou envisager une activité commerciale : les jeux RPG Maker se ressemblent généralement beaucoup entre eux et peuvent avoir une mauvaise réputation sur les sites comme Steam. Cela dit, cela reste une très bonne initiation au game design et à la narration, car vous pouvez réfléchir au contenu de votre jeu sans vous soucier d'en programmer les systèmes.
 

@@ -1,9 +1,8 @@
----
-    import Logo from '$assets/logo.png'
----
-  <a href="/" class="inline-block relative">
-    <img alt="Vue logo" class="h-14 mx-auto float-left" src="{ Logo }" />
-    <h1 class="
+<template>
+  <router-link to="/" class="inline-block relative">
+    <img alt="Vue logo" class="h-14 mx-auto float-left" src="../../assets/logo.png" />
+    <h1
+      class="
         h-14
         pl-2
         text-base
@@ -18,4 +17,5 @@
       Faire des<br />
       <span class="tracking-logo">jeux .fr</span>
     </h1>
-</a>
+  </router-link>
+</template>

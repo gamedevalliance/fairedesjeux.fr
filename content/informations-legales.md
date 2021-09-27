@@ -1,0 +1,15 @@
+FaireDesJeux.fr est un site collaboratif de formation à la création de jeux vidéo amateurs. Il est réalisé et hébergé par Game Dev Alliance, une association loi 1901 (parue au journal officiel le [23/02/2019](https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20190008/1082)) dont l'objet est “développement de la scène francophone de création de jeux vidéo indépendants : formation à la création de jeux, animation d'une communauté de passionnés, aide à la publication de jeux vidéo indépendants”. Le siège social de l'association est déclaré à Pau (France), son président est [Aurélien Dos Santos](https://github.com/aureliendossantos).
+
+Game Dev Alliance ne recueille ni ne stocke les données personnelles de nos utilisateurs. Notre site ne contient également aucune publicité et n'utilise pas de cookie.
+
+En utilisant le site FaireDesJeux.fr, vous confirmez que vous comprenez que le contenu du site est fourni librement et qu’aucune sorte d’accord ou de contrat n’est créé entre vous et Game Dev Alliance, entre vous et les utilisateurs de ce site, ou entre vous et toute autre personne liée à ce projet. Votre utilisation du contenu de ce site n’implique aucune responsabilité de la part de Game Dev Alliance ou de l’un de ses agents, organisateurs ou autres utilisateurs.
+
+Sauf mention contraire, le contenu texte des formations de FaireDesJeux.fr est placé sous les termes de la [licence CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr). Fournir du contenu pour FaireDesJeux.fr devrait être fait volontairement, sans aucune hypothèse de préservation du contenu ou de compensation de la part de Game Dev Alliance. Toute information publiée sur FaireDesJeux.fr peut être modifiée ou supprimée.
+
+Les illustrations de nos mascottes “Marvin”, “Astride” et “Rémi”, ainsi que l'illustration de fond, réalisées par [Oriana Marini](https://linktr.ee/aadorah) pour Game Dev Alliance, ainsi que le nom “Game Dev Alliance” et “FaireDesJeux.fr” ne peuvent être utilisés sans notre accord préalable. Les autres illustrations du site sont libres de droits mais leur licence peut varier en fonction de leur origine.
+
+Le code de notre site web est entièrement libre et open source. Il est hébergé publiquement sur [un compte Github](https://github.com/gamedevalliance/fairedesjeux.fr).
+
+Toutes les marques de commerce, marques de service, marques collectives, droits de conception, droits de la personnalité ou droits similaires mentionnés, utilisés ou cités dans un article de FaireDesJeux.fr sont la propriété de leurs propriétaires respectifs. Leur utilisation ici n’implique pas que vous puissiez les utiliser à d’autres fins que des fins informatives similaires à celles envisagées par les auteurs originaux de ces articles.
+
+Sauf indication contraire, FaireDesJeux.fr n’est ni approuvé ni affilié à l’un des détenteurs de tels droits et, en tant que tel, Game Dev Alliance ne peut accorder aucun droit d’utiliser des matériaux autrement protégés.

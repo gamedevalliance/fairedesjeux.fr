@@ -26,14 +26,14 @@ La plupart du temps, les scripts ne sont pas compatibles d'une version de RPG Ma
 Les scripts sont écrits en Ruby. Il n'est pas nécessaire de télécharger un fichier : il suffit de copier-coller le code.
 
 ![Icône de l'éditeur de script](./bouton.png)
-*L'éditeur de script peut aussi être ouvert avec F11.*
+_L'éditeur de script peut aussi être ouvert avec F11._
 
 Sélectionnez le contenu du script et copiez-le. Retournez dans RPG Maker et ouvrez l'éditeur de script. La liste sur la gauche représente tous les scripts de votre jeu et vous pouvez constater qu'il en existe déjà beaucoup : ce sont les systèmes de base qu'il ne faut pas supprimer.
 
 ![Insérer un script dans RPG Maker VX Ace](./inserer.png)
-*Création d'un emplacement dans Materials.*
+_Création d'un emplacement dans Materials._
 
-La plupart des scripts que vous trouverez sur Internet doivent être copiés *au-dessus* du script Main mais *en-dessous* de tous les autres scripts de base. Sur RPG Maker VX Ace, une catégorie Materials est présente pour vous aider à choisir un emplacement. Cliquez-droit sur l'emplacement désiré puis choisissez Insérer. Vous pouvez alors nommer votre script comme bon vous semble et copier son contenu dans le grand champ de texte à droite.
+La plupart des scripts que vous trouverez sur Internet doivent être copiés _au-dessus_ du script Main mais _en-dessous_ de tous les autres scripts de base. Sur RPG Maker VX Ace, une catégorie Materials est présente pour vous aider à choisir un emplacement. Cliquez-droit sur l'emplacement désiré puis choisissez Insérer. Vous pouvez alors nommer votre script comme bon vous semble et copier son contenu dans le grand champ de texte à droite.
 
 Les écritures en vert sont des commentaires, ignorés par le programme car destinés uniquement aux humains. Les programmeurs s'en servent généralement pour expliquer le fonctionnement de leurs scripts. Lisez attentivement les commentaires si vous ne savez pas comment utiliser un script.
 
