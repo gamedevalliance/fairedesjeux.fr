@@ -1,13 +1,81 @@
 ---
-title: "Les opérateurs logiques"
+title: "Les conditions"
 ---
 
-C'est très bien, mais actuellement, on ne fait rien de plus qu'une calculatrice. C'est là qu'interviennent les instructions, ou opérateurs logiques. Il en existe plusieurs, mais on va voir le plus simple : if, si en anglais, qui permet de réaliser des conditions. Dans mon cas, je vais faire que si le résultat de la multiplication est pair, je print "c'est pair" else, sinon, je print "impair".
+La **condition** est une structure fondamentale en programmation :
 
-> Schéma
+> Schéma : **Si** x est vrai **alors** y **sinon** z. **Suite du programme**
 
-Ce sont vraiment les opératuers logiques qui vont rendre le code "intelligent", qui vont lui permettre d'agir en fonction des variables, et d'être plus qu'une calculatrice. Mais actuellement, notre code est un peu ennuyeux, la seule chose qu'il fait vers le monde extérieur est d'imprimer le résultat mais on a aucun moyen d'agir sur le programme.
+```lua
+number = 10
+if number > 6 then
+    print("Le nombre est supérieur à 6.")
+else
+    print("Le nombre est inférieur ou égal à 6.")
+end
+```
 
-Quand des instruction agissent sur le monde extérieur, on appelle ça des effets. Nous avons déjà print qui permet d'afficher le résultat sur un écran, mais maintenant nous allons ajouter input qui permet à l'utilisateur d'entrer une valeur. Revenons au début de mon programme. Je permets à l'utilisateur d'entrer la variable chiffre, et le programme va dire à l'utilisateur si le chiffre envoyé est pair ou impair. Là vous avez un premier programme très simple, mais déjà vous pouvez commencer à imaginer les possibilités que cela nous offre. 
+Ici, le segment `number > 6` est une **expression** qui est évaluée par le programme pour valoir "vrai" ou "faux" (`true` ou `false`).
 
-> Schéma
+- Si l'expression est vraie, le programme exécute l'intérieur de la condition ;
+- Si l'expression est fausse, le programme exécute la branche `else`. On peut aussi ne pas mettre de branche `else` : dans ce cas-là, le programme passe simplement à la suite.
+
+`>` est un **opérateur de comparaison**. Il en existe bien sûr d'autres :
+
+Opérateur | Signification
+--- | ---
+`>` | Supérieur à
+`>=` | Supérieur ou à égal à
+`<` | Inférieur à
+`<=` | Inférieur ou égal à
+`==` | Égal à
+`!=` | Différent de
+
+Remarquez le double égal `==`. Il s'écrit ainsi pour une bonne raison :
+
+- `number = 5` est une instruction qui assigne la valeur 5 à la variable `number`.
+- `number == 5` est une expression qui demande "*Est-ce que* `number` *est égal à 5 ?*" et qui vaut `true` ou `false`. On peut placer cette expression dans une condition.
+
+Avec le double égal et le modulo, on peut savoir si un nombre est pair ou impair :
+
+```lua
+if number % 2 == O then
+    print("Ce nombre est pair")
+else
+    print("Ce nombre est impair")
+end
+```
+
+Enfin, il existe des **opérateurs logiques**, qui permettent de connecter plusieurs expressions. Selon les langages, ils peuvent être écrits en toutes lettres ou avec des symboles :
+
+Opérateur | Alphanumérique | Non-alphanumérique
+--- | --- | ---
+`x` et `y` | `x and y` | `x && y`
+`x` ou `y` | `x or y` | `x || y`
+Inverse de `x` | `not x` | `!x`
+
+Vous pouvez combiner ces opérateurs logiques et utiliser des parenthèses pour former des conditions complexes !
+
+```lua
+if (pommes > 10 or pommes <= 0) and oranges != 5 then
+    -- faire quelque chose...
+end
+```
+
+Ce sont les opérateurs de comparaison et les opérateurs logiques qui vont permettre à votre code de réellement dépasser la calculatrice, en agissant en fonction des variables. Cela dit, pour que cela ait un intérêt, l'utilisateur devrait pouvoir agir sur le programme en écrivant lui-même les nombres.
+
+:::profremi
+Quand une instruction agit sur le monde extérieur, par exemple en affichant un texte à l'écran, ou en demandant à l'utilisateur d'écrire quelque chose, on appelle cela un **effet**.
+:::
+
+```lua
+print("Entrez un nombre.")
+number = io.read() -- permet à l'utilisateur d'écrire dans la console
+if number % 2 == O then
+    print("Ce nombre est pair.")
+else
+    print("Ce nombre est impair.")
+end
+```
+
+Désormais, l'utilisateur peut entrer un nombre et le programme va lui répondre en fonction. C'est un exemple tout simple, mais qui vous permet de commencer à imaginer les possibilités qui s'offrent à nous !

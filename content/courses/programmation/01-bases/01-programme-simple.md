@@ -1,19 +1,94 @@
 ---
-title: "A quoi ressemble un programme ?"
+title: "À quoi ressemble un programme ?"
 ---
 
-Qu'est-ce qu'un programme tout simple ? C'est une série d'ordres qui part du haut vers le bas, et que la machine exécute une par une pour faire une tâche.
+Un programme tout simple, c'est une série d'ordres qui part du haut vers le bas, et que la machine exécute un par un pour faire une tâche.
 
-Exemple je vais écrire un programme tout simple, où je vais créer une variable (jespliquerai plus tard ce que c'est exactement) avec le texte 'bjr gda' et je vais l'afficher dans la console. Mon programme c'est deux ordres : 1 créer une variable : c'est comme une boite dans laquelle on va mettre une donnée, ici un texte, et on va lui donner un nom, une étiquette, ici montexte. Une variable c'est une boite qui a un nom (un identifiant) et une valeur. Dans certains cas, une fois défini, on ne peut pas changer la valeur de la variable, et dans ce cas là on appelle ça une constante.
+Voici un exemple de programme qui crée une variable contenant le texte "Bonjour Marvin !" puis qui l'affiche dans la console :
 
-> Des boites avec une animation que les trucs rentrent dedans, et quand c'est une constante, la boite se ferme
+```ocaml
+let message = "Bonjour Marvin !"
+print(message)
+```
 
-Une variable peut contenir différentes choses, comme un nombre entier ou un texte par exemple. On appelle ça le type de la variable. Dans certains langages de programmation, une fois le type d'une variable défini, il ne peut plus changer : vous ne pouvez remplacer un nombre entier que par un autre nombre entier.
+Mon programme est constitué de deux ordres :
 
-Comme en maths, on peut agir sur ces variables avec des opérateurs comme l'addition, soustraction, multiplication. Par exemple, je crée deux variables de chiffre, et après result multiplie les deux variables. Si je print result je vois le résultat.
+1. Je crée une variable qui s'appelle `message` et qui contient le texte `"Bonjour Marvin !"`.
+2. J'affiche le contenu de la variable `message` dans la console.
 
-> Schéma
+:::oofmarvin
+Attends un peu... C'est quoi, une variable ?
+:::
 
-Bien sur il y a tous les opérateurs que vous connaissez, masi en prog il nous arrive d'utiliser des opérateurs un peu plus originaux. Un exemple assez courant, c'est le modulo. Le modulo fait une division et récupère le reste de la division. Si je fais 10 modulo 5, il y a 2*5 dans 10, et il n'y a aucun reste : mon modulo renvoie 0. Mais si je fais 11 modulo 5, il reste 1 et mon modulo renvoie 1.
+:::profremi
+Une variable, c'est comme une boîte dans laquelle on peut enregistrer une donnée. Elle peut porter le nom de ton choix, comme si tu collais une étiquette sur la boite pour te souvenir de ce qu'elle contient.
+:::
 
-Concrètement, cela permet de faire des boucles. Imaginez que vous avez un plateau de jeu de l'oie avec 10 cases numérotées de 0 à 9. Quand vous dépassez la 9e case, vous recommencez à 0. Un joueur va lancer un dé, et vous voulez savoir sur quelle case il va arriver. En mettant le résultat du jet de dé modulo 9, vous obtiendrez la bonne case. < Exemple >
+:::astride
+Ici, l'étiquette de la boîte est `message` et son contenu est le texte "Bonjour Marvin !".
+:::
+
+> Boite
+
+:::profremi
+Dans certains cas, on ne peut pas changer la valeur de la variable une fois qu'on l'a définie. On appelle ça une constante.
+:::
+
+> Boite scotchée
+
+Une variable peut contenir plusieurs **types de données** : un nombre entier, un texte... Dans certains langages de programmation, une fois que le type de la variable a été défini, il ne peut plus changer : vous pouvez remplacer un nombre entier par un autre nombre entier, mais pas par un texte.
+
+On peut agir sur les variables avec des **opérateurs mathématiques** comme l'addition, la soustraction et la multiplication.
+
+```lua
+bananes = 2
+cerises = 8
+fruits = bananes + cerises
+print(fruits)
+```
+
+Ce petit programme va afficher `10` dans la console.
+
+On trouve bien sûr tous les opérateurs que vous connaissez (`+`, `-`, `*`, `/`), mais en programmation, il nous arrive aussi d'utiliser des opérateurs un peu plus originaux ! Un exemple assez courant, c'est le modulo, qui donne le reste d'une division euclidienne. Prenons le calcul suivant :
+
+> 14 ÷ 5 = 2 et il reste 4.
+
+Cela veut dire que 14 modulo 5 = 4 !
+
+:::oofmarvin
+Je ne comprends pas trop à quoi ça sert...
+:::
+
+:::remi
+C'est très utile pour faire des boucles !
+:::
+
+Imaginez un mini-plateau de Monopoly avec 8 cases numérotées de 0 à 7. Le joueur est à la case 0 et il va lancer deux dés de 6.
+
+> Plateau
+
+```
+OOO
+O O
+XOO
+```
+
+Si le résultat est 5, il doit arriver sur la case 5. Mais si le résultat est 10, il doit faire un tour complet et arriver sur la case 2 !
+
+Pour obtenir la bonne case d'arrivée, on peut utiliser le modulo :
+
+- Si le jet de dés donne 5 → 5 modulo 8 = 5.
+- Si le jet de dés donne 10 → 10 modulo 8 = 2.
+
+```lua
+case_depart = 0
+jet = math.random(2, 12) -- donne un résultat entre 2 et 12
+case_arrivee = case_depart + jet % 8
+print(case_arrivee)
+```
+
+Ce petit programme affiche donc la case d'arrivée. Comme vous le voyez, la plupart des langages permettent de faire un modulo avec le signe `%`.
+
+Le modulo peut sembler étrange au début, car on ne sait pas trop à quelle occasion on va réellement s'en servir. Mais c'est une bonne chose de savoir qu'il existe, car il est présent dans beaucoup de langages de programmation et permet de réaliser ce genre de petites astuces !
+
+Dans cette première section, nous avons vu le principe des variables et des opérateurs arithmétiques. C'est un bon début, mais actuellement, nos programmes ne font rien de plus qu'une calculatrice... Pour créer de véritables mécanismes, nous avons besoin des opérateurs logiques. Direction la section suivante !
