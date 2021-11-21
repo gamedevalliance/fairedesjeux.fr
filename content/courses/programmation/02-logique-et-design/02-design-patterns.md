@@ -2,14 +2,51 @@
 title: "Design patterns"
 ---
 
-algos courants : filtrer des valeurs selon une condition, trier des valeurs (trier des titres de livres par ordre alphabétique). mais ça peut aussi être des problèmes beaucoup plus complexes, et une des manière de régler des problèmes complexes, surtout quand on est débutant, c'est d'utiliser des design pattern, ou patrons de conception, qui sont des solutions établies et reconnues comme étant des bonnes pratiques pour régler des problèmes courants. Ainsi, quand vous devez réaliser un algorithme complexe et que vous doutez de la bonne manière de faire, un bon premier réflexe peut être d'aller vérifier sur internet s'il n'y a pas déjà un design pattern ou en tout cas une manière de faire recommandée par des gens plus expérimentés et connaissant mieux le langage que vous.
+Une des choses importantes en programmation, c'est d'éviter à tout prix de réinventer la roue. Pas besoin de recréer un algorithme de tri quand votre langage en embarque déjà un qui sera compris par tous les autres programmeurs et qui sera mis à jour.
 
-Exemples de sites
+De la même manière, si vous êtes confrontée à un problème qui vous semble courant, plutôt que de bricoler votre propre solution, regardez s'il n'existe pas une manière standardisée d'y répondre. On appelle cela des design patterns. Ils ont deux intérêts : le premier est d'avoir sans doute été pensé par quelqu'un de plus expérimenté que vous, le second est d'être connu, et donc compris, par une grande partie des programmeurs de votre langage.
 
-Conclusion
+:::remi
+Les design patterns servent à compenser les manques de certains langages. Préférez toujours les fonctions pré-faites si elles existent !
+:::
 
-Design pattern
--> a la fois de régler un problème de manière maline
--> améliore la lisibilité, car les autres devs vont reconnaître le pattern
--> exemple : factory ou autre
--> donner des sites qui montre pleins de design pattern
+Prenons un exemple avec un pattern Factory. N'ayez pas peur si ça a l'air compliqué, on vous explique ensuite.
+
+Imaginons que nous voulons créer des animaux. Tous les animaux vont avoir la même structure, c'est à dire un objet qui contient un attribut nom et une méthode sound pour leur cri. Plutôt que de réécrire plusieurs fois le même code, on va créer une `AnimalFactory` qui, en fonction du type de l'animal, va créer l'objet adapté.
+
+```js
+function AnimalFactory() {
+    this.createAnimal = (type, name) => {
+        let animal
+        animal.name = name
+        if (type == "dog") {
+            animal = new Dog()
+        } else if (type == "cat") {
+            animal = new Cat()
+        }
+        return animal
+    }
+}
+function Dog() {
+    this.sound() {
+        print("ouaf")
+    }
+}
+function Cat() {
+    this.sound() {
+        print("miaou")
+    }
+}
+```
+
+Dans notre exemple, en une seule ligne, nous pouvons créer un chat dont le nom serait Potimarron et donc la méthode `.sound()` afficherait "miaou" dans la console.
+
+```js
+let nouvelAnimal = AnimalFactory.createAnimal("cat", "Potimarron")
+```
+
+On ne va pas s'éterniser sur l'explication technique ligne par ligne, car la manière de faire diffère énormément d'un langage à l'autre. Si le sujet vous intéresse, il existe de nombreux sites référençant les design patterns et vous expliquant comment les mettre en place, tels que [Refactoring Guru](https://refactoring.guru/fr/design-patterns) et [Dofactory](https://www.dofactory.com/javascript/design-patterns/).
+
+:::notlikethisremi
+Ne sur-utilisez pas les design patterns là où ils ne sont pas nécessaires, surtout si vous ne les comprenez pas bien... Le code spaghetti est vite arrivé !
+:::
