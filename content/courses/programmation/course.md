@@ -45,3 +45,7 @@ if expression:
     condition
 suite du programme
 ```
+
+préciser que si ça devient trop dur d'un coup, c'est sans doute qu'il faut pratiquer
+
+ça ne remplacera jamais une formation d'ingénieur, 10 ans de pratique ou des soirées perdues sur Wikipédia, mais on espère que cela va attiser votre curiosité, vous aider à mieux comprendre certains termes techniques, et rappeler que la programmation ce n'est pas seulement de la technique, mais aussi des questionnements théoriques.

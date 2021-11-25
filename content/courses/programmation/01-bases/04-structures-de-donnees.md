@@ -2,22 +2,28 @@
 title: "Structures de données"
 ---
 
-Dans les sections précédentes, nous avons déjà manipulé des types simples comme les nombres entiers et les chaînes de caractère. Mais chaque langage de programmation propose différentes structures de données plus complexes pour répondre à de nombreux problèmes.
+Dans les sections précédentes, nous avons déjà manipulé des types de variable simples comme les nombres entiers et les chaînes de caractère. Chaque langage de programmation propose d'autres structures de données plus complexes pour répondre à de nombreux problèmes.
 
-Imaginons que vous gérez un refuge d'animaux et vous souhaitez suivre le compte de tous vos animaux. Pour cela, vous aurez besoin d'une **liste** -- vous entendrez aussi parler de tableau ou d'array selon les langages.
+Imaginons que vous gérez un refuge d'animaux et que vous souhaitez suivre le compte de tous vos animaux. Pour cela, vous aurez besoin d'un **tableau**, ou *array* en anglais.
 
 ```js
 let refuge = ["Lynx", "Chien", "Cerf", "Vache"]
 print(refuge[2]) // affiche Cerf
 ```
 
-En fonction du langage de programmation, la manière dont est gérée une structure de données peut varier. Dans notre cas, nous utilisons une array qui est homogène (c'est-à-dire qu'elle ne contient que des éléments d'un même type) et indexée (chaque valeur est ordonnée en partant de 0).
-
-:::
-Comme les index commencent à 0, l'index 2 me donne le troisième élément de la liste !
+:::remi
+Comme les index commencent à 0, l'index 2 donne le troisième élément de la liste !
 :::
 
-Plus complexe, on a les tableaux associatifs qui existent sous de nombreux noms en fonction des langages : vous entendrez parler de tables de hachage, d'associative arrays, de dictionnaires, d'objets, de map ou de record. C'est un peu comme une liste, mais où chaque valeur est associée à une clé unique. Par exemple, je pourrais créer un tableau associatif, qui va représenter un animal du refuge.
+Selon le langage, la manière dont est gérée une structure de données peut varier. Dans notre cas, nous utilisons un tableau homogène (il ne contient que des éléments d'un même type) et indexé (chaque valeur est ordonnée en partant de 0).
+
+Dans certains langages, il existe également la **liste** (ou *linked list*). Très semblable au tableau, elle est par contre plus rapide à parcourir et sera par exemple idéale dans vos fonctions récursives. Le tableau, quant à lui, est plus performant pour ajouter, modifier ou retirer des éléments. Idéal pour stocker des informations !
+
+:::winkastride
+Donc si vous comprenez bien votre langage et ses possibilités, vous pourrez mettre en place plein de petites optimisations dans votre code !
+:::
+
+Plus complexes, les **tableaux associatifs** existent sous de nombreux noms et formes en fonction des langages : vous entendrez parler de tables de hachage, d'*associative arrays*, de dictionnaires, d'objets, de *map* ou de *record*. C'est comme un tableau, sauf que chaque valeur est associée à une clé unique. Par exemple, nous pouvons utiliser un objet pour représenter un animal du refuge :
 
 ```js
 let lynx = {
@@ -27,13 +33,11 @@ let lynx = {
 }
 ```
 
+:::profremi
+Généralement, un tableau associatif (ou dictionnaire) est homogène, mais un objet (ou *record*) est hétérogène. Donc libre à vous d'y stocker toutes les informations nécessaires !
 :::
-Généralement, un tableau associatif est hétérogène, donc libre à vous d'y stocker toutes les informations nécessaires.
-:::
 
-
-
-On a regardé deux types de structure de données qui sont très simples et très courantes, mais en fonction des langages et des technologies que vous utiliserez, il y aura des structures de données plus compliquées ou plus originales pour répondre à des problèmes plus spécifiques. Par exemple, les tuples, qui sont comme une liste, mais dont le nombre d'éléments à l'intérieur est déjà fixé. Par exemple, notre animal de tout à l'heure va avoir des coordonnées qui vont être un tuple de deux int, x et y.
+En fonction des langages et des technologies que vous utiliserez, il y aura parfois des structures de données plus compliquées ou plus originales pour répondre à des problèmes plus spécifiques. Par exemple, les **tuples**, qui sont comme une liste, mais dont le nombre d'éléments à l'intérieur est déjà fixé. Notre animal peut avoir des coordonnées qui seront un tuple de deux nombres entiers, *x* et *y*.
 
 ```js
 let lynx = {
@@ -44,6 +48,4 @@ let lynx = {
 }
 ```
 
-Si vous deviez retenir une chose : quand vous commencez un nouveau langage de programmation, intéressez-vous aux différentes structures de données qu'il vous propose, et les qualités et défauts de chacune.
-
-Dans certains langages, il n'y a qu'un seul type de tableau, mais dans d'autres, vous aurez par exemple des différences entre un tableau (array) et une liste (linked list). La première étant plus performante pour retirer, ajouter et modifier des éléments, et la seconde meilleure pour faire des boucles ou des fonctions récursives. Donc si vous comprenez bien votre langage et ses possibilités, vous pourrez mettre en place plein de petites optimisations dans votre code !
+Chaque langage de programmation vous propose des structures de données différentes, avec leurs qualités et leurs défauts... Prenez le temps de vous y intéresser !

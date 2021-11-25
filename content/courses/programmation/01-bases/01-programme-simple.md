@@ -2,7 +2,7 @@
 title: "À quoi ressemble un programme ?"
 ---
 
-Un programme tout simple, c'est une série d'ordres qui part du haut vers le bas, et que la machine exécute un par un pour faire une tâche.
+Un programme tout simple, c'est une série de tâches qui part du haut vers le bas, et que la machine exécute une par une pour obtenir un résultat.
 
 Voici un exemple de programme qui crée une variable contenant le texte "Bonjour Marvin !" puis qui l'affiche dans la console :
 
@@ -11,7 +11,7 @@ let message = "Bonjour Marvin !"
 print(message)
 ```
 
-Mon programme est constitué de deux ordres :
+Mon programme est constitué de deux tâches :
 
 1. Je crée une variable qui s'appelle `message` et qui contient le texte `"Bonjour Marvin !"`.
 2. J'affiche le contenu de la variable `message` dans la console.
@@ -31,14 +31,14 @@ Ici, l'étiquette de la boîte est `message` et son contenu est le texte "Bonjou
 > Boite
 
 :::profremi
-Dans certains cas, on ne peut pas changer la valeur de la variable une fois qu'on l'a définie. On appelle ça une constante.
+Dans certains cas, on ne peut pas changer la valeur de la variable une fois qu'on l'a définie. On appelle souvent ça une constante.
 :::
 
 > Boite scotchée
 
 Une variable peut contenir plusieurs **types de données** : un nombre entier, un texte... Dans certains langages de programmation, une fois que le type de la variable a été défini, il ne peut plus changer : vous pouvez remplacer un nombre entier par un autre nombre entier, mais pas par un texte.
 
-On peut agir sur les variables avec des **opérateurs mathématiques** comme l'addition, la soustraction et la multiplication.
+On peut agir sur les variables avec des **opérateurs arithmétiques** comme l'addition, la soustraction et la multiplication.
 
 ```lua
 bananes = 2
@@ -90,5 +90,3 @@ print(case_arrivee)
 Ce petit programme affiche donc la case d'arrivée. Comme vous le voyez, la plupart des langages permettent de faire un modulo avec le signe `%`.
 
 Le modulo peut sembler étrange au début, car on ne sait pas trop à quelle occasion on va réellement s'en servir. Mais c'est une bonne chose de savoir qu'il existe, car il est présent dans beaucoup de langages de programmation et permet de réaliser ce genre de petites astuces !
-
-Dans cette première section, nous avons vu le principe des variables et des opérateurs arithmétiques. C'est un bon début, mais actuellement, nos programmes ne font rien de plus qu'une calculatrice... Pour créer de véritables mécanismes, nous avons besoin des opérateurs logiques. Direction la section suivante !
