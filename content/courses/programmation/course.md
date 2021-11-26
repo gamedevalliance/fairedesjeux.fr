@@ -11,41 +11,29 @@ cover_wide: ./cover-wide.png
 cover_tall: ./cover-tall.png
 opengraph_image: cover_wide
 ---
-loops?
 
-ça a l'air d'être énorme, flippant, on comprend que ça puisse faire peur. Mais justement, chez gda, on veut montrer que c accessible aux débutants, aux amateurs qui font leurs petits projets. On a déjà fait des vidéos sur le sujet :
+Vous avez envie de créer vos propres jeux vidéo, mais malheusement vous avez cru comprendre qu'il fallait savoir programmer pour cela... Pas de panique. Si ça peut paraître flippant de l'extérieur, chez GDA, on est justement là pour vous vous montrer que c'est tout à fait accessibles aux débutants et débutantes.
 
-"faire des jeux sans programmer" : programmer c'est pas l'image qu'en ont les gens, y a des outils pour nous aider, c'est plus simple et plus de ressources que ce qu'on image, et même si c'est pas pour vous, y a plein d'autres métier dans le jv qui peuvent vous plaire.
+Nous avions déjà réalisé une vidéo "Faire des jeux sans programmer", qui s'attaquait à beaucoup de clichés autour de la programmation : faut-il être un génie des maths pour savoir programmer ? Faut-il retenir le nom de toutes les fonctions par coeur ? Le visual scripting peut-il remplacer la programmation ? Est-ce que l'on peut quand même travailler dans le jeu vidéo sans programmer ? 
 
-"vidéos pico8": tutoriels pratiques simples, avec un langage simple, lua, et en une soirée vous avez déjà codé votre premier jeu vidéo.
+Si ces questions vous intéresse, n'hésitez pas à regarder cette vidéo avant d'attaquer cette formation. De la même manière, si vous préférez débuter par un projet pratique, ou avoir des exercices concrets en suivant cette formation, nous vous invitons à jeter un oeil à nos formations [Pico8](https://fairedesjeux.fr/pico-8/) et [Ren'Py](https://fairedesjeux.fr/renpy/). Très accesibles et courtes, elles vous permettrons de réaliser vos premiers petits jeux en une soirée !
 
-La pratique c'est bien beau, y a plein de tutos sur internet, mais on s'est rendus compte que les gens avaient du mal à appréhender les aspects théoriques, et les meilleurs articles sur les blog de prog ou wikipedia sont destinés à des personnes avancées ayant des bases et non pas aux débutants qui font leurs premiers pas.
+:::profremi
+Apprendre en pratiquant c'est bien beau, mais sans un minimum de théorie... Vous allez finir par vous retrouver coincer !
+:::
 
-C'est donc ce qu'on va faire dans cette série de vidéos, où on va expliquer les bases de la prog, comment on écrit des programmes, des algorithmes, mais où aussi on va expliquer plein de mots compliqués : fonctions, types, structures de données, design patterns, paradigmes... là on va partir de zéro et expliquer ça  le plus simplement posssible. pour que quelque soit le langage sur lequel vous allez, vous aurez toujours les bases théoriques pour vous lancer.
+Exactement. Il y a plein de tutos sur internet, mais on s'est rendus compte que les gens avaient du mal à appréhender les aspects théoriques, et les meilleurs articles sur les blog de prog ou wikipedia sont destinés à des dévelopeurs et développeuses avancées, et non pas aux débutants et débutantes qui font leurs premiers pas.
 
-Bien sur on est GDA donc on aura souvent des exemples JV mais la série est pas coincé sur un langage ou un domaine, donc vous voulez faire la programmation pour le web, ou tout autre domaine, ça pourra quand même vous aider.
+C'est donc ce qu'on va faire dans cette formation, où on va expliquer les bases de la prog, comment on écrit des programmes, des algorithmes, mais où aussi on va expliquer plein de mots compliqués : fonctions, types, structures de données, design patterns, paradigmes... là on va partir de zéro et expliquer ça  le plus simplement posssible. pour que quelque soit le langage sur lequel vous allez, vous aurez toujours les bases théoriques pour vous lancer.
 
-- Certains langages demandent de mettre des points-virgule `;` à la fin des lignes, d'autres non.
-- Certains langages ouvrent et ferment des blocs avec des accolades `{ }`, d'autres ferment avec le mot-clé `end`. Python, lui, n'a ni accolade, ni mot-clé, mais utilise plutôt l'indentation (le décalage au début des lignes) pour savoir ce qui est dans un bloc.
+Par contre, ne tombez pas dans le problème inverse... Si a un moment, vous trouvez que la formation devient trop dure, c'est que vous devez prendre une pause pour pratiquer sur des projets concrets. En effet, c'est la pratique qui va vous permettre de réellement comprendre et assimiler les concepts théoriques.
 
-```c
-if (expression) {
-    condition
-}
-```
+:::oofmarvin
+Je ne reconnais pas le code que vous utilisez...
+:::
 
-```lua
-if expression then
-    condition
-end
-```
+:::astride
+C'est normal Marvin, pour que tu puisse te concentrer sur le propos et non sur l'éxécution... J'ai choisis d'utiliser un **pseudo-code** fictif, inspiré de plusieurs langages.
+:::
 
-```python
-if expression:
-    condition
-suite du programme
-```
-
-préciser que si ça devient trop dur d'un coup, c'est sans doute qu'il faut pratiquer
-
-ça ne remplacera jamais une formation d'ingénieur, 10 ans de pratique ou des soirées perdues sur Wikipédia, mais on espère que cela va attiser votre curiosité, vous aider à mieux comprendre certains termes techniques, et rappeler que la programmation ce n'est pas seulement de la technique, mais aussi des questionnements théoriques.
+Evidémment, cette formation ne remplacera jamais une école d'ingé, 10 ans de pratique profesionnelle, ou des soirées perdues sur Wikipédia... Mais on espère que cela va attiser votre curiosité, démystifier les craintes que vous pourriez avoir, vous apprendre quelques bonnes pratiques, et vous donner envie d'en apprendre plus !
