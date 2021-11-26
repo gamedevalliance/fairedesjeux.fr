@@ -6,13 +6,13 @@ Dans la section précédente, nous avons vu le principe des variables et des op�
 
 > Schéma : **Si** x est vrai **alors** y **sinon** z. **Suite du programme**
 
-```lua
-number = 10
-if number > 6 then
-    print("Le nombre est supérieur à 6.")
-else
-    print("Le nombre est inférieur ou égal à 6.")
-end
+```ts
+let number = 10
+if(number > 6){
+  Console.print("Le nombre est supérieur à 6.")
+}else{
+  Console.print("Le nombre est inférieur ou égal à 6.")
+}
 ```
 
 Ici, `number > 6` est une expression qui est évaluée par le programme pour valoir « vrai » ou « faux » (`true` ou `false` en anglais).
@@ -40,12 +40,12 @@ Remarquez l'opérateur double égal `==`. Il s'écrit ainsi pour une bonne raiso
 
 Avec le double égal et le modulo, on peut savoir si un nombre est pair ou impair :
 
-```lua
-if number % 2 == O then
-    print("Ce nombre est pair")
-else
-    print("Ce nombre est impair")
-end
+```ts
+if(number % 2 == O){
+  Console.print("Ce nombre est pair")
+}else{
+  Console.print("Ce nombre est impair")
+}
 ```
 
 Enfin, il existe des opérateurs logiques, qui permettent de connecter plusieurs expressions. Selon les langages, ils peuvent être écrits en toutes lettres ou avec des symboles :
@@ -58,22 +58,22 @@ Inverse de `x` | `not x` | `!x`
 
 Vous pouvez combiner ces opérateurs logiques et utiliser des parenthèses pour former des conditions complexes !
 
-```lua
-if (pommes > 5 and pommes < 10) or oranges != 5 then
-    print("J'ai de quoi faire une tarte !")
-end
+```ts
+if((applesCount > 5 && applesCount < 10) || orangesCount != 5){
+  Console.print("J'ai de quoi faire une tarte !)
+}
 ```
 
 Ce sont les opérateurs de comparaison et les opérateurs logiques qui vont permettre à votre code de réellement dépasser la calculatrice, en agissant en fonction des variables. Cela dit, pour que cela ait un intérêt, l'utilisateur devrait pouvoir agir sur le programme en écrivant lui-même les nombres.
 
-```lua
-print("Entrez un nombre.")
-number = io.read() -- permet à l'utilisateur d'écrire dans la console
-if number % 2 == O then
-    print("Ce nombre est pair.")
-else
-    print("Ce nombre est impair.")
-end
+```ts
+Console.print("Entrez un nombre.")
+let number = Console.input() // permet à l'utilisateur d'écrire dans la console
+if(number % 2 == O){
+  Console.print("Ce nombre est pair.")
+}else{
+  Console.print("Ce nombre est impair.")
+}
 ```
 
 :::profremi

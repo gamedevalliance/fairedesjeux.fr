@@ -14,8 +14,8 @@ Pour les plus attentifs, on a déjà parlé des fonctions récursives qui permet
 
 Imaginons que nous avons une liste d'ingrédients, et que nous voulons afficher dans la console chaque ingrédient. Je peux réaliser une boucle *for in* telle que :
 
-```js
-let ingredients = {"tomatoes", "cucumbers"}
+```ts
+let ingredients = list{"tomatoes", "cucumbers"}
 for (ingredient in ingredients) {
     print(ingredient)
 }
@@ -34,44 +34,44 @@ C'est pourquoi nous allons regarder ensemble quelques boucles plus expressives.
 
 Les fonctions de premier ordre prennent comme argument une autre fonction. Vous pouvez réaliser les vôtres, mais généralement, les langages embarquent plusieurs fonctions pré-faites pour réaliser des tâches courantes. Vérifiez ce qui est disponible dans votre langage avant de réinventer la roue !
 
-La *map* est une fonction (ou méthode selon les langages) à laquelle on passe une structure de données — souvent une liste — et qui renvoie une copie de cette liste modifiée.
+La *map* est une fonction (ou méthode selon les langages) à laquelle on passe une structure de données itérable - c'est à dire une liste ou un tableau par exemple — et qui renvoie une copie de cette liste modifiée.
 
-```js
-function cut(item) {
-    return "cut " + item
+```ts
+let cut = (ingredient) => {
+  return "cutted " + ingredient
 }
-let cutIngredients = ingredients.map(ingredient => cut(ingredient))
+let cuttedIngredients = ingredients.map(ingredient => cut(ingredient))
 ```
 
-La variable `cutIngredients` va contenir `{"cut tomatoes", "cut cucumbers"}`.
+La variable `cuttedIngredients` va contenir une liste `list{"cutted tomatoes", "cutted cucumbers"}`.
 
 L'intérêt de la *map*, c'est que la liste `ingredients` existe toujours. On en a seulement réalisé une copie en appliquant une logique à chaque élément. Si une autre fonction a besoin des ingrédients d'origine au même moment, elles ne vont pas entrer en conflit.
 
-Très utile également, la fonction *filter* permet, quand on lui passe une structure de données — souvent une liste — de ne garder que les éléments répondant à une condition précise. Par exemple, on pourrait ne garder que les ingrédients dont la propriété "est cru" (`isRaw`) est `true`.
+Très utile également, la fonction *filter* permet, quand on lui passe une structure de données itérable de ne garder que les éléments répondant à une condition précise. Par exemple, on pourrait ne garder que les ingrédients dont la propriété "est cru" (`isRaw`) est `true`.
 
-```js
-let ingredients = {
-    {
-        name: "tomatoes",
-        isRaw: true
-    },
-    {
-        name: "roasted chicken",
-        isRaw: false
-    }
+```ts
+let ingredients = list{
+  {
+    name: "tomatoes",
+    isRaw: true
+  },
+  {
+    name: "roasted chicken",
+    isRaw: false
+  }
 }
 let rawIngredients = ingredients.filter(ingredient => ingredient.isRaw)
 ```
 
 Grâce au filtre, `rawIngredients` ne contient que les tomates.
 
-Dernier exemple : un *reducer* permet d'accumuler une liste en une seule valeur finale. On peut l'utiliser pour additionner une liste de nombres et obtenir la valeur totale.
+Dernier exemple : un *reducer* permet de transformer une structure de donnée itérable en une seule valeur finale. On pourrait l'utiliser pour additionner un tableau de nombres et obtenir la valeur totale.
 
-```js
-let donations = {3, 50, 10}
-let funding = donations.reduce((a, b) => a + b)
+```ts
+let donations = [3, 50, 10]
+let fundingTotal = donations.reduce((a, b) => a + b)
 ```
 
-Ici, `funding` vaut 63. Notre *reducer* a d'abord réalisé le calcul `3 + 50`, puis `53 + 10`, et aurait continué de la sorte si le tableau contenait d'autres valeurs.
+Ici, `fundingTotal` vaut 63. Notre *reducer* a d'abord réalisé le calcul `3 + 50`, puis `53 + 10`, et aurait continué de la sorte si le tableau contenait d'autres valeurs.
 
-Il s'agit d'un exemple très simple, mais on pourrait imaginer un *reducer* plus complexe qui récupèrerait notre liste d'ingrédients pour en faire une salade ! Le principe est toujours de transformer un groupe de valeurs en une valeur unique.
+Il s'agit d'un exemple très simple, mais on pourrait imaginer un *reducer* plus complexe qui récupèrerait notre liste d'ingrédients pour en faire une salade ! Le principe est toujours de transformer un ensemble de valeurs en une valeur unique.

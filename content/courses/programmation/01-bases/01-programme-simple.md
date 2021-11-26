@@ -6,7 +6,7 @@ Un programme tout simple, c'est une série de tâches qui part du haut vers le b
 
 Voici un exemple de programme qui crée une variable contenant le texte "Bonjour Marvin !" puis qui l'affiche dans la console :
 
-```ocaml
+```ts
 let message = "Bonjour Marvin !"
 print(message)
 ```
@@ -40,11 +40,11 @@ Une variable peut contenir plusieurs **types de données** : un nombre entier, 
 
 On peut agir sur les variables avec des **opérateurs arithmétiques** comme l'addition, la soustraction et la multiplication.
 
-```lua
-bananes = 2
-cerises = 8
-fruits = bananes + cerises
-print(fruits)
+```ts
+let bananasCount = 2
+let cherriesCount = 8
+let fruitsTotal = bananasCount + cherriesCount
+print(fruitsTotal)
 ```
 
 Ce petit programme va afficher `10` dans la console.
@@ -80,11 +80,11 @@ Pour obtenir la bonne case d'arrivée, on peut utiliser le modulo :
 - Si le jet de dés donne 5 → 5 modulo 8 = 5.
 - Si le jet de dés donne 10 → 10 modulo 8 = 2.
 
-```lua
-case_depart = 0
-jet = math.random(2, 12) -- donne un résultat entre 2 et 12
-case_arrivee = case_depart + jet % 8
-print(case_arrivee)
+```ts
+let currentPosition = 0
+let diceRoll = Math.random(2, 12) // donne un résultat entre 2 et 12
+let newPosition = currentPosition + diceRoll % 8
+Console.print(newPosition)
 ```
 
 Ce petit programme affiche donc la case d'arrivée. Comme vous le voyez, la plupart des langages permettent de faire un modulo avec le signe `%`.
