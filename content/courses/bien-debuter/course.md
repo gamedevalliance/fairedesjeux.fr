@@ -2,7 +2,7 @@
 type: SKILL
 title: "Bien débuter dans la création de jeux"
 short_title: "Bien débuter"
-description: "Vous avez envie de créer des jeux vidéo, mais vous débutez complètement et ne savez pas par où commencer ? Cette formation est faite pour vous !"
+description: "Nos conseils et ressources pour débuter la création de jeux vidéo du bon pied !"
 date: "2020-08-28"
 author: "L'équipe de Game Dev Alliance"
 medal: SILVER
@@ -12,8 +12,22 @@ cover_tall: ./cover-tall.png
 opengraph_image: cover_wide
 ---
 
-Vous avez envie de créer des jeux vidéo, mais vous débutez complètement et ne savez pas par où commencer ? Cette formation est faite pour vous !
+Vous avez envie de créer des jeux vidéo mais vous débutez complétement ? Si vous êtes audodidacte et ne connaisez pas d'autres créateurs, cela peut ne pas être évident...
 
-Tous les jours sur notre [serveur Discord](https://discord.gg/RrBppaj), nous voyons de nombreux débutants se confronter aux mêmes problèmes et se poser les mêmes questions, ce qui nous avait poussé à écrire une *foire aux questions* sur notre ancien wiki, et à traiter plusieurs de ces sujets en vidéo.
+:::oofmarvin
+Créer des jeux me parait trop compliqué : je ne sais ni par où commencer, ni où chercher pour trouver des réponses !
+:::
 
-Aujourd'hui, nous vous proposons une formation complète, vous permettant à la fois de comprendre comment débuter sur des bonnes bases, choisir un moteur de jeu ou un logiciel de graphisme, progresser au fil des prototypes, ou tout simplement capturer votre écran pour montrer son projet aux autres. Bonne visite !
+:::winkastride
+Ne t'inquiète pas Marvin, c'est normal quand on débute... mais je suis là pour t'aider !
+:::
+
+En effet, vous n'êtes pas seuls : chaque année nous voyons de nombreux débutants et débutantes être confrontés aux mêmes difficultés, et nous poser les mêmes questions...  
+
+Alors pour vous permettre d'attaquer la création de jeux vidéos du bon pied, nous avons décidé de réaliser cette petite formation sur "Bien débuter". Vous y retrouverez tous nos conseils pour vous lancer et progresser, ainsi que nos réponses aux questions les plus fréquentes.
+
+:::remi
+Si tu ne trouve pas la réponse à ta question ici, n'hésite pas à venir la poser directement sur notre [serveur Discord](https://discord.gg/RrBppaj).
+:::
+
+Notez que "Bien débuter" n'est pas une formation classique : pas la peine de la suivre méthodiquement du début à la fin. Vous pouvez simplement utiliser le menu de gauche pour lire les chapitres qui vous intéresse particulièrement.
