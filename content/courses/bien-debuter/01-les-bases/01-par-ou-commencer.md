@@ -5,6 +5,8 @@ description: "Voici par où commencer si vous souhaitez créer des jeux !"
 
 `youtube:https://www.youtube.com/watch?v=LgAQWasSAXQ`
 
+### Résumé de la vidéo
+
 Si vous vous intéréssez à la création de jeux vidéo, il y a de bonnes chances que vous aimez y jouer. Peut-être même que vous révez de pouvoir réaliser des jeux comme ceux de vos studios favoris ?
 
 :::hypemarvin
@@ -28,7 +30,7 @@ Pour cela, pas besoin de musiques ni de graphismes fignolés. De simples carrés
 ![Screenshot de Butterfly Soup](../prototype.webp)
 *Inserez une illustration de prototypes*
 
-Ainsi, vous pourez voir immédiatement si votre idée marche bien, si elle est rigolote, et si vous avez les compétences requises pour la réaliser. Réaliser des protypes vous permet aussi d'apprendre de nouvelles compétences, en suivant des petits tutoriels ou en essayant de réaliser quelque chose que vous n'aviez jamais fait !
+Ainsi, vous pourez voir immédiatement si votre idée marche bien, si elle est rigolote, et si vous avez les compétences requises pour la mener à bien. Réaliser des protypes vous permet aussi d'apprendre de nouvelles compétences, en suivant des petits tutoriels ou en essayant de réaliser quelque chose que vous n'aviez jamais fait !
 
 Si votre idée de base fonctionne, vous pouvez progressivement ajouter de nouvelles fonctionnalités autour, comme un système de score par exemple. N'hésitez pas à diviser chaque fonctionnalité en une to do list de mini-objectifs, pour vous donner un sentiment de progression.
 
@@ -40,4 +42,4 @@ Félicitation ! Vous avez réalisé votre premier petit jeu !
 
 N'hésitez pas à le faire tester à vos amis, ou à le poster sur notre [serveur Discord](https://discord.gg/RrBppaj)... C'est important de recueillir des avis extérieurs, et voir comment les autres abordent votre jeu.
 
-A force de réaliser des petits prototypes, vous devriez gagner en compétance, tout en comprenant mieux ce que vous êtes capable ou non de faire, et voir quels idées de gameplay fonctionnent mieux que d'autres... Et, qui sait... Peut-être qu'un jour, un de vos protypes vous plaira tellement, que vous en ferez un jeu complet 😉
+A force de réaliser des petits prototypes, vous devriez gagner en compétence, tout en comprenant mieux ce que vous êtes capable ou non de faire, et voir quels idées de gameplay fonctionnent mieux que d'autres... Et, qui sait... Peut-être qu'un jour, un de vos protypes vous plaira tellement, que vous en ferez un jeu complet 😉

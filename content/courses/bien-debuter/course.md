@@ -22,7 +22,7 @@ Créer des jeux me parait trop compliqué : je ne sais ni par où commencer, ni 
 Ne t'inquiète pas Marvin, c'est normal quand on débute... mais je suis là pour t'aider !
 :::
 
-En effet, vous n'êtes pas seuls : chaque année nous voyons de nombreux débutants et débutantes être confrontés aux mêmes difficultés, et nous poser les mêmes questions...  
+En effet, vous n'êtes pas seuls : chaque année nous voyons de nombreux débutants et débutantes sont confrontées aux mêmes difficultés, et nous posent les mêmes questions... 
 
 Alors pour vous permettre d'attaquer la création de jeux vidéos du bon pied, nous avons décidé de réaliser cette petite formation sur "Bien débuter". Vous y retrouverez tous nos conseils pour vous lancer et progresser, ainsi que nos réponses aux questions les plus fréquentes.
 
