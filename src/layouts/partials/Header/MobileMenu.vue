@@ -50,7 +50,7 @@
                 Game Dev Alliance
             </a>
 
-            <a href="https://discord.gg/RrBppaj" class="link text-purple-600">Rejoindre Discord</a>
+            <a href="https://discord.gg/RrBppaj" class="link text-violet-600">Rejoindre Discord</a>
 
             <hr class="my-3 border-body border-2 rounded-md border-opacity-75" />
 
@@ -91,7 +91,7 @@
     }
 
     .mobile--menu {
-        @apply fixed w-0 overflow-hidden whitespace-no-wrap bg-area border-t border-body;
+        @apply fixed w-0 overflow-hidden whitespace-nowrap bg-area border-t border-body;
 
         transition: width 0.1s linear;
         height: calc(100% - 55px);

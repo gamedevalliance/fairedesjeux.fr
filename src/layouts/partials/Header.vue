@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="bg-area lg:bg-body text-font font-semibold clearfix">
+        <header class="bg-area lg:bg-body text-font font-semibold flow-root">
             <div class="container mx-auto flex justify-between lg:block pr-3 md:pr-0">
                 <Logo />
                 <Links class="hidden lg:inline-block " />

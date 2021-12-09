@@ -1,10 +1,16 @@
 module.exports = {
-    purge: [
+    content: [
         './src/**/*.html',
         './src/**/*.vue',
         './src/**/*.js',
     ],
     theme: {
+        screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+        },
         fontFamily: {
             display: ['Source Code Pro'],
             body: ['Muli'],
@@ -92,7 +98,6 @@ module.exports = {
             }),
         },
     },
-    variants: {},
     plugins: [
         ({
             addBase, addComponents, theme,
