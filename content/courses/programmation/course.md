@@ -9,7 +9,7 @@ medal: SILVER
 medal_message: "Cette formation est en cours de rédaction : seul le chapitre 1 est finalisé. [Voir l'avancement.](https://github.com/gamedevalliance/fairedesjeux.fr/pull/44)"
 cover_wide: ./cover-wide.png
 cover_tall: ./cover-tall.png
-opengraph_image: cover_wide
+opengraph_image: ./open-graph.png
 ---
 
 Vous souhaitez créer vos propres jeux vidéo, mais malheusement vous avez constaté qu'il fallait programmer pour cela... Pas de panique. Si cela peut faire peur de l'extérieur, chez Game Dev Alliance, nous sommes justement là pour vous montrer que c'est un domaine tout à fait accessible aux débutants et débutantes.
