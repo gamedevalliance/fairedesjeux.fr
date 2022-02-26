@@ -22,7 +22,7 @@
     "gridsome-plugin-remark-youtube": "^1.0.1",
     "gridsome-remark-video-shortcode": "^0.1.1",
     "postcss-nested": "^4.2.3",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.27.0",
     "remark-html": "^13.0.1",
     "remark-parse": "^9.0.0",
     "remark-shortcodes": "github:Princesseuh/remark-shortcodes",
