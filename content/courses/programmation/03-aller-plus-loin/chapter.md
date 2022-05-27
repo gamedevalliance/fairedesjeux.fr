@@ -1,3 +1,0 @@
----
-title: "Aller plus loin"
----

@@ -21,7 +21,7 @@ for (ingredient in ingredients) {
 }
 ```
 
-Dans cette boucle, la variable `ingredient` va prendre tour à tour la valeur de chaque élément de la liste `ingredients`, et à chaque fois appliquer le bout de code qui se trouve à l'intérieur de la boucle.
+Dans cette boucle, la variable `ingredient` va prendre tour à tour la valeur de chaque élément de la liste `ingredients`, et à chaque fois appliquer le bout de code qui se trouve à l'intérieur de la boucle. Notez que la liste se nomme `ingredients` au pluriel, mais que la variable `ingredient` (que l'on appelle un itérateur) est au singulier.
 
 Il existe d'autres boucles similaires, comme les boucles *for* et *while* dans lesquelles on ne se base pas sur une liste, mais où l'on précise directement le nombre de fois que la boucle doit se jouer. Dans tous les cas, ces structures ont les mêmes défauts :
 
@@ -32,22 +32,22 @@ C'est pourquoi nous allons regarder ensemble quelques boucles plus expressives.
 
 ### Fonctions de premier ordre
 
-Les fonctions de premier ordre prennent comme argument une autre fonction. Vous pouvez réaliser les vôtres, mais généralement, les langages embarquent plusieurs fonctions pré-faites pour réaliser des tâches courantes. Vérifiez ce qui est disponible dans votre langage avant de réinventer la roue !
+Afin de vous faciliter le travail, les langages de programmation embarquent tout un tas de fonctions pré-faites pour réaliser des tâches courantes. Dans notre cas, nous allons nous intéresser aux fonctions de premier ordre, qui ont la particularité de prendre une autre fonction en argument. Nous allons voir que beaucoup d'entre elles peuvent remplacer les boucles traditionnelles !
 
-La *map* est une fonction (ou méthode selon les langages) à laquelle on passe une structure de données itérable - c'est à dire une liste ou un tableau par exemple — et qui renvoie une copie de cette liste modifiée.
+Par exemple, la *map* est une fonction (ou méthode selon les langages) à laquelle on passe une structure de données itérable - c'est-à-dire une liste ou un tableau par exemple — et qui renvoie une copie de cette liste modifiée en y appliquant une fonction. Dans notre cas, nous souhaitons créer une copie de la liste `ingredients` où chaque ingrédient a été coupé avec la fonction `cut()` :
 
 ```ts
 let cut = (ingredient) => {
-  return "cutted " + ingredient
+  return "cut " + ingredient
 }
-let cuttedIngredients = ingredients.map(ingredient => cut(ingredient))
+let cutIngredients = ingredients.map(ingredient => cut(ingredient))
 ```
 
-La variable `cuttedIngredients` va contenir une liste `list{"cutted tomatoes", "cutted cucumbers"}`.
+La variable `cutIngredients` va contenir une liste `list{"cut tomatoes", "cut cucumbers"}`.
 
-L'intérêt de la *map*, c'est que la liste `ingredients` existe toujours. On en a seulement réalisé une copie en appliquant une logique à chaque élément. Si une autre fonction a besoin des ingrédients d'origine au même moment, elles ne vont pas entrer en conflit.
+L'intérêt de ce genre de fonction est leur expressivité : plutôt que de décrire dans une boucle for les étapes nécéssaires, on laisse le soin à la machine d'obtenir le résultat voulu de la manière la plus efficace possible. Cela rend également notre programme plus lisible, un autre développeur comprendra immédiatement l'objectif sans avoir à déchiffrer toutes les instructions d'une boucle for.
 
-Très utile également, la fonction *filter* permet, quand on lui passe une structure de données itérable de ne garder que les éléments répondant à une condition précise. Par exemple, on pourrait ne garder que les ingrédients dont la propriété "est cru" (`isRaw`) est `true`.
+Un autre exemple serait la fonction *filter*, qui permet de filtrer une structure itérable selon une condition donnée. Concrètement, on pourrait garder uniquement les ingrédients dont la propriété "est cru" (`isRaw`) est `true`.
 
 ```ts
 let ingredients = list{
@@ -63,7 +63,9 @@ let ingredients = list{
 let rawIngredients = ingredients.filter(ingredient => ingredient.isRaw)
 ```
 
-Grâce au filtre, `rawIngredients` ne contient que les tomates.
+:::marvin
+Chouette ! Grâce au filtre, j'ai pu retrouver mes tomates fraîches !
+:::
 
 Dernier exemple : un *reducer* permet de transformer une structure de donnée itérable en une seule valeur finale. On pourrait l'utiliser pour additionner un tableau de nombres et obtenir la valeur totale.
 

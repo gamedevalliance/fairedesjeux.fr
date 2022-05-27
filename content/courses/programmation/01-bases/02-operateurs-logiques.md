@@ -2,16 +2,16 @@
 title: "Les conditions"
 ---
 
-Dans la section précédente, nous avons vu le principe des variables et des opérateurs arithmétiques. C'est un bon début, mais actuellement, nos programmes ne font rien de plus qu'une calculatrice... Pour créer de véritables mécanismes, nous avons besoin d'écrire des conditions, une structure fondamentale en programmation :
+Dans la section précédente, nous avons vu le principe des variables et des opérateurs arithmétiques. C'est un bon début, mais actuellement, nos programmes ne font rien de plus qu'une calculatrice... Pour créer de véritables mécanismes, nous avons besoin d'écrire des conditions, une structure fondamentale en programmation.
 
-> Schéma : **Si** x est vrai **alors** y **sinon** z. **Suite du programme**
+![Représentation schématique d'une condition](./condition.png)
 
 ```ts
 let number = 10
 if(number > 6){
-  Console.print("Le nombre est supérieur à 6.")
+  Console.print("Le nombre est supérieur à 6")
 }else{
-  Console.print("Le nombre est inférieur ou égal à 6.")
+  Console.print("Le nombre est inférieur ou égal à 6")
 }
 ```
 
@@ -41,7 +41,7 @@ Remarquez l'opérateur double égal `==`. Il s'écrit ainsi pour une bonne raiso
 Avec le double égal et le modulo, on peut savoir si un nombre est pair ou impair :
 
 ```ts
-if(number % 2 == O){
+if(number % 2 == 0){
   Console.print("Ce nombre est pair")
 }else{
   Console.print("Ce nombre est impair")
@@ -59,17 +59,17 @@ Inverse de `x` | `not x` | `!x`
 Vous pouvez combiner ces opérateurs logiques et utiliser des parenthèses pour former des conditions complexes !
 
 ```ts
-if((applesCount > 5 && applesCount < 10) || orangesCount != 5){
-  Console.print("J'ai de quoi faire une tarte !)
+if((applesCount > 5 && applesCount < 10) || orangesCount == 5){
+  Console.print("J'ai de quoi faire une tarte !")
 }
 ```
 
-Ce sont les opérateurs de comparaison et les opérateurs logiques qui vont permettre à votre code de réellement dépasser la calculatrice, en agissant en fonction des variables. Cela dit, pour que cela ait un intérêt, l'utilisateur devrait pouvoir agir sur le programme en écrivant lui-même les nombres.
+Ce sont les opérateurs de comparaison et les opérateurs logiques qui vont permettre à notre code de réellement dépasser la calculatrice, en agissant en fonction des variables. Cela dit, pour le moment, c'est nous qui définissons les variables de départ et le programme fera toujours la même chose. Pour que les conditions aient un intérêt, l'utilisateur devrait pouvoir agir sur le programme en écrivant lui-même les nombres.
 
 ```ts
 Console.print("Entrez un nombre.")
 let number = Console.input() // permet à l'utilisateur d'écrire dans la console
-if(number % 2 == O){
+if(number % 2 == 0){
   Console.print("Ce nombre est pair.")
 }else{
   Console.print("Ce nombre est impair.")

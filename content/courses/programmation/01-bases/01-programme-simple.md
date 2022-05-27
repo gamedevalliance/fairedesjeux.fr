@@ -24,17 +24,15 @@ Attends un peu... C'est quoi, une variable ?
 Une variable, c'est comme une boîte dans laquelle on peut enregistrer une donnée. Elle peut porter le nom de ton choix, comme si tu collais une étiquette sur la boite pour te souvenir de ce qu'elle contient.
 :::
 
-:::astride
+:::winkastride
 Ici, l'étiquette de la boîte est `message` et son contenu est le texte "Bonjour Marvin !".
 :::
 
-> Boite
+![Dessin d'un boîte avec une étiquette "message"](./variable.png)
 
 :::profremi
 Dans certains cas, on ne peut pas changer la valeur de la variable une fois qu'on l'a définie. On appelle souvent ça une constante.
 :::
-
-> Boite scotchée
 
 Une variable peut contenir plusieurs **types de données** : un nombre entier, un texte... Dans certains langages de programmation, une fois que le type de la variable a été défini, il ne peut plus changer : vous pouvez remplacer un nombre entier par un autre nombre entier, mais pas par un texte.
 
@@ -65,13 +63,7 @@ C'est très utile pour faire des boucles !
 
 Imaginez un mini-plateau de Monopoly avec 8 cases numérotées de 0 à 7. Le joueur est à la case 0 et il va lancer deux dés de 6.
 
-> Plateau
-
-```
-OOO
-O O
-XOO
-```
+![Plateau de Monopoly](./monopoly.png)
 
 Si le résultat est 5, il doit arriver sur la case 5. Mais si le résultat est 10, il doit faire un tour complet et arriver sur la case 2 !
 
@@ -89,4 +81,4 @@ Console.print(newPosition)
 
 Ce petit programme affiche donc la case d'arrivée. Comme vous le voyez, la plupart des langages permettent de faire un modulo avec le signe `%`.
 
-Le modulo peut sembler étrange au début, car on ne sait pas trop à quelle occasion on va réellement s'en servir. Mais c'est une bonne chose de savoir qu'il existe, car il est présent dans beaucoup de langages de programmation et permet de réaliser ce genre de petites astuces !
+Le modulo peut sembler étrange au début, car on ne sait pas trop à quelle occasion on va réellement s'en servir. Mais c'est une bonne chose de savoir qu'il existe, car il est souvent utilisé dans le développement de jeux pour ce genre d'astuces !

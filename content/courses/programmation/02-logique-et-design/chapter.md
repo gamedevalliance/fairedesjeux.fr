@@ -1,3 +1,0 @@
----
-title: "Logique et design"
----

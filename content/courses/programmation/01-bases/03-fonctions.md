@@ -2,15 +2,11 @@
 title: "Les fonctions"
 ---
 
-Votre programme doit réaliser plusieurs fois la même série d'opérations et vous en avez marre de la réécrire à chaque fois ? Eh bien j'ai un outil très pratique pour vous, les fonctions !
-
-Une fonction, c'est comme une machine dans laquelle on insère des arguments et qui produit un résultat. Vous pouvez donc réutiliser plusieurs fois la même fonction avec des paramètres différents !
-
-> schéma
+Votre programme doit réaliser plusieurs fois la même série d'opérations et vous en avez marre de la réécrire à chaque fois ? Voici un outil très pratique ! Une fonction, c'est comme une machine dans laquelle on insère des arguments et qui produit un résultat. Vous pouvez réutiliser plusieurs fois la même fonction avec des arguments différents !
 
 Concrètement, avant d'utiliser votre première fonction, il faut la créer, autrement dit la déclarer.
 
-Déclarons une fonction qui met le nombre qu'on lui donne au carré — on va l'appeler `square()`. Entre les parenthèses, on précise que la fonction attend une valeur en argument, qui sera appelée `number` dans la logique interne.
+Déclarons une fonction qui retourne le nombre qu'on lui donne au carré — on va l'appeler `square()`. Entre les parenthèses, on déclare un paramètre `number` que l'on pourra utiliser dans la logique interne.
 
 ```js
 let square = (number) => {
@@ -32,10 +28,10 @@ let square = (number) => {
 Une fois la fonction déclarée, vous pouvez l'appeler en écrivant son nom et en lui passant un argument, par exemple 6. Si on affiche le résultat, on a bien 6 × 6 = 36.
 
 ```ts
-Console.print(square(6)) -- affiche 36
+Console.print(square(6)) // affiche 36
 ```
 
-Une fonction peut aussi prendre plusieurs arguments ! Nous pouvons créer la fonction `multiply()` qui prend *x* et *y*, et retourne *x* × *y*.
+Une fonction peut aussi prendre plusieurs arguments ! Nous pouvons créer la fonction `multiply()` avec les paramètres *x* et *y*, et qui retourne *x* × *y*.
 
 ```ts
 let multiply = (x, y) => {
@@ -57,7 +53,8 @@ let isMoreThanOneHundred = (number) = {
     return false
   }
 }
-end
+
+Console.print(isMoreThanOneHundred(50)) // affiche "false"
 ```
 
 Pour finir, une fonction peut être **récursive**, c'est-à-dire qu'elle peut s'appeler elle-même.
@@ -75,5 +72,7 @@ let chrono = (count) => {
   }
 }
 ```
+
+On peut ainsi appeler `chrono(10)` et le programme affichera 10, 9, 8... puis le message de fin !
 
 Les fonctions récursives nous permettent de faire des boucles logiques, et nous verrons plus tard d'autres manières de créer des boucles.

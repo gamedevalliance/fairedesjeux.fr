@@ -12,12 +12,12 @@ Console.print(animals[2]) // affiche Cerf
 ```
 
 :::remi
-Comme les index commencent à 0, l'index 2 donne le troisième élément du tableau !
+Comme les index commencent le plus souvent à 0, l'index 2 donne le troisième élément du tableau !
 :::
 
 Selon le langage, la manière dont est gérée une structure de données peut varier. Dans notre cas, nous utilisons un tableau homogène (il ne contient que des éléments d'un même type) et indexé (chaque valeur est ordonnée en partant de 0).
 
-Dans certains langages, il existe également la **liste** (ou *linked list*). Très semblable au tableau, elle est par contre plus rapide à parcourir et sera par exemple idéale dans vos fonctions récursives. Le tableau, quant à lui, est plus performant pour ajouter, modifier ou retirer des éléments. Idéal pour stocker des informations !
+Dans certains langages, il existe également la **liste** (ou *linked list*). Si elle paraît très semblable au tableau, elle n'a en fait pas la même utilité : la liste est plus rapide à parcourir, ce qui la rend idéale dans des fonctions récursives par exemple ; mais si vous souhaitez ajouter, modifier ou retirer des éléments régulièrement, un tableau sera plus performant !
 
 ```ts
 let animals = list{"Lynx", "Chien", "Cerf", "Vache"}

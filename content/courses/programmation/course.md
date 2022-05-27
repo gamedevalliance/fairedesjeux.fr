@@ -1,12 +1,13 @@
 ---
 type: SKILL
 title: "Apprendre à programmer"
-short_title: "Programmation"
-description: ""
+short_title: "Programmer"
+description: "Aspects théoriques de la programmation pour comprendre tous les termes techniques et devenir autonome dans la création de jeux et de logiciels."
 date: "2021-08-02"
 author: "Nev, Aurélien Dos Santos"
 medal: SILVER
-medal_message: "Cette formation est en cours de rédaction : seul le chapitre 1 est finalisé. [Voir l'avancement.](https://github.com/gamedevalliance/fairedesjeux.fr/pull/44)"
+medal_message: "Cette formation est en cours de rédaction : seul le chapitre 1 est finalisé. [Voir l'avancement.](https://github.com/gamedevalliance/fairedesjeux.fr/issues/39)"
+video: "https://www.youtube.com/playlist?list=PLHKUrXMrDS5v1I6RCFObboACa2PtEfTmA"
 cover_wide: ./cover-wide.png
 cover_tall: ./cover-tall.png
 opengraph_image: ./open-graph.png
