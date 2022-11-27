@@ -1,0 +1,18 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+
+const courses = await Astro.glob("../pages/*/*.md")
+---
+
+<MainLayout title="FaireDesJeux.fr">
+  <p>Bienvenue ! On a pleins de supers cours :</p>
+  <ul>
+    {
+      courses.map((course) => (
+        <li>
+          <a href={course.url}>{course.frontmatter.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</MainLayout>

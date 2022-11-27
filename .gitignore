@@ -1,10 +1,17 @@
-*.log
-.cache
-.DS_Store
-src/.temp
-node_modules
-dist
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+
+# environment variables
 .env
-.env.*
-.vscode
+.env.production
+
+# misc
+.DS_Store
 .tool-versions
