@@ -145,7 +145,7 @@ Cette commande fonctionne sur les distributions basées sur la dernière version
 Ouvrez ensuite le terminal dans le dossier où vous souhaitez télécharger le site, puis écrivez ceci pour cloner votre fork :
 
 ```bash
-git clone https://github.com/votre-pseudo/fairedesjeux.fr
+git clone --recursive https://github.com/votre-pseudo/fairedesjeux.fr
 ```
 
 Entrez dans le dossier avec `cd fairedesjeux.fr` puis installez les dépendances :

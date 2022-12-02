@@ -18,7 +18,7 @@ PICO-8 est une console imaginaire dans laquelle vous pouvez aussi bien développ
 
 [[Video src="/videos/pico-8/jelpi.mp4" autoplay muted loop controls]]
 
-Le programme fonctionne sur Windows, Mac, Linux, Raspberry Pi et les jeux peuvent aussi être exportés pour le web.
+Le programme coûte 15$ et fonctionne sur Windows, Mac, Linux, Raspberry Pi et les jeux peuvent aussi être exportés pour le web. Une version étudiante gratuite est disponible sur navigateur à l'adresse [pico-8-edu.com](https://www.pico-8-edu.com/) : elle contient tous les outils de création mais ne permet pas d'exporter ses jeux. Notez que la version étudiante n'est pas mentionné dans les tutoriels vidéo car elle n'existait pas encore.
 
 ### Mais c'est quoi exactement, une console imaginaire ?
 
@@ -32,8 +32,8 @@ On dit souvent que les contraintes stimulent la créativité, et PICO-8 en est u
 
 Si vous réalisiez votre jeu avec Unity, qui est bien plus puissant, vous pourriez être tenté·e d'ajouter toujours plus de contenu à votre jeu, ce qui n'est pas toujours une bonne chose. De plus, il vous serait plus difficile de peaufiner votre jeu car il y aurait beaucoup de paramètres à gérer. La simplicité de PICO-8 vous incite à vous concentrer sur ce qui compte vraiment, et le style graphique permet à n'importe qui de produire un jeu charmant en trois coups de pinceau numérique. Ces gros pixels aux couleurs vives vous feront retomber en enfance, et ça aussi, c'est bon pour la créativité !
 
-Un autre atout crucial de PICO-8, c'est la communauté du forum officiel. Les utilisateurs y partagent des tonnes de démos et de tutoriels ; j'y ai d'ailleurs trouvé tout un tas d'astuces que je vous partagerai dans cette formation. Pour nourrir votre inspiration, vous pouvez essayer des jeux depuis la console elle-même (ou avec votre navigateur [sur itch.io](https://itch.io/games/tag-pico-8)) et examiner leur code librement.
+Un autre atout crucial de PICO-8, c'est la communauté du forum officiel. Les utilisateurs y partagent des tonnes de démos et de tutoriels ; j'y ai d'ailleurs trouvé tout un tas d'astuces que je vous partagerai dans cette formation. Pour nourrir votre inspiration, vous pouvez essayer des jeux depuis la console elle-même (ou avec votre navigateur [sur itch.io](https://itch.io/games/tag-pico-8)) et examiner leur code librement.
 
 [[Video src="/videos/pico-8/splore-online.mp4" autoplay muted loop controls]]
 
-Pour toutes ces raisons, PICO-8 est un logiciel idéal pour les apprentis game designers et toutes les personnes qui souhaitent tenter de nouvelles idées facilement. Pour suivre cette formation, vous pouvez vous rendre sur le [site officiel](https://www.lexaloffle.com/pico-8.php) et obtenir le programme pour la modique somme de 15$. Sachez tout de même qu'il existe des consoles imaginaires gratuites, mais j'estime que PICO-8 vaut largement le détour car aucune autre n'est aussi amusante ou ne dispose d'une aussi belle communauté.
+Pour toutes ces raisons, PICO-8 est un logiciel idéal pour les apprentis game designers et toutes les personnes qui souhaitent tenter de nouvelles idées facilement. Pour suivre cette formation, vous pouvez vous rendre sur le [site officiel](https://www.lexaloffle.com/pico-8.php) et obtenir le programme pour la modique somme de 15$, ou bien utiliser la [version étudiante](https://www.pico-8-edu.com/) sur navigateur. Dans ce dernier cas, consultez la [liste des différences](https://wiki.gamedevalliance.fr/pico-8/education-edition/) par rapport à la version payante. Sachez qu'il existe d'autres consoles imaginaires gratuites, mais j'estime que PICO-8 vaut largement le détour car elle est très amusante et profite d'une belle communauté.

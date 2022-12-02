@@ -1,10 +1,24 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
-    purge: [
+    content: [
         './src/**/*.html',
         './src/**/*.vue',
         './src/**/*.js',
     ],
+    safelist: [
+        { pattern: /bubble(|::after)/ },
+        { pattern: /bubble-(marvin|oofmarvin|hypemarvin)(|::after)/ },
+        { pattern: /bubble-(astride|sighastride|winkastride)(|::after)/ },
+        { pattern: /bubble-(remi|profremi|notlikethisremi)(|::after)/ },
+    ],
     theme: {
+        screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+        },
         fontFamily: {
             display: ['Source Code Pro'],
             body: ['Muli'],
@@ -92,11 +106,8 @@ module.exports = {
             }),
         },
     },
-    variants: {},
     plugins: [
-        ({
-            addBase, addComponents, theme,
-        }) => {
+        plugin(({ addBase, addComponents, theme }) => {
             addBase({
                 'section p': {
                     color: theme('textColor.font'),
@@ -450,8 +461,7 @@ module.exports = {
                         backgroundImage: theme('backgroundImage.remiNotLikeThis'),
                     },
                 },
-
             });
-        },
+        }),
     ],
 };

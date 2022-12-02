@@ -37,7 +37,7 @@ Pour injecter le contenu d'un fichier dans votre cartouche, utilisez la commande
 
 ![](./include.png)
 
-Pour PICO-8, c'est comme si vous avez copié-collé le contenu du fichier à la place de la ligne `#include`. Vous pouvez utiliser cette commande de plusieurs façons :
+Pour PICO-8, c'est comme si vous aviez copié-collé le contenu du fichier à la place de la ligne `#include`. Vous pouvez utiliser cette commande de plusieurs façons :
 
 - `#include script.lua` copie le contenu d'un fichier.
 - `#include cartouche.p8` copie le code d'une autre cartouche.
@@ -47,6 +47,6 @@ La commande `#include` est traitée une seule fois au lancement du jeu, ce qui v
 
 ![](./commande-info.png)
 
-Ce qui est particulièrement pratique en séparant votre jeu en plusieurs fichiers, c'est que vous pouvez écrire du code dans votre éditeur favori et modifier vos sprites dans PICO-8 sans craindre qu'un conflit ait lieu lors de la sauvegarde. Cela vous facilitera particulièrement la vie si vous travaillez à plusieurs !
+Si vous souhaitez écrire votre jeu dans un éditeur externe, je vous conseille de placer tout votre code dans des fichiers `.lua` et de n'écrire que des commandes `#include` dans la cartouche `.p8` ouverte dans PICO-8. Ainsi, vous pourrez écrire dans votre éditeur favori et dessiner vos sprites dans PICO-8 en même temps, sans craindre qu'un conflit ait lieu lors de la sauvegarde. Cela vous facilitera particulièrement la vie si vous travaillez à plusieurs !
 
 Lorsque vous exportez votre jeu ou l'enregistrez au format PNG, tout le contenu des `#include` est sauvegardé à l'intérieur de la cartouche, afin que les fichiers externes ne soient pas nécessaires pour jouer.

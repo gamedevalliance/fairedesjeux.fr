@@ -3,7 +3,7 @@
         <div
             v-for="course in list"
             :key="course.node.id"
-            class="course h-normalCourse relative mx-2 mb-4 lg:mb-0"
+            class="course h-normalCourse relative lg:mb-0"
             :title="course.node.title"
         >
             <g-link :to="course.node.path" class="course__link">
@@ -50,7 +50,7 @@
     }
 
     .course {
-        width: calc(50% - 1rem);
+        width: calc(50% - 0.5rem);
         max-height: 255px;
     }
 

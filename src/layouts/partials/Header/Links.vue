@@ -18,7 +18,7 @@
                 <span>e</span><span>.</span><span>f</span><span>r</span>
             </span>
         </a>
-        <a href="https://discord.gg/RrBppaj" class="font-semibold text-purple-600 border-none inline-block">Rejoindre le Discord</a>
+        <a href="https://discord.gg/RrBppaj" class="font-semibold text-violet-600 border-none inline-block">Rejoindre le Discord</a>
     </nav>
 </template>
 
