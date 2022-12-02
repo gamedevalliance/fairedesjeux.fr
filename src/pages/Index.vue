@@ -36,9 +36,6 @@
             </h3>
 
             <course-list :list="$page.skillCourses.edges" class="flex flex-wrap">
-                <contribute-c-t-a
-                    class="cta"
-                />
             </course-list>
         </main>
     </Layout>
