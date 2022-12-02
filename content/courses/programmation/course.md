@@ -1,7 +1,7 @@
 ---
 type: SKILL
-title: "Apprendre à programmer"
-short_title: "Programmer"
+title: "Les bases de la programmation"
+short_title: "Programmation"
 description: "Aspects théoriques de la programmation pour comprendre tous les termes techniques et devenir autonome dans la création de jeux et de logiciels."
 date: "2021-08-02"
 author: "Nev, Aurélien Dos Santos"
@@ -13,28 +13,26 @@ cover_tall: ./cover-tall.png
 opengraph_image: ./open-graph.png
 ---
 
-Vous souhaitez créer vos propres jeux vidéo, mais malheusement vous avez constaté qu'il fallait programmer pour cela... Pas de panique. Si cela peut faire peur de l'extérieur, chez Game Dev Alliance, nous sommes justement là pour vous montrer que c'est un domaine tout à fait accessible aux débutants et débutantes.
+Vous souhaitez créer vos propres jeux vidéo, mais malheusement vous avez constaté qu'il fallait programmer pour cela... Pas de panique ! Si cela peut faire peur de l'extérieur, c'est en réalité un domaine tout à fait accessible aux débutants et débutantes.
 
-Nous avions déjà réalisé la vidéo « [Faire des jeux sans programmer](https://www.youtube.com/watch?v=AAp3cNlJxCw) », qui s'attaquait à beaucoup de clichés autour de la programmation : faut-il être un génie des maths pour savoir programmer ? Faut-il retenir le nom de toutes les fonctions par coeur ? Le *visual scripting* peut-il remplacer le code ? Peut-on travailler dans le jeu vidéo même sans programmer ? 
-
-Si ces questions vous intéressent, n'hésitez pas à regarder la vidéo avant d'attaquer cette formation. Également, si vous préférez débuter avec un projet pratique, nous vous invitons à suivre nos formations [PICO-8](https://fairedesjeux.fr/pico-8/) et [Ren'Py](https://fairedesjeux.fr/renpy/). Très accessibles et courtes, elles vous permettront de réaliser vos premiers petits jeux en une soirée !
+Si vous préférez débuter avec un projet pratique, nous vous invitons à suivre nos formations [PICO-8](/pico-8/) et [Ren'Py](/renpy/). Très accessibles et courtes, elles vous permettront de réaliser vos premiers petits jeux en une soirée !
 
 :::profremi
 Apprendre en pratiquant c'est bien beau, mais sans un minimum de théorie... Vous allez finir par vous retrouver coincés !
 :::
 
-Exactement. Il existe une multitude de tutoriels sur Internet, mais nous nous sommes rendus compte que les gens avaient du mal à appréhender les aspects théoriques de la programmation. Les meilleurs articles sur les blogs de programmeur ou sur Wikipédia sont destinés à des développeurs et développeuses avancées, non pas aux débutants et débutantes qui font leurs premiers pas.
+Exactement. Il existe une multitude de tutoriels sur Internet, mais nous nous sommes rendus compte que les gens avaient du mal à appréhender les aspects *théoriques* de la programmation.
 
-Dans cette formation, nous allons donc expliquer les bases de la programmation, mais aussi expliquer plein de mots compliqués : fonctions, types, structures de données, *design patterns*, paradigmes... On va partir de zéro, pour que quelque soit le langage que vous utilisiez, vous ayez toujours de bonnes bases théoriques pour vous lancer.
+Ici, nous allons donc aborder les fondamentaux et expliquer plein de mots compliqués : fonctions, types, structures de données, *design patterns*, paradigmes... On va partir de zéro, pour que quelque soit le langage que vous utilisiez, vous ayez toujours de bonnes bases théoriques pour vous lancer.
 
-Par contre, attention à ne pas tomber pas dans le problème inverse... Si à un moment, vous trouvez que la formation devient trop difficile, c'est probablement parce que vous devriez prendre une pause et pratiquer sur des projets concrets. En effet, c'est la pratique qui vous permettra de réellement comprendre et assimiler les concepts théoriques.
+Si au cours de votre lecture, vous trouvez que les explications deviennent trop abstraites, n'hésitez pas à prendre une pause et pratiquer sur des projets concrets. C'est la pratique qui vous permettra de réellement comprendre et assimiler les concepts théoriques !
 
 :::oofmarvin
-Je ne reconnais pas le code que vous utilisez...
+Je ne reconnais pas le code que vous utilisez dans les exemples...
 :::
 
 :::astride
-C'est normal Marvin. Pour que tu puisses te concentrer sur le propos et non sur l'exécution, j'ai choisi d'utiliser un **pseudo-code** fictif dans les exemples, inspiré de plusieurs langages.
+C'est normal ! Pour que tu puisses te concentrer sur le propos et non sur l'exécution, j'ai choisi d'utiliser un **pseudo-code** fictif dans les exemples, inspiré de plusieurs langages.
 :::
 
-Bien sûr, cette formation ne remplacera jamais une école d'ingé, dix ans de pratique professionnelle, ou des soirées perdues sur Wikipédia... Mais on espère que cela va attiser votre curiosité, démystifier les craintes que vous pourriez avoir, vous apprendre quelques bonnes pratiques, et vous donner envie d'en savoir plus !
+Bien sûr, cette formation ne remplacera jamais une école d'ingé ou des années de pratique professionnelle... L'objectif est avant tout d'apprendre quelques bonnes pratiques et de savoir comment progresser dans la bonne direction !

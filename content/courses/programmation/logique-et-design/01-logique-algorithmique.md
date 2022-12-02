@@ -2,7 +2,7 @@
 title: "Logique algorithmique"
 ---
 
-Dans les vidéos précédentes, on a vu les opérateurs, les types, les fonctions et les structures de données. Mais la base de la programmation, c'est d'utiliser tous ces outils pour résoudre des problèmes. C'est ce qu'on appelle un algorithme, c'est un programme fait pour résoudre un problème.
+Dans le chapitre précédent, nous avons vu les opérateurs, les types, les fonctions et les structures de données. Mais la base de la programmation, c'est d'utiliser tous ces outils pour résoudre des problèmes. C'est ce qu'on appelle un algorithme, c'est un programme fait pour résoudre un problème.
 
 Dans notre exemple, on va avoir un service qui va nous envoyer une liste d'animaux. Vous reconnaissez peut-être que c'est une liste contenant plusieurs fois des tableaux associatifs d'animaux. On a donc une liste d'animaux sur laquelle on fait une boucle *for in*.
 

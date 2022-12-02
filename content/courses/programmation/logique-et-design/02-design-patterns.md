@@ -13,26 +13,20 @@ L'exemple qui va suivre fait un peu peur, mais pas de panique, on essaye de vous
 Prenons un exemple avec un pattern Factory : Imaginons que nous voulons créer des animaux. Tous les animaux vont avoir la même structure, c'est à dire un objet qui contient un attribut nom et une méthode sound pour leur cri. Plutôt que de réécrire plusieurs fois le même code, on va créer une `AnimalFactory` qui, en fonction du type de l'animal, va créer l'objet adapté.
 
 ```js
-function AnimalFactory() {
-    this.createAnimal = (type, name) => {
-        let animal
-        animal.name = name
-        if (type == "dog") {
-            animal = new Dog()
-        } else if (type == "cat") {
-            animal = new Cat()
-        }
-        return animal
+let newCat = (name) => {
+    let cat = {
+        name: name
     }
+    return cat
 }
-function Dog() {
-    this.sound() {
-        print("ouaf")
-    }
-}
-function Cat() {
-    this.sound() {
-        print("miaou")
+```
+
+```js
+for (animal in animals) {
+    if (animal.name) {
+        Console.print(animal.name)
+    } else {
+        Console.print("L'animal n'a pas de nom !")
     }
 }
 ```
@@ -43,6 +37,7 @@ Une fois cela fait nous pouvons, en une seule ligne, créer un chat dont le nom 
 
 ```js
 let nouvelAnimal = AnimalFactory.createAnimal("cat", "Potimarron")
+Console.print(nouvelAnimal.sound()) // affiche miaou
 ```
 
 On ne va pas s'éterniser sur l'explication technique ligne par ligne, car la manière de faire diffère énormément d'un langage à l'autre. Si le sujet vous intéresse, il existe de nombreux sites référençant les design patterns et vous expliquant comment les mettre en place, tels que [Refactoring Guru](https://refactoring.guru/fr/design-patterns) et [Dofactory](https://www.dofactory.com/javascript/design-patterns/). Mais aussi le site Game Design Patern, qui référencent les patterns spécifiquement liés à la création de jeux.

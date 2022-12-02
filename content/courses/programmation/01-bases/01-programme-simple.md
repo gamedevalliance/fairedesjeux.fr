@@ -2,13 +2,13 @@
 title: "À quoi ressemble un programme ?"
 ---
 
-Un programme tout simple, c'est une série de tâches qui part du haut vers le bas, et que la machine exécute une par une pour obtenir un résultat.
+Un programme tout simple, c'est une série de tâches qui part du haut vers le bas et que la machine exécute une par une pour obtenir un résultat.
 
-Voici un exemple de programme qui crée une variable contenant le texte "Bonjour Marvin !" puis qui l'affiche dans la console :
+Voici un exemple de programme qui crée une variable contenant le texte « Bonjour Marvin ! » puis qui l'affiche dans la console :
 
 ```ts
 let message = "Bonjour Marvin !"
-print(message)
+Console.print(message)
 ```
 
 Mon programme est constitué de deux tâches :
@@ -25,7 +25,7 @@ Une variable, c'est comme une boîte dans laquelle on peut enregistrer une donn�
 :::
 
 :::winkastride
-Ici, l'étiquette de la boîte est `message` et son contenu est le texte "Bonjour Marvin !".
+Ici, l'étiquette de la boîte est `message` et son contenu est le texte « Bonjour Marvin ! ».
 :::
 
 ![Dessin d'un boîte avec une étiquette "message"](./variable.png)
@@ -42,7 +42,7 @@ On peut agir sur les variables avec des **opérateurs arithmétiques** comme l'a
 let bananasCount = 2
 let cherriesCount = 8
 let fruitsTotal = bananasCount + cherriesCount
-print(fruitsTotal)
+Console.print(fruitsTotal)
 ```
 
 Ce petit programme va afficher `10` dans la console.

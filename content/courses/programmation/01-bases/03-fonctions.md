@@ -4,14 +4,12 @@ title: "Les fonctions"
 
 Votre programme doit réaliser plusieurs fois la même série d'opérations et vous en avez marre de la réécrire à chaque fois ? Voici un outil très pratique ! Une fonction, c'est comme une machine dans laquelle on insère des arguments et qui produit un résultat. Vous pouvez réutiliser plusieurs fois la même fonction avec des arguments différents !
 
-Concrètement, avant d'utiliser votre première fonction, il faut la créer, autrement dit la déclarer.
-
-Déclarons une fonction qui retourne le nombre qu'on lui donne au carré — on va l'appeler `square()`. Entre les parenthèses, on déclare un paramètre `number` que l'on pourra utiliser dans la logique interne.
+Concrètement, avant d'utiliser votre première fonction, il faut la créer, autrement dit la déclarer. Déclarons une fonction qui retourne le nombre qu'on lui donne au carré — on va l'appeler `square()`. Entre les parenthèses, on déclare un paramètre `number` que l'on pourra utiliser dans la logique interne.
 
 ```js
 let square = (number) => {
-  let result = number * number
-  return result
+    let result = number * number
+    return result
 }
 ```
 
@@ -21,7 +19,7 @@ On pourrait écrire cette fonction encore plus rapidement, en écrivant la logiq
 
 ```ts
 let square = (number) => {
-  return number * number
+    return number * number
 }
 ```
 
@@ -31,12 +29,13 @@ Une fois la fonction déclarée, vous pouvez l'appeler en écrivant son nom et e
 Console.print(square(6)) // affiche 36
 ```
 
-Une fonction peut aussi prendre plusieurs arguments ! Nous pouvons créer la fonction `multiply()` avec les paramètres *x* et *y*, et qui retourne *x* × *y*.
+Une fonction peut également prendre plusieurs arguments ! Nous pouvons créer la fonction `multiply()` avec les paramètres *x* et *y*, et qui retourne *x* × *y*.
 
 ```ts
 let multiply = (x, y) => {
-  return x * y
+    return x * y
 }
+Console.print(multiply(2, 3)) // affiche 6
 ```
 
 Bien sûr, dans la vraie vie, on n'aura jamais besoin d'écrire des fonctions simples comme `square()` et `multiply()`, parce que les langages incluent déjà ce genre d'outils.
@@ -47,13 +46,27 @@ Une fonction peut avoir plusieurs `return`, imbriqués dans des conditions par e
 
 ```ts
 let isMoreThanOneHundred = (number) = {
-  if(number > 100){
-    return true
-  }else{
-    return false
-  }
+    if (number > 100) {
+        return true
+    } else {
+        return false
+    }
 }
+Console.print(isMoreThanOneHundred(50)) // affiche "false"
+```
 
+:::hypemarvin
+Est-ce que là aussi, on pourrait écrire la logique directement dans le `return` ?
+:::
+
+:::winkastride
+Bien vu ! Comme `number > 100` est une expression qui renvoie `true` ou `false`, on peut l'écrire comme ceci.
+:::
+
+```ts
+let isMoreThanOneHundred = (number) = {
+    return number > 100
+}
 Console.print(isMoreThanOneHundred(50)) // affiche "false"
 ```
 
@@ -63,16 +76,22 @@ Voici par exemple une fonction `chrono()` qui prend un entier et vérifie s'il e
 
 ```ts
 let chrono = (count) => {
-  if(count == 0){
-    Console.print("Le chrono est terminé !")
-  }else{
-    Console.print(count)
-    wait(1000)
-    chrono(count - 1)
-  }
+    if (count == 0) {
+        Console.print("Le chrono est terminé !")
+    } else {
+        Console.print(count)
+        wait(1000) // Attend 1000 ms, donc une seconde
+        chrono(count - 1)
+    }
 }
 ```
 
 On peut ainsi appeler `chrono(10)` et le programme affichera 10, 9, 8... puis le message de fin !
 
-Les fonctions récursives nous permettent de faire des boucles logiques, et nous verrons plus tard d'autres manières de créer des boucles.
+:::profremi
+Les fonctions récursives sont un moyen pratique et expressif de faire des boucles logiques.
+:::
+
+:::astride
+Nous verrons plus tard d'autres manières de créer des boucles !
+:::
