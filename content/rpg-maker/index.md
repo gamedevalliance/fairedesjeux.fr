@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/MainLayout.astro"
 type: ENGINE
 title: "RPG Maker"
 short_title: "RPG Maker"

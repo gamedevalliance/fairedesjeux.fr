@@ -1,7 +1,9 @@
 ---
+import type { Course } from "../data/courses"
 import MainLayout from "../layouts/MainLayout.astro"
+import { getSlugFromPath } from "../utils"
 
-const courses = await Astro.glob("../pages/*/*.md")
+const courses = await Astro.glob<Course>("../../content/**/index.md")
 ---
 
 <MainLayout title="FaireDesJeux.fr">
@@ -10,7 +12,9 @@ const courses = await Astro.glob("../pages/*/*.md")
     {
       courses.map((course) => (
         <li>
-          <a href={course.url}>{course.frontmatter.title}</a>
+          <a href={"/" + getSlugFromPath(course.file, "course")}>
+            {course.frontmatter.title}
+          </a>
         </li>
       ))
     }

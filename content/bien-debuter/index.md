@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/MainLayout.astro"
 type: SKILL
 title: "Bien débuter dans la création de jeux"
 short_title: "Bien débuter"

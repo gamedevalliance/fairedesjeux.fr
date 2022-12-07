@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/MainLayout.astro"
 type: SKILL
 title: "Comment contribuer au site"
 short_title: "Contribuer"

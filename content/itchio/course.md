@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/MainLayout.astro"
 type: SKILL
 title: "Publier sur itch.io"
 short_title: "Publier sur itch.io"

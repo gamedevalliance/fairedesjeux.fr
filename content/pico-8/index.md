@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/MainLayout.astro"
 type: ENGINE
 title: "Programmer des mini jeux avec PICO-8"
 short_title: "PICO-8"

@@ -1,13 +1,13 @@
 ---
 import AppLayout from "./AppLayout.astro"
 
-const { title, frontmatter } = Astro.props
+const { title } = Astro.props
 ---
 
 <AppLayout title={title}>
   <main class="max-w-screen-md mx-auto px-4 py-2">
     <h2>
-      {title || frontmatter.title}
+      {title}
     </h2>
     <slot />
   </main>

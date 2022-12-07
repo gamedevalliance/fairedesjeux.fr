@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/MainLayout.astro"
 type: SKILL
 title: "Krita"
 short_title: "Krita"

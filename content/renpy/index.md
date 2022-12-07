@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/MainLayout.astro"
 type: ENGINE
 title: "Créer des visual novels avec Ren'Py !"
 short_title: "Ren'Py"

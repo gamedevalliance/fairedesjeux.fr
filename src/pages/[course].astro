@@ -1,0 +1,21 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro"
+import { getSlugFromPath } from "../utils"
+
+export async function getStaticPaths() {
+  const courses = await Astro.glob("../../content/**/index.md")
+
+  return courses.map((course) => ({
+    params: {
+      course: getSlugFromPath(course.file, "course"),
+    },
+    props: {
+      course: { ...course, frontmatter: course.frontmatter },
+    },
+  }))
+}
+
+const { course } = Astro.props
+---
+
+<ContentLayout content={course} />

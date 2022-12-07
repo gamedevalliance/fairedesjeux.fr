@@ -164,7 +164,6 @@ Dans le dossier `content/courses`, chaque formation possède son dossier. Dans u
 
 ```yaml
 ---
-layout: "../../layouts/MainLayout.astro"
 type: ENGINE # Catégorie de la formation : ENGINE ou SKILL
 title: "Créer des jeux avec PICO-8" # Titre complet
 short_title: "PICO-8" # Titre court (pour la page d'accueil)
