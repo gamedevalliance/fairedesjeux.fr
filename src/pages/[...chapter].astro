@@ -1,0 +1,13 @@
+---
+import type { Chapter, ChapterInstance } from "$data"
+import { getStaticPathFromContentType } from "./glob.astro"
+
+interface Props {
+  slug: ChapterInstance
+}
+const { content } = Astro.props
+
+export async function getStaticPaths() {
+  return await getStaticPathFromContentType(Astro, "Chapter")
+}
+---

@@ -1,0 +1,54 @@
+---
+import type { Chapter, ContentType, Course } from "$data"
+import { getSlugFromFilePath } from "$utils"
+import type { AstroGlobal } from "astro"
+
+/**
+ * A standardized way to get all Static Paths of a given content type.
+ * ==============================================
+ * Temporarily moved from `src/utils/glob.ts`,
+ * see this issue -> https://github.com/withastro/astro/issues/5552
+ * @param Astro needed to use Astro.glob<t> inside a TypeScript file
+ * @param contentType what's the type of content needed ?
+ * @returns A promise of an array with all Static Paths
+ */
+export async function getStaticPathFromContentType(
+  Astro: Readonly<AstroGlobal>,
+  contentType: ContentType
+) {
+  let contents: Array<any> = []
+
+  switch (contentType) {
+    case "Course":
+      contents = await Astro.glob<Course>("../../content/**/index.md")
+      return contents.map((content) => ({
+        params: {
+          course: getSlugFromFilePath(content.file, contentType),
+        },
+        props: {
+          content: { ...content },
+        },
+      }))
+
+    case "Chapter":
+      contents = await Astro.glob<Chapter>(`../../content/**/**/chapter.md`)
+
+      return contents.map((content) => ({
+        params: {
+          chapter: getSlugFromFilePath(content.file, contentType),
+        },
+        props: {
+          content: { ...content },
+        },
+      }))
+
+    case "Page":
+      contents = await Astro.glob<Chapter>("../../content/**/**/*.md")
+
+    default:
+      throw new Error(
+        `[getStaticPathFromContentType] contentType not yet implemented: ${contentType}`
+      )
+  }
+}
+---

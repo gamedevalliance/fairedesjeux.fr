@@ -1,7 +1,7 @@
 ---
-import type { Course } from "../data/courses"
-import MainLayout from "../layouts/MainLayout.astro"
-import { getSlugFromPath } from "../utils"
+import type { Course } from "$data"
+import { getSlugFromFilePath } from "$utils"
+import MainLayout from "$layouts/MainLayout.astro"
 
 const courses = await Astro.glob<Course>("../../content/**/index.md")
 ---
@@ -12,7 +12,7 @@ const courses = await Astro.glob<Course>("../../content/**/index.md")
     {
       courses.map((course) => (
         <li>
-          <a href={"/" + getSlugFromPath(course.file, "Course")}>
+          <a href={"/" + getSlugFromFilePath(course.file, "Course")}>
             {course.frontmatter.title}
           </a>
         </li>
