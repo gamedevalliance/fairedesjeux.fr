@@ -1,15 +1,17 @@
 ---
-import type { Course } from "../data/courses"
+import type { CourseInstance } from "../data/courses"
 import AppLayout from "./AppLayout.astro"
 
+interface Props {
+  content: CourseInstance
+}
 const { content } = Astro.props
-const frontmatter: Course = content.frontmatter
 ---
 
-<AppLayout title={frontmatter.title}>
+<AppLayout title={content.frontmatter.title}>
   <main class="max-w-screen-md mx-auto px-4 py-2">
     <h2>
-      {frontmatter.title}
+      {content.frontmatter.title}
     </h2>
     <content.Content />
   </main>

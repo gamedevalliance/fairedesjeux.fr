@@ -1,21 +1,25 @@
 ---
+import type { Course, CourseInstance } from "../data/courses"
 import ContentLayout from "../layouts/ContentLayout.astro"
 import { getSlugFromPath } from "../utils"
 
+interface Props {
+  course: CourseInstance
+}
+const { course } = Astro.props
+
 export async function getStaticPaths() {
-  const courses = await Astro.glob("../../content/**/index.md")
+  const courses = await Astro.glob<Course>("../../content/**/index.md")
 
   return courses.map((course) => ({
     params: {
-      course: getSlugFromPath(course.file, "course"),
+      course: getSlugFromPath(course.file, "Course"),
     },
     props: {
-      course: { ...course, frontmatter: course.frontmatter },
+      course: { ...course },
     },
   }))
 }
-
-const { course } = Astro.props
 ---
 
 <ContentLayout content={course} />

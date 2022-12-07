@@ -12,7 +12,7 @@ const courses = await Astro.glob<Course>("../../content/**/index.md")
     {
       courses.map((course) => (
         <li>
-          <a href={"/" + getSlugFromPath(course.file, "course")}>
+          <a href={"/" + getSlugFromPath(course.file, "Course")}>
             {course.frontmatter.title}
           </a>
         </li>
