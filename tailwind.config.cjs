@@ -89,15 +89,15 @@ module.exports = {
 
 			// Speech bubbles
 			backgroundImage: () => ({
-				marvinNeutral: "url('~@avatars/marvin.png')",
+				marvinHappy: "url('~@avatars/marvin.png')",
 				marvinHype: "url('~@avatars/marvin-hehe.png')",
 				marvinOof: "url('~@avatars/marvin-oof.png')",
 
-				astrideNeutral: "url('~@avatars/astride.png')",
+				astrideSmile: "url('~@avatars/astride.png')",
 				astrideWink: "url('~@avatars/astride-wink.png')",
 				astrideSigh: "url('~@avatars/astride-tss.png')",
 
-				remiNeutral: "url('~@avatars/remi.png')",
+				remiSmile: "url('~@avatars/remi.png')",
 				remiProf: "url('~@avatars/remi-hum.png')",
 				remiNotLikeThis: "url('~@avatars/remi-ono.png')",
 			}),
@@ -364,7 +364,7 @@ module.exports = {
 				},
 
 				// Speech Bubbles - Marvin
-				".bubble-marvin, .bubble-hypemarvin, .bubble-oofmarvin": {
+				".bubble-marvin-happy, .bubble-marvin-hype, .bubble-marvin-oof": {
 					textAlign: "right",
 
 					"& h5": {
@@ -377,26 +377,26 @@ module.exports = {
 					},
 				},
 
-				".bubble-marvin": {
+				".bubble-marvin-happy": {
 					"&::after": {
-						backgroundImage: theme("backgroundImage.marvinNeutral"),
+						backgroundImage: theme("backgroundImage.marvinHappy"),
 					},
 				},
 
-				".bubble-hypemarvin": {
+				".bubble-marvin-hype": {
 					"&::after": {
 						backgroundImage: theme("backgroundImage.marvinHype"),
 					},
 				},
 
-				".bubble-oofmarvin": {
+				".bubble-marvin-oof": {
 					"&::after": {
 						backgroundImage: theme("backgroundImage.marvinOof"),
 					},
 				},
 
 				// Speech Bubbles - Astride
-				".bubble-astride, .bubble-winkastride, .bubble-sighastride": {
+				".bubble-astride-smile, .bubble-astride-wink, .bubble-astride-sigh": {
 					textAlign: "left",
 
 					"& h5": {
@@ -409,26 +409,26 @@ module.exports = {
 					},
 				},
 
-				".bubble-astride": {
+				".bubble-astride-smile": {
 					"&::after": {
-						backgroundImage: theme("backgroundImage.astrideNeutral"),
+						backgroundImage: theme("backgroundImage.astrideSmile"),
 					},
 				},
 
-				".bubble-winkastride": {
+				".bubble-astride-wink": {
 					"&::after": {
 						backgroundImage: theme("backgroundImage.astrideWink"),
 					},
 				},
 
-				".bubble-sighastride": {
+				".bubble-astride-sigh": {
 					"&::after": {
 						backgroundImage: theme("backgroundImage.astrideSigh"),
 					},
 				},
 
 				// Speech Bubbles - Rémi
-				".bubble-remi, .bubble-profremi, .bubble-notlikethisremi": {
+				".bubble-remi-smile, .bubble-remi-prof, .bubble-remi-notlikethis": {
 					textAlign: "left",
 
 					"& h5": {
@@ -441,19 +441,19 @@ module.exports = {
 					},
 				},
 
-				".bubble-remi": {
+				".bubble-remi-smile": {
 					"&::after": {
-						backgroundImage: theme("backgroundImage.remiNeutral"),
+						backgroundImage: theme("backgroundImage.remiSmile"),
 					},
 				},
 
-				".bubble-profremi": {
+				".bubble-remi-prof": {
 					"&::after": {
 						backgroundImage: theme("backgroundImage.remiProf"),
 					},
 				},
 
-				".bubble-notlikethisremi": {
+				".bubble-remi-notlikethis": {
 					"&::after": {
 						backgroundImage: theme("backgroundImage.remiNotLikeThis"),
 					},

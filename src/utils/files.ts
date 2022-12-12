@@ -12,9 +12,9 @@ export function getSlugFromFilePath(
 ): string {
   switch (contentType) {
     case "Course":
-      return extractSlugFromFilePath(path, "index.md")
+      return extractSlugFromFilePath(path, "index.mdx")
     case "Chapter":
-      return extractSlugFromFilePath(path, "chapter.md")
+      return extractSlugFromFilePath(path, "chapter.mdx")
     default:
       throw new Error(
         `[getSlugFromFilePath] contentType not yet implemented: ${contentType}`

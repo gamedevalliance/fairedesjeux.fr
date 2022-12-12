@@ -20,7 +20,7 @@ export async function getStaticPathFromContentType(
 
   switch (contentType) {
     case "Course":
-      contents = await Astro.glob<Course>("../../content/**/index.md")
+      contents = await Astro.glob<Course>("../../content/**/index.mdx")
       return contents.map((content) => ({
         params: {
           course: getSlugFromFilePath(content.file, contentType),
@@ -31,7 +31,7 @@ export async function getStaticPathFromContentType(
       }))
 
     case "Chapter":
-      contents = await Astro.glob<Chapter>(`../../content/**/**/chapter.md`)
+      contents = await Astro.glob<Chapter>(`../../content/**/**/chapter.mdx`)
 
       return contents.map((content) => ({
         params: {
@@ -43,7 +43,7 @@ export async function getStaticPathFromContentType(
       }))
 
     case "Page":
-      contents = await Astro.glob<Chapter>("../../content/**/**/*.md")
+      contents = await Astro.glob<Chapter>("../../content/**/**/*.mdx")
 
     default:
       throw new Error(

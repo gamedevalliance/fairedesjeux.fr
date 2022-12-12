@@ -3,7 +3,7 @@ import type { Course } from "$data"
 import { getSlugFromFilePath } from "$utils"
 import MainLayout from "$layouts/MainLayout.astro"
 
-const courses = await Astro.glob<Course>("../../content/**/index.md")
+const courses = await Astro.glob<Course>("../../content/**/index.mdx")
 ---
 
 <MainLayout title="FaireDesJeux.fr">

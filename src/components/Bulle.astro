@@ -1,0 +1,26 @@
+---
+interface Props {
+	emote: "marvin-hype" | "marvin-happy" | "marvin-oof" | "astride-smile" | "astride-wink" | "astride-sigh" | "remi-smile" | "remi-prof" | "remi-notlikethis"
+}
+const { emote } = Astro.props;
+const getSpeaker = () => {
+	switch (emote.split("-")[0]) {
+		case "marvin":
+			return "Marvin"
+		case "astride":
+			return "Astride"
+		case "remi":
+			return "Rémi"
+	}
+}
+const name = getSpeaker()
+---
+
+<div class={"bubble bubble-" + emote}>
+	<div class="bubble-heading">
+		<h5>{name}</h5>
+	</div>
+	<div class="bubble-content">
+		<slot />
+	</div>
+</div>

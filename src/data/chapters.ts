@@ -1,6 +1,6 @@
-import type { MarkdownInstance } from "astro"
+import type { MDXInstance } from "astro"
 import type { BaseFrontmatter } from "./shared"
 
 export interface Chapter extends BaseFrontmatter {}
 
-export type ChapterInstance = MarkdownInstance<Chapter>
+export type ChapterInstance = MDXInstance<Chapter>

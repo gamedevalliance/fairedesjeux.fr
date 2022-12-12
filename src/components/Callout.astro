@@ -1,0 +1,15 @@
+---
+interface Props {
+	heading?: string
+}
+const { heading = "Remarque" } = Astro.props;
+---
+
+<div class={"bubble"}>
+	<div class="bubble-heading">
+		<h5>{heading}</h5>
+	</div>
+	<div class="bubble-content">
+		<slot />
+	</div>
+</div>

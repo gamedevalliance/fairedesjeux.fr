@@ -1,4 +1,4 @@
-import type { MarkdownInstance } from "astro"
+import type { MDXInstance } from "astro"
 import type { BaseFrontmatter } from "./shared"
 
 export interface Course extends BaseFrontmatter {
@@ -12,4 +12,4 @@ export interface Course extends BaseFrontmatter {
   cover_tall: string
 }
 
-export type CourseInstance = MarkdownInstance<Course>
+export type CourseInstance = MDXInstance<Course>
