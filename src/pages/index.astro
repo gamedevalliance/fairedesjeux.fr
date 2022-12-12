@@ -1,6 +1,6 @@
 ---
 import type { Course } from "$data"
-import { getSlugFromFilePath } from "$utils"
+import { getSlugsFromFilePath } from "$utils"
 import MainLayout from "$layouts/MainLayout.astro"
 
 const courses = await Astro.glob<Course>("../../content/**/index.mdx")
@@ -12,9 +12,7 @@ const courses = await Astro.glob<Course>("../../content/**/index.mdx")
     {
       courses.map((course) => (
         <li>
-          <a href={"/" + getSlugFromFilePath(course.file, "Course")}>
-            {course.frontmatter.title}
-          </a>
+          <a href={"/" + getSlugsFromFilePath(course.file).course}>{course.frontmatter.title}</a>
         </li>
       ))
     }

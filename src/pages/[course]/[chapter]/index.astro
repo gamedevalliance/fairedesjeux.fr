@@ -1,9 +1,9 @@
 ---
-import type { Chapter, ChapterInstance } from "$data"
-import { getStaticPathFromContentType } from "./glob.astro"
+import type { ChapterInstance } from "$data"
+import { getStaticPathFromContentType } from "../../glob.astro"
 
 interface Props {
-  slug: ChapterInstance
+  chapter: ChapterInstance
 }
 const { content } = Astro.props
 

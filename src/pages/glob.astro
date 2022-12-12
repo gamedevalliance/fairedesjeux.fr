@@ -1,7 +1,7 @@
 ---
 import type { Chapter, ContentType, Course } from "$data"
-import { getSlugFromFilePath } from "$utils"
-import type { AstroGlobal } from "astro"
+import { getSlugsFromFilePath } from "$utils"
+import type { AstroGlobal, Page } from "astro"
 
 /**
  * A standardized way to get all Static Paths of a given content type.
@@ -16,34 +16,49 @@ export async function getStaticPathFromContentType(
   Astro: Readonly<AstroGlobal>,
   contentType: ContentType
 ) {
-  let contents: Array<any> = []
-
   switch (contentType) {
     case "Course":
-      contents = await Astro.glob<Course>("../../content/**/index.mdx")
-      return contents.map((content) => ({
+      const courses = await Astro.glob<Course>("../../content/**/index.mdx")
+      return courses.map((course) => ({
         params: {
-          course: getSlugFromFilePath(content.file, contentType),
+          course: getSlugsFromFilePath(course.file).course,
         },
         props: {
-          content: { ...content },
+          content: course,
         },
       }))
 
     case "Chapter":
-      contents = await Astro.glob<Chapter>(`../../content/**/**/chapter.mdx`)
-
-      return contents.map((content) => ({
-        params: {
-          chapter: getSlugFromFilePath(content.file, contentType),
-        },
-        props: {
-          content: { ...content },
-        },
-      }))
+      const chapters = await Astro.glob<Chapter>(`../../content/**/**/chapter.mdx`)
+      return chapters.map((chapter) => {
+        const chapterSlugs = getSlugsFromFilePath(chapter.file)
+        return {
+          params: {
+            course: chapterSlugs.course,
+            chapter: chapterSlugs.chapter,
+          },
+          props: {
+            content: chapter,
+          },
+        }
+      })
 
     case "Page":
-      contents = await Astro.glob<Chapter>("../../content/**/**/*.mdx")
+      const pages = await Astro.glob<Page>(`../../content/**/**/**.mdx`)
+
+      return pages.map((page) => {
+        const pageSlugs = getSlugsFromFilePath(page.file)
+        return {
+          params: {
+            course: pageSlugs.course,
+            chapter: pageSlugs.chapter,
+            page: pageSlugs.page,
+          },
+          props: {
+            content: page,
+          },
+        }
+      })
 
     default:
       throw new Error(

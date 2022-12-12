@@ -1,37 +1,15 @@
-import type { ContentType } from "$data"
-
-/**
- * Get content's slug from a content file path
- * @param path where is the content file ?
- * @param contentType what's the type of content ?
- * @returns
- */
-export function getSlugFromFilePath(
-  path: string,
-  contentType: ContentType
-): string {
-  switch (contentType) {
-    case "Course":
-      return extractSlugFromFilePath(path, "index.mdx")
-    case "Chapter":
-      return extractSlugFromFilePath(path, "chapter.mdx")
-    default:
-      throw new Error(
-        `[getSlugFromFilePath] contentType not yet implemented: ${contentType}`
-      )
-  }
+interface ContentSlug {
+  course: string
+  chapter?: string
+  page?: string
 }
 
 /**
- * Private function, utils used by getSlugFromFilePath to substring path
- * @param path What's the path to substring ?
- * @param end What's the end of the subtring ?
+ * Get content's slugs from a content file path
+ * @param path where is the content file ?
  * @returns
  */
-function extractSlugFromFilePath(path: string, end: string) {
-  return path.substring(
-    // there is probably a smarter way
-    path.indexOf("content/") + 8,
-    path.indexOf(`/${end}`)
-  )
+export function getSlugsFromFilePath(path: string): ContentSlug {
+  const slugs = path.substring(path.indexOf("content/") + 8, path.indexOf(".mdx")).split("/")
+  return { course: slugs[0], chapter: slugs[1], page: slugs[2] }
 }
