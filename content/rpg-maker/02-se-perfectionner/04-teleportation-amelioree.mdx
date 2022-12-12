@@ -24,7 +24,7 @@ N'oubliez pas de valider après les avoir nommées ou vous devrez recommencer.
 
 ### Explications
 
-Dans la base de données, créez un nouvel évènement commun en [processus parallèle]({{< ref "evenements.md#declenchement" >}}). On est obligé de mettre un interrupteur en condition de déclenchement, c'est pour cela que je vous avais dit d'activer l'interrupteur `Système de téléportation` au début du jeu.
+Dans la base de données, créez un nouvel évènement commun en [processus parallèle](evenements.md#declenchement). On est obligé de mettre un interrupteur en condition de déclenchement, c'est pour cela que je vous avais dit d'activer l'interrupteur `Système de téléportation` au début du jeu.
 
 Le début de l'évènement consistera à enregistrer où se trouve le joueur. Rendez la variable `Position X actuelle` égale à la position X du joueur sur la carte. Vous trouverez cette information en cliquant sur *Données Jeu* :
 
@@ -75,4 +75,3 @@ Testez en jeu et vous devriez avoir reproduit l'exemple !
 Il est très utile de savoir manipuler la position du joueur avec des variables ! Avec ces connaissances, vous pourrez par exemple imaginer des énigmes basées sur la position du joueur et d'objets environnants.
 
 Si vous le souhaitez, vous pouvez vous entraîner davantage avec ce système. Maintenant que vous savez passer entre deux maps de gauche à droite, avec un Y variable, tentez un passage de bas en haut, avec un X variable. Vous pouvez utiliser cet évènement commun pour tout votre jeu en ajoutant une nouvelle condition pour chaque passage entre deux maps.
-

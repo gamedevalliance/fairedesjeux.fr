@@ -44,14 +44,14 @@ J'ai du mal avec les maths... Je ne comprends pas pourquoi on écrit **(*i* −
 :::
 
 :::winkastride
-Essaye de faire le calcul en faisant varier ***i*** ! Pour le premier ennemi de la vague, ***i* = 1**, donc X vaudra seulement ***gap* × 1**. Pour le deuxième ennemi, X vaut ***gap* × 2 + 8** et ainsi de suite... 
+Essaye de faire le calcul en faisant varier ***i*** ! Pour le premier ennemi de la vague, ***i* = 1**, donc X vaudra seulement ***gap* × 1**. Pour le deuxième ennemi, X vaut ***gap* × 2 + 8** et ainsi de suite...
 :::
 
 ![](./x-gap.png)
 
 Et voilà, votre vague est toute belle, sans bavure ! Rendons maintenant le nombre d'ennemis aléatoire quand on appelle le spawn dans update.
 
-Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#RND) explique que `rnd(n)` retourne un nombre décimal où 0 ≤ résultat < n. On doit arrondir le résultat en un nombre entier, et pour cela deux méthodes s'offrent à vous :
+Pour rappel, le [manuel de PICO-8](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#RND) explique que `rnd(n)` retourne un nombre décimal où 0 ≤ résultat \< n. On doit arrondir le résultat en un nombre entier, et pour cela deux méthodes s'offrent à vous :
 
 - `flr(rnd(n))` arrondit au nombre inférieur, ce qui donne un nombre entier entre 0 et ***n* − 1**.
 - `ceil(rnd(n))` arrondit au nombre supérieur, ce qui donne un nombre entier entre 1 et ***n***.
