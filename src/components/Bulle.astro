@@ -1,8 +1,17 @@
 ---
 interface Props {
-	emote: "marvin-hype" | "marvin-happy" | "marvin-oof" | "astride-smile" | "astride-wink" | "astride-sigh" | "remi-smile" | "remi-prof" | "remi-notlikethis"
+	emote:
+		| "marvin-hype"
+		| "marvin-happy"
+		| "marvin-oof"
+		| "astride-smile"
+		| "astride-wink"
+		| "astride-sigh"
+		| "remi-smile"
+		| "remi-prof"
+		| "remi-notlikethis"
 }
-const { emote } = Astro.props;
+const { emote } = Astro.props
 const getSpeaker = () => {
 	switch (emote.split("-")[0]) {
 		case "marvin":

@@ -4,12 +4,12 @@ import { getStaticPathFromContentType } from "../glob.astro"
 import ContentLayout from "$layouts/ContentLayout.astro"
 
 interface Props {
-  content: CourseInstance
+	content: CourseInstance
 }
 const { content } = Astro.props
 
 export async function getStaticPaths() {
-  return await getStaticPathFromContentType(Astro, "Course")
+	return await getStaticPathFromContentType(Astro, "Course")
 }
 ---
 

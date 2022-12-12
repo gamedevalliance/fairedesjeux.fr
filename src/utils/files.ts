@@ -1,7 +1,7 @@
 interface ContentSlug {
-  course: string
-  chapter?: string
-  page?: string
+	course: string
+	chapter?: string
+	page?: string
 }
 
 /**
@@ -10,6 +10,6 @@ interface ContentSlug {
  * @returns
  */
 export function getSlugsFromFilePath(path: string): ContentSlug {
-  const slugs = path.substring(path.indexOf("content/") + 8, path.indexOf(".mdx")).split("/")
-  return { course: slugs[0], chapter: slugs[1], page: slugs[2] }
+	const slugs = path.substring(path.indexOf("content/") + 8, path.indexOf(".mdx")).split("/")
+	return { course: slugs[0], chapter: slugs[1], page: slugs[2] }
 }

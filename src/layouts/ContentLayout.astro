@@ -3,16 +3,16 @@ import type { CourseInstance } from "$data"
 import AppLayout from "./AppLayout.astro"
 
 interface Props {
-  content: CourseInstance
+	content: CourseInstance
 }
 const { content } = Astro.props
 ---
 
 <AppLayout title={content.frontmatter.title}>
-  <main class="max-w-screen-md mx-auto px-4 py-2">
-    <h2>
-      {content.frontmatter.title}
-    </h2>
-    <content.Content />
-  </main>
+	<main class="mx-auto max-w-screen-md px-4 py-2">
+		<h2>
+			{content.frontmatter.title}
+		</h2>
+		<content.Content />
+	</main>
 </AppLayout>

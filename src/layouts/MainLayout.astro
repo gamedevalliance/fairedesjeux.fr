@@ -2,16 +2,16 @@
 import AppLayout from "./AppLayout.astro"
 
 interface Props {
-  title: string
+	title: string
 }
 const { title } = Astro.props
 ---
 
 <AppLayout title={title}>
-  <main class="max-w-screen-md mx-auto px-4 py-2">
-    <h2>
-      {title}
-    </h2>
-    <slot />
-  </main>
+	<main class="mx-auto max-w-screen-md px-4 py-2">
+		<h2>
+			{title}
+		</h2>
+		<slot />
+	</main>
 </AppLayout>

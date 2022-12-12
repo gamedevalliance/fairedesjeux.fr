@@ -7,14 +7,14 @@ const courses = await Astro.glob<Course>("../../content/**/index.mdx")
 ---
 
 <MainLayout title="FaireDesJeux.fr">
-  <p>Bienvenue ! On a pleins de supers cours :</p>
-  <ul>
-    {
-      courses.map((course) => (
-        <li>
-          <a href={"/" + getSlugsFromFilePath(course.file).course}>{course.frontmatter.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+	<p>Bienvenue ! On a pleins de supers cours :</p>
+	<ul>
+		{
+			courses.map((course) => (
+				<li>
+					<a href={"/" + getSlugsFromFilePath(course.file).course}>{course.frontmatter.title}</a>
+				</li>
+			))
+		}
+	</ul>
 </MainLayout>
