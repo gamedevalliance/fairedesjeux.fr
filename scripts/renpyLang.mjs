@@ -2,9 +2,11 @@ import { readFileSync } from "fs"
 import * as path from "path"
 import { fileURLToPath } from "url"
 
-const textMateDef = readFileSync(
+let textMateDef = readFileSync(
 	path.join(path.dirname(fileURLToPath(import.meta.url)), "renpy.tmLanguage.json")
 ).toString()
+
+textMateDef = textMateDef.substring(textMateDef.indexOf("{"))
 
 export default {
 	id: "renpy",
