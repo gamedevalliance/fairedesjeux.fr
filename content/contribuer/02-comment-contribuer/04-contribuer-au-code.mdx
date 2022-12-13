@@ -6,30 +6,21 @@ Cette dernière section explique comment contribuer à l'aspect technique du sit
 
 ### Structure du repo
 
-Pour vous aider à vous familiariser avec le repo, voici sa structure ainsi que les pages de documentation Gridsome et Tailwind qui détaillent le fonctionnement de chaque fichier.
+Pour vous aider à vous familiariser avec le repo, voici sa structure :
 
-- `tailwind.config.js` : [Configuration du thème Tailwind](https://tailwindcss.com/docs/configuration)
-- `gridsome.config.js` : [Configuration du projet Gridsome](https://gridsome.org/docs/config/#project-configuration)
-- `gridsome.server.js` : [API du serveur Gridsome](https://gridsome.org/docs/server-api/)
-- `types.graphql` : Contient les types GraphQL utilisés à travers le site
-- `src/` : [Structure d'un projet Gridsome](https://gridsome.org/docs/directory-structure/)
-    - `assets/`
-    - `layouts/`
-    - `pages/`
-    - `templates/`
-    - `main.js`
-- `content/` : Le contenu du site
+- `tailwind.config.cjs` : Configuration de Tailwind
+- `astro.config.mjs` : Configuration d'Astro
+- `src/` : Code source du projet
+    - `components/` : Composants réutilisables dans les pages web, tels que les bulles de personnage, les vidéos et bien d'autres. Il est très simple de s'inspirer des composants existants pour créer un nouveau composant !
+    - `layouts/` : Composants généraux structurant les pages.
+    - `pages/` : Composants représentant des pages.
+- `content/` : Le contenu du site (fichiers Markdown, images et vidéos)
+
+Pour en savoir plus sur la structure d'un projet Astro, référez-vous à la [documentation officielle](https://docs.astro.build/core-concepts/project-structure/).
 
 ### Conventions de style
 
-Pour respecter les conventions du repo, nous utilisons les outils ESLint et stylelint. Les deux sont disponibles sous la forme d'extension pour la plupart des éditeurs de code à ces adresses :
-
-- [ESLint](https://eslint.org/docs/user-guide/integrations)
-- [stylelint](https://stylelint.io/user-guide/integrations/editor)
-
-Installer les extensions sera plus confortable, notamment grâce aux erreurs affichées en temps réel et l'auto-fix lors des sauvegardes. Cela dit, vous pouvez également les télécharger séparément si vous préférez ([ESLint](https://eslint.org/docs/user-guide/getting-started), [stylelint](https://stylelint.io/user-guide/get-started)) et les utiliser manuellement dans le repo, par exemple avec `eslint .`.
-
-Il vous faut également installer l'extension [EditorConfig](https://editorconfig.org/), qui permet de configurer automatiquement l'éditeur de code selon les règles définies dans le fichier `.editorconfig`, comme par exemple l'indentation avec 4 espaces et le format de retour à la ligne. C'est un moyen simple d'éviter les erreurs de style les plus communes.
+Pour respecter les conventions du repo, nous utilisons [Prettier](https://prettier.io/), disponible sous la forme d'extension pour la plupart des éditeurs de code ou bien par installation manuelle.
 
 ### Créer une pull request
 

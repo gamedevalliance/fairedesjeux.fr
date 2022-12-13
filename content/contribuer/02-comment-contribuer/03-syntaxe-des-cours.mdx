@@ -2,6 +2,8 @@
 title: "Syntaxe des cours"
 description: "Les cours de FaireDesJeux.fr sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voici un tour d'horizon des fonctionnalités disponibles !"
 ---
+import Callout from './src/components/Callout.astro';
+import Bulle from './src/components/Bulle.astro';
 
 Les cours de FaireDesJeux.fr sont écrits en Markdown, une syntaxe simple et populaire également utilisée sur GitHub, Discord et bien d'autres services. Voici un tour d'horizon des fonctionnalités disponibles !
 
@@ -22,6 +24,8 @@ Pour créer un titre, ajoutez des `#` avant le texte.
 | _Italique_             | `*Italique*`             |
 | **Gras**               | `**Gras**`               |
 | **_Italique et gras_** | `***Italique et gras***` |
+
+En Markdown, vous pouvez utiliser `*` ou `_` pour l'italique et le gras, selon votre préférence.
 
 ### Listes
 
@@ -55,19 +59,43 @@ William Shakespeare disait :
 
 ### Bulles de personnage
 
-Pour faire parler les trois mascottes du site, entourez le dialogue de `:::` en précisant le nom du personnage : `marvin`, `astride` ou `remi`.
+Pour faire parler les trois mascottes du site, entourez le dialogue du composant `Bulle`.
 
-```md
-:::marvin
+```html
+<Bulle emote="marvin-happy">
 Salut la compagnie !
-:::
+</Bulle>
 ```
 
-:::marvin
+<Bulle emote="marvin-happy">
 Salut la compagnie !
-:::
+</Bulle>
 
-Il existe également des émotions supplémentaires : `hypemarvin`, `oofmarvin`, `winkastride`, `sighastride`, `profremi` et `notlikethisremi`.
+Les émotions disponibles sont :
+
+- `marvin-hype`
+- `marvin-happy`
+- `marvin-oof`
+- `astride-smile`
+- `astride-wink`
+- `astride-sigh`
+- `remi-smile`
+- `remi-prof`
+- `remi-notlikethis`
+
+### Bulles de remarque
+
+Pour créer une bulle neutre avec titre de votre choix, utilisez le composant `Callout`.
+
+```html
+<Callout heading="Remarque">
+Ceci est une information supplémentaire.
+</Callout>
+```
+
+<Callout heading="Remarque">
+Ceci est une information supplémentaire.
+</Callout>
 
 ### Morceaux de code
 
@@ -138,24 +166,24 @@ Si votre vidéo est longue, il est plus confortable de l'héberger sur YouTube. 
 
 #### Vidéos hébergées sur le site
 
-Dans le cas de vidéos de quelques secondes pour illustrer un article, vous pouvez les déposer dans le dossier `static/videos`. Préférez le format MP4, ou éventuellement WebM. Vous pouvez ensuite choisir plusieurs options :
+Dans le cas de vidéos de quelques secondes pour illustrer un article, vous pouvez les déposer comme une image. Préférez le format MP4, ou éventuellement WebM. Vous pouvez ensuite choisir plusieurs options :
 
 - `autoplay` démarre la vidéo automatiquement. La plupart des navigateurs n'autorisent l'autoplay que si `muted` est aussi activé.
 - `muted` joue la vidéo sans le son.
 - `loop` joue la vidéo en boucle.
 - `controls` affiche les boutons play/pause, volume, plein-écran, ainsi qu'une barre de progression.
-- `poster = "static/videos/.../poster.png"` affiche une image quand la vidéo n'est pas encore lancée. Par défaut, la première image de la vidéo est affichée.
+- `poster = "./poster.png"` affiche une image quand la vidéo n'est pas encore lancée. Par défaut, la première image de la vidéo est affichée.
 
 Avec des paramètres bien équilibrés, une vidéo MP4 est bien plus légère et de meilleure qualité qu'un gif animé, ce qui est bien pratique pour les petites connexions ! Pour imiter le comportement d'un gif animé, vous pouvez lancer la vidéo automatiquement et la faire boucler sans le son : `autoplay muted loop`.
 
 Voici deux exemples :
 
-```
-[[Video src="/videos/pico-8/jelpi.mp4" autoplay muted loop]]
+```html
+<Video src="jelpi.mp4" autoplay muted loop />
 ```
 
-```
-[[Video src="/videos/renpy/demo.mp4" poster="/videos/renpy/poster.png" muted loop controls]]
+```html
+<Video src="demo.mp4" poster="poster.png" muted loop controls />
 ```
 
 ### Organisation des formations
