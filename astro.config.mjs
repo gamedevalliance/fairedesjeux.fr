@@ -5,6 +5,7 @@ import renpyLang from "./scripts/renpyLang.mjs"
 
 // https://astro.build/config
 export default defineConfig({
+	site: "https://fairedesjeux.fr",
 	integrations: [tailwind(), mdx()],
 	markdown: {
 		shikiConfig: {

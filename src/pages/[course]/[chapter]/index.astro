@@ -1,13 +1,14 @@
 ---
-import type { ChapterInstance } from "$data"
-import { getStaticPathFromContentType } from "../../glob.astro"
+import { getStaticPathFromContentType } from "$utils"
 
 interface Props {
-	chapter: ChapterInstance
+	firstPage: string
 }
-const { content } = Astro.props
+const { firstPage } = Astro.props
 
 export async function getStaticPaths() {
-	return await getStaticPathFromContentType(Astro, "Chapter")
+	return await getStaticPathFromContentType("chapter")
 }
 ---
+
+<meta http-equiv="refresh" content={`0;url=${Astro.url.href}/${firstPage}`} />

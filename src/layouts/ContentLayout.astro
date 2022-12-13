@@ -1,10 +1,11 @@
 ---
-import type { CourseInstance } from "$data"
+import type { ChapterInstance, CourseInstance, PageInstance } from "$data"
 import AppLayout from "./AppLayout.astro"
 
 interface Props {
-	content: CourseInstance
+	content: CourseInstance | ChapterInstance | PageInstance
 }
+
 const { content } = Astro.props
 ---
 

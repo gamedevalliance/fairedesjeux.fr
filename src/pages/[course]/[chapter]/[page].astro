@@ -1,16 +1,16 @@
 ---
-import type { ChapterInstance, CourseInstance, PageInstance } from "$data"
+import type { PageInstance } from "$data"
 import ContentLayout from "$layouts/ContentLayout.astro"
-import { getStaticPathFromContentType } from "../../glob.astro"
+import { getStaticPathFromContentType } from "$utils"
 
 interface Props {
 	page: PageInstance
 }
-const { content } = Astro.props
+const { page } = Astro.props
 
 export async function getStaticPaths() {
-	return await getStaticPathFromContentType(Astro, "Page")
+	return getStaticPathFromContentType("page")
 }
 ---
 
-<ContentLayout content={content} />
+<ContentLayout content={page} />

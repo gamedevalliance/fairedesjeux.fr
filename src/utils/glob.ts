@@ -1,19 +1,72 @@
-import type { ChapterInstance } from "$data"
+import { ContentType, CourseInstance, fullContent, getFirstPageSlugForChapter } from "$data"
+import {
+	getAllChaptersPaths,
+	getAllCoursesPaths,
+	getAllPagePaths,
+	getSlugsFromFilePath,
+} from "$utils"
+import type { GetStaticPathsResult, MDXInstance } from "astro"
 
-/**
- * Temporarily moved to `src/pages/glob.astro`,
- * see this issue -> https://github.com/withastro/astro/issues/5552
- */
-export async function getStaticPathFromContentType() {
-	throw new Error("Temporarily moved to `src/pages/glob.astro`")
+export async function getStaticPathFromContentType(
+	contentType: ContentType
+): Promise<GetStaticPathsResult> {
+	switch (contentType) {
+		case "course":
+			return Promise.all(
+				getAllCoursesPaths().flatMap(async (path) => ({
+					params: {
+						course: getSlugsFromFilePath(path).course,
+					},
+					props: {
+						course: await getContentForPath<CourseInstance>(path),
+					},
+				}))
+			)
+		case "chapter":
+			return Promise.all(
+				getAllChaptersPaths().flatMap(async (path) => {
+					const { course, chapter } = getSlugsFromFilePath(path)
+					return {
+						params: {
+							chapter,
+							course,
+						},
+						props: {
+							firstPage: chapter ? getFirstPageSlugForChapter(chapter) : undefined,
+						},
+					}
+				})
+			)
+		case "page":
+			return Promise.all(
+				getAllPagePaths().flatMap(async (path) => {
+					const { course, chapter, page } = getSlugsFromFilePath(path)
+					return {
+						params: {
+							course,
+							chapter,
+							page,
+						},
+						props: {
+							page: await getContentForPath(path),
+						},
+					}
+				})
+			)
+		default:
+			return []
+	}
 }
 
-export const fullContent = import.meta.glob("/content/**/*.md")
+export async function getContentForPath<T extends MDXInstance<Record<string, any>>>(
+	path: string
+): Promise<T> {
+	const content = (await fullContent[path]()) as T
+	return { ...content, frontmatter: postProcessFrontmatter(content.frontmatter) }
 
-export async function getChaptersForCourse(course: string): Promise<ChapterInstance[]> {
-	const chapters = []
-	for (const path of Object.keys(fullContent).filter((path) => path.split("/").includes(course))) {
-		chapters.push((await fullContent[path]()) as ChapterInstance)
+	function postProcessFrontmatter(frontmatter: any) {
+		frontmatter.slug = getSlugsFromFilePath(path)
+
+		return frontmatter
 	}
-	return chapters
 }
