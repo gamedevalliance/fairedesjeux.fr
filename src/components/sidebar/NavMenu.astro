@@ -1,0 +1,47 @@
+---
+import { ChapterInstance, getChaptersForCourse, getPagesForChapter, PageInstance } from "$data"
+
+interface Props {
+	course: string
+}
+
+const { course } = Astro.props
+
+const chapters = await getChaptersForCourse(course)
+
+interface ChapterContent {
+	chapterData: ChapterInstance
+	content: PageInstance[]
+}
+
+// NOTE: Tried using a reduce and stuff here, but the types were all messy and I couldn't figure it out - erika, 2022-12-12
+const groupedChapters: Record<string, ChapterContent> = {}
+
+for (var chapter of chapters) {
+	const chapterSlug = chapter.frontmatter.slug
+
+	if (!chapterSlug.chapter) continue
+
+	groupedChapters[chapterSlug.chapter] = {
+		chapterData: chapter,
+		content: await getPagesForChapter(chapterSlug),
+	}
+}
+---
+
+<Fragment>
+	{
+		Object.values(groupedChapters).map((chapterContent) => (
+			<>
+				<div>{chapterContent.chapterData.frontmatter.title}</div>
+				<ul>
+					{chapterContent.content.map((page) => (
+						<li>
+							<a href={page.frontmatter.url}>{page.frontmatter.title}</a>
+						</li>
+					))}
+				</ul>
+			</>
+		))
+	}
+</Fragment>

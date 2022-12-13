@@ -1,4 +1,5 @@
 ---
+import NavMenu from "$components/sidebar/NavMenu.astro"
 import type { ChapterInstance, CourseInstance, PageInstance } from "$data"
 import AppLayout from "./AppLayout.astro"
 
@@ -10,10 +11,16 @@ const { content } = Astro.props
 ---
 
 <AppLayout title={content.frontmatter.title}>
-	<main class="mx-auto max-w-screen-md px-4 py-2">
-		<h2>
-			{content.frontmatter.title}
-		</h2>
-		<content.Content />
-	</main>
+	<div class="grid grid-cols-cont">
+		<aside>
+			<NavMenu course={content.frontmatter.slug.course} />
+		</aside>
+		<main class="mx-auto max-w-screen-md px-4 py-2">
+			<h2>
+				{content.frontmatter.title}
+			</h2>
+			<content.Content />
+		</main>
+		<aside></aside>
+	</div>
 </AppLayout>

@@ -1,14 +1,17 @@
-import { fullContent, getCleanContentPaths, type BaseFrontmatter } from "$data"
+import { fullContent, type BaseFrontmatter } from "$data"
+import { getContentForPath } from "$utils"
 import type { MDXInstance } from "astro"
 
 export interface Chapter extends BaseFrontmatter {}
 
 export type ChapterInstance = MDXInstance<Chapter>
 
-export async function getChaptersForCourse(course: string): Promise<ChapterInstance[]> {
-	const chapters = []
-	for (const path of getCleanContentPaths().filter((path) => path.split("/").includes(course))) {
-		chapters.push((await fullContent[path]()) as ChapterInstance)
+export async function getChaptersForCourse(course: string) {
+	const chapters = new Set<ChapterInstance>()
+	for (const path of Object.keys(fullContent).filter(
+		(path) => !path.endsWith(`${course}/index.mdx`) && path.split("/").includes(course)
+	)) {
+		chapters.add(await getContentForPath<ChapterInstance>(path))
 	}
 	return chapters
 }
