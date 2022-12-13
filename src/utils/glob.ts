@@ -75,6 +75,7 @@ export async function getContentForPath<T extends MDXInstance<Record<string, any
 
 	function postProcessFrontmatter(frontmatter: any) {
 		frontmatter.slug = getSlugsFromFilePath(path)
+		frontmatter.url = "/" + Array.from(Object.values(frontmatter.slug)).filter(Boolean).join("/")
 
 		return frontmatter
 	}

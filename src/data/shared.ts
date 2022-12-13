@@ -15,6 +15,7 @@ export interface BaseFrontmatter {
 	description: string
 	opengraph_image: string | null
 	slug: ContentSlug
+	url: string
 }
 
 export interface ContentSlug {
