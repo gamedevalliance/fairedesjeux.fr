@@ -3,9 +3,11 @@ title: "Téléportation améliorée"
 description: "Utilisez les variables pour vous téléporter entre les cartes au bon endroit sans placer aucun évènement de téléportation."
 ---
 
-Cette section s'adresse aux personnes qui ont découvert les variables depuis peu et qui cherchent un moyen utile de les exploiter. Nous allons réaliser un système qui permet de se téléporter entre les cartes au bon endroit et sans placer des évènements de téléportation sur tous les bords. Le système présenté ici fonctionne uniquement dans le cas où toutes les cartes font la même taille. Grâce aux variables, nous allons utiliser un seul évènement pour tout le jeu.
+Cette section s'adresse aux personnes qui ont découvert les variables depuis peu et qui cherchent un moyen utile de les exploiter. Nous allons réaliser un système qui permet de se téléporter entre les cartes au bon endroit et sans placer des évènements de téléportation sur tous les bords.
 
 [[Video src="/videos/rpg-maker/teleportation.webm" muted loop controls]]
+
+Le système présenté ici ne fonctionne que si toutes vos cartes font la même taille. Grâce aux variables, nous allons utiliser un seul évènement pour tout le jeu !
 
 ### Préparation
 
@@ -24,7 +26,7 @@ N'oubliez pas de valider après les avoir nommées ou vous devrez recommencer.
 
 ### Explications
 
-Dans la base de données, créez un nouvel évènement commun en [processus parallèle]({{< ref "evenements.md#declenchement" >}}). On est obligé de mettre un interrupteur en condition de déclenchement, c'est pour cela que je vous avais dit d'activer l'interrupteur `Système de téléportation` au début du jeu.
+Dans la base de données, créez un nouvel évènement commun en processus parallèle. On est obligé de mettre un interrupteur en condition de déclenchement, c'est pour cela que je vous avais dit d'activer l'interrupteur `Système de téléportation` au début du jeu.
 
 Le début de l'évènement consistera à enregistrer où se trouve le joueur. Rendez la variable `Position X actuelle` égale à la position X du joueur sur la carte. Vous trouverez cette information en cliquant sur *Données Jeu* :
 
