@@ -61,7 +61,16 @@ export async function getStaticPathFromContentType(
 export async function getContentForPath<T extends MDXInstance<Record<string, any>>>(
 	path: string
 ): Promise<T> {
-	const content = (await fullContent[path]()) as T
+	let content: T
+
+	// HACK: Astro's dev server crashes if this fails, weird. erika, 2022-12-12
+	try {
+		content = (await fullContent[path]()) as T
+	} catch (err) {
+		console.error("Could not import from path", path, err)
+		content = { frontmatter: {} } as any
+	}
+
 	return { ...content, frontmatter: postProcessFrontmatter(content.frontmatter) }
 
 	function postProcessFrontmatter(frontmatter: any) {
