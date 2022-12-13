@@ -6,7 +6,7 @@ export interface Page extends BaseFrontmatter {}
 
 export type PageInstance = MDXInstance<Page>
 
-export async function getPagesForChapters(chapterSlug: ContentSlug) {
+export async function getPagesForChapter(chapterSlug: ContentSlug) {
 	return Promise.all(
 		Object.keys(fullContent)
 			.filter(isProperCourseAndChapter)
