@@ -77,5 +77,3 @@ let fundingTotal = donations.reduce((a, b) => a + b)
 Ici, `fundingTotal` vaut 63. Notre *reducer* a d'abord réalisé le calcul `3 + 50`, puis `53 + 10`, et aurait continué de la sorte si le tableau contenait d'autres valeurs.
 
 Il s'agit d'un exemple très simple, mais on pourrait imaginer un *reducer* plus complexe qui récupèrerait notre liste d'ingrédients pour en faire une salade ! Le principe est toujours de transformer un ensemble de valeurs en une valeur unique.
-
-> Le premier chapitre de cette formation touche à sa fin et les suivants sont en cours d'écriture. Revenez bientôt !
