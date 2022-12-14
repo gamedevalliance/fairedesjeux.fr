@@ -16,6 +16,7 @@ export default defineConfig({
 					"./src/components/content/Bulle.astro": [["default", "Bulle"]],
 					"./src/components/content/Callout.astro": [["default", "Callout"]],
 					"./src/components/content/Video.astro": [["default", "Video"]],
+					"./src/components/content/YouTube.astro": [["default", "YouTube"]],
 					"./src/components/Image.astro": [["default", "Image"]],
 				},
 			],
