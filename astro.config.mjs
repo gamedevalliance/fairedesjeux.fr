@@ -2,6 +2,7 @@ import mdx from "@astrojs/mdx"
 import tailwind from "@astrojs/tailwind"
 import AutoImport from "astro-auto-import"
 import { defineConfig } from "astro/config"
+import { remarkFixRelativeAssetLinks } from "./scripts/remark-relative-assets"
 import renpyLang from "./scripts/renpyLang.mjs"
 
 // https://astro.build/config
@@ -15,6 +16,7 @@ export default defineConfig({
 					"./src/components/content/Bulle.astro": [["default", "Bulle"]],
 					"./src/components/content/Callout.astro": [["default", "Callout"]],
 					"./src/components/content/Video.astro": [["default", "Video"]],
+					"./src/components/Image.astro": [["default", "Image"]],
 				},
 			],
 		}),
@@ -24,5 +26,7 @@ export default defineConfig({
 		shikiConfig: {
 			langs: [renpyLang],
 		},
+		extendDefaultPlugins: true,
+		remarkPlugins: [remarkFixRelativeAssetLinks()],
 	},
 })
