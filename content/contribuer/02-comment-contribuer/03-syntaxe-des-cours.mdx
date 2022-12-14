@@ -142,14 +142,20 @@ Voici le [serveur Discord](https://discord.gg/RrBppaj) de GDA.
 En Markdown, on crée une image en commençant par un point d'exclamation `!`, en entourant le texte alternatif de crochets `[]` et en entourant le lien vers l'image de parenthèses `()`. Le texte alternatif est utilisé lorsque l'image ne peut pas être affichée, mais permet aussi de décrire le contenu pour les malvoyants et les robots.
 
 ```md
-![Description alternative](./exemple.png)
+<Image
+  src="exemple.png"
+  alt="Description alternative"
+/>
 ```
 
 Ajoutez une légende sous l'image en écrivant un texte en italique en dessous :
 
 ```md
-![Description alternative](./exemple.png)
-_En voilà une belle image !_
+<Image
+  src="exemple.png"
+  alt="Description alternative"
+  caption="En voilà une belle image !"
+/>
 ```
 
 ### Vidéos

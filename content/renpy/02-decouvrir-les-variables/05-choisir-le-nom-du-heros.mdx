@@ -39,8 +39,11 @@ define perso = Character("[nom_du_perso]", color="ffc8c8")
 
 Essayez votre système, et vous verrez que ça marche du tonnerre ! Excepté qu'il y a une faille... Si vous entrez plein d'espaces au début ou à la fin du nom, ils se verront par la suite.
 
-![Nom avec trop d'espaces](./renpy-strip.png)
-*Ce n'est pas idéal...*
+<Image
+  src="renpy-strip.png"
+  alt="Nom avec trop d'espaces"
+  caption="Ce n'est pas idéal..."
+/>
 
 On peut contrer ce problème avec `strip()` :
 

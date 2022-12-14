@@ -9,21 +9,25 @@ Dans le chapitre sur le shooter, vous avez appris à déplacer un vaisseau pixel
 
 Commencez par dessiner votre héroïne ou héros comme il se doit.
 
-![Sprite d'héroïne](./sprite-heroine.png)
+<Image
+  src="sprite-heroine.png"
+  alt="Sprite d'héroïne"
+  classes="pixelated"
+/>
 
 Ensuite, dans un nouvel onglet "*Player*", créez un tableau pour préciser la position X et Y de départ du personnage et le sprite utilisé.
 
-![](./create-player.png)
+<Image src="create-player.png" alt="" classes="pixelated" />
 
 Comme nous faisons un jeu en case par case, les coordonnées n'indiqueront pas la position à l'écran mais bien la position sur la grille de la carte. Ici, le personnage se situe donc sur la 7<sup>ème</sup> case en X et la 4<sup>ème</sup> en Y, puisque les coordonnées de la carte commencent à 0.
 
 Pour afficher le sprite en jeu, nous devons utiliser la commande que vous connaissez bien, `spr(sprite, x, y)`. Problème : elle prend une position d'écran alors que les coordonnées du personnage correspondent à la carte ! Mais comme une case fait 8 pixels, il suffit de multiplier les coordonnées par 8 pour obtenir la bonne position à l'écran.
 
-![](./draw-player.png)
+<Image src="draw-player.png" alt="" classes="pixelated" />
 
 Appelons ces deux fonctions dans notre game loop :
 
-![](./game-loop3.png)
+<Image src="game-loop3.png" alt="" classes="pixelated" />
 
 Testez votre jeu pour voir votre personnage s'afficher ! N'hésitez pas à changer ses coordonnées pour vérifier que le système fonctionne.
 
@@ -31,12 +35,16 @@ Testez votre jeu pour voir votre personnage s'afficher ! N'hésitez pas à chang
 
 La première méthode qui vous viendra à l'esprit pour réaliser le mouvement sera probablement celle-ci :
 
-![](./player-movement.png)
+<Image src="player-movement.png" alt="" classes="pixelated" />
 
 Simple, efficace. Cela dit, si vous créez cette fonction et l'appelez dans update, vous verrez que le personnage peut passer à travers les obstacles, donc nous devons affiner le système. Au lieu de directement déplacer le personnage, nous allons plutôt stocker la nouvelle position souhaitée afin de vérifier qu'elle soit valide.
 
-![](./new-x-y.png)
-*La position à tester sera appelée "New X" et "New Y".*
+<Image
+  src="new-x-y.png"
+  alt=""
+  caption='La position à tester sera appelée "New X" et "New Y".'
+  classes="pixelated"
+/>
 
 Maintenant, nous devons vérifier si le tile "*New X Y*" est un obstacle, c'est-à-dire vérifier si ce tile a le flag 0 !
 
@@ -44,7 +52,7 @@ Maintenant, nous devons vérifier si le tile "*New X Y*" est un obstacle, c'est-
 
 Nous allons créer une fonction qui nous servira souvent, pour vérifier si une case de la carte a un certain flag activé. Quand on écrira `check_flag(flag, x, y)`, le résultat sera `true` si le flag en question est activé, `false` sinon. Voici le code :
 
-![](./check-flag.png)
+<Image src="check-flag.png" alt="" classes="pixelated" />
 
 Avant toute chose, dites-vous que techniquement, une case de la carte n'a pas de flag : c'est le sprite qui les a. Donc la commande `fget` qui vérifie l'état d'un flag ne peut pas être utilisée directement sur une case de la carte. Nous devons d'abord récupérer le numéro de sprite qui correspond à cette case avec `mget`.
 
@@ -72,7 +80,7 @@ end
 
 Comme `not` inverse le signal de ce qui suit, la condition est validée quand il n'y a pas d'obstacle. Très pratique ! Plus qu'à mettre à jour la position du personnage en conséquence.
 
-![](./player-movement2.png)
+<Image src="player-movement2.png" alt="" classes="pixelated" />
 
 Testez le jeu et cela devrait fonctionner ! Si vous allez vers la droite ou le bas, la caméra ne vous suit pas encore mais nous nous en occuperons à l'étape suivante. Par contre, si vous allez vers le haut ou la gauche, vous dépasserez les limites de la carte de PICO-8 en ayant des coordonnées négatives, et il vaudrait mieux l'empêcher. Là aussi, il y a une façon barbante et une façon cool de l'écrire :
 
@@ -94,17 +102,20 @@ p.y = mid(0, newy, 63)
 
 Généralement, la valeur du milieu sera `newx`. Par contre, si vous allez trop à gauche et que `newx` devient -1, la valeur du milieu sera alors 0 ! `p.x` ne pourra donc jamais dépasser 0 ou 127.
 
-![](./player-movement3.png)
+<Image src="player-movement3.png" alt="" classes="pixelated" />
 
 #### Ajouter un feedback sonore
 
 C'est la cerise sur le gâteau. Pour que le jeu soit plus fun et que votre joueur ou joueuse comprenne bien qu'elle essaie d'aller dans un mur, on peut ajouter un petit son.
 
-![](./player-movement4.png)
+<Image src="player-movement4.png" alt="" classes="pixelated" />
 
 Quelque chose de court et discret devrait faire l'affaire :
 
-![](./sfx-bump.png)
-*Boup.*
+<Image
+  src="sfx-bump.png"
+  alt=""
+  caption="Boup."
+/>
 
 Parfait ! Comme promis, dans la section suivante nous verrons comment faire suivre la caméra avec deux types de vues différentes !

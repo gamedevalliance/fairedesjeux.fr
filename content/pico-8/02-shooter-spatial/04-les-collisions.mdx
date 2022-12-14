@@ -121,22 +121,38 @@ L'opérateur `not` inverse la valeur qui suit. Ainsi, si la condition entre pare
 
 Bien sûr, ce n'est pas toujours une bonne idée de minimiser le code à outrance. Si la première écriture est plus lisible pour vous, gardez-la ! Il est très important d'écrire du code facile à lire : le vous du futur vous remerciera pour ça. Ecrivez cette fonction dans un nouvel onglet où vous pourrez ranger les outils en tout genre.
 
-![Fonction de collision](./fonction-collision.png)
+<Image
+  src="fonction-collision.png"
+  alt="Fonction de collision"
+  classes="pixelated"
+/>
 
 ### Utiliser la fonction
 
 Retrouvez la fonction `update_enemies()` pour y ajouter la vérification de collision. Pour chaque balle existante dans `bullets`, on vérifie si elle touche l'ennemi actuellement examiné. Si oui, on joue un son et on supprime la balle (pour ne pas qu'elle lui passe à travers).
 
-![Collision entre l'ennemi et les balles](./collision-ennemi-bullets.png)
+<Image
+  src="collision-ennemi-bullets.png"
+  alt="Collision entre l'ennemi et les balles"
+  classes="pixelated"
+/>
 
-![Son de collision](./son-collision.png)
-*Réalisez un effet sonore d'impact dans l'emplacement numéro 1.*
+<Image
+  src="son-collision.png"
+  alt="Son de collision"
+  caption="Réalisez un effet sonore d'impact dans l'emplacement numéro 1."
+  classes="pixelated"
+/>
 
 Essayez, ça fonctionne ! Après tous ces efforts, ça fait du bien, pas vrai ?
 
 Souvenez-vous : en créant l'ennemi dans `spawn_enemies()`, on lui avait donné des points de vie. Essayez de lui retirer sa vie et de le supprimer lorsqu'il n'en a plus.
 
-![Supression de l'ennnemi](./supprimer-ennemi.png)
+<Image
+  src="supprimer-ennemi.png"
+  alt="Supression de l'ennnemi"
+  classes="pixelated"
+/>
 
 Comme un nouvel ennemi apparaît immédiatement après, c'est un peu étrange. Vous pouvez éloigner la position Y de départ des ennemis à −24 par exemple.
 

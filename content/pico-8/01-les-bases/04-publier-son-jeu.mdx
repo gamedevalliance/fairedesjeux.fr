@@ -32,7 +32,11 @@ Appuyez sur Echap et écrivez la commande :
 export mon-jeu.bin
 ```
 
-![Utilisation de la commande export](./export.png)
+<Image
+  src="export.png"
+  alt="Utilisation de la commande export"
+  classes="pixelated"
+/>
 
 `bin` est une abréviation de *binaries*, ou exécutables en français. Cette commande produit donc une version différente de votre jeu par système d'exploitation : Windows, Linux, Mac et même Raspberry Pi ! Pour avoir l'allure d'un·e vrai·e pro, vous pouvez aussi personnaliser l'icône du fichier exécutable. Dessinez-la sur votre spritesheet, et notez son numéro dans le paramètre `-i`.
 
@@ -46,7 +50,10 @@ Si besoin, précisez la taille de l'icône avec `-s` (`2` pour du 16×16px) et l
 
 Sur Windows, un fichier exécutable est indiqué par l'extension `.exe`, mais le fonctionnement est différent sur Mac et Linux. Or, le système de fichiers de Windows ne permet pas de stocker les métadonnées requises pour rendre un fichier exécutable sur ces autres systèmes. Cela veut dire que si vous utilisez Windows pour envoyer le fichier, les joueurs et joueuses sur Mac et Linux devraient faire une manipulation par eux-mêmes après le téléchargement.
 
-![Liste des fichiers générés par l'export](./dossiers.png)
+<Image
+  src="dossiers.png"
+  alt="Liste des fichiers générés par l'export"
+/>
 
 Pour éviter cela, PICO-8 génère aussi des fichiers zip qui peuvent conserver les bonnes propriétés tant qu'ils ne sont pas extraits sur Windows. Il vaut donc mieux que vous partagiez ces zip tels quels pour que tout fonctionne directement sur les autres systèmes. Si vous avez besoin d'ajouter un fichier dans les zip, précisez-le plutôt à PICO-8 au moment de l'exportation :
 
@@ -90,11 +97,17 @@ Créez un nouveau projet sur itch.io. Si vous avez besoin de conseils supplémen
 
 Compressez le dossier du jeu web (sur Windows : clic droit, envoyer vers dossier compressé). Uploadez le zip sur itch.io et cochez "This file will be played in the browser". Cela permettra à votre fichier HTML de s'afficher dans un *embed*, c'est-à-dire un cadre au sein de la page itch.io. Plus bas, vous pouvez régler les options de ce cadre, et pour un jeu PICO-8, je vous conseille ces réglages :
 
-![Options de l'embed sur itch.io](./embed-options.png)
+<Image
+  src="embed-options.png"
+  alt="Options de l'embed sur itch.io"
+/>
 
 Une fois sur la page du jeu, cliquez sur Edit theme pour choisir des couleurs qui accompagnent bien l'embed.
 
-![Choix des couleurs de la page](./theme.png)
+<Image
+  src="theme.png"
+  alt="Choix des couleurs de la page"
+/>
 
 Sachez qu'en plus de la version web, vous pouvez aussi proposer des versions Windows, Mac et Linux qui seront disponibles au téléchargement en bas de la page.
 

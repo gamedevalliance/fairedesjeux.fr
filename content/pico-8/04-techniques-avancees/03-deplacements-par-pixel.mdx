@@ -167,7 +167,7 @@ function player_movement()
 
 Cela ressemble à ce que nous avions fait lors de l'étape précédente, mais le problème avec cette méthode, c'est que lorsqu'on bouge en diagonale, on va plus vite. Plus précisément, si au cours d'une frame on se déplace à la fois d'un pixel sur l'axe X et d'un pixel sur l'axe Y, on a parcouru une distance 1,4 fois plus grande que si on se déplaçait sur un seul axe. D'où je sors ce chiffre ? Vous pouvez le retrouver avec un petit coup de théorème de Pythagore !
 
-![](./pythagore.png)
+<Image src="pythagore.png" alt="" />
 
 Ici, a et b sont les distances parcourues en X et en Y, tandis que c est la distance parcourue en diagonale. D'après le théorème, c² = a² + b² = √2 ≈ 1,41. Cela signifie que pour corriger la vitesse, il faudrait la multiplier par environ 0,71, mais ce n'est pas obligatoire ! Dans certains jeux, il sera plus fun et naturel de multiplier par un juste milieu tel que 0,8 ou de ne pas altérer la vitesse du tout. A vous de voir ! Personnellement, j'aime bien le résultat que donne 0,75. J'effectue le calcul lorsque le personnage se déplace à une vitesse significative dans les deux axes.
 
@@ -205,7 +205,7 @@ Ensuite vient le déplacement. Comme précédemment, la fonction `can_move()` re
 
 Par contre, cette fois, s'il y a un obstacle, on va en rapprocher le personnage aussi près que possible ! Nous allons stocker la distance que le personnage était censé parcourir, puis progressivement raccourcir cette distance jusqu'à trouver une position sans aucun obstacle.
 
-![](./schema-position.png)
+<Image src="schema-position.png" alt="" />
 
 ```lua
 	if can_move(p, p.dx, p.dy) then

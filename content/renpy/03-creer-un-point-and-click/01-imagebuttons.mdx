@@ -61,8 +61,11 @@ show screen texte_coucou
 a "Pour écrire ton histoire, il te faudrait un carnet. Je crois que j'ai oublié le mien au pied de l'arbre..."
 ```
 
-![Screen texte affiché](./coucou-petit.png)
-*Le texte s'affiche bien dans le coin de l'écran !*
+<Image
+  src="coucou-petit.png"
+  alt="Screen texte affiché"
+  caption="Le texte s'affiche bien dans le coin de l'écran !"
+/>
 
 On ne le voit presque pas... On peut améliorer cela en lui ajoutant quelques propriétés. Ces deux écritures produisent le même effet :
 
@@ -77,7 +80,10 @@ screen texte_coucou:
         size 40
 ```
 
-![Screen texte modifié](./coucou-grand.png)
+<Image
+  src="coucou-grand.png"
+  alt="Screen texte modifié"
+/>
 
 Pas mal, mais on peut encore faire mieux ! Affichons notre texte dans une frame : c'est une fenêtre avec un fond et une bordure.
 
@@ -94,8 +100,11 @@ screen texte_coucou:
             size 40
 ```
 
-![Screen texte modifié](./coucou-frame.png)
-*Eh ben voilà ! Que demande le peuple ?*
+<Image
+  src="coucou-frame.png"
+  alt="Screen texte modifié"
+  caption="Eh ben voilà ! Que demande le peuple ?"
+/>
 
 Je pense que vous comprenez le principe maintenant. Vous voyez que créer une interface, ça consiste souvent à trouver la meilleure façon de mettre des trucs dans d'autres. Passons au vif du sujet : notre livre !
 
@@ -103,8 +112,11 @@ Je pense que vous comprenez le principe maintenant. Vous voyez que créer une in
 
 Une imagebutton, comme son nom l'indique, est une image qui peut avoir le comportement d'un bouton. Nous allons afficher un livre au pied de l'arbre que l'on peut ramasser. Je vais utiliser ce fichier :
 
-![Icône de livre](./livre.png)
-*Provient de [ce pack](https://red-baby.itch.io/sprite-pack-fantasy-inventory-icons).*
+<Image
+  src="livre.png"
+  alt="Icône de livre"
+  caption="Provient de [ce pack](https://red-baby.itch.io/sprite-pack-fantasy-inventory-icons)."
+/>
 
 Créons le screen contenant notre imagebutton :
 
@@ -128,7 +140,10 @@ label livre_recupere:
     a "Félicitations, tu l'as retrouvé !"
 ```
 
-![Livre affiché en jeu](./livre-trop-grand.png)
+<Image
+  src="livre-trop-grand.png"
+  alt="Livre affiché en jeu"
+/>
 
 Le jeu ne continue pas une fois le livre affiché, ce qui est normal. Par contre, nous avons un souci : l'image est bien trop grande !
 
@@ -146,7 +161,10 @@ transform custom_zoom:
     zoom 0.2
 ```
 
-![Livre redimensionné en jeu](./livre-custom-zoom.png)
+<Image
+  src="livre-custom-zoom.png"
+  alt="Livre redimensionné en jeu"
+/>
 
 C'est mieux ! Nous n'avons plus qu'à ajouter une action à effectuer lorsqu'on clique sur le livre :
 

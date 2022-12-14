@@ -6,12 +6,16 @@ Pour le moment, on a un bête ennemi qui apparaît tout seul en haut de l'écran
 
 Pour commencer, si vous l'avez gardé, retirez le `spawn_enemies()` que l'on appelait dans `_init()`, car il ne servait qu'à faire des premiers tests. Dans update, ajoutez le chiffre de votre choix en argument de la fonction :
 
-![](./spawn-enemies-3.png)
+<Image src="spawn-enemies-3.png" alt="" classes="pixelated" />
 
 Pour l'instant, cela ne change rien en jeu : nous devons dire à la fonction quoi faire de ce chiffre. Donnez-lui une appellation (j'ai choisi `amount`) et pour répéter la commande `add()` autant de fois qu'il y a d'ennemis, englobez-la dans une boucle for qui va de 1 à `amount`.
 
-![](./spawn-enemies-amount.png)
-*Pour un rappel sur les boucles for, retournez à l'étape des projectiles.*
+<Image
+  src="spawn-enemies-amount.png"
+  alt=""
+  caption="Pour un rappel sur les boucles for, retournez à l'étape des projectiles."
+  classes="pixelated"
+/>
 
 Vous pouvez essayer avec une position X aléatoire pour bien différencer les ennemis. Le souci avec cette méthode, c'est que le résultat est assez chaotique et la plupart des jeux ont besoin de motifs plus réguliers. Je vous propose donc d'écrire un petit calcul pour obtenir le même écart entre chaque ennemi ! Voici un exemple en images, avec la position de nos futurs ennemis en rouge :
 
@@ -25,7 +29,7 @@ Cela fait **(128 − 8 × *n*) ÷ (*n* + 1)** où ***n*** est le nombre d
 
 Créez une variable stockant l'écart au début de la fonction :
 
-![](./calcul-gap.png)
+<Image src="calcul-gap.png" alt="" classes="pixelated" />
 
 La variable `gap` aura désormais le même résultat que dans l'animation d'exemple. Pour faire apparaître vos ennemis, vous pourriez être tentés de simplement leur donner cette position :
 
@@ -47,7 +51,7 @@ J'ai du mal avec les maths... Je ne comprends pas pourquoi on écrit **(*i* −
 Essaye de faire le calcul en faisant varier ***i*** ! Pour le premier ennemi de la vague, ***i* = 1**, donc X vaudra seulement ***gap* × 1**. Pour le deuxième ennemi, X vaut ***gap* × 2 + 8** et ainsi de suite...
 :::
 
-![](./x-gap.png)
+<Image src="x-gap.png" alt="" classes="pixelated" />
 
 Et voilà, votre vague est toute belle, sans bavure ! Rendons maintenant le nombre d'ennemis aléatoire quand on appelle le spawn dans update.
 
@@ -62,6 +66,6 @@ A vous de choisir ! Je souhaite obtenir un nombre aléatoire entre 1 et 7, donc
 Pour retenir ces fonctions, sachez que `flr` veut dire *floor*, qu'on peut traduire par sol ou plancher, donc vers le bas, et `ceil` veut dire *ceiling* ou plafond, vers le haut.
 :::
 
-![](./ceil-random-7.png)
+<Image src="ceil-random-7.png" alt="" classes="pixelated" />
 
 Le jeu commence à prendre forme ! Nous nous approchons de la fin...

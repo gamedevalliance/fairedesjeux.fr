@@ -17,13 +17,19 @@ butler push dossier utilisateur/jeu:branche
 
 Imaginons que vous souhaitez proposer aux joueurs le choix de télécharger une version stable ou une version beta, et ce depuis la même page de jeu. Il vous faut utiliser deux branches, que vous pouvez appeler `stable` et `beta`. Vous pourriez aussi utiliser les branches pour donner le choix entre une démo gratuite et le jeu complet payant, ou encore pour proposer une version différente par système d'exploitation.
 
-![](./branches.png)
-*Avec les branches, on peut proposer plusieurs téléchargements sur la même page.*
+<Image
+  src="branches.png"
+  alt=""
+  caption="Avec les branches, on peut proposer plusieurs téléchargements sur la même page."
+/>
 
 Le nom d'une branche a un sens. S'il contient `win` ou `windows`, le fichier sera automatiquement marqué comme fonctionnant sur Windows. De la même façon, on écrit `linux` pour Linux, `mac` ou `osx` pour Mac, et `android` pour une application Android. Une branche peut être marquée comme fonctionnant pour plusieurs plateformes, par exemple `win-mac-linux-beta`
 
-![](./nom-branche.png)
-*Le nom de la branche contient `win`, donc Windows est coché automatiquement.*
+<Image
+  src="nom-branche.png"
+  alt=""
+  caption="Le nom de la branche contient `win`, donc Windows est coché automatiquement."
+/>
 
 Vous pouvez aussi changer manuellement les plateformes supportées par une branche depuis la page **Edit game**. Marquer un jeu web doit toujours être fait depuis cette page.
 
@@ -44,7 +50,10 @@ La plupart du temps, seule une petite partie des données changera entre les pus
 
 butler est automatiquement mis à jour au lancement de l'application itch. Mais si vous n'utilisez pas cette dernière, butler vous notifiera lui-même des mises à jour disponibles.
 
-![Une mise à jour est disponible](./butler-update.png)
+<Image
+  src="butler-update.png"
+  alt="Une mise à jour est disponible"
+/>
 
 Pensez alors à utiliser la commande `butler update` et l'opération sera terminée en un instant !
 

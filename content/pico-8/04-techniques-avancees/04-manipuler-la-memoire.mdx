@@ -106,8 +106,11 @@ Pour plus de rapidité, dans la plupart des consoles de jeu et des ordinateurs, 
 
 C'est dans cet espace de 32 Kio que l'on pourra peek et poke pour modifier le comportement de PICO-8 pendant le jeu. La RAM est compartimentée en différentes sections, chaque adresse ayant une utilité précise :
 
-![](./memoire.png)
-*Un carré équivaut à 128 octets.*
+<Image
+  src="memoire.png"
+  alt=""
+  caption="Un carré équivaut à 128 octets."
+/>
 
 Comme vous pouvez le voir, le début de la RAM, de "sprites" jusqu'à "sons", n'est autre que votre ROM chargée au lancement. On trouve ensuite :
 
@@ -220,8 +223,12 @@ AND 001    AND 001    AND 001    <-- bit du clic gauche
 
 Pour résumer, `band(stat(34), 0b001)` renverra le résultat 0b001 si les deux nombres ont le bit en commun, et renverra 0b000 sinon. Voici comment vérifier les trois types de clic :
 
-![](./band.png)
-*Pour plus de concision, j'ai écrit 1, 2 et 4, qui sont les écritures décimales de 0b001, 0b010 et 0b1000. Les deux écritures sont toujours interchangeables !*
+<Image
+  src="band.png"
+  alt=""
+  caption="Pour plus de concision, j'ai écrit 1, 2 et 4, qui sont les écritures décimales de 0b001, 0b010 et 0b1000. Les deux écritures sont toujours interchangeables !"
+  classes="pixelated"
+/>
 
 Si les opérations bit à bit vous intéressent, je vous laisse consulter la section [Bitwise Operations](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#Bitwise_Operations) du manuel de PICO-8 ainsi que les exemples de [Wikipédia](https://fr.wikipedia.org/wiki/Opération_bit_à_bit).
 
@@ -231,4 +238,4 @@ Méfiez-vous cependant : zep, le développeur de PICO-8, indique que la souris 
 
 Gardez également à l'esprit que toutes les machines exécutant PICO-8 ne disposent pas forcément d'une souris et d'un clavier complet ; il est donc recommandé de rendre le mode devkit optionnel lorsque vous publiez votre jeu sur le site officiel. La première fois qu'une de ces `stat()` est lue par le jeu dans un contexte où la présence d'un clavier et d'une souris n'est pas garantie, PICO-8 affiche un court avertissement en bas de l'écran.
 
-![](./devkit-mouse.png)
+<Image src="devkit-mouse.png" alt="" />

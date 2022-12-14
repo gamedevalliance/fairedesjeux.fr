@@ -10,7 +10,11 @@ Il existe trois fonctions pré-définies dans PICO-8 qui vous seront très utile
 - `_update()` contient toute la logique du jeu et s'exécute 30 fois par seconde.
 - `_draw()` est exécuté 30 fois par seconde aussi, juste après update, et on y met tout ce qui concerne l'affichage des graphismes.
 
-![Les trois fonctions dans l'éditeur de code](./les-3-fonctions.png)
+<Image
+  src="les-3-fonctions.png"
+  alt="Les trois fonctions dans l'éditeur de code"
+  classes="pixelated"
+/>
 
 :::hypemarvin
 Pourquoi je dois séparer update et draw alors que les deux se jouent à la suite ?
@@ -32,12 +36,15 @@ Pour rappel, notre but est de faire bouger le vaisseau en utilisant les flèches
 
 Commencez par mettre le code que vous aviez déjà écrit dans la fonction `_draw()` :
 
-![](./function-draw.png)
+<Image src="function-draw.png" alt="" classes="pixelated" />
 
 Nous devons maintenant définir des variables pour la position du joueur. Pour être bien organisé, nous allons insérer toutes ces variables dans un tableau "player".
 
-![Schéma du tableau player](./player.png)
-*Les tableaux sont un moyen de stocker plusieurs informations différentes en une seule variable.*
+<Image
+  src="player.png"
+  alt="Schéma du tableau player"
+  caption="Les tableaux sont un moyen de stocker plusieurs informations différentes en une seule variable."
+/>
 
 En Lua, un tableau peut se créer ainsi :
 
@@ -55,13 +62,21 @@ player.speed  => 4
 
 Vous pouvez l'écrire comme vous préférez, mais personnellement je vais nommer le tableau `p` plutôt que player, car on va l'utiliser souvent et il n'y a pas beaucoup de place sur l'écran de PICO-8.
 
-![](./function-init.png)
-*N'oubliez pas de changer les arguments de spr() pour qu'ils pointent vers vos variables !*
+<Image
+  src="function-init.png"
+  alt=""
+  caption="N'oubliez pas de changer les arguments de spr() pour qu'ils pointent vers vos variables !"
+  classes="pixelated"
+/>
 
 Parfait ! Nous allons pouvoir ajouter un peu d'interactivité maintenant. Ajoutez une fonction `_update()` ou `_update60()` (je vous conseille la version à 60 FPS, la fluidité est très appréciable) et écrivez-y cette condition :
 
-![](./premier-if.png)
-*Pour écrire la flèche, tapez Maj+R (pour Right).*
+<Image
+  src="premier-if.png"
+  alt=""
+  caption="Pour écrire la flèche, tapez Maj+R (pour Right)."
+  classes="pixelated"
+/>
 
 Vous pouvez tester le jeu, et ça marche ! Cela dit, trois lignes pour un bête appui de touche, ça prend quand même beaucoup de place. PICO-8 propose une écriture alternative en une ligne :
 
@@ -76,11 +91,11 @@ if (question) commandes
 
 Pratique pour les conditions simples comme celle-ci !
 
-![](./one-line-if.png)
+<Image src="one-line-if.png" alt="" classes="pixelated" />
 
 Essayez d'écrire les conditions correspondant aux 4 directions. Pour écrire les signes des flèches, tapez Maj+L, R, U ou D (pour *Left*, *Right*, *Up* et *Down*).
 
-![](./tous-les-boutons.png)
+<Image src="tous-les-boutons.png" alt="" classes="pixelated" />
 
 :::winkastride
 Les boutons peuvent aussi être désignés par des chiffres et vous pouvez avoir jusqu'à 8 joueurs différents en branchant des manettes ! Tout est dans la [documentation de `btn`](https://www.lexaloffle.com/dl/docs/pico-8_manual.html#BTN).
@@ -88,7 +103,11 @@ Les boutons peuvent aussi être désignés par des chiffres et vous pouvez avoir
 
 Ça fait plaisir de voir son petit vaisseau bouger à l'écran, n'est-ce pas ? Ajoutons une touche finale : actuellement, votre fonction déplace le joueur de 1 pixel par frame. Vous vous souvenez que nous avions défini une propriété `speed` pour le joueur ? Essayez de l'utiliser dans votre code de déplacement.
 
-![Code final de l'étape](./p-speed.png)
+<Image
+  src="p-speed.png"
+  alt="Code final de l'étape"
+  classes="pixelated"
+/>
 
 :::hypemarvin
 Pourquoi s'embêter à créer une variable `speed` alors que je peux directement écrire le chiffre que je veux dans `_update()` ?

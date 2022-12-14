@@ -31,23 +31,43 @@ Dans la démo, le modulo est noté `%`. C'est comme ça qu'on l'écrit en Lua et
 
 Nous aurons parfois plusieurs explosions affichées à la fois ; le mieux est donc de toutes les stocker dans un tableau, que vous pouvez créer dans `_init()`.
 
-![Déclaration du tableau des explosions](./tableau-explosions.png)
+<Image
+  src="tableau-explosions.png"
+  alt="Déclaration du tableau des explosions"
+  classes="pixelated"
+/>
 
 Maintenant, on va travailler dans un nouvel onglet "*Explosions*". Essayons d'écrire le système le plus pratique possible à utiliser ! Quand on voudra créer une explosion au cours du jeu, il nous suffira d'appeler `create_explosion()` en donnant l'emplacement de l'explosion. La fonction prendra donc deux arguments : X et Y.
 
-![Create explosion](./create-explosion.png)
-*Pour un meilleur effet, chaque explosion devrait jouer un son !*
+<Image
+  src="create-explosion.png"
+  alt="Create explosion"
+  caption="Pour un meilleur effet, chaque explosion devrait jouer un son !"
+  classes="pixelated"
+/>
 
 Si on récapitule, une explosion est structurée ainsi : `{x, y, timer}`. A chaque frame, nous devrons faire avancer le timer des explosions existantes, et les supprimer quand elles dépassent 12. Ce sera le job de notre fonction d'update !
 
-![Update explosions](./update-explosions.png)
+<Image
+  src="update-explosions.png"
+  alt="Update explosions"
+  classes="pixelated"
+/>
 
 Plus qu'à afficher les explosions d'après ce que je vous expliquais au début. Pour rappel, le rayon du cercle vaut ***timer* ÷ 3** et la couleur est **8 + *timer* modulo 3**.
 
-![Draw explosions](./draw-explosions.png)
+<Image
+  src="draw-explosions.png"
+  alt="Draw explosions"
+  classes="pixelated"
+/>
 
 Bien ! Pensez à appeler `update_explosions()` dans update et `draw_explosions()` à la fin de draw. Quant à la création de l'explosion... elle devrait arriver lorsque l'ennemi se fait toucher, et on vérifiait cela dans `update_enemies()`. Enlevez le son que l'on jouait, puisque désormais votre fonction joue le son, puis créez une explosion au point d'impact, c'est à dire à la position de la balle.
 
-![Appel explosion](./appel-explosion.png)
+<Image
+  src="appel-explosion.png"
+  alt="Appel explosion"
+  classes="pixelated"
+/>
 
 Ça fonctionne bien ! Il faudrait juste décaler un peu l'explosion. Souvenez-vous que la position d'un cercle indique son centre, donc avec `b.x + 4` et `b.y + 4`, vous seriez au centre de votre sprite de balle. A vous de doser ça comme bon vous semble.

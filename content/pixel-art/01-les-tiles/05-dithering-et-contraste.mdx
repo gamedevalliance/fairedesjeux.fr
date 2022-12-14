@@ -6,7 +6,7 @@ opengraph_image: ./opengraph-ff1.png
 
 Oh mon dieu ! Qu'est-ce que c'est que cette horreur ? C'est Final Fantasy 1.
 
-![](./ff1.png)
+<Image src="ff1.png" alt="" classes="pixelated" />
 
 :::hypemarvin
 Ce cours est censé m'apprendre à faire du bon pixel art... Alors pourquoi étudier des jeux datant de la NES ? En plus ils n'utilisent que 16 couleurs, non ?
@@ -16,7 +16,7 @@ Exactement, et c'est là que se trouve tout l'intérêt. A l'époque, les consol
 
 Regardons d'un peu plus près ce Final Fantasy.
 
-![](./ff1-tiles.png)
+<Image src="ff1-tiles.png" alt="" classes="pixelated" />
 
 Le premier tile est celui du sol. Comme vous pouvez le voir, il ne parvient pas à effacer la grille, mais il faut dire que ce n'était pas une priorité à l'époque... Les développeurs et développeuses ne cherchaient pas encore à rendre leurs jeux beaux mais compréhensibles. Or, en voyant ce tile sur la map, vous savez qu'il s'agit d'un sol et qu'il est fait de pierres ; pourtant il n'utilise que deux couleurs !
 
@@ -32,13 +32,13 @@ Notez comment ces briques, avec seulement 2 ou 3 couleurs, parviennent à rendre
 
 Passons maintenant au dithering.
 
-![](./dithering.png)
+<Image src="dithering.png" alt="" classes="pixelated" />
 
 Ceci est un exemple de ce qui se fait de plus simple en matière de dithering. Si vous vous éloignez un peu de votre écran, vous diriez qu'il y a 3 teintes sur cette image. Pourtant elle n'utilise que des pixels blancs et noirs, mais un pattern en damier mixant les deux couleurs donne un gris. Ce n'est pas un magnifique gris, mais c'est du gris.
 
 En l’occurrence le tile est très grossier, mais plus la résolution est grande, plus les pixels seront petits et donc plus l'effet sera réussi. Regardons comment nous pouvons nous en servir sur nos tiles :
 
-![](./dithering-briques.png)
+<Image src="dithering-briques.png" alt="" classes="pixelated" />
 
 Nous retrouvons notre premier mur dit « briques en plastique » toujours aussi lisse et brillant. Mais cette fois-ci, nous allons tenter d'adoucir le dégradé en utilisant le dithering entre chaque transition de couleurs... Ce qui nous amène au second mur, beaucoup plus agréable à regarder car il fait disparaître le dégradé grossier.
 
@@ -48,7 +48,7 @@ Pourtant les trois murs sont tous faits de quatre tiles composés de 16 pixels s
 
 Jetons un œil à une image issue de Crystalis, un jeu plutôt disgracieux, mais qui illustre bien l'utilisation du dithering.
 
-![](./crystalis.png)
+<Image src="crystalis.png" alt="" classes="pixelated" />
 
 Notez comment la monotonie du sol est brisée par de la poussière, des brindilles... Dommage que le mur n'ait pas profité du même soin ; quelques fissures ou détails y auraient été bienvenus.
 
@@ -58,7 +58,7 @@ Plus les rochers sont proches du sol, moins ils utilisent du pêche et plus ils 
 
 Tentons d'en apprendre un peu plus sur comment faire des ombres. J'ai réalisé un sol de cave pour l'occasion :
 
-![](./sol-cave.png)
+<Image src="sol-cave.png" alt="" classes="pixelated" />
 
 Je veux que cette cave semble vieille et sombre, effrayante donc... Pour l'instant ce n'est pas encore ça, c'est encore trop plat. Quelque chose ne va pas, mais quoi ?
 
@@ -66,13 +66,13 @@ A l'époque des palettes limitées, on utilisait davantage le noir. C'est une co
 
 En supprimant la teinte la plus claire pour ne garder que les deux plus sombres tout en utilisant un fond noir, voici ce que j'obtiens :
 
-![](./sol-cave2.png)
+<Image src="sol-cave2.png" alt="" classes="pixelated" />
 
 Là, nous avons un sol sombre, effrayant et avec de vrais volumes. Le noir permet de séparer les rochers, d'améliorer le contraste général de la texture tout en assombrissant le tout.
 
 Maintenant, regardez pourquoi j'ai choisi de supprimer le vert clair de mon sol :
 
-![](./sol-cave3.png)
+<Image src="sol-cave3.png" alt="" classes="pixelated" />
 
 Bienvenue dans le monde merveilleux du contraste, amusez-vous bien !
 
@@ -88,7 +88,7 @@ Quand on fait du pixel art, l'important est de voir le résultat en jeu, et non 
 
 Continuons notre analyse avec quelque chose d'encore plus basique que la NES :
 
-![](./gameboy.png)
+<Image src="gameboy.png" alt="" classes="pixelated" />
 
 La Game Boy. Une merveilleuse console limitant la palette de couleur à 4 nuances de gris. Ça c'est de la restriction !
 
@@ -98,7 +98,7 @@ Bien sûr, les tiles manquent de texture, la château semble comme neuf et on re
 
 Ce qui nous intéresse ici, c'est de voir que malgré le peu de couleurs, les graphistes ont veillé à ce que les personnages se détachent du décor. Les tiles autour de la scène sont très clairs et contrastés, alors que les personnages sont plus sombres et moins contrastés.
 
-![](./gameboy2.png)
+<Image src="gameboy2.png" alt="" classes="pixelated" />
 
 Une autre scène incroyable, pour peu que l'on se rappelle qu'elle n'est constituée que de 4 couleurs.
 

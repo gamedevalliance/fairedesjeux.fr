@@ -26,7 +26,7 @@ Remarquez que l'on autorise le joueur ou la joueuse à déplacer `p.x` et `p.y` 
 
 Ajoutons les propriétés du personnage dont nous aurons besoin par la suite :
 
-![](./create-player-animation.png)
+<Image src="create-player-animation.png" alt="" classes="pixelated" />
 
 Pour vous donner une idée, les variables `ox` et `oy` représenteront la position actuelle de l'offset. `start_ox` et `start_oy` seront la position de départ de l'offset, au début d'un déplacement. `anim_t` vaudra 1 au début de l'animation, et ira jusqu'à 0 pour qu'elle se termine.
 
@@ -59,23 +59,23 @@ Placez les conditions dans un `elseif` afin de dire au jeu de s'arrêter au prem
 
 Plus bas, dans la condition qui vérifie la collison avant de déplacer `p.x` et `p.y`, nous pouvons aussi confirmer la position de départ de l'offset, et dire que l'animation commence en mettant `p.anim_t` à 1.
 
-![](./condition-check-flag.png)
+<Image src="condition-check-flag.png" alt="" classes="pixelated" />
 
 Cela dit, cette condition est actuellement vraie en permanence tant qu'il n'y a pas d'obstacle à "New X Y", même si nous sommes immobiles et que "New X Y" se trouve sous nos pieds. Nous devons faire en sorte que la condition se joue uniquement lorsque le joueur ou la joueuse tente de se déplacer, c'est à dire que "New X Y" n'est pas sous nos pieds.
 
-![](./condition-check-flag2.png)
+<Image src="condition-check-flag2.png" alt="" classes="pixelated" />
 
 Au passage, je vous conseille d'enlever le `else` qui joue le son. Avec l'animation améliorée, on n'a plus besoin de ce feedback supplémentaire, et maintenant que nous n'utilisons plus btnp, le son se jouerait en boucle.
 
 Juste en-dessous, donc à la fin de la fonction `player_movement()`, ajoutez ce code qui anime l'offset.
 
-![](./animation-offset.png)
+<Image src="animation-offset.png" alt="" classes="pixelated" />
 
 La première ligne diminue `p.anim_t` au fil du temps jusqu'à atteindre 0. Plus nous diminuons `p.anim_t`, plus `p.ox` et `p.oy` deviennent petits, ce qui nous rapproche de la position réelle du personnage, et ce jusqu'à obtenir un offset de 0.
 
 Lorsque nous affichons le personnage, nous devons maintenant prendre en compte l'offset :
 
-![](./draw-sprite-offset.png)
+<Image src="draw-sprite-offset.png" alt="" classes="pixelated" />
 
 Maintenant, l'animation de déplacement est fluide mais saute lorsqu'on maintient une flèche appuyée. C'est parce que jusqu'ici, nous déplacions le personnage à chaque fois que btnp était vrai. Maintenant, nous vérifierons plutôt les boutons quand `p.anim_t` est égal à 0, autrement dit quand l'animation est terminée.
 
@@ -128,11 +128,11 @@ Ceci n'est qu'un exemple pour vous montrer le principe. Bien sûr, nous ne pouvo
 
 Nous allons ajouter une propriété "flip" au personnage.
 
-![](./set-sprite-flip.png)
+<Image src="set-sprite-flip.png" alt="" classes="pixelated" />
 
 Dans `draw_player()`, nous n'avons plus qu'à changer l'argument "miroir X" en fonction de l'état de `p.flip`.
 
-![](./draw-sprite-flip.png)
+<Image src="draw-sprite-flip.png" alt="" classes="pixelated" />
 
 Nous n'avons pas eu besoin de déclarer la variable `flip` dans le tableau `p` au début du jeu, puisque si la variable n'existe pas encore, l'argument vaudra tout simplement `false`.
 
@@ -140,11 +140,14 @@ Nous n'avons pas eu besoin de déclarer la variable `flip` dans le tableau `p` a
 
 La touche finale concernant notre personnage sera d'agiter ses gambettes lorsqu'il avance. Pour créer un cycle de marche simple, deux sprites suffisent largement. Pour ma part, ce sont les sprites 16 et 17.
 
-![Dessin du cycle de marche](./dessin-animation-sprite.png)
+<Image
+  src="dessin-animation-sprite.png"
+  alt="Dessin du cycle de marche"
+/>
 
 Vous pouvez ensuite, à la fin de `player_movement()`, ajouter cette petite condition pour afficher le deuxième sprite pendant la première moitié de l'animation :
 
-![](./animation-sprite.png)
+<Image src="animation-sprite.png" alt="" classes="pixelated" />
 
 Pour un résultat plus comique, je vous suggère de remplacer la condition par `p.anim_t % 0.25 != 0`. Et pour aller plus loin au sujet des cycles de marche, je vous conseille d'étudier cette [démo](https://mboffin.itch.io/pico8-simple-animation) de MBoffin !
 

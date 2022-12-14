@@ -9,11 +9,11 @@ Vous êtes arrivé·e à la dernière étape de la réalisation de votre premier
 
 Au début du jeu, on doit déclarer la variable `score` et la mettre à 0 :
 
-![](./score-0.png)
+<Image src="score-0.png" alt="" classes="pixelated" />
 
 Ensuite, quand on tue un ennemi, montez le score de 100 points par exemple. C'est toujours plus gratifiant quand il y a plein de zéros !
 
-![](./score-100.png)
+<Image src="score-100.png" alt="" classes="pixelated" />
 
 Enfin, et c'est là la nouveauté, nous allons afficher du texte dans un coin de l'écran avec la commande `print()`.
 
@@ -44,14 +44,18 @@ print(score, 2, 8)
 
 ...les deux textes seront affichés avec la couleur 7, le blanc. En connaissant toutes ces astuces, vous pouvez afficher le score comme il vous plaît à la fin de draw. Voici un exemple tout simple :
 
-![](./print-score.png)
+<Image src="print-score.png" alt="" classes="pixelated" />
 
-![](./score-en-jeu.png)
+<Image src="score-en-jeu.png" alt="" classes="pixelated" />
 
 Plus qu'à gérer la collision entre notre vaisseau et les ennemis afin d'avoir une condition de défaite !
 
-![](./collision-ennemi-joueur.png)
-*Au tout début de ce cours, nous n'avions pas encore pris l'habitude de ranger les choses dans des fonctions, donc ce qui concerne notre vaisseau est directement dans update. N'hésitez pas à réorganiser ça !*
+<Image
+  src="collision-ennemi-joueur.png"
+  alt=""
+  caption="Au tout début de ce cours, nous n'avions pas encore pris l'habitude de ranger les choses dans des fonctions, donc ce qui concerne notre vaisseau est directement dans update. N'hésitez pas à réorganiser ça !"
+  classes="pixelated"
+/>
 
 Pour le moment, on n'a pas d'écran de game over. En appelant `_init()`, on remet toutes les variables à leur état initial, donc c'est un peu comme si on redémarrait le jeu. Plus tard, on appellera plutôt notre scène de game over, mais... comment créer différentes scènes ?
 
@@ -125,8 +129,12 @@ Maintenant, le jeu devrait se figer lorsqu'on meurt. On dirait pas comme ça, ma
 
 Commencez par choisir une couleur de fond avec `cls()` puis laissez libre cours à votre imagination. Affichez un petit message avec le score puis faites en sorte que l'on puisse quitter l'écran en appuyant sur la touche O (écrivez le symbole avec Maj+O).
 
-![](./game-over.png)
-*Mon écran contient une fenêtre et son ombre dessinées avec des rectfill ainsi qu'un texte dont la couleur clignote en utilisant l'astuce du modulo. Les deux points `..` permettent de [concaténer](https://www.lua.org/pil/3.4.html) les deux textes.*
+<Image
+  src="game-over.png"
+  alt=""
+  caption="Mon écran contient une fenêtre et son ombre dessinées avec des rectfill ainsi qu'un texte dont la couleur clignote en utilisant l'astuce du modulo. Les deux points `..` permettent de [concaténer](https://www.lua.org/pil/3.4.html) les deux textes."
+  classes="pixelated"
+/>
 
 Vous pouvez essayer d'écrire `state = 0` pour relancer une partie, mais cela posera un problème car les variables du jeu n'ont pas été réinitialisées. Dans notre cas, autant relancer `_init()` qui remet tout à zéro, incluant la variable `state`.
 
@@ -146,7 +154,11 @@ A travers ce chapitre, j'ai pu vous montrer plein de concepts de base de PICO-8�
 
 Prenez le temps de chercher par vous-même, et si vous bloquez, téléchargez cette cartouche et ouvrez-la dans une deuxième fenêtre de PICO-8. Elle contient tout ce que nous avons fait dans le tuto ainsi que ces trois points bonus.
 
-![Cartouche PICO-8 à télécharger](./space-shooter.p8.png)
-*Enregistrez l'image dans le dossier de vos cartouches.<br/>Pour trouver le dossier, tapez `folder` au lancement de PICO-8.*
+<Image
+  src="space-shooter.p8.png"
+  alt="Cartouche PICO-8 à télécharger"
+  caption="Enregistrez l'image dans le dossier de vos cartouches.<br/>Pour trouver le dossier, tapez `folder` au lancement de PICO-8."
+  classes="pixelated"
+/>
 
 Vous pouvez également demander de l'aide dans la section d'entraide de notre serveur Discord !

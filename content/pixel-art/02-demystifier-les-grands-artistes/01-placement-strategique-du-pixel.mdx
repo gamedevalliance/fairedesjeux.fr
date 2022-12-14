@@ -5,7 +5,11 @@ description: "Décomposons les grandes icônes du pixel art pour mieux comprendr
 
 Si vous aimez les RPG, vous avez sûrement déjà joué aux icônes du genre. Ce qu'on va faire dans ce chapitre, c'est les décomposer pour voir ce qui les rend aussi légendaires ! Parlons de Secret of Mana 3, qui est probablement le jeu le plus beau que j'ai jamais vu :
 
-![Images de Secret of Mana 3](./secret-of-mana-3.png)
+<Image
+  src="secret-of-mana-3.png"
+  alt="Images de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 Impressionnant, hein... Mais décomposons-le et voyons ce qui le rend *si* impressionnant.
 
@@ -15,7 +19,11 @@ Si vous regardez le sol de plus près, vous remarquerez qu'ils ne se sont pas co
 
 Bien sûr, tout est extrêmement bien dessiné, mais ça ne veut pas dire que personne d'autre ne peut le faire. Prenons un morceau du screen et agrandissons-le.
 
-![Zoom sur l'herbe de Secret of Mana 3](./secret-of-mana-herbe.png)
+<Image
+  src="secret-of-mana-herbe.png"
+  alt="Zoom sur l'herbe de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 Petite note au passage... Ce dont je parlais tout à l'heure, éliminer la grille. Eh bien Secret of Mana 3 l'a absolument fait. J'ai été obligé de découper mon screen au hasard parce que je n'avais aucune idée d'où commencent et finissent les tiles. Ça, mes amis, c'est une réussite.
 
@@ -33,13 +41,21 @@ Ce que nous avons appris ici, c'est que pour que quelque chose ait l'air plus cl
 
 Prenons une autre zone, du deuxième screen cette fois.
 
-![Zoom sur la terre de Secret of Mana 3](./secret-of-mana-terre1.png)
+<Image
+  src="secret-of-mana-terre1.png"
+  alt="Zoom sur la terre de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 Intéressons-nous à la terre : on peut distinguer quatre teintes. La quatrième, la plus foncée, est utilisée rarement. Ce sont juste des pixels parsemés ici et là pour ajouter un peu de profondeur ou pour souligner l'herbe, qui devrait projeter une ombre de toute façon.
 
 C'est juste placé à quelques endroits... mais ça fait plus que vous ne pourriez l'imaginer. Pour vous montrer un exemple drastique de tout ce que fait cette teinte à l'image, j'ai éclairci d'un cran la teinte la plus foncée :
 
-![Zoom sur la terre de Secret of Mana 3](./secret-of-mana-terre2.png)
+<Image
+  src="secret-of-mana-terre2.png"
+  alt="Zoom sur la terre de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 :::oofmarvin
 Qu'est-ce qui s'est passé ? C'est tout plat maintenant !
@@ -53,7 +69,11 @@ Regardez de nouveau le screen d'origine et prêtez attention à où est placée 
 
 Alors à quoi est-ce que ça ressemblerait si l'herbe avait cette quatrième teinte ? Eh bien j'en ai ajouté une ici :
 
-![Zoom sur la terre de Secret of Mana 3](./secret-of-mana-terre3.png)
+<Image
+  src="secret-of-mana-terre3.png"
+  alt="Zoom sur la terre de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 Maintenant, vous pouvez voir que l'herbe semble plus épaisse, comme si d'autres brins d'herbe se cachaient en dessous. Et ça peut être sympa... Mais plissez à nouveau les yeux et observez les deux images. 
 
@@ -67,7 +87,11 @@ C'est un mécanisme naturel de l'esprit : si c'est plus clair, c'est plus près.
 
 Passons désormais à l'arbre :
 
-![L'arbre de Secret of Mana 3](./arbre.png)
+<Image
+  src="arbre.png"
+  alt="L'arbre de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 Pas mal cet arbre, hein ? Regardez-le de près, en commençant par la grande zone verte. En mettant de côté les pixels les plus foncés, pratiquement noirs, placés ici et là, vous avez cinq teintes de vert. Seulement cinq.
 
@@ -79,19 +103,31 @@ Si vous vous reculez un peu, vous verrez comme des gros amas de feuilles, et pou
 
 Eh bien ça marche de la même manière que la fameuse sphère avec de la lumière. Vous l'avez probablement déjà vue si vous vous êtes renseigné·e sur les concepts d'éclairage, mais je vais rapidement en parler pour cet exemple :
 
-![Sphère avec de l'ombre](./sphere.png)
+<Image
+  src="sphere.png"
+  alt="Sphère avec de l'ombre"
+  classes="pixelated"
+/>
 
 Voici une sphère avec une lumière qui se reflète dessus. Vous pouvez dire instantanément que la lumière vient frapper le coin en haut à gauche parce que ce côté est plus clair, et l'opposé est, bien évidemment, plus foncé. On ressent la 3D, même si ce ne sont que de simples pixels, comme tout ce qu'on a regardé depuis le début du cours.
 
 Utilisons cette sphère pour recréer une partie de l'arbre : 
 
-![Sphères assemblées](./spheres.png)
+<Image
+  src="spheres.png"
+  alt="Sphères assemblées"
+  classes="pixelated"
+/>
 
 On dirait vraiment de la 3D... En regardant l'image, les sphères ont l'air d'être placées devant ou derrière les autres. Ça n'a pas été fait en dessinant une ligne noire, mais bien grâce à l'ombrage. Si vous regardez une sphère individuellement, les pixels ont tous plus ou moins la même teinte, donc ça semble être un seul objet. Mais là où deux sphères se chevauchent, le changement de teinte est bien plus drastique. De presque noir à pratiquement blanc. C'est pour ça qu'on a l'impression que ce sont des zones séparées.
 
 Retournons à notre arbre maintenant :
 
-![Arbre de Secret of Mana 3](./arbre.png)
+<Image
+  src="arbre.png"
+  alt="Arbre de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 Vous voyez peut-être maintenant le rapport. Là où la sphère était claire, l'arbre a un vert proche du jaune, et plus les teintes se rapprochent du bord d'une sphère, plus elles deviennent foncées. 
 
@@ -107,7 +143,11 @@ Bon, vous n'avez pas besoin d'utiliser du bleu dans toutes vos ombres, mais gard
 
 Attaquons maintenant le dernier screen, la plage :
 
-![Plage de Secret of Mana 3](./secret-of-mana-plage.png)
+<Image
+  src="secret-of-mana-plage.png"
+  alt="Plage de Secret of Mana 3"
+  classes="pixelated"
+/>
 
 Tout d'abord, laissez-moi vous dire que c'est un bon exemple d'élimination de la grille. Il est presque impossible de dire où sont les tiles !
 

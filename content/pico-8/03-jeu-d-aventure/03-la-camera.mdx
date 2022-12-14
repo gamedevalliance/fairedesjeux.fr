@@ -14,15 +14,27 @@ Quelque soit la méthode que vous choisissez, je vous conseille de lire cette se
 
 Avec la fonction `camera(x, y)`, vous pouvez changer la position du coin haut-gauche de la caméra. En pratique, quand vous déplacez la caméra, cela veut dire que vous décalez tout ce qui est ensuite dessiné dans draw. Faites un petit test en écrivant les mêmes coordonnées que le sprite du personnage :
 
-![Première utilisation de la caméra](./camera.png)
+<Image
+  src="camera.png"
+  alt="Première utilisation de la caméra"
+  classes="pixelated"
+/>
 
 La caméra suit bien le personnage ; il ne reste plus qu'à la reculer pour qu'il soit au centre. Comme l'écran fait 16 tiles de large, `p.x - 8` serait trop loin à gauche tandis que `p.x - 7` serait trop à droite. L'idéal, c'est entre les deux !
 
-![Ajustement de la position de la caméra](./camera-methode-1.png)
+<Image
+  src="camera-methode-1.png"
+  alt="Ajustement de la position de la caméra"
+  classes="pixelated"
+/>
 
 Il ne manque plus qu'à restreindre la caméra lorsqu'on est proche des bords de la carte en utilisant `mid`, comme on l'a fait précédemment pour le personnage.
 
-![Restriction de la position de la caméra](./camera-methode-1-mid.png)
+<Image
+  src="camera-methode-1-mid.png"
+  alt="Restriction de la position de la caméra"
+  classes="pixelated"
+/>
 
 ### Deuxième méthode
 
@@ -34,6 +46,10 @@ Pour imiter le comportement du premier Zelda, il faut imaginer que notre carte e
 
 Dans cette démo, vous pouvez déplacer le personnage avec les flèches et examiner comment la caméra est ajustée. L'astuce consiste à diviser la position du personnage par 16 et l'arrondir avec `flr` pour obtenir le numéro de l'écran dans lequel il se trouve. Il suffit alors de multiplier ce nombre par 16 pour obtenir la case où doit se trouver la caméra.
 
-![Deuxième méthode de gestion de la caméra](./camera-methode-2.png)
+<Image
+  src="camera-methode-2.png"
+  alt="Deuxième méthode de gestion de la caméra"
+  classes="pixelated"
+/>
 
 C'est du beau travail. Bien sûr, plus tard, il vous sera possible d'animer votre personnage et la caméra d'une façon plus fluide, et je vous partagerai pour cela quelques techniques à la fin du chapitre. Une fois que vous avez choisi la méthode qui vous plaît le plus pour la caméra, vous pouvez passer à l'étape suivante !
