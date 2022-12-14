@@ -4,6 +4,7 @@ import * as path from "path"
 
 interface Props {
 	src: string
+	caption: string
 	autoplay?: boolean
 	muted?: boolean
 	loop?: boolean
@@ -12,12 +13,19 @@ interface Props {
 }
 
 const outputDir = "public/assets/videos"
-const { src, ...props} = Astro.props
+const { src, caption, ...props } = Astro.props
 
-fs.mkdirSync(outputDir, { recursive: true})
+fs.mkdirSync(outputDir, { recursive: true })
 fs.copyFileSync(src, path.join("public/assets/videos", path.basename(src)))
 ---
 
 <video {...props}>
 	<source type="video/mp4" src={`/assets/videos/${path.basename(src)}`} />
 </video>
+{
+	caption ? (
+		<p>
+			<em>Le résultat final de ce chapitre.</em>
+		</p>
+	) : null
+}
