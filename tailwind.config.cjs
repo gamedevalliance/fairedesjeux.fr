@@ -89,17 +89,17 @@ module.exports = {
 
 			// Speech bubbles
 			backgroundImage: () => ({
-				marvinHappy: "url('~@avatars/marvin.png')",
-				marvinHype: "url('~@avatars/marvin-hehe.png')",
-				marvinOof: "url('~@avatars/marvin-oof.png')",
+				marvinHappy: "url('/assets/avatar/happy.png')",
+				marvinHype: "url('/assets/avatar/hype.png')",
+				marvinOof: "url('/assets/avatar/oof.png')",
 
-				astrideSmile: "url('~@avatars/astride.png')",
-				astrideWink: "url('~@avatars/astride-wink.png')",
-				astrideSigh: "url('~@avatars/astride-tss.png')",
+				astrideSmile: "url('/assets/avatar/astride-smile.png')",
+				astrideWink: "url('/assets/avatar/wink.png')",
+				astrideSigh: "url('/assets/avatar/sigh.png')",
 
-				remiSmile: "url('~@avatars/remi.png')",
-				remiProf: "url('~@avatars/remi-hum.png')",
-				remiNotLikeThis: "url('~@avatars/remi-ono.png')",
+				remiSmile: "url('/assets/avatar/smile.png')",
+				remiProf: "url('/assets/avatar/prof.png')",
+				remiNotLikeThis: "url('/assets/avatar/notlikethis.png')",
 			}),
 		},
 	},
