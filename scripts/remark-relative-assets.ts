@@ -27,7 +27,7 @@ export function remarkFixRelativeAssetLinks(): Plugin<[], Root> {
 			if (!["Image", "Video"].includes(element.name)) return element as any
 
 			element.attributes = element.attributes.map((attr) => {
-				if (attr.name !== "src") return attr
+				if (!["src", "poster"].includes(attr.name)) return attr
 
 				// Resolve the filepath of the image from the directory of the MDX file
 				const mdxFilePath = file.history.at(-1)

@@ -12,14 +12,20 @@ interface Props {
 	poster?: string
 }
 
-const outputDir = "public/assets/videos"
-const { src, caption, ...props } = Astro.props
+const videoOutputDir = "public/assets/videos"
+const posterOutputDir = "public/assets/images"
+const { src, poster, caption, ...props } = Astro.props
 
-fs.mkdirSync(outputDir, { recursive: true })
-fs.copyFileSync(src, path.join("public/assets/videos", path.basename(src)))
+fs.mkdirSync(videoOutputDir, { recursive: true })
+fs.copyFileSync(src, path.join(videoOutputDir, path.basename(src)))
+
+if (poster) {
+	fs.mkdirSync(posterOutputDir, { recursive: true })
+	fs.copyFileSync(poster, path.join(posterOutputDir, path.basename(poster)))
+}
 ---
 
-<video {...props}>
+<video {...props} poster={poster ? `/assets/images/${path.basename(poster)}` : undefined}>
 	<source type="video/mp4" src={`/assets/videos/${path.basename(src)}`} />
 </video>
 {
