@@ -2,7 +2,7 @@ const plugin = require("tailwindcss/plugin")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./src/**/*.astro"],
+	content: ["./src/**/*.{astro,js,ts}", "./content/**/*.mdx"],
 	safelist: [
 		{ pattern: /bubble(|::after)/ },
 		{ pattern: /bubble-(marvin|oofmarvin|hypemarvin)(|::after)/ },
@@ -458,6 +458,11 @@ module.exports = {
 						backgroundImage: theme("backgroundImage.remiNotLikeThis"),
 					},
 				},
+
+				// Image rendering mode
+				".pixelated": {
+          imageRendering: "pixelated",
+        },
 			})
 		}),
 	],
