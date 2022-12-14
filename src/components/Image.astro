@@ -1,0 +1,25 @@
+---
+import { Image, ImageOptions, PlaceholderOptions } from "astro-eleventy-img"
+
+interface Props {
+	src: string
+	alt: string
+	caption?: string
+	options?: ImageOptions
+	sizes?: string
+	classes?: string
+	quality?: number
+	placeholderOptions?: PlaceholderOptions
+}
+
+const props: Props = Object.assign(
+	{ ...Astro.props },
+	{
+		options: {
+			outputDir: "public/assets/images",
+		},
+	}
+)
+---
+
+<Image {...props} />
