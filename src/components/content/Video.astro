@@ -29,9 +29,9 @@ if (poster) {
 	<source type="video/mp4" src={`/assets/videos/${path.basename(src)}`} />
 </video>
 {
-	caption ? (
+	caption && (
 		<p>
-			<em>Le résultat final de ce chapitre.</em>
+			<em>{caption}</em>
 		</p>
-	) : null
+	)
 }
