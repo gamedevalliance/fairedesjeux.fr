@@ -34,4 +34,4 @@ Avant toute chose, cliquez sur "Vérifier le script (Lint)" dans le launcher. Re
 ![](./lint-report.png)
 *Un rapport Lint sans erreur.*
 
-Ensuite, cliquez sur "Compiler les paquets" dans le launcher pour générer les fichiers Windows, Mac ou Linux que vous pourrez distribuer à vos futurs joueurs et joueuses. Pour obtenir plus d'informations sur la distribution de jeux indés en général, consultez notre guide sur itch.io !
+Ensuite, cliquez sur "Compiler les paquets" dans le launcher pour générer les fichiers Windows, Mac ou Linux que vous pourrez distribuer à vos futurs joueurs et joueuses.

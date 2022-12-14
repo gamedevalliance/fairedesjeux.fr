@@ -71,4 +71,4 @@ label map_magasin:
 
 Et voilà ! Plutôt simple, non ? Cela dit, vous devez vous douter que pour chacun des concepts que l'on a vus dans ce chapitre (les frames, les imagemaps, etc) il existe de nombreuses fonctionnalités que je ne pourrais pas vous expliquer aussi simplement : c'est à vous de regarder ce qui vous intéresse pour votre propre jeu.
 
-J'espère en tout cas qu'après avoir vu ces principes de base ensemble, la documentation de Ren'Py vous paraitra moins intimidante (même si, nous sommes d'accord, elle est tout de même très dense). La consulter est une étape incontournable pour étayer vos connaissances, mais vous saurez sans doute mieux par où commencer désormais.
+J'espère qu'après avoir vu ces principes de base ensemble, la documentation de Ren'Py vous paraitra moins intimidante (même si, nous sommes d'accord, elle est tout de même très dense). La consulter est une étape incontournable pour étayer vos connaissances !
