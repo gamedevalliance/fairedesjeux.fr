@@ -1,6 +1,6 @@
 ---
-import * as fs from "fs"
-import * as path from "path"
+import { copyHashedAsset } from "$utils"
+import { generateImage } from "astro-eleventy-img"
 
 interface Props {
 	src: string
@@ -11,22 +11,27 @@ interface Props {
 	controls?: boolean
 	poster?: string
 }
-
-const videoOutputDir = "public/assets/videos"
-const posterOutputDir = "public/assets/images"
 const { src, poster, caption, ...props } = Astro.props
 
-fs.mkdirSync(videoOutputDir, { recursive: true })
-fs.copyFileSync(src, path.join(videoOutputDir, path.basename(src)))
+const videoPath = copyHashedAsset("assets/videos", src)
 
+let posterPath: string | undefined = undefined
 if (poster) {
-	fs.mkdirSync(posterOutputDir, { recursive: true })
-	fs.copyFileSync(poster, path.join(posterOutputDir, path.basename(poster)))
+	const posterImage = await generateImage(poster, {
+		formats: ["webp"],
+		sharpWebpOptions: {
+			quality: 90,
+		},
+	})
+
+	if (posterImage?.webp?.[0]) {
+		posterPath = posterImage.webp[0].url
+	}
 }
 ---
 
-<video {...props} poster={poster ? `/assets/images/${path.basename(poster)}` : undefined}>
-	<source type="video/mp4" src={`/assets/videos/${path.basename(src)}`} />
+<video {...props} poster={posterPath}>
+	<source type="video/mp4" src={videoPath} />
 </video>
 {
 	caption && (

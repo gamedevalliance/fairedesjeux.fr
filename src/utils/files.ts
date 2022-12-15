@@ -1,4 +1,7 @@
 import { ContentSlug, fullContent } from "$data"
+import * as crypto from "crypto"
+import * as fs from "fs"
+import * as path from "path"
 
 export function getAllCoursesPaths(): string[] {
 	return Object.keys(fullContent).filter((path) => path.split("/").at(-1) === "index.mdx")
@@ -36,4 +39,24 @@ export function getSlugsFromFilePath(path: string): ContentSlug {
  */
 export function cleanSlug(slug: string) {
 	return slug.replaceAll(/(\d+-)/gm, "")
+}
+
+export function copyHashedAsset(outputDir: string, file: string) {
+	const fileName = `${getFileSHA1(file)}-${path.basename(file)}`
+	const publicOutputDir = path.join("public/", outputDir)
+	const outputResult = path.join(publicOutputDir, fileName)
+	if (!fs.existsSync(outputResult)) {
+		fs.mkdirSync(publicOutputDir, { recursive: true })
+		fs.copyFileSync(file, outputResult)
+	}
+
+	return "/" + path.join(outputDir, fileName)
+}
+
+export function getFileSHA1(filePath: string) {
+	const fileBuffer = fs.readFileSync(filePath)
+	const hashSum = crypto.createHash("sha1")
+	hashSum.update(fileBuffer)
+
+	return hashSum.digest("hex").substring(0, 10)
 }
