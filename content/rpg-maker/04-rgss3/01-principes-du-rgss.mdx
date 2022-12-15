@@ -1,0 +1,82 @@
+---
+title: "Créer un pierre-feuille-ciseaux"
+description: "Le guide pour créer un pierre-papier-ciseaux entièrement en scripts sur RPG Maker VX Ace. Apprenez à scripter en Ruby et RGSS pour créer vos propres systèmes sur RPG Maker !"
+---
+
+Vous créez des jeux sur RPG Maker, vous gérez bien les évènements et vous vous demandez comment écrire des scripts ? Alors ce chapitre est fait pour vous !
+
+Nous allons réaliser un jeu de chifoumi (qui est l'appellation cool de pierre-papier-ciseaux) via Ruby et RGSS3 pour RPG Maker VX Ace, en partant du principe que vous n'avez aucune connaissance en programmation en dehors des évènements.
+
+<Video
+  src="demo.mp4"
+  poster="resultat.png"
+  muted loop controls
+/>
+
+<Callout heading="Attention">
+Ce guide fonctionne uniquement avec RPG Maker VX Ace, qui utilise le langage de script Ruby et RGSS3. Vous ne pourrez pas utiliser ce code pour les autres versions de RPG Maker.
+</Callout>
+
+Même si l'histoire de votre jeu n'implique pas un tournoi de chifoumi, ce cours peut vous être très utile pour découvrir la programmation. Ainsi, vous aurez les bases pour écrire les scripts de votre projet, mais vous serez aussi plus à l'aise pour programmer sur d'autres moteurs par la suite !
+
+<Bulle emote="remi-prof">
+Nous ferons abstraction de la théorie compliquée, mais vous allez pratiquer de nombreux concepts utilisés en programmation.
+</Bulle>
+
+<Bulle emote="astride-smile">
+Et tout cela, sans quitter RPG Maker !
+</Bulle>
+
+### Principes du RGSS
+
+#### La notion de scène
+
+Dans RPG Maker, chaque écran est une scène. Suivons un parcours typique dans un jeu RPG Maker :
+
+1. On arrive sur l'écran-titre,
+2. on lance une nouvelle partie,
+3. on explore la carte,
+4. on ouvre le menu,
+5. on retourne sur la carte,
+6. on entre dans un combat,
+7. la victoire nous amène sur une autre carte,
+8. on entre dans un magasin,
+9. on retourne sur la map et on meurt.
+
+On aura lancé plusieurs scènes comme le montre ce schéma.
+
+<Image
+  src="schema1.png"
+  alt="Schéma du parcours typique d'un joueur."
+/>
+
+Vous l'aurez compris, tous les écrans sont des scènes. En RGSS, une scène est représentée par une classe. Dans l'éditeur de script, vous pouvez consulter l'intégralité des scènes du RGSS.
+
+<Image
+  src="scenes.png"
+  alt="Scènes du RGSS dans l'éditeur de script."
+/>
+
+Pour créer notre mini-jeu, nous allons créer un nouvel écran où se déroulera le chifoumi, et donc une scène dédiée.
+
+#### Un langage orienté objet
+
+Ruby est un langage orienté objet, ce qui signifie que tous les éléments sont basés sur un modèle, appelé classe. Par exemple, dans un système de combat, nous serons amenés à créer toutes sortes de monstres : des zombies, des chauve-souris... Tous ces ennemis ont des choses en commun : ils ont des caractéristiques et peuvent attaquer le joueur. Au lieu de réécrire ces comportements dans chaque monstre, nous écrivons une classe « ennemi » contenant ces informations communes, et nous l'appliquons à chaque monstre. Dans la programmation orientée objet (plus spécifiquement orientée classe), on est amené à utiliser des classes déjà existantes et à créer nos propres classes pour décrire des éléments.
+
+#### Le RGSS, c'est plein de classes
+
+Dans RPG Maker, le RGSS nous offre énormément de classes déjà écrites. Pour vous en rendre compte, je vous invite à ouvrir l'éditeur de script et à survoler les différentes sections. Pour réaliser un système en RGSS, on part de classes déjà existantes et on en crée de nouvelles.
+
+<Bulle emote="remi-smile">
+Il existe toute une série d'autres classes qui sont inaccessibles via l'éditeur de script, mais décrites dans l'aide du logiciel.
+</Bulle>
+
+<Bulle emote="astride-wink">
+Le scripteur averti les consultera régulièrement, mais nous n'en aurons pas besoin ici !
+</Bulle>
+
+Dans la prochaine section, nous allons créer notre propre scène en utilisant des classes existantes !
+
+<Callout heading="Crédits">
+Ce chapitre est adapté de l'article de msp (S4suk3) sur la [BilouCorp](http://www.biloucorp.com/creation-dun-shifumi-avec-le-rgss3-16).
+</Callout>
