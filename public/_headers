@@ -1,0 +1,20 @@
+/*
+  cache-control: public,max-age=300
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+
+/chunks/*.js
+  cache-control: public,max-age=31536000,immutable
+/hoisted.*.js
+  cache-control: public,max-age=31536000,immutable
+/assets/*.css
+  cache-control: public,max-age=31536000,immutable
+/assets/videos/*
+  cache-control: public,max-age=31536000,immutable
+/assets/images/*
+  cache-control: public,max-age=604800
+/assets/avatar/*
+  cache-control: public,max-age=604800
+/assets/favicon.png
+  cache-control: public,max-age=2628000
