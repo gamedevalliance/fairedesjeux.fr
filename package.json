@@ -6,11 +6,11 @@
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build && npm run copy:images",
+		"build": "astro build && npm run copy:assets",
 		"preview": "astro preview",
 		"astro": "astro",
 		"format": "prettier -w --plugin-search-dir=. --cache .",
-		"copy:images": "cp -r public/assets/images dist/assets/"
+		"copy:assets": "cp -r public/assets/images public/assets/videos dist/assets/"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^0.12.2",
