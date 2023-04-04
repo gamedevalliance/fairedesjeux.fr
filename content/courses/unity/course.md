@@ -8,7 +8,7 @@ author: "Anthony Cardinale"
 medal: GOLD
 featured: 1
 header: 1
-video: "https://www.youtube.com/playlist?list="
+video: "https://www.youtube.com/watch?v=nSklohcnzb0"
 cover_wide: ./cover-wide.png
 cover_tall: ./cover-tall.png
 opengraph_image: cover_wide
